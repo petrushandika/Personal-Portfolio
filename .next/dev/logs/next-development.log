@@ -1,0 +1,30 @@
+[00:00:09.170] Server  LOG      ✓ Ready in 5.5s
+[00:01:52.188] Server  LOG        skipping /blog (conflict)
+[00:04:56.944] Server  LOG      ○ Compiling / ...
+[00:05:17.842] Server  LOG      ○ Compiling /_error ...
+[00:05:18.888] Browser ERROR   uncaughtError: Error: ./
+App Router and Pages Router both match path: /blog
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
+
+
+[00:05:19.613] Browser ERROR   ./
+App Router and Pages Router both match path: /blog
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
+[00:05:31.669] Browser ERROR   ./
+App Router and Pages Router both match path: /blog
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
+[00:05:32.179] Server  LOG        skipping / (conflict)
+[00:05:32.184] Server  LOG        skipping /blog (conflict)
+[00:05:32.385] Server  ERROR    ⨯ PageNotFoundError: Cannot find module for page: route not found /page
+[00:05:32.673] Browser ERROR   uncaughtError: Error: ./
+App Router and Pages Router both match path: /
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
+
+
+[00:05:34.522] Server  LOG      ✓ Compiled in 3.3s
+[00:05:34.638] Browser ERROR   ./
+App Router and Pages Router both match path: /
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
+[00:05:34.638] Browser ERROR   ./
+App Router and Pages Router both match path: /blog
+Next.js does not support having both App Router and Pages Router routes matching the same path. Please remove one of the conflicting routes.
