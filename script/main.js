@@ -1,7 +1,7 @@
 // Text Animation
 
 var typed = new Typed(".text", {
-  strings:["Web Designer", "Front-End Developer", "Data Enthusiast"],
+  strings:["Web Designer", "Fullstack Developer", "Data Enthusiast"],
   typeSpeed:100,
   backSpeed:100,
   backDelay:1000,

@@ -963,6 +963,34 @@ footer {
     display: inline-block;
 }
 
+.lni-linkedin-original {
+    background: linear-gradient(135deg, #251cc0, #4579e0, #251cc0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lni-instagram-original {
+    background: linear-gradient(135deg, #251cc0, #c70000, #d5fe25);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lni-github-original {
+    background: linear-gradient(135deg, #605757, #000000, #605757);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.lni-spotify-original {
+    background: linear-gradient(135deg, #37a44b, #1bb835, #37a44b);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
 .social-icons li a {
     height: 3rem;
     width: 3rem;
