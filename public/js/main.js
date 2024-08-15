@@ -1,11 +1,11 @@
 // Text Animation
 
 var typed = new Typed(".text", {
-  strings:["Web Designer", "Fullstack Developer", "Data Enthusiast"],
-  typeSpeed:100,
-  backSpeed:100,
-  backDelay:1000,
-  loop:true
+  strings: ["Web Designer", "Fullstack Developer", "Data Enthusiast"],
+  typeSpeed: 100,
+  backSpeed: 100,
+  backDelay: 1000,
+  loop: true,
 });
 
 // Toggle visibility of navbar when button clicked
@@ -60,17 +60,17 @@ const swiper = new Swiper(".project-slider", {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 30,
-  loop:true,
+  loop: true,
   navigation: {
-    nextEl: '.nextArrowBtn',
-    prevEl: '.prevArrowBtn',
+    nextEl: ".nextArrowBtn",
+    prevEl: ".prevArrowBtn",
   },
   pagination: {
-    el: '.swiper-pagination',
+    el: ".swiper-pagination",
     renderBullet: function (index, className) {
       return '<li class="' + className + '"></li>';
     },
-    clickable:true,
+    clickable: true,
   },
   // Responsive breakpoints
   breakpoints: {
@@ -81,7 +81,7 @@ const swiper = new Swiper(".project-slider", {
     // when window width is >= 768px
     768: {
       slidesPerView: 3,
-      spaceBetween: 30
+      spaceBetween: 30,
     },
   },
 });
@@ -92,8 +92,8 @@ const swiper1 = new Swiper(".testimonial-swiper", {
   // Default parameters
   slidesPerView: 1,
   spaceBetween: 30,
-  loop:true,
-  grabCursor:true,
+  loop: true,
+  grabCursor: true,
   // Responsive breakpoints
   breakpoints: {
     // when window width is >= 567px
@@ -112,29 +112,33 @@ const swiper1 = new Swiper(".testimonial-swiper", {
 
 const msg = document.querySelector(".form-message");
 
-(function() {
+(function () {
   //https://dashboard.emailjs.com/admin/account
-  emailjs.init('_JwRzmmuGSoowklOI');
+  emailjs.init("_JwRzmmuGSoowklOI");
 })();
 
-window.onload = function() {
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
-        document.querySelector('.loader').classList.add('show');
-        // these IDs from the previous steps
-        emailjs.sendForm('service_smmav9e', 'template_dqierpn', this)
-            .then(function() {
-                document.getElementById("contact-form").reset();
-                document.querySelector('.loader').classList.remove('show');
-                msg.innerHTML = "";
-                msg.innerHTML += "<span class='success-msg'>Email Sent</span>"
-                msg.classList.add('show');
-                setTimeout(() => msg.classList.remove('show'),2000);
-            }, function(error) {
-                document.querySelector('.loader').classList.toggle('show');
-                msg.classList.add('show');
-                msg.innerHTML += "<span class='error-msg'>Email Not Sent</span>"
-            });
+window.onload = function () {
+  document
+    .getElementById("contact-form")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+      document.querySelector(".loader").classList.add("show");
+      // these IDs from the previous steps
+      emailjs.sendForm("service_smmav9e", "template_dqierpn", this).then(
+        function () {
+          document.getElementById("contact-form").reset();
+          document.querySelector(".loader").classList.remove("show");
+          msg.innerHTML = "";
+          msg.innerHTML += "<span class='success-msg'>Email Sent</span>";
+          msg.classList.add("show");
+          setTimeout(() => msg.classList.remove("show"), 2000);
+        },
+        function (error) {
+          document.querySelector(".loader").classList.toggle("show");
+          msg.classList.add("show");
+          msg.innerHTML += "<span class='error-msg'>Email Not Sent</span>";
+        }
+      );
     });
 };
 
@@ -235,14 +239,14 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Animation text
 gsap.to(".two-color-text", {
-    scrollTrigger: {
-        trigger: ".two-color-text",
-        start: "top center",
-        end: "bottom center",
-        toggleActions: "play none none none",
-    },
-    color: "#84bcda",
-    duration: 1,
+  scrollTrigger: {
+    trigger: ".two-color-text",
+    start: "top center",
+    end: "bottom center",
+    toggleActions: "play none none none",
+  },
+  color: "#84bcda",
+  duration: 1,
 });
 
 document.body.addEventListener("mousemove", (event) => {
@@ -256,7 +260,50 @@ document.body.addEventListener("mousemove", (event) => {
   gsap.to(".shape", {
     x: clientX,
     y: clientY,
-    stagger: -0.1
+    stagger: -0.1,
   });
 });
 
+// Select the carousel elements
+const carouselInner = document.querySelector(".carousel-inner");
+const prevButton = document.querySelector(".carousel-button.prev");
+const nextButton = document.querySelector(".carousel-button.next");
+
+// Get the number of slides and the width of a single slide
+const slides = document.querySelectorAll(".carousel-item");
+const totalSlides = slides.length;
+let currentIndex = 0;
+
+// Function to update the carousel position
+function updateCarouselPosition() {
+  const slideWidth = slides[0].getBoundingClientRect().width;
+  const newTransformValue = -currentIndex * slideWidth;
+  carouselInner.style.transform = `translateX(${newTransformValue}px)`;
+}
+
+// Function to handle the previous button click
+function showPreviousSlide() {
+  if (currentIndex > 0) {
+    currentIndex--;
+  } else {
+    currentIndex = totalSlides - 1; // Loop to the last slide
+  }
+  updateCarouselPosition();
+}
+
+// Function to handle the next button click
+function showNextSlide() {
+  if (currentIndex < totalSlides - 1) {
+    currentIndex++;
+  } else {
+    currentIndex = 0; // Loop to the first slide
+  }
+  updateCarouselPosition();
+}
+
+// Attach event listeners to the buttons
+prevButton.addEventListener("click", showPreviousSlide);
+nextButton.addEventListener("click", showNextSlide);
+
+// Initialize the carousel position
+updateCarouselPosition();
