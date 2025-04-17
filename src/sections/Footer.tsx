@@ -2,20 +2,20 @@ import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 
 const footerLinks = [
   {
-    title: "Youtube",
-    href: "#",
+    title: "Github",
+    href: "https://github.com/petrushandika",
   },
   {
     title: "Twitter",
-    href: "#",
+    href: "https://x.com/petrushandika",
   },
   {
     title: "Instagram",
-    href: "#",
+    href: "https://www.instagram.com/petrushandika/",
   },
   {
     title: "LinkedIn",
-    href: "#",
+    href: "https://www.linkedin.com/in/petrushandika/",
   },
 ];
 

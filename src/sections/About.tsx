@@ -3,11 +3,11 @@ import { Card } from "@/components/Card";
 import { SectionHeader } from "@/components/SectionHeader";
 import Image from "next/image";
 import bookImage from "@/assets/images/book-cover.png";
-import JavascriptIcon from "@/assets/icons/square-js.svg";
-import HTMLIcon from "@/assets/icons/html5.svg";
-import CssIcon from "@/assets/icons/css3.svg";
+import JavascriptIcon from "@/assets/icons/js.svg";
+import NodeJsIcon from "@/assets/icons/node-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
-import ChromeIcon from "@/assets/icons/chrome.svg";
+import DatabaseIcon from "@/assets/icons/database.svg";
+import PHPIcon from "@/assets/icons/php.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import mapImage from "@/assets/images/map.png";
 import smileMemoji from "@/assets/images/memoji-smile.png";
@@ -22,20 +22,20 @@ const toolboxItems = [
     iconType: JavascriptIcon,
   },
   {
-    title: "HTML5",
-    iconType: HTMLIcon,
+    title: "NodeJS",
+    iconType: NodeJsIcon,
   },
   {
-    title: "CSS3",
-    iconType: CssIcon,
+    title: "Database",
+    iconType: DatabaseIcon,
   },
   {
     title: "React",
     iconType: ReactIcon,
   },
   {
-    title: "Chrome",
-    iconType: ChromeIcon,
+    title: "PHP",
+    iconType: PHPIcon,
   },
   {
     title: "Github",
@@ -45,44 +45,44 @@ const toolboxItems = [
 
 const hobbies = [
   {
-    title: "Painting",
-    emoji: "🎨",
+    title: "Running",
+    emoji: "🏃‍♂️",
     left: "5%",
     top: "5%",
   },
   {
-    title: "Photography",
-    emoji: "📸",
+    title: "Politics",
+    emoji: "🏛️",
     left: "50%",
     top: "5%",
   },
   {
-    title: "Hiking",
-    emoji: "🥾",
+    title: "Reading",
+    emoji: "📖",
     left: "35%",
     top: "40%",
   },
   {
     title: "Gaming",
-    emoji: "🕹️",
+    emoji: "🎮",
     left: "10%",
     top: "35%",
   },
   {
-    title: "Music",
-    emoji: "🎹",
+    title: "Cooking",
+    emoji: "🍳",
     left: "70%",
     top: "45%",
   },
   {
-    title: "Fitness",
-    emoji: "🏋🏻‍♂️",
+    title: "Hiking",
+    emoji: "🥾",
     left: "5%",
     top: "65%",
   },
   {
-    title: "Reading",
-    emoji: "📖",
+    title: "Analysis",
+    emoji: "🧠",
     left: "45%",
     top: "70%",
   },
@@ -91,7 +91,7 @@ const hobbies = [
 export const AboutSection = () => {
   const constraintRef = useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
       <div className="container">
         <SectionHeader
           eyebrow="About Me"

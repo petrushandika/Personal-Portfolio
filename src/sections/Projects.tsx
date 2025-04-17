@@ -1,6 +1,8 @@
-import darkSaasLandingPage from "@/assets/images/dark-saas-landing-page.png";
-import lightSaasLandingPage from "@/assets/images/light-saas-landing-page.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+import theAestheticsSkin from "@/assets/images/the-aesthetics-skin.png";
+import lakoeEcommerce from "@/assets/images/lakoe-ecommerce.png";
+import circleApp from "@/assets/images/circle-app.png";
+import velocia from "@/assets/images/velocia.png";
+import deltaDekoria from "@/assets/images/delta-dekoria.png";
 import Image from "next/image";
 import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -10,46 +12,82 @@ import { Card } from "@/components/Card";
 
 const portfolioProjects = [
   {
-    company: "Acme Corp",
-    year: "2022",
-    title: "Dark Saas Landing Page",
+    company: "The Aesthetics Skin",
+    year: "2025",
+    title: "The Aesthetics Skin E-Commerce",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      { title: "Improved mobile user experience by 35%" },
+      { title: "SEO optimization boosted organic traffic by 60%" },
+      {
+        title:
+          "Integrated booking system and product purchases into a single platform",
+      },
     ],
-    link: "https://youtu.be/4k7IdSLxh6w",
-    image: darkSaasLandingPage,
+    link: "https://theaestheticsskin.com/",
+    image: theAestheticsSkin,
   },
   {
-    company: "Innovative Co",
-    year: "2021",
-    title: "Light Saas Landing Page",
+    company: "Dumbways Indonesia",
+    year: "2024",
+    title: "Lakoe E-Commerce",
     results: [
-      { title: "Boosted sales by 20%" },
-      { title: "Expanded customer reach by 35%" },
-      { title: "Increased brand awareness by 15%" },
+      { title: "Increased basic food product sales by 25%" },
+      { title: "Accelerated checkout process by 30%" },
+      { title: "Reached customers in more than 10 cities across Indonesia" },
     ],
-    link: "https://youtu.be/7hi5zwO75yc",
-    image: lightSaasLandingPage,
+    link: "",
+    image: lakoeEcommerce,
   },
   {
-    company: "Quantum Dynamics",
+    company: "Dumbways Indonesia",
+    year: "2024",
+    title: "Circle App",
+    results: [
+      { title: "Improved daily user retention by 45%" },
+      { title: "Added trending topics and real-time notifications features" },
+      {
+        title:
+          "Delivered a more interactive experience like popular social platforms",
+      },
+    ],
+    link: "",
+    image: circleApp,
+  },
+  {
+    company: "Alpha Alliance",
+    year: "2024",
+    title: "Velocia",
+    results: [
+      { title: "Users can easily search cars by type and price" },
+      { title: "Increased product page speed by up to 60%" },
+      {
+        title:
+          "Implemented filters and sorting for a more efficient shopping experience",
+      },
+    ],
+    link: "",
+    image: velocia,
+  },
+  {
+    company: "Mikrotek",
     year: "2023",
-    title: "AI Startup Landing Page",
+    title: "Delta Dekoria",
     results: [
-      { title: "Enhanced user experience by 40%" },
-      { title: "Improved site speed by 50%" },
-      { title: "Increased mobile traffic by 35%" },
+      {
+        title:
+          "Integrated wishlist and automated product recommendation features",
+      },
+      { title: "Optimized product images without compromising quality" },
+      { title: "Clean and professional online store interface design" },
     ],
-    link: "https://youtu.be/Z7I5uSRHMHg",
-    image: aiStartupLandingPage,
+    link: "https://deltadekoria.com/",
+    image: deltaDekoria,
   },
 ];
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="projects" className="pb-16 lg:py-24">
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"
@@ -80,14 +118,17 @@ export const ProjectsSection = () => {
                     {project.results.map((result, i) => (
                       <li
                         key={i}
-                        className="flex gap-2 text-sm md:text-base text-white/50"
+                        className="flex gap-2 text-sm md:text-base text-white/50 items-start"
                       >
-                        <CheckCircleIcon className="size-5 md:size-6" />
+                        <CheckCircleIcon
+                          className="w-5 h-5 shrink-0"
+                          strokeWidth={2}
+                        />
                         <span>{result.title}</span>
                       </li>
                     ))}
                   </ul>
-                  <a href={project.link}>
+                  <a href={project.link} target="_blank">
                     <button className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8">
                       <span>Visit Live Site</span>
                       <ArrowUpRightIcon className="size-4" />
@@ -98,7 +139,7 @@ export const ProjectsSection = () => {
                   <Image
                     src={project.image}
                     alt={project.title}
-                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none"
+                    className="mt-8 -mb-4 md:-mb-0 lg:mt-0 lg:absolute lg:h-full lg:w-auto lg:max-w-none rounded-t"
                   />
                 </div>
               </div>
