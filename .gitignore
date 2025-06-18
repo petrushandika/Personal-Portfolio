@@ -34,4 +34,15 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
-.qodo
+
+public/assets/projects-screenshots/codingducks/
+public/assets/projects-screenshots/couponluxury
+public/assets/projects-screenshots/ghostchat
+public/assets/projects-screenshots/jra
+public/assets/projects-screenshots/the-booking-desk
+
+Resend API key.txt
+
+.env
+
+updated-readme.md

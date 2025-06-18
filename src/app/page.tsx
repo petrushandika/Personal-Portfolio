@@ -1,23 +1,30 @@
-import { AboutSection } from "@/sections/About";
-import { ContactSection } from "@/sections/Contact";
-import { Footer } from "@/sections/Footer";
-import { Header } from "@/sections/Header";
-import { HeroSection } from "@/sections/Hero";
-import { ProjectsSection } from "@/sections/Projects";
-import { TapeSection } from "@/sections/Tape";
-import { TestimonialsSection } from "@/sections/Testimonials";
+"use client";
 
-export default function Home() {
+import React from "react";
+import SmoothScroll from "@/components/smooth-scroll";
+import { cn } from "@/lib/utils";
+import AnimatedBackground from "@/components/animated-background";
+import SkillsSection from "@/components/sections/skills";
+import ProjectsSection from "@/components/sections/projects";
+import ContactSection from "@/components/sections/contact";
+import HeroSection from "@/components/sections/hero";
+
+function MainPage() {
   return (
-    <div>
-      <Header />
-      <HeroSection />
-      <ProjectsSection />
-      <TapeSection />
-      <TestimonialsSection />
-      <AboutSection />
-      <ContactSection />
-      <Footer />
-    </div>
+    <>
+      <SmoothScroll>
+        <main className={cn("bg-slate-100 dark:bg-transparent")}>
+          <div className="top-0 z-0 fixed w-full h-screen">
+            <AnimatedBackground />
+          </div>
+          <HeroSection />
+          <SkillsSection />
+          <ProjectsSection />
+          <ContactSection />
+        </main>
+      </SmoothScroll>
+    </>
   );
 }
+
+export default MainPage;
