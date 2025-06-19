@@ -931,7 +931,7 @@ const projects: Project[] = [
     src: "/assets/projects-screenshots/myportfolio/landing.png",
     screenshots: ["assets/projects-screenshots/myportfolio/landing.png"],
     live: "https://www.petrushandikasinaga.com/",
-    github: "https://github.com/petrushandika/3D-interactive-portfolio",
+    github: "https://github.com/petrushandika/Personal-Portfolio",
     skills: {
       frontend: [
         PROJECT_SKILLS.ts,

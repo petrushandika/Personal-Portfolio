@@ -2,12 +2,6 @@
 
 Welcome to the repository for my personal portfolio website! 🎉 This project is a culmination of creativity, technology, and my dedication to showcasing my skills, projects, and personality in a visually stunning and interactive manner.
 
-### Live preview: https://www.petrushandikasinaga.com/
-
-https://github.com/petrushandika/3D-interactive-portfolio/blob/main/preview_video.mp4
-
-This project is **inspired** by the amazing work of [Petrus Handika](https://github.com/petrus-handika/Portfolio). His innovative approach to web design and attention to detail has been a huge influence. Thank you, Petrus! 🙏
-
 ## 🔥 Features
 
 Here are the key highlights of my portfolio:
@@ -51,13 +45,13 @@ The portfolio website is built using the following tools and technologies:
 1. Clone this repository:
 
    ```bash
-   git clone https://github.com/petrushandika/3D-interactive-portfolio.git
+   git clone https://github.com/petrushandika/Personal-Portfolio.git
    ```
 
 2. Navigate to the project directory:
 
    ```bash
-   cd 3D-interactive-portfolio
+   cd Personal-Portfolio
    ```
 
 3. Install dependencies:
