@@ -10,17 +10,29 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
-import { ArticleService, PaginationParams } from './article.service';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import { CreateArticleDto, UpdateArticleDto } from './dto/article.dto';
+import type { CreateArticleDto, UpdateArticleDto, PaginationDto } from '../../application/dto';
+import {
+  GetArticlesUseCase,
+  GetArticleBySlugUseCase,
+  CreateArticleUseCase,
+  UpdateArticleUseCase,
+  DeleteArticleUseCase,
+} from '../../application/use-cases';
 
 @Controller('articles')
 export class ArticleController {
-  constructor(private readonly articleService: ArticleService) {}
+  constructor(
+    private readonly getArticlesUseCase: GetArticlesUseCase,
+    private readonly getArticleBySlugUseCase: GetArticleBySlugUseCase,
+    private readonly createArticleUseCase: CreateArticleUseCase,
+    private readonly updateArticleUseCase: UpdateArticleUseCase,
+    private readonly deleteArticleUseCase: DeleteArticleUseCase,
+  ) {}
 
   @Get()
-  async findAll(@Query() query: PaginationParams) {
-    const result = await this.articleService.findAll(query);
+  async findAll(@Query() query: PaginationDto) {
+    const result = await this.getArticlesUseCase.execute(query);
     return {
       success: true,
       ...result,
@@ -29,7 +41,7 @@ export class ArticleController {
 
   @Get(':slug')
   async findOne(@Param('slug') slug: string) {
-    const article = await this.articleService.findBySlug(slug);
+    const article = await this.getArticleBySlugUseCase.execute(slug);
     return {
       success: true,
       data: article,
@@ -40,7 +52,7 @@ export class ArticleController {
   @UseGuards(JwtAuthGuard)
   async create(@Body() dto: CreateArticleDto, @Req() req: any) {
     const user = req.user;
-    const article = await this.articleService.create(dto, user.userId);
+    const article = await this.createArticleUseCase.execute(dto, user.userId);
     return {
       success: true,
       data: article,
@@ -50,7 +62,7 @@ export class ArticleController {
   @Put(':id')
   @UseGuards(JwtAuthGuard)
   async update(@Param('id') id: string, @Body() dto: UpdateArticleDto) {
-    const article = await this.articleService.update(id, dto);
+    const article = await this.updateArticleUseCase.execute(id, dto);
     return {
       success: true,
       data: article,
@@ -60,7 +72,7 @@ export class ArticleController {
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
   async delete(@Param('id') id: string) {
-    await this.articleService.delete(id);
+    await this.deleteArticleUseCase.execute(id);
     return {
       success: true,
       data: null,

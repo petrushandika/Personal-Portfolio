@@ -1,8 +1,10 @@
 import { Module } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import Redis from 'ioredis';
+import { ICacheService } from '../../domain/interfaces';
+import { TCacheService } from '../../domain/tokens';
 
-export class CacheService {
+export class CacheService implements ICacheService {
   constructor(private readonly redis: Redis) {}
 
   async get<T>(key: string): Promise<T | null> {
@@ -34,7 +36,7 @@ export class CacheService {
   private parseTtl(ttl: string): number {
     const regex = /^(\d+)([smhd])$/;
     const match = regex.exec(ttl);
-    if (!match || !match[1]) return 300;
+    if (!match?.[1]) return 300;
 
     const value = Number.parseInt(match[1], 10);
     const unit = match[2] ?? '';
@@ -70,12 +72,8 @@ export class CacheService {
         });
       },
     },
-    {
-      provide: CacheService,
-      inject: ['REDIS'],
-      useFactory: (redis: Redis) => new CacheService(redis),
-    },
+    { provide: TCacheService, useClass: CacheService },
   ],
-  exports: [CacheService, 'REDIS'],
+  exports: [TCacheService, 'REDIS'],
 })
 export class CacheModule {}

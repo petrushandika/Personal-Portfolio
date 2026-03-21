@@ -8,17 +8,29 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
-import type { AuthService } from './auth.service';
-import type { LoginDto, RefreshDto, RegisterDto } from './dto/auth.dto';
+import type { LoginDto, RegisterDto, RefreshDto } from '../../application/dto';
+import {
+  RegisterUseCase,
+  LoginUseCase,
+  RefreshTokenUseCase,
+  LogoutUseCase,
+  GetProfileUseCase,
+} from '../../application/use-cases';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Controller('auth')
 export class AuthController {
-  constructor(private readonly authService: AuthService) {}
+  constructor(
+    private readonly registerUseCase: RegisterUseCase,
+    private readonly loginUseCase: LoginUseCase,
+    private readonly refreshTokenUseCase: RefreshTokenUseCase,
+    private readonly logoutUseCase: LogoutUseCase,
+    private readonly getProfileUseCase: GetProfileUseCase,
+  ) {}
 
   @Post('register')
   async register(@Body() dto: RegisterDto) {
-    const user = await this.authService.register(dto.email, dto.password);
+    const user = await this.registerUseCase.execute(dto);
     return {
       success: true,
       data: {
@@ -32,7 +44,7 @@ export class AuthController {
   @Post('login')
   @HttpCode(HttpStatus.OK)
   async login(@Body() dto: LoginDto) {
-    const result = await this.authService.login(dto.email, dto.password);
+    const result = await this.loginUseCase.execute(dto);
     return {
       success: true,
       data: {
@@ -50,7 +62,7 @@ export class AuthController {
   @Post('refresh')
   @HttpCode(HttpStatus.OK)
   async refresh(@Body() dto: RefreshDto) {
-    const result = await this.authService.refresh(dto.refreshToken);
+    const result = await this.refreshTokenUseCase.execute(dto.refreshToken);
     return {
       success: true,
       data: result,
@@ -60,7 +72,7 @@ export class AuthController {
   @Post('logout')
   @HttpCode(HttpStatus.OK)
   async logout(@Body() dto: RefreshDto) {
-    await this.authService.logout(dto.refreshToken);
+    await this.logoutUseCase.execute(dto.refreshToken);
     return {
       success: true,
       data: null,
@@ -71,7 +83,7 @@ export class AuthController {
   @UseGuards(JwtAuthGuard)
   async me(@Req() req: any) {
     const user = req.user;
-    const profile = await this.authService.getProfile(user.userId);
+    const profile = await this.getProfileUseCase.execute(user.userId);
     return {
       success: true,
       data: profile,
