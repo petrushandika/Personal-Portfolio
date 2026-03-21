@@ -16,3 +16,4 @@ Frontend/dist
 Frontend/node_modules
 .drizzle
 *.tgz
+Frontend/.astro

@@ -12,8 +12,12 @@
       },
       "style": {
         "useTemplate": "warn"
+      },
+      "suspicious": {
+        "noExplicitAny": "off"
       }
-    }
+    },
+    "ignore": [".astro/**"]
   },
   "formatter": {
     "enabled": true,
