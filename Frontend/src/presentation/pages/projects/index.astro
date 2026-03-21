@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Project - Portfolio">
+  <main class="container mx-auto px-4 py-16">
+    <h1 class="text-4xl font-bold mb-8 text-center">Project</h1>
+    
+    <div id="projects-grid" class="grid md:grid-cols-2 gap-6">
+      <!-- Projects will be loaded here -->
+    </div>
+  </main>
+</BaseLayout>
+
+<script>
+  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+  
+  async function loadProjects() {
+    try {
+      const response = await fetch(`${API_URL}/projects`);
+      const { data } = await response.json();
+      
+      const grid = document.getElementById('projects-grid');
+      if (!grid) return;
+      
+      if (!data || data.length === 0) {
+        grid.innerHTML = '<p class="col-span-full text-center text-gray-500">Belum ada project</p>';
+        return;
+      }
+      
+      grid.innerHTML = data.map((project: any) => `
+        <article class="card overflow-hidden">
+          ${project.images?.[0] ? `<img src="${project.images[0]}" alt="${project.title}" class="w-full h-48 object-cover" />` : ''}
+          <div class="p-6">
+            <h2 class="text-xl font-semibold mb-2">${project.title}</h2>
+            <p class="text-gray-600 mb-4">${project.description}</p>
+            ${project.techStack?.length > 0 ? `
+              <div class="flex flex-wrap gap-2 mb-4">
+                ${project.techStack.map((tech: string) => `
+                  <span class="px-2 py-1 text-xs bg-gray-100 rounded">${tech}</span>
+                `).join('')}
+              </div>
+            ` : ''}
+            <div class="flex gap-4">
+              ${project.githubUrl ? `<a href="${project.githubUrl}" target="_blank" class="text-gray-600 hover:text-gray-900">GitHub</a>` : ''}
+              ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="text-primary-500 hover:underline">Live Demo</a>` : ''}
+            </div>
+          </div>
+        </article>
+      `).join('');
+    } catch (error) {
+      console.error('Failed to load projects:', error);
+    }
+  }
+  
+  loadProjects();
+</script>

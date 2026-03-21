@@ -1,0 +1,48 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Portfolio - Beranda">
+  <main class="container mx-auto px-4 py-16">
+    <section class="text-center mb-16">
+      <h1 class="text-5xl font-bold mb-4">Halo, Saya Developer</h1>
+      <p class="text-xl text-gray-600 mb-8">
+        Full-Stack Developer | Web Enthusiast | Content Creator
+      </p>
+      <div class="flex gap-4 justify-center">
+        <a href="/projects" class="btn-primary">Lihat Project</a>
+        <a href="/blog" class="btn-secondary">Baca Blog</a>
+      </div>
+    </section>
+
+    <section class="mb-16">
+      <h2 class="text-3xl font-bold mb-8 text-center">Skill</h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div class="card p-4 text-center">React</div>
+        <div class="card p-4 text-center">Node.js</div>
+        <div class="card p-4 text-center">TypeScript</div>
+        <div class="card p-4 text-center">PostgreSQL</div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="text-3xl font-bold mb-8 text-center">Project Terbaru</h2>
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-2">Project 1</h3>
+          <p class="text-gray-600 mb-4">Deskripsi project singkat</p>
+          <a href="/projects/project-1" class="text-primary-500 hover:underline">
+            Selengkapnya →
+          </a>
+        </div>
+        <div class="card p-6">
+          <h3 class="text-xl font-semibold mb-2">Project 2</h3>
+          <p class="text-gray-600 mb-4">Deskripsi project singkat</p>
+          <a href="/projects/project-2" class="text-primary-500 hover:underline">
+            Selengkapnya →
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+</BaseLayout>

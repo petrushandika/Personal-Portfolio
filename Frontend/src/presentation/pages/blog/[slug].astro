@@ -1,0 +1,60 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const { slug } = Astro.params;
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+
+let _article = null;
+let _error = null;
+
+try {
+  const response = await fetch(`${API_URL}/articles/${slug}`);
+  if (response.ok) {
+    const { data } = await response.json();
+    _article = data;
+  } else {
+    _error = 'Article not found';
+  }
+} catch (_e) {
+  _error = 'Failed to load article';
+}
+---
+
+<BaseLayout 
+  title={_article?.title || 'Article Not Found'} 
+  description={_article?.metaDescription || _article?.excerpt}
+>
+  <main class="container mx-auto px-4 py-16 max-w-4xl">
+    {_error ? (
+      <div class="text-center">
+        <h1 class="text-4xl font-bold mb-4">{_error}</h1>
+        <a href="/blog" class="btn-primary">Kembali ke Blog</a>
+      </div>
+    ) : _article ? (
+      <article>
+        <header class="mb-8 text-center">
+          {_article.featuredImage && (
+            <img 
+              src={_article.featuredImage} 
+              alt={_article.title}
+              class="w-full h-64 md:h-96 object-cover rounded-xl mb-8"
+            />
+          )}
+          <h1 class="text-4xl md:text-5xl font-bold mb-4">{_article.title}</h1>
+          <time class="text-gray-500">
+            {new Date(_article.publishedAt).toLocaleDateString('id-ID', { dateStyle: 'long' })}
+          </time>
+        </header>
+        
+        <div class="prose prose-lg max-w-none" id="article-content">
+          <!-- Content will be rendered here -->
+        </div>
+        
+        <script define:vars={{ content: _article.content }}>
+          import { marked } from 'marked';
+          document.getElementById('article-content').innerHTML = marked.parse(content);
+        </script>
+      </article>
+    ) : null}
+  </main>
+</BaseLayout>
