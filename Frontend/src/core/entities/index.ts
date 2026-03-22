@@ -8,10 +8,19 @@ export interface Article {
   status: 'draft' | 'published';
   metaTitle?: string;
   metaDescription?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  schemaMarkup?: Record<string, unknown>;
   authorId: string;
   publishedAt?: string;
   createdAt: string;
   updatedAt: string;
+}
+
+export interface TechStackIcon {
+  name: string;
+  icon: string;
 }
 
 export interface Project {
@@ -21,9 +30,11 @@ export interface Project {
   description: string;
   content?: string;
   techStack: string[];
+  techStackIcons: TechStackIcon[];
   githubUrl?: string;
   liveUrl?: string;
   images: string[];
+  thumbnail?: string;
   featured: boolean;
   order: number;
   createdAt: string;
