@@ -70,19 +70,19 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="flex flex-col gap-8">
       {projects.map((project) => (
         <article
           key={project.id}
-          className="group glass-panel overflow-hidden hover-glow flex flex-col h-full"
+          className="group glass-panel overflow-hidden hover-glow flex flex-col md:flex-row border border-white/10 hover:border-brand-500/30 transition-all duration-300"
         >
           {/* Image */}
-          <div className="relative h-48 sm:h-56 overflow-hidden bg-[#0A0A1F] border-b border-white/5">
+          <div className="relative h-52 sm:h-64 md:h-auto md:w-[40%] overflow-hidden bg-[#0A0A1F] border-b md:border-b-0 md:border-r border-white/5 flex-shrink-0">
             {project.thumbnail ? (
               <img
                 src={project.thumbnail}
                 alt={project.title}
-                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-700"
               />
             ) : (
               <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
@@ -104,41 +104,39 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
               </div>
             )}
 
-            {/* Overlay on hover */}
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A1F] via-[#0A0A1F]/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0A0A1F] via-[#0A0A1F]/10 to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500" />
           </div>
 
           {/* Content */}
-          <div className="p-6 flex flex-col flex-1">
-            <h3 className="text-xl font-bold text-white mb-3 group-hover:text-brand-400 transition-colors drop-shadow-sm">
-              {project.title}
-            </h3>
-
-            <p className="text-gray-400 mb-6 line-clamp-2 text-sm leading-relaxed flex-1 font-light">
-              {project.description}
-            </p>
-
-            {/* Tech Stack */}
-            {project.techStack && project.techStack.length > 0 && (
-              <div className="flex flex-wrap gap-2 mb-6">
-                {project.techStack.slice(0, 4).map((tech: string) => (
-                  <span
-                    key={tech}
-                    className="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-300 text-xs font-mono rounded-md"
-                  >
-                    {tech}
-                  </span>
-                ))}
-                {project.techStack.length > 4 && (
-                  <span className="px-2.5 py-1 bg-white/5 border border-white/10 text-gray-500 text-xs font-mono rounded-md">
-                    +{project.techStack.length - 4}
-                  </span>
-                )}
+          <div className="p-6 md:p-8 flex flex-col flex-1 justify-between">
+            <div>
+              <div className="flex items-center justify-between gap-4 mb-3">
+                <h3 className="text-xl md:text-2xl font-bold text-white group-hover:text-brand-400 transition-colors drop-shadow-sm">
+                  {project.title}
+                </h3>
               </div>
-            )}
+
+              <p className="text-gray-400 mb-6 text-sm md:text-base leading-relaxed font-light">
+                {project.description}
+              </p>
+
+              {/* Tech Stack */}
+              {project.techStack && project.techStack.length > 0 && (
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {project.techStack.map((tech: string) => (
+                    <span
+                      key={tech}
+                      className="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-300 text-xs font-mono rounded"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
+            </div>
 
             {/* Links */}
-            <div className="flex items-center gap-4 pt-4 border-t border-white/10 mt-auto">
+            <div className="flex items-center gap-6 pt-5 border-t border-white/10 mt-4">
               {project.githubUrl && (
                 <a
                   href={project.githubUrl}
@@ -147,7 +145,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium group/link"
                 >
                   <Github className="w-4 h-4 group-hover/link:text-brand-400" />
-                  Code
+                  Source Code
                 </a>
               )}
               {project.liveUrl && (
@@ -158,7 +156,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
                   className="flex items-center gap-2 text-gray-400 hover:text-white transition-colors text-sm font-medium group/link"
                 >
                   <ExternalLink className="w-4 h-4 group-hover/link:text-accent-400" />
-                  Live Demo
+                  Live Preview
                 </a>
               )}
             </div>
