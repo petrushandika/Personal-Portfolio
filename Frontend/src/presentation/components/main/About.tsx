@@ -7,9 +7,7 @@ interface AboutProps {
 
 export function About({
   title = 'About Me',
-  content = `Hello! I'm Petrus Handika, a results-driven Full Stack Developer based in Jakarta, Indonesia. I enjoy creating things that live on the internet, from small passion projects to robust enterprise-level applications. My goal is always to build products that provide pixel-perfect, performant, and accessible experiences.
-
-With a strong foundation in modern web technologies, I have had the opportunity to develop complex, full-scale web platforms from scratch. I love tackling difficult problems, learning new technologies, and turning ideas into reality through clean, scalable code.`,
+  content = `I'm Petrus Handika, a Full Stack Developer based in Jakarta, Indonesia. I specialize in building modern web applications with a focus on clean code and exceptional user experiences. With strong foundations in React, Node.js, and various modern technologies, I transform ideas into functional digital products.`,
 }: AboutProps) {
   const paragraphs = content.split('\n\n').filter(Boolean);
 
@@ -28,23 +26,16 @@ With a strong foundation in modern web technologies, I have had the opportunity 
 
   return (
     <section id="about" className="relative overflow-hidden">
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto relative z-10">
         <div className="w-full mx-auto">
-          {/* Consistent Section Header */}
-          <div className="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6">
-            <h2 className="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-              <span className="text-brand-400 font-mono text-xl md:text-2xl font-normal">01.</span>
-              {title}
-            </h2>
-            <div className="hidden md:block w-px h-8 bg-white/10 ml-4" />
-            <span className="text-brand-400 font-mono text-sm tracking-wide">Who am I?</span>
-          </div>
-
-          <div className="grid md:grid-cols-2 gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
             {/* Left - Content */}
-            <div className="space-y-6">
+            <div className="space-y-4 lg:space-y-6">
               {paragraphs.map((paragraph, index) => (
-                <p key={index} className="text-lg text-gray-400 leading-relaxed font-light">
+                <p
+                  key={index}
+                  className="text-base md:text-lg text-gray-400 leading-relaxed font-light"
+                >
                   {paragraph}
                 </p>
               ))}
@@ -95,13 +86,13 @@ With a strong foundation in modern web technologies, I have had the opportunity 
             {/* Right - Summary */}
             <div className="space-y-8">
               {/* Stats */}
-              <div className="grid grid-cols-3 gap-4">
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
                 {highlights.map((item) => (
                   <div
                     key={item.label}
-                    className="glass-panel border border-white/10 p-6 text-center"
+                    className="glass-panel border border-white/10 p-4 md:p-6 text-center"
                   >
-                    <div className="text-2xl md:text-3xl font-bold text-brand-400 mb-1">
+                    <div className="text-xl md:text-3xl font-bold text-brand-400 mb-1">
                       {item.value}
                     </div>
                     <div className="text-xs text-gray-400 uppercase tracking-wider">

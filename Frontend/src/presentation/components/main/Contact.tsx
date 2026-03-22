@@ -47,16 +47,6 @@ export function Contact({
       </div>
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
-        {/* Consistent Section Header */}
-        <div className="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6 w-full">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span className="text-brand-400 font-mono text-xl md:text-2xl font-normal">06.</span>
-            What's Next?
-          </h2>
-          <div className="hidden md:block w-px h-8 bg-white/10 ml-4" />
-          <span className="text-brand-400 font-mono text-sm tracking-wide">Get In Touch</span>
-        </div>
-
         {/* Content Box */}
         <div className="w-full text-center glass-panel p-10 md:p-16 relative border border-brand-500/20 shadow-[0_0_30px_rgba(99,102,241,0.05)]">
           {/* Subtle grid in background of glass panel */}

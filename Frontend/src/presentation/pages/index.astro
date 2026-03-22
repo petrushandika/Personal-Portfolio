@@ -9,42 +9,41 @@ import { Skills } from '../components/main/Skills';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout 
+<BaseLayout
   title="Petrus Handika - Full Stack Developer"
   description="Portfolio of Petrus Handika, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies."
 >
-  <main class="space-y-12">
+  <main class="space-y-8 md:space-y-12 lg:space-y-16">
     <Hero />
 
-    <section id="skills" class="py-24 relative mt-16 scroll-mt-20">
+    <section id="skills" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <Skills client:visible />
     </section>
 
-    <section id="experience" class="py-24 relative scroll-mt-20">
+    <section id="experience" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <Experience client:visible />
     </section>
 
-    <section id="education" class="py-24 relative scroll-mt-20">
+    <section id="education" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <Education client:visible />
     </section>
 
-    <section id="projects" class="py-24 relative scroll-mt-20">
+    <section id="projects" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <div class="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">04.</span> 
+        <div class="mb-8 md:mb-12 lg:mb-16 border-b border-white/10 py-6 w-full">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            <span class="text-brand-400 font-mono text-lg md:text-xl lg:text-2xl font-normal">04.</span>
             Featured Projects
           </h2>
-          <div class="hidden md:block w-px h-8 bg-white/10 ml-4"></div>
-          <span class="text-brand-400 font-mono text-sm tracking-wide">
+          <p class="text-base md:text-lg text-gray-400 font-light leading-relaxed">
             Some things I've built
-          </span>
+          </p>
         </div>
-        
+
         <div class="w-full">
           <Projects client:visible limit={6} />
-          
-          <div class="text-center mt-12">
+
+          <div class="text-center mt-8 md:mt-12">
             <a href="/projects" class="btn-secondary group">
               View All Projects
             </a>
@@ -53,32 +52,29 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </div>
     </section>
 
-    <section id="blog" class="py-24 relative scroll-mt-20">
+    <section id="blog" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <div class="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6">
-          <h2 class="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">05.</span> 
+        <div class="mb-8 md:mb-12 lg:mb-16 border-b border-white/10 py-6 w-full">
+          <h2 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+            <span class="text-brand-400 font-mono text-lg md:text-xl lg:text-2xl font-normal">05.</span>
             Latest Articles
           </h2>
-          <div class="hidden md:block w-px h-8 bg-white/10 ml-4"></div>
-          <span class="text-brand-400 font-mono text-sm tracking-wide">
+          <p class="text-base md:text-lg text-gray-400 font-light leading-relaxed">
             Writings & tutorials
-          </span>
+          </p>
         </div>
-        
+
         <div class="w-full">
           <Articles client:visible limit={3} />
-          
-          <div class="text-center mt-12">
-            <a href="/blog" class="btn-secondary group">
-              View All Articles
-            </a>
+
+          <div class="text-center mt-8 md:mt-12">
+            <a href="/blog" class="btn-secondary group">View All Articles</a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="contact" class="py-24 relative scroll-mt-20">
+    <section id="contact" class="py-8 md:py-12 lg:py-16 xl:py-24 relative scroll-mt-20">
       <Contact client:visible />
     </section>
   </main>

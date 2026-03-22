@@ -7,9 +7,19 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
   title="Experience - Petrus Handika"
   description="Professional experience of Petrus Handika, Full Stack Developer."
 >
-  <main class="py-24 relative overflow-hidden">
+  <main class="py-8 md:py-12 lg:py-16 xl:py-24">
     <div class="absolute inset-0 bg-bg-base z-[-1]" />
     <div class="container mx-auto px-4 md:px-8 relative z-10">
+      <div class="mb-8 md:mb-12 lg:mb-16 border-b border-white/10 py-6 w-full">
+        <h1 class="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
+          <span class="text-brand-400 font-mono text-lg md:text-xl lg:text-2xl font-normal">02.</span> 
+          Professional Experience
+        </h1>
+        <p class="text-base md:text-lg text-gray-400 font-light leading-relaxed">
+          My professional journey and the companies I've had the privilege to work with.
+        </p>
+      </div>
+      
       <Experience client:load />
     </div>
   </main>

@@ -33,10 +33,10 @@ export function Projects({ limit = 6, featured = true }: ProjectsProps) {
 
   if (loading) {
     return (
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {[...Array(limit)].map((_, i) => (
           <div key={i} className="animate-pulse glass-panel p-4">
-            <div className="bg-white/5 rounded-2xl h-48 mb-4 border border-white/10" />
+            <div className="bg-white/5 rounded-2xl h-40 md:h-48 mb-4 border border-white/10" />
             <div className="bg-white/5 rounded-lg h-6 w-3/4 mb-3" />
             <div className="bg-white/5 rounded-lg h-4 w-full mb-2" />
             <div className="bg-white/5 rounded-lg h-4 w-2/3" />
@@ -105,7 +105,7 @@ export function Projects({ limit = 6, featured = true }: ProjectsProps) {
               </div>
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-black/10 to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500" />
+            <div className="absolute inset-x-0 bottom-0 md:inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-black/10 to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500 h-1/3 md:h-full" />
           </div>
 
           {/* Content */}

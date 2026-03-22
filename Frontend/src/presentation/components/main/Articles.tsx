@@ -40,10 +40,10 @@ export function Articles({ limit = 3 }: ArticlesProps) {
 
   if (loading) {
     return (
-      <div className="grid md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
         {[...Array(limit)].map((_, i) => (
           <div key={i} className="animate-pulse glass-panel p-4">
-            <div className="bg-white/5 rounded-2xl h-40 mb-4 border border-white/10" />
+            <div className="bg-white/5 rounded-2xl h-32 md:h-40 mb-4 border border-white/10" />
             <div className="bg-white/5 rounded-lg h-4 w-1/4 mb-4" />
             <div className="bg-white/5 rounded-lg h-6 w-3/4 mb-3" />
             <div className="bg-white/5 rounded-lg h-4 w-full mb-2" />
@@ -78,14 +78,14 @@ export function Articles({ limit = 3 }: ArticlesProps) {
   }
 
   return (
-    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8">
       {articles.map((article) => (
         <article
           key={article.id}
           className="group glass-panel overflow-hidden hover-glow flex flex-col h-full"
         >
           {/* Image */}
-          <div className="relative h-48 overflow-hidden bg-black border-b border-white/5">
+          <div className="relative h-40 md:h-48 overflow-hidden bg-black border-b border-white/5">
             {article.featuredImage ? (
               <img
                 src={article.featuredImage}

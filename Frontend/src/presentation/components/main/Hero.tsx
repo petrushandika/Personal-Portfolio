@@ -13,15 +13,15 @@ export function Hero({
   description = "I'm a Full-Stack Developer specializing in building exceptional digital experiences. Focused on building accessible, human-centered products using modern technologies.",
 }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-24 pb-16">
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
       {/* Animated glowing blobs */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-white/5 rounded-full blur-[100px] animate-blob" />
+      <div className="absolute top-1/4 left-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-white/5 rounded-full blur-[80px] md:blur-[100px] animate-blob" />
       <div
-        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-white/3 rounded-full blur-[100px] animate-blob"
+        className="absolute bottom-1/4 right-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-white/3 rounded-full blur-[80px] md:blur-[100px] animate-blob"
         style={{ animationDelay: '2s' }}
       />
       <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] md:w-[1000px] h-[600px] md:h-[1000px] bg-white/3 rounded-full blur-[140px] animate-blob"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,100vw)] md:w-[1000px] h-[min(600px,100vw)] md:h-[1000px] bg-white/3 rounded-full blur-[140px] animate-blob"
         style={{ animationDelay: '4s' }}
       />
 
@@ -59,13 +59,13 @@ export function Hero({
           </div>
 
           {/* Image Placeholder */}
-          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative mb-10 lg:mb-0">
-            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-[24rem] lg:h-[24rem]">
-              <div className="absolute inset-0 bg-transparent border-2 border-brand-400 rounded-xl translate-x-5 translate-y-5 transition-transform duration-500 hover:translate-x-3 hover:translate-y-3 z-0" />
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative mb-8 lg:mb-0">
+            <div className="relative w-48 h-48 xs:w-56 xs:h-56 sm:w-64 sm:h-64 md:w-72 md:h-72 lg:w-[24rem] lg:h-[24rem]">
+              <div className="absolute inset-0 bg-transparent border-2 border-brand-400 rounded-xl translate-x-4 translate-y-4 sm:translate-x-5 sm:translate-y-5 md:translate-x-5 md:translate-y-5 transition-transform duration-500 hover:translate-x-2 hover:translate-y-2 sm:hover:translate-x-3 sm:hover:translate-y-3 md:hover:translate-x-3 md:hover:translate-y-3 z-0" />
               <div className="w-full h-full relative z-10 flex flex-col justify-center items-center overflow-hidden group bg-[#112240] rounded-xl border border-brand-500/20">
-                <div className="w-20 h-20 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                <div className="w-14 h-14 xs:w-16 xs:h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 mb-3 sm:mb-4 md:mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
                   <svg
-                    className="w-10 h-10 text-brand-400"
+                    className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 text-brand-400"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -78,7 +78,7 @@ export function Hero({
                     />
                   </svg>
                 </div>
-                <p className="text-brand-300 font-mono text-sm tracking-wide text-center px-4">
+                <p className="text-brand-300 font-mono text-sm sm:text-base md:text-base tracking-wide text-center px-4">
                   [ Profile Image ]
                 </p>
                 <div className="absolute inset-0 bg-brand-500/20 group-hover:bg-transparent transition-colors duration-500 z-20 pointer-events-none" />
