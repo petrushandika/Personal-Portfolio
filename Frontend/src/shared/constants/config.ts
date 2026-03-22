@@ -19,3 +19,12 @@ export const HTTP_STATUS = {
   NOT_FOUND: 404,
   INTERNAL_SERVER_ERROR: 500,
 } as const;
+
+export const APP_CONFIG = {
+  NAME: 'Portfolio',
+  DESCRIPTION: 'Personal Portfolio with CMS',
+  AUTHOR: {
+    NAME: 'Petrus Handika',
+    EMAIL: 'petrushandikasinaga@gmail.com',
+  },
+} as const;

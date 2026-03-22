@@ -1,6 +1,6 @@
-const API_BASE_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_BASE_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/api';
 
-interface ApiResponse<T> {
+export interface ApiResponse<T> {
   success: boolean;
   data: T;
   error?: {
@@ -9,11 +9,11 @@ interface ApiResponse<T> {
   };
 }
 
-interface RequestOptions extends RequestInit {
+export interface RequestOptions extends RequestInit {
   token?: string;
 }
 
-class ApiClient {
+export class ApiClient {
   private baseUrl: string;
 
   constructor(baseUrl: string) {

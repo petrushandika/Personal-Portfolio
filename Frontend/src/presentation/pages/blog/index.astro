@@ -2,18 +2,37 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Blog - Portfolio">
-  <main class="container mx-auto px-4 py-16">
-    <h1 class="text-4xl font-bold mb-8 text-center">Blog</h1>
-    
-    <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <!-- Articles will be loaded here -->
+<BaseLayout 
+  title="Blog - Handika's Portfolio" 
+  description="Read latest articles about web development, technology, and more."
+>
+  <main class="py-24 bg-gradient-to-b from-white via-gray-50 to-white">
+    <div class="container mx-auto px-4 md:px-8">
+      <div class="text-center mb-16">
+        <span class="inline-block px-4 py-1.5 bg-gradient-to-r from-indigo-500/10 to-purple-500/10 text-indigo-600 text-sm font-semibold rounded-full mb-4 border border-indigo-200">
+          Blog
+        </span>
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+          Latest Articles
+        </h1>
+        <p class="text-lg text-gray-600 max-w-2xl mx-auto">
+          Insights on web development, technology trends, and software engineering best practices
+        </p>
+        <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 rounded-full mx-auto mt-6" />
+      </div>
+      
+      <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="col-span-full text-center py-16">
+          <div class="animate-spin w-8 h-8 border-4 border-indigo-500 border-t-transparent rounded-full mx-auto mb-4"></div>
+          <p class="text-gray-500">Loading articles...</p>
+        </div>
+      </div>
     </div>
   </main>
 </BaseLayout>
 
 <script>
-  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/api';
   
   async function loadArticles() {
     try {
@@ -24,21 +43,49 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
       if (!grid) return;
       
       if (!data || data.length === 0) {
-        grid.innerHTML = '<p class="col-span-full text-center text-gray-500">Belum ada artikel</p>';
+        grid.innerHTML = `
+          <div class="col-span-full text-center py-16">
+            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+              <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+              </svg>
+            </div>
+            <p class="text-gray-500">No articles available yet.</p>
+          </div>
+        `;
         return;
       }
       
       grid.innerHTML = data.map((article: any) => `
-        <article class="card overflow-hidden">
-          ${article.featuredImage ? `<img src="${article.featuredImage}" alt="${article.title}" class="w-full h-48 object-cover" />` : ''}
+        <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 hover:-translate-y-2">
+          <div class="relative h-52 overflow-hidden bg-gradient-to-br from-indigo-50 to-purple-50">
+            ${article.featuredImage ? `
+              <img src="${article.featuredImage}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+            ` : `
+              <div class="w-full h-full flex items-center justify-center">
+                <span class="text-5xl opacity-50">📝</span>
+              </div>
+            `}
+            <div class="absolute top-4 right-4">
+              <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-medium rounded-full shadow-sm">
+                ${article.category || 'Article'}
+              </span>
+            </div>
+          </div>
           <div class="p-6">
-            <h2 class="text-xl font-semibold mb-2">
-              <a href="/blog/${article.slug}" class="hover:text-primary-500">${article.title}</a>
+            <time class="text-sm text-gray-500 mb-2 block">
+              ${article.publishedAt ? new Date(article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Draft'}
+            </time>
+            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
+              <a href="/blog/${article.slug}">${article.title}</a>
             </h2>
             <p class="text-gray-600 mb-4 line-clamp-3">${article.excerpt}</p>
-            <time class="text-sm text-gray-500">
-              ${new Date(article.publishedAt).toLocaleDateString('id-ID', { dateStyle: 'long' })}
-            </time>
+            <a href="/blog/${article.slug}" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 text-sm font-semibold group-hover:gap-3 transition-all">
+              Read More
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
           </div>
         </article>
       `).join('');

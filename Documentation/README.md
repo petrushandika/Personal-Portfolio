@@ -48,9 +48,22 @@ Comprehensive documentation for building a modern Personal Portfolio with integr
 portfolio/
 ├── Frontend/              # Astro + React frontend
 │   └── src/
-│       ├── core/         # Domain logic
-│       ├── infrastructure/ # API clients
-│       └── presentation/ # UI components
+│       ├── core/          # Domain entities (types.ts)
+│       ├── infrastructure/
+│       │   └── api/      # API client (api-client.ts)
+│       ├── presentation/
+│       │   ├── components/  # React components
+│       │   │   ├── Hero.tsx
+│       │   │   ├── TechStackShowcase.tsx
+│       │   │   ├── ProjectsShowcase.tsx
+│       │   │   ├── ArticlesShowcase.tsx
+│       │   │   ├── About.tsx
+│       │   │   └── Contact.tsx
+│       │   ├── layouts/
+│       │   └── pages/
+│       └── shared/
+│           ├── constants/  # App config
+│           └── utils/      # Helper functions
 ├── Backend/               # NestJS backend
 │   └── src/
 │       ├── domain/       # Business entities

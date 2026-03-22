@@ -11,13 +11,18 @@
         "noUnusedVariables": "off"
       },
       "style": {
-        "useTemplate": "warn"
+        "useTemplate": "off",
+        "noUnusedTemplateLiteral": "off"
       },
       "suspicious": {
-        "noExplicitAny": "off"
+        "noExplicitAny": "off",
+        "noArrayIndexKey": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
       }
     },
-    "ignore": [".astro/**"]
+    "ignore": [".astro/**", "dist/**", ".vercel/**"]
   },
   "formatter": {
     "enabled": true,

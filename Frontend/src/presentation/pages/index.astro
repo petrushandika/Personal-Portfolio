@@ -1,48 +1,84 @@
 ---
+import { About } from '../components/About';
+import { ArticlesShowcase } from '../components/ArticlesShowcase';
+import { Contact } from '../components/Contact';
+import { Hero } from '../components/Hero';
+import { ProjectsShowcase } from '../components/ProjectsShowcase';
+import { TechStackShowcase } from '../components/TechStackShowcase';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
-<BaseLayout title="Portfolio - Beranda">
-  <main class="container mx-auto px-4 py-16">
-    <section class="text-center mb-16">
-      <h1 class="text-5xl font-bold mb-4">Halo, Saya Developer</h1>
-      <p class="text-xl text-gray-600 mb-8">
-        Full-Stack Developer | Web Enthusiast | Content Creator
-      </p>
-      <div class="flex gap-4 justify-center">
-        <a href="/projects" class="btn-primary">Lihat Project</a>
-        <a href="/blog" class="btn-secondary">Baca Blog</a>
+<BaseLayout 
+  title="Petrus Handika - Full Stack Developer"
+  description="Portfolio of Petrus Handika, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies."
+>
+  <main>
+    <Hero 
+      name="Petrus Handika"
+      title="Full Stack Developer"
+      description="Passionate about building beautiful, functional web applications with modern technologies. Always eager to learn and create innovative solutions."
+    />
+
+    <TechStackShowcase limit={8} />
+
+    <About />
+
+    <section id="projects" class="py-24 bg-gray-50">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 text-sm font-medium rounded-full mb-4">
+            Portfolio
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Featured Projects
+          </h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto" />
+        </div>
+        
+        <ProjectsShowcase client:visible limit={6} />
+        
+        <div class="text-center mt-12">
+          <a 
+            href="/projects" 
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-full border-2 border-gray-200 hover:border-indigo-500 hover:text-indigo-600 transition-all duration-300"
+          >
+            View All Projects
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section class="mb-16">
-      <h2 class="text-3xl font-bold mb-8 text-center">Skill</h2>
-      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-        <div class="card p-4 text-center">React</div>
-        <div class="card p-4 text-center">Node.js</div>
-        <div class="card p-4 text-center">TypeScript</div>
-        <div class="card p-4 text-center">PostgreSQL</div>
+    <section id="blog" class="py-24 bg-white">
+      <div class="container mx-auto px-4 md:px-8">
+        <div class="text-center mb-16">
+          <span class="inline-block px-4 py-1.5 bg-indigo-100 text-indigo-700 text-sm font-medium rounded-full mb-4">
+            Blog
+          </span>
+          <h2 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+            Latest Articles
+          </h2>
+          <div class="w-24 h-1.5 bg-gradient-to-r from-indigo-500 to-purple-500 rounded-full mx-auto" />
+        </div>
+        
+        <ArticlesShowcase client:visible limit={3} />
+        
+        <div class="text-center mt-12">
+          <a 
+            href="/blog" 
+            class="inline-flex items-center gap-2 px-6 py-3 bg-white text-gray-700 font-semibold rounded-full border-2 border-gray-200 hover:border-indigo-500 hover:text-indigo-600 transition-all duration-300"
+          >
+            View All Articles
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+            </svg>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2 class="text-3xl font-bold mb-8 text-center">Project Terbaru</h2>
-      <div class="grid md:grid-cols-2 gap-6">
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 1</h3>
-          <p class="text-gray-600 mb-4">Deskripsi project singkat</p>
-          <a href="/projects/project-1" class="text-primary-500 hover:underline">
-            Selengkapnya →
-          </a>
-        </div>
-        <div class="card p-6">
-          <h3 class="text-xl font-semibold mb-2">Project 2</h3>
-          <p class="text-gray-600 mb-4">Deskripsi project singkat</p>
-          <a href="/projects/project-2" class="text-primary-500 hover:underline">
-            Selengkapnya →
-          </a>
-        </div>
-      </div>
-    </section>
+    <Contact />
   </main>
 </BaseLayout>

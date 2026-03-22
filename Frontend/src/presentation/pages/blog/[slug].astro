@@ -2,7 +2,7 @@
 import BaseLayout from '../../layouts/BaseLayout.astro';
 
 export async function getStaticPaths() {
-  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/api';
 
   try {
     const response = await fetch(`${API_URL}/articles?status=published&limit=100`);
@@ -20,7 +20,7 @@ export async function getStaticPaths() {
 }
 
 const { slug } = Astro.params;
-const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3001/api';
+const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/api';
 
 let _article = null;
 let _error = null;
@@ -42,37 +42,62 @@ try {
   title={_article?.title || 'Article Not Found'} 
   description={_article?.metaDescription || _article?.excerpt}
 >
-  <main class="container mx-auto px-4 py-16 max-w-4xl">
-    {_error ? (
-      <div class="text-center">
-        <h1 class="text-4xl font-bold mb-4">{_error}</h1>
-        <a href="/blog" class="btn-primary">Kembali ke Blog</a>
-      </div>
-    ) : _article ? (
-      <article>
-        <header class="mb-8 text-center">
-          {_article.featuredImage && (
-            <img 
-              src={_article.featuredImage} 
-              alt={_article.title}
-              class="w-full h-64 md:h-96 object-cover rounded-xl mb-8"
-            />
-          )}
-          <h1 class="text-4xl md:text-5xl font-bold mb-4">{_article.title}</h1>
-          <time class="text-gray-500">
-            {new Date(_article.publishedAt).toLocaleDateString('id-ID', { dateStyle: 'long' })}
-          </time>
-        </header>
-        
-        <div class="prose prose-lg max-w-none" id="article-content">
-          <!-- Content will be rendered here -->
+  <main class="py-16 bg-gradient-to-b from-white via-gray-50 to-white">
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+      {_error ? (
+        <div class="text-center py-16">
+          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
+          </div>
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">{_error}</h1>
+          <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-colors">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+            </svg>
+            Back to Blog
+          </a>
         </div>
-        
-        <script define:vars={{ content: _article.content }}>
-          import { marked } from 'marked';
-          document.getElementById('article-content').innerHTML = marked.parse(content);
-        </script>
-      </article>
-    ) : null}
+      ) : _article ? (
+        <article>
+          <header class="mb-12 text-center">
+            <a href="/blog" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 text-sm font-medium mb-6">
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+              </svg>
+              Back to Blog
+            </a>
+            {_article.featuredImage && (
+              <img 
+                src={_article.featuredImage} 
+                alt={_article.title}
+                class="w-full h-64 md:h-96 object-cover rounded-2xl mb-8 shadow-lg"
+              />
+            )}
+            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{_article.title}</h1>
+            <div class="flex items-center justify-center gap-4 text-gray-500">
+              <time>
+                {new Date(_article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              </time>
+              {_article.category && (
+                <>
+                  <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
+                  <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">{_article.category}</span>
+                </>
+              )}
+            </div>
+          </header>
+          
+          <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100" id="article-content">
+          </div>
+          
+          <script define:vars={{ content: _article.content }}>
+            import { marked } from 'marked';
+            document.getElementById('article-content').innerHTML = marked.parse(content);
+          </script>
+        </article>
+      ) : null}
+    </div>
   </main>
 </BaseLayout>
