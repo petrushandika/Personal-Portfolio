@@ -42,11 +42,11 @@ export function Contact({
     <section id="contact" className="relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[100px] animate-blob" />
-        <div className="absolute bottom-0 left-1/4 w-[500px] h-[500px] bg-accent-500/10 rounded-full blur-[100px] animate-blob animation-delay-2000" />
+        <div className="absolute top-0 right-1/4 w-64 md:w-96 lg:w-[500px] h-64 md:h-96 lg:h-[500px] bg-white/5 rounded-full blur-[100px] animate-blob" />
+        <div className="absolute bottom-0 left-1/4 w-64 md:w-96 lg:w-[500px] h-64 md:h-96 lg:h-[500px] bg-white/5 rounded-full blur-[100px] animate-blob [animation-delay:2s]" />
       </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+      <div className="container mx-auto relative z-10">
         {/* Content Box */}
         <div className="w-full text-center glass-panel p-10 md:p-16 relative border border-brand-500/20 shadow-[0_0_30px_rgba(99,102,241,0.05)]">
           {/* Subtle grid in background of glass panel */}

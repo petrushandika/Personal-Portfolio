@@ -13,19 +13,8 @@ export function Hero({
   description = "I'm a Full-Stack Developer specializing in building exceptional digital experiences. Focused on building accessible, human-centered products using modern technologies.",
 }: HeroProps) {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-16 overflow-hidden">
-      {/* Animated glowing blobs */}
-      <div className="absolute top-1/4 left-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-white/5 rounded-full blur-[80px] md:blur-[100px] animate-blob" />
-      <div
-        className="absolute bottom-1/4 right-1/4 w-48 md:w-72 lg:w-96 h-48 md:h-72 lg:h-96 bg-white/3 rounded-full blur-[80px] md:blur-[100px] animate-blob"
-        style={{ animationDelay: '2s' }}
-      />
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[min(600px,100vw)] md:w-[1000px] h-[min(600px,100vw)] md:h-[1000px] bg-white/3 rounded-full blur-[140px] animate-blob"
-        style={{ animationDelay: '4s' }}
-      />
-
-      <div className="container mx-auto px-4 md:px-8 relative z-10">
+    <section className="relative min-h-[85vh] flex items-center justify-center pt-32 pb-16">
+      <div className="container mx-auto px-4 relative z-10">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Text Content */}
           <div className="order-2 lg:order-1 flex flex-col items-start text-left">
