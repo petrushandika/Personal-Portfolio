@@ -1,7 +1,7 @@
 import { ExternalLink, Github, Star } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
 import { apiClient } from '../../../infrastructure/api/api';
-import type { Project } from '../../core/entities/project';
+import type { Project } from '../../../core/entities/project';
 
 interface ProjectsShowcaseProps {
   limit?: number;
@@ -121,7 +121,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
             {/* Tech Stack */}
             {project.techStack && project.techStack.length > 0 && (
               <div className="flex flex-wrap gap-2 mb-6">
-                {project.techStack.slice(0, 4).map((tech) => (
+                {project.techStack.slice(0, 4).map((tech: string) => (
                   <span
                     key={tech}
                     className="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-300 text-xs font-mono rounded-md"
