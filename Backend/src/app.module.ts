@@ -9,6 +9,7 @@ import { AuthModule } from './interface/auth/auth.module';
 import { CategoryModule } from './interface/category/category.module';
 import { HealthModule } from './interface/health/health.module';
 import { ProjectModule } from './interface/project/project.module';
+import { UploadModule } from './interface/upload/upload.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { ProjectModule } from './interface/project/project.module';
     ArticleModule,
     ProjectModule,
     CategoryModule,
+    UploadModule,
   ],
   providers: [
     {

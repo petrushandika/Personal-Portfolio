@@ -88,6 +88,49 @@ export function CMSApp() {
 
   const [currentView, setCurrentView] = useState<'list' | 'form'>('list');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const [thumbnailUrl, setThumbnailUrl] = useState<string>('');
+  const [uploading, setUploading] = useState(false);
+
+  // Sync state with editingItem when it changes
+  useEffect(() => {
+    if (editingItem) {
+      setThumbnailUrl(activeTab === 'articles' ? editingItem.featuredImage : editingItem.thumbnail);
+    } else {
+      setThumbnailUrl('');
+    }
+  }, [editingItem, activeTab]);
+
+  const handleFileUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+    const file = e.target.files?.[0];
+    if (!file) return;
+
+    setUploading(true);
+    const formData = new FormData();
+    formData.append('file', file);
+
+    try {
+      const api_url = (import.meta as any).env?.PUBLIC_API_URL || 'http://localhost:3000/api';
+      const resp = await fetch(`${api_url}/upload`, {
+        method: 'POST',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+        body: formData,
+      });
+      const res = await resp.json();
+      if (res.success) {
+        // Assume API returns { url: "/uploads/filename.jpg" }
+        // Prepend host URL for complete absolute display safely if needed
+        setThumbnailUrl(res.data.url);
+      } else {
+        alert(res.error?.message || 'Upload failed');
+      }
+    } catch (err: any) {
+      alert('Upload failed: ' + err.message);
+    } finally {
+      setUploading(false);
+    }
+  };
 
   const handleSave = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -102,6 +145,15 @@ export function CMSApp() {
         dataObj[key] = value;
       }
     });
+
+    // Override image based on tab
+    if (thumbnailUrl) {
+      if (activeTab === 'articles') {
+        dataObj.featuredImage = thumbnailUrl;
+      } else {
+        dataObj.thumbnail = thumbnailUrl;
+      }
+    }
 
     try {
       if (editingItem) {
@@ -359,7 +411,7 @@ export function CMSApp() {
           </>
         ) : (
           <div className="p-8 flex-1">
-            <div className="max-w-3xl glass-panel p-6 md:p-8 border border-brand-500/30 shadow-2xl">
+            <div className="w-full glass-panel p-6 md:p-8 border border-brand-500/30 shadow-2xl">
               <div className="pb-6 border-b border-white/10 flex justify-between items-center bg-[#0A0A1F]/50 z-10">
                 <h3 className="text-xl font-bold flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-500" />
@@ -530,17 +582,35 @@ export function CMSApp() {
 
                 <div>
                   <label
-                    htmlFor="thumbnail"
+                    htmlFor="thumbnail_file"
                     className="block text-xs uppercase tracking-wider text-gray-400 mb-1"
                   >
-                    Featured Image URL (Optional)
+                    Image {activeTab === 'articles' ? '(Featured Image)' : '(Thumbnail)'}
                   </label>
+                  <p className="text-xs text-brand-400 mb-2">
+                    Images are automatically converted to WebP for SEO and performance.
+                  </p>
                   <input
-                    name="thumbnail"
-                    id="thumbnail"
-                    defaultValue={editingItem?.thumbnail}
-                    className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                    type="file"
+                    id="thumbnail_file"
+                    accept="image/*"
+                    onChange={handleFileUpload}
+                    className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-brand-500/20 file:text-brand-400 hover:file:bg-brand-500/30"
                   />
+                  {uploading && <p className="text-xs text-brand-400 mt-1">Uploading...</p>}
+                  {thumbnailUrl && (
+                    <div className="mt-4 relative w-32 aspect-square group">
+                      <img
+                        src={
+                          thumbnailUrl.indexOf('http') === 0
+                            ? thumbnailUrl
+                            : `${((import.meta as any).env?.PUBLIC_API_URL || 'http://localhost:3000/api').replace('/api', '')}${thumbnailUrl}`
+                        }
+                        alt="Preview"
+                        className="w-full h-full object-cover rounded-lg border border-white/10"
+                      />
+                    </div>
+                  )}
                 </div>
 
                 <div className="pt-6 flex justify-end gap-3">

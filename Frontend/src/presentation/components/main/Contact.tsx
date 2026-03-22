@@ -62,43 +62,111 @@ export function Contact({
           {/* Subtle grid in background of glass panel */}
           <div className="absolute inset-0 bg-grid-white/[0.02] bg-[length:32px_32px]" />
 
-          <div className="relative z-10">
-            <p className="text-xl text-gray-400 mb-12 max-w-3xl mx-auto font-light leading-relaxed">
-              Have a project in mind or want to collaborate? I'd love to hear from you. Let's create
-              something amazing together.
-            </p>
+          <div className="relative z-10 flex flex-col lg:flex-row gap-12 text-left">
+            {/* Left Column: Info */}
+            <div className="flex-1 flex flex-col justify-center">
+              <p className="text-xl md:text-2xl text-white font-bold mb-4 tracking-tight">
+                Let's create something amazing together.
+              </p>
+              <p className="text-gray-400 mb-8 font-light leading-relaxed">
+                Have a project in mind, a question, or want to collaborate? I'd love to hear from
+                you. Whether you prefer email, or directly sending a message on this form, I usually
+                reply within 24 hours.
+              </p>
 
-            {/* Email Button */}
-            <div className="mb-12">
-              <a href={`mailto:${email}`} className="btn-primary">
-                <Mail className="w-5 h-5" />
-                <span>{email}</span>
-              </a>
-            </div>
+              {/* Social Links */}
+              <div className="flex justify-start gap-4 mb-8">
+                {socialLinks.map((social) => {
+                  const Icon = social.icon;
+                  return (
+                    <a
+                      key={social.label}
+                      href={social.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`p-3 bg-white/5 text-gray-400 rounded-xl border border-white/10 backdrop-blur-sm transition-all duration-300 ${social.color}`}
+                      aria-label={social.label}
+                    >
+                      <Icon className="w-5 h-5" />
+                    </a>
+                  );
+                })}
+              </div>
 
-            {/* Social Links */}
-            <div className="flex justify-center gap-6">
-              {socialLinks.map((social) => {
-                const Icon = social.icon;
-                return (
+              {/* Info Details */}
+              <div className="space-y-4 border-t border-white/10 pt-6">
+                <div className="flex items-center gap-3 text-gray-300">
+                  <Mail className="w-5 h-5 text-brand-400" />
                   <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-4 bg-white/5 text-gray-400 rounded-full border border-white/10 backdrop-blur-sm transition-all duration-300 ${social.color}`}
-                    aria-label={social.label}
+                    href={`mailto:${email}`}
+                    className="text-sm hover:text-white transition-colors"
                   >
-                    <Icon className="w-6 h-6" />
+                    {email}
                   </a>
-                );
-              })}
+                </div>
+                <p className="text-gray-500 text-xs mt-4">
+                  Also available for freelance work and consulting opportunities.
+                </p>
+              </div>
             </div>
 
-            {/* CTA Text */}
-            <p className="mt-12 text-gray-500 text-sm font-medium">
-              Also available for freelance work and consulting opportunities.
-            </p>
+            {/* Right Column: Contact Form */}
+            <div className="flex-1 bg-white/5 border border-white/10 rounded-2xl p-6 md:p-8 backdrop-blur-md">
+              <form className="space-y-4" onSubmit={(e) => e.preventDefault()}>
+                <div>
+                  <label
+                    htmlFor="name"
+                    className="block text-xs uppercase tracking-wider text-gray-400 mb-2"
+                  >
+                    Name
+                  </label>
+                  <input
+                    type="text"
+                    id="name"
+                    required
+                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    placeholder="Your Name"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="form_email"
+                    className="block text-xs uppercase tracking-wider text-gray-400 mb-2"
+                  >
+                    Email
+                  </label>
+                  <input
+                    type="email"
+                    id="form_email"
+                    required
+                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    placeholder="your@email.com"
+                  />
+                </div>
+                <div>
+                  <label
+                    htmlFor="message"
+                    className="block text-xs uppercase tracking-wider text-gray-400 mb-2"
+                  >
+                    Message
+                  </label>
+                  <textarea
+                    id="message"
+                    required
+                    rows={4}
+                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    placeholder="Tell me about your project..."
+                  />
+                </div>
+                <button
+                  type="submit"
+                  className="w-full btn-primary py-3 rounded-xl flex justify-center text-sm font-semibold mt-6"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>Send Message</span>
+                </button>
+              </form>
+            </div>
           </div>
         </div>
       </div>

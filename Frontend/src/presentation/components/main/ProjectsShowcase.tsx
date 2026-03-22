@@ -77,7 +77,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
           className="group glass-panel overflow-hidden hover-glow flex flex-col md:flex-row border border-white/10 hover:border-brand-500/30 transition-all duration-300"
         >
           {/* Image */}
-          <div className="relative h-52 sm:h-64 md:h-auto md:w-[40%] overflow-hidden bg-[#0A0A1F] border-b md:border-b-0 md:border-r border-white/5 flex-shrink-0">
+          <div className="relative aspect-square md:w-1/3 overflow-hidden bg-[#0A0A1F] border-b md:border-b-0 md:border-r border-white/5 shrink-0">
             {project.thumbnail ? (
               <img
                 src={project.thumbnail}

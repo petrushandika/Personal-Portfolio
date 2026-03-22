@@ -1,4 +1,5 @@
 ---
+import { ArticlesShowcase } from '../../components/main/ArticlesShowcase';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
@@ -19,78 +20,9 @@ import BaseLayout from '../../layouts/BaseLayout.astro';
         </p>
       </div>
       
-      <div id="articles-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <div class="col-span-full text-center py-16 glass-panel border border-white/5">
-          <div class="animate-spin w-8 h-8 border-4 border-brand-500 border-t-transparent rounded-full mx-auto mb-4"></div>
-          <p class="text-gray-400">Loading articles...</p>
-        </div>
+      <div class="w-full">
+        <ArticlesShowcase client:load limit={100} />
       </div>
     </div>
   </main>
 </BaseLayout>
-
-<script>
-  const API_URL = import.meta.env.PUBLIC_API_URL || 'http://localhost:3000/api';
-  
-  async function loadArticles() {
-    try {
-      const response = await fetch(`${API_URL}/articles?status=published&limit=9`);
-      const { data } = await response.json();
-      
-      const grid = document.getElementById('articles-grid');
-      if (!grid) return;
-      
-      if (!data || data.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full text-center py-16">
-            <div class="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
-              <svg class="w-8 h-8 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-              </svg>
-            </div>
-            <p class="text-gray-500">No articles available yet.</p>
-          </div>
-        `;
-        return;
-      }
-      
-      grid.innerHTML = data.map((article: any) => `
-        <article class="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 hover:-translate-y-2">
-          <div class="relative h-52 overflow-hidden bg-gradient-to-br from-indigo-50 to-purple-50">
-            ${article.featuredImage ? `
-              <img src="${article.featuredImage}" alt="${article.title}" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-            ` : `
-              <div class="w-full h-full flex items-center justify-center">
-                <span class="text-5xl opacity-50">📝</span>
-              </div>
-            `}
-            <div class="absolute top-4 right-4">
-              <span class="px-3 py-1 bg-white/90 backdrop-blur-sm text-gray-700 text-xs font-medium rounded-full shadow-sm">
-                ${article.category || 'Article'}
-              </span>
-            </div>
-          </div>
-          <div class="p-6">
-            <time class="text-sm text-gray-500 mb-2 block">
-              ${article.publishedAt ? new Date(article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' }) : 'Draft'}
-            </time>
-            <h2 class="text-xl font-bold text-gray-900 mb-2 group-hover:text-indigo-600 transition-colors line-clamp-2">
-              <a href="/blog/${article.slug}">${article.title}</a>
-            </h2>
-            <p class="text-gray-600 mb-4 line-clamp-3">${article.excerpt}</p>
-            <a href="/blog/${article.slug}" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 text-sm font-semibold group-hover:gap-3 transition-all">
-              Read More
-              <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
-            </a>
-          </div>
-        </article>
-      `).join('');
-    } catch (error) {
-      console.error('Failed to load articles:', error);
-    }
-  }
-  
-  loadArticles();
-</script>

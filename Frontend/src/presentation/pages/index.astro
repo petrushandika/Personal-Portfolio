@@ -1,5 +1,6 @@
 ---
 import { ArticlesShowcase } from '../components/main/ArticlesShowcase';
+import { Contact } from '../components/main/Contact';
 import { Hero } from '../components/main/Hero';
 import { ProjectsShowcase } from '../components/main/ProjectsShowcase';
 import BaseLayout from '../layouts/BaseLayout.astro';
@@ -72,6 +73,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </div>
         </div>
       </div>
+    </section>
+    <section id="contact" class="py-24 relative">
+      <Contact client:visible />
     </section>
   </main>
 </BaseLayout>
