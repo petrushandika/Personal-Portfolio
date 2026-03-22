@@ -1,7 +1,9 @@
 import { Inject } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
-import type { IAuthService, IJwtService, IUserRepository } from '../../domain/interfaces';
-import type { User } from '../../domain/entities';
+import type { IAuthService } from '../../domain/interfaces/auth-service.interface';
+import type { IJwtService } from '../../domain/interfaces/jwt-service.interface';
+import type { IUserRepository } from '../../domain/interfaces/user-repository.interface';
+import type { User } from '../../domain/entities/user.entity';
 import { refreshTokens } from '../../database/schema';
 import { TJwtService, TUserRepository } from '../../domain/tokens';
 

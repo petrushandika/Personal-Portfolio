@@ -64,10 +64,10 @@ import { defineConfig } from 'astro/config';
 import react from '@astrojs/react';
 import tailwind from '@astrojs/tailwind';
 import sitemap from '@astrojs/sitemap';
-import vercel from '@astrojs/vercel/serverless';
+import vercel from '@astrojs/vercel';
 
 export default defineConfig({
-  output: 'hybrid',
+  output: 'static',
   adapter: vercel(),
   integrations: [
     react(),
@@ -81,6 +81,8 @@ export default defineConfig({
   }
 });
 ```
+
+**Note:** Astro 5.x changed from `output: 'hybrid'` to `output: 'static'` with the new Vercel adapter.
 
 ### TailwindCSS 4.x Configuration
 
@@ -183,18 +185,18 @@ TailwindCSS 4.x introduces a new CSS-first configuration approach:
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| **NestJS** | 11.x | Progressive Node.js framework |
-| **TypeScript** | 5.8.x | Type safety |
+| **NestJS** | 10.x | Progressive Node.js framework |
+| **TypeScript** | 5.x | Type safety |
 | **Node.js** | 22 LTS | Runtime |
 
 ### API & Validation
 
 | Technology | Version | Purpose |
 |------------|---------|---------|
-| **@nestjs/core** | 11.x | Core framework |
-| **@nestjs/common** | 11.x | Common utilities |
-| **@nestjs/platform-express** | 11.x | Express adapter |
-| **@nestjs/platform-fastify** | 11.x | Fastify adapter (faster) |
+| **@nestjs/core** | 10.x | Core framework |
+| **@nestjs/common** | 10.x | Common utilities |
+| **@nestjs/platform-express** | 10.x | Express adapter |
+| **@nestjs/platform-fastify** | 10.x | Fastify adapter (faster) |
 | **Zod** | 3.x | Runtime validation |
 | **drizzle-zod** | Latest | Drizzle-Zod integration |
 

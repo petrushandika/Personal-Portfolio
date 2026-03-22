@@ -3,21 +3,17 @@ import { ConfigService } from '@nestjs/config';
 import { JwtModule } from '@nestjs/jwt';
 import { AuthController } from './auth.controller';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
-import { UserRepository } from '../../infrastructure/repositories';
-import { PasswordService, AuthService, provideJwtService } from '../../infrastructure/auth';
+import { UserRepository } from '../../infrastructure/repositories/user.repository';
+import { PasswordService } from '../../infrastructure/auth/password.service';
+import { AuthService } from '../../infrastructure/auth/auth.service';
+import { provideJwtService } from '../../infrastructure/auth/jwt.service';
 import { DatabaseModule } from '../../infrastructure/database/database.module';
-import {
-  TUserRepository,
-  TPasswordService,
-  TAuthService,
-} from '../../domain/tokens';
-import {
-  RegisterUseCase,
-  LoginUseCase,
-  RefreshTokenUseCase,
-  LogoutUseCase,
-  GetProfileUseCase,
-} from '../../application/use-cases';
+import { TUserRepository, TPasswordService, TAuthService } from '../../domain/tokens';
+import { RegisterUseCase } from '../../application/use-cases/auth.use-case';
+import { LoginUseCase } from '../../application/use-cases/auth.use-case';
+import { RefreshTokenUseCase } from '../../application/use-cases/auth.use-case';
+import { LogoutUseCase } from '../../application/use-cases/auth.use-case';
+import { GetProfileUseCase } from '../../application/use-cases/auth.use-case';
 
 @Module({
   imports: [

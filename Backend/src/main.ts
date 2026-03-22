@@ -5,14 +5,10 @@ import { AppModule } from './app.module';
 import { HttpExceptionFilter } from './interface/filters/http-exception.filter';
 
 async function bootstrap() {
-  const app = await NestFactory.create(AppModule, {
-    bufferLogs: true,
-  });
+  const app = await NestFactory.create(AppModule);
 
   const configService = app.get(ConfigService);
-  const logger = app.get(Logger);
-
-  app.useLogger(logger);
+  const logger = new Logger('Bootstrap');
 
   app.setGlobalPrefix(configService.get<string>('API_PREFIX', 'api'), {
     exclude: ['health'],
@@ -41,7 +37,7 @@ async function bootstrap() {
   const port = configService.get<number>('PORT', 3001);
   await app.listen(port);
 
-  logger.log(`Application running on port ${port}`, 'Bootstrap');
+  logger.log(`Application running on port ${port}`);
 }
 
 bootstrap().catch((err) => {

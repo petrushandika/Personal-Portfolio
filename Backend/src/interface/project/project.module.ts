@@ -1,19 +1,16 @@
 import { Module } from '@nestjs/common';
 import { ProjectController } from './project.controller';
-import { ProjectRepository } from '../../infrastructure/repositories';
-import { CacheModule } from '../../infrastructure/cache/cache.module';
+import { ProjectRepository } from '../../infrastructure/repositories/project.repository';
 import { DatabaseModule } from '../../infrastructure/database/database.module';
 import { TProjectRepository } from '../../domain/tokens';
-import {
-  GetProjectsUseCase,
-  GetProjectBySlugUseCase,
-  CreateProjectUseCase,
-  UpdateProjectUseCase,
-  DeleteProjectUseCase,
-} from '../../application/use-cases';
+import { GetProjectsUseCase } from '../../application/use-cases/project.use-case';
+import { GetProjectBySlugUseCase } from '../../application/use-cases/project.use-case';
+import { CreateProjectUseCase } from '../../application/use-cases/project.use-case';
+import { UpdateProjectUseCase } from '../../application/use-cases/project.use-case';
+import { DeleteProjectUseCase } from '../../application/use-cases/project.use-case';
 
 @Module({
-  imports: [DatabaseModule, CacheModule],
+  imports: [DatabaseModule],
   controllers: [ProjectController],
   providers: [
     { provide: TProjectRepository, useClass: ProjectRepository },

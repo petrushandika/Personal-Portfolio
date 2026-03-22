@@ -1,5 +1,5 @@
 import * as argon2 from 'argon2';
-import type { IPasswordService } from '../../domain/interfaces';
+import type { IPasswordService } from '../../domain/interfaces/password-service.interface';
 
 export class PasswordService implements IPasswordService {
   async hash(password: string): Promise<string> {

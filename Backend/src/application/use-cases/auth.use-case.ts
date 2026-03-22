@@ -1,10 +1,14 @@
-import { Inject } from '@nestjs/common';
-import type { IAuthService, IPasswordService, IJwtService } from '../../domain/interfaces';
-import type { IUserRepository } from '../../domain/interfaces';
-import type { User } from '../../domain/entities';
-import type { LoginDto, RegisterDto } from '../dto';
+import { Inject, Injectable } from '@nestjs/common';
+import type { IAuthService } from '../../domain/interfaces/auth-service.interface';
+import type { IPasswordService } from '../../domain/interfaces/password-service.interface';
+import type { IJwtService } from '../../domain/interfaces/jwt-service.interface';
+import type { IUserRepository } from '../../domain/interfaces/user-repository.interface';
+import type { User } from '../../domain/entities/user.entity';
+import type { LoginDto } from '../dto/auth.dto';
+import type { RegisterDto } from '../dto/auth.dto';
 import { TUserRepository, TPasswordService, TJwtService, TAuthService } from '../../domain/tokens';
 
+@Injectable()
 export class RegisterUseCase {
   constructor(
     @Inject(TUserRepository) private readonly userRepository: IUserRepository,
@@ -29,6 +33,7 @@ export class RegisterUseCase {
   }
 }
 
+@Injectable()
 export class LoginUseCase {
   constructor(
     @Inject(TUserRepository) private readonly userRepository: IUserRepository,
@@ -69,6 +74,7 @@ export class LoginUseCase {
   }
 }
 
+@Injectable()
 export class RefreshTokenUseCase {
   constructor(
     @Inject(TAuthService) private readonly authService: IAuthService,
@@ -79,6 +85,7 @@ export class RefreshTokenUseCase {
   }
 }
 
+@Injectable()
 export class LogoutUseCase {
   constructor(@Inject(TAuthService) private readonly authService: IAuthService) {}
 
@@ -87,6 +94,7 @@ export class LogoutUseCase {
   }
 }
 
+@Injectable()
 export class GetProfileUseCase {
   constructor(@Inject(TUserRepository) private readonly userRepository: IUserRepository) {}
 

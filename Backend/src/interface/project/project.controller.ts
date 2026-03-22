@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Inject,
   Param,
   Post,
   Put,
@@ -10,26 +11,22 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import type {
-  CreateProjectDto,
-  UpdateProjectDto,
-} from '../../application/dto';
-import {
-  GetProjectsUseCase,
-  GetProjectBySlugUseCase,
-  CreateProjectUseCase,
-  UpdateProjectUseCase,
-  DeleteProjectUseCase,
-} from '../../application/use-cases';
+import type { CreateProjectDto } from '../../application/dto/project.dto';
+import type { UpdateProjectDto } from '../../application/dto/project.dto';
+import { GetProjectsUseCase } from '../../application/use-cases/project.use-case';
+import { GetProjectBySlugUseCase } from '../../application/use-cases/project.use-case';
+import { CreateProjectUseCase } from '../../application/use-cases/project.use-case';
+import { UpdateProjectUseCase } from '../../application/use-cases/project.use-case';
+import { DeleteProjectUseCase } from '../../application/use-cases/project.use-case';
 
 @Controller('projects')
 export class ProjectController {
   constructor(
-    private readonly getProjectsUseCase: GetProjectsUseCase,
-    private readonly getProjectBySlugUseCase: GetProjectBySlugUseCase,
-    private readonly createProjectUseCase: CreateProjectUseCase,
-    private readonly updateProjectUseCase: UpdateProjectUseCase,
-    private readonly deleteProjectUseCase: DeleteProjectUseCase,
+    @Inject(GetProjectsUseCase) private readonly getProjectsUseCase: GetProjectsUseCase,
+    @Inject(GetProjectBySlugUseCase) private readonly getProjectBySlugUseCase: GetProjectBySlugUseCase,
+    @Inject(CreateProjectUseCase) private readonly createProjectUseCase: CreateProjectUseCase,
+    @Inject(UpdateProjectUseCase) private readonly updateProjectUseCase: UpdateProjectUseCase,
+    @Inject(DeleteProjectUseCase) private readonly deleteProjectUseCase: DeleteProjectUseCase,
   ) {}
 
   @Get()

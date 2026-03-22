@@ -3,6 +3,7 @@ import {
   Controller,
   Delete,
   Get,
+  Inject,
   Param,
   Post,
   Put,
@@ -11,23 +12,23 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import type { CreateArticleDto, UpdateArticleDto, PaginationDto } from '../../application/dto';
-import {
-  GetArticlesUseCase,
-  GetArticleBySlugUseCase,
-  CreateArticleUseCase,
-  UpdateArticleUseCase,
-  DeleteArticleUseCase,
-} from '../../application/use-cases';
+import type { CreateArticleDto } from '../../application/dto/article.dto';
+import type { UpdateArticleDto } from '../../application/dto/article.dto';
+import type { PaginationDto } from '../../application/dto/article.dto';
+import { GetArticlesUseCase } from '../../application/use-cases/article.use-case';
+import { GetArticleBySlugUseCase } from '../../application/use-cases/article.use-case';
+import { CreateArticleUseCase } from '../../application/use-cases/article.use-case';
+import { UpdateArticleUseCase } from '../../application/use-cases/article.use-case';
+import { DeleteArticleUseCase } from '../../application/use-cases/article.use-case';
 
 @Controller('articles')
 export class ArticleController {
   constructor(
-    private readonly getArticlesUseCase: GetArticlesUseCase,
-    private readonly getArticleBySlugUseCase: GetArticleBySlugUseCase,
-    private readonly createArticleUseCase: CreateArticleUseCase,
-    private readonly updateArticleUseCase: UpdateArticleUseCase,
-    private readonly deleteArticleUseCase: DeleteArticleUseCase,
+    @Inject(GetArticlesUseCase) private readonly getArticlesUseCase: GetArticlesUseCase,
+    @Inject(GetArticleBySlugUseCase) private readonly getArticleBySlugUseCase: GetArticleBySlugUseCase,
+    @Inject(CreateArticleUseCase) private readonly createArticleUseCase: CreateArticleUseCase,
+    @Inject(UpdateArticleUseCase) private readonly updateArticleUseCase: UpdateArticleUseCase,
+    @Inject(DeleteArticleUseCase) private readonly deleteArticleUseCase: DeleteArticleUseCase,
   ) {}
 
   @Get()

@@ -1,7 +1,10 @@
-import { Inject } from '@nestjs/common';
-import type { IArticleRepository, ICacheService } from '../../domain/interfaces';
-import type { Article } from '../../domain/entities';
-import type { CreateArticleDto, UpdateArticleDto, PaginationDto } from '../dto';
+import { Inject, Injectable } from '@nestjs/common';
+import type { IArticleRepository } from '../../domain/interfaces/article-repository.interface';
+import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
+import type { Article } from '../../domain/entities/article.entity';
+import type { CreateArticleDto } from '../dto/article.dto';
+import type { UpdateArticleDto } from '../dto/article.dto';
+import type { PaginationDto } from '../dto/article.dto';
 import { TArticleRepository, TCacheService } from '../../domain/tokens';
 
 export interface PaginatedResult<T> {
@@ -14,6 +17,7 @@ export interface PaginatedResult<T> {
   };
 }
 
+@Injectable()
 export class GetArticlesUseCase {
   constructor(
     @Inject(TArticleRepository) private readonly articleRepository: IArticleRepository,
@@ -40,6 +44,7 @@ export class GetArticlesUseCase {
   }
 }
 
+@Injectable()
 export class GetArticleBySlugUseCase {
   constructor(
     @Inject(TArticleRepository) private readonly articleRepository: IArticleRepository,
@@ -62,6 +67,7 @@ export class GetArticleBySlugUseCase {
   }
 }
 
+@Injectable()
 export class CreateArticleUseCase {
   constructor(
     @Inject(TArticleRepository) private readonly articleRepository: IArticleRepository,
@@ -82,6 +88,7 @@ export class CreateArticleUseCase {
   }
 }
 
+@Injectable()
 export class UpdateArticleUseCase {
   constructor(
     @Inject(TArticleRepository) private readonly articleRepository: IArticleRepository,
@@ -105,6 +112,7 @@ export class UpdateArticleUseCase {
   }
 }
 
+@Injectable()
 export class DeleteArticleUseCase {
   constructor(
     @Inject(TArticleRepository) private readonly articleRepository: IArticleRepository,

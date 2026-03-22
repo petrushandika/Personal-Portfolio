@@ -1,6 +1,6 @@
 import { SignJWT } from 'jose';
 import { ConfigService } from '@nestjs/config';
-import type { IJwtService } from '../../domain/interfaces';
+import type { IJwtService } from '../../domain/interfaces/jwt-service.interface';
 import { TJwtService } from '../../domain/tokens';
 
 export class JwtService implements IJwtService {

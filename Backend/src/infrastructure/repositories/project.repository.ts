@@ -1,11 +1,13 @@
-import type { IProjectRepository } from '../../domain/interfaces';
-import type { Project } from '../../domain/entities';
+import { Inject } from '@nestjs/common';
+import type { IProjectRepository } from '../../domain/interfaces/project-repository.interface';
+import type { Project } from '../../domain/entities/project.entity';
 import { asc, desc, eq } from 'drizzle-orm';
 import { projects } from '../../database/schema';
 
 export class ProjectRepository implements IProjectRepository {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  constructor(private readonly db: any) {}
+  constructor(
+    @Inject('DB') private readonly db: any,
+  ) {}
 
   async findAll(featuredOnly?: boolean): Promise<Project[]> {
     const condition = featuredOnly ? eq(projects.featured, true) : undefined;

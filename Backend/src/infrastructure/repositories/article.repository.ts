@@ -1,11 +1,13 @@
-import type { IArticleRepository } from '../../domain/interfaces';
-import type { Article } from '../../domain/entities';
+import { Inject } from '@nestjs/common';
+import type { IArticleRepository } from '../../domain/interfaces/article-repository.interface';
+import type { Article } from '../../domain/entities/article.entity';
 import { and, desc, eq, like, sql } from 'drizzle-orm';
 import { articles } from '../../database/schema';
 
 export class ArticleRepository implements IArticleRepository {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  constructor(private readonly db: any) {}
+  constructor(
+    @Inject('DB') private readonly db: any,
+  ) {}
 
   async findAll(params: {
     page?: number;

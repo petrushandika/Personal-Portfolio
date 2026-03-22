@@ -4,28 +4,29 @@ import {
   Get,
   HttpCode,
   HttpStatus,
+  Inject,
   Post,
   Req,
   UseGuards,
 } from '@nestjs/common';
-import type { LoginDto, RegisterDto, RefreshDto } from '../../application/dto';
-import {
-  RegisterUseCase,
-  LoginUseCase,
-  RefreshTokenUseCase,
-  LogoutUseCase,
-  GetProfileUseCase,
-} from '../../application/use-cases';
+import type { LoginDto } from '../../application/dto/auth.dto';
+import type { RegisterDto } from '../../application/dto/auth.dto';
+import type { RefreshDto } from '../../application/dto/auth.dto';
+import { RegisterUseCase } from '../../application/use-cases/auth.use-case';
+import { LoginUseCase } from '../../application/use-cases/auth.use-case';
+import { RefreshTokenUseCase } from '../../application/use-cases/auth.use-case';
+import { LogoutUseCase } from '../../application/use-cases/auth.use-case';
+import { GetProfileUseCase } from '../../application/use-cases/auth.use-case';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Controller('auth')
 export class AuthController {
   constructor(
-    private readonly registerUseCase: RegisterUseCase,
-    private readonly loginUseCase: LoginUseCase,
-    private readonly refreshTokenUseCase: RefreshTokenUseCase,
-    private readonly logoutUseCase: LogoutUseCase,
-    private readonly getProfileUseCase: GetProfileUseCase,
+    @Inject(RegisterUseCase) private readonly registerUseCase: RegisterUseCase,
+    @Inject(LoginUseCase) private readonly loginUseCase: LoginUseCase,
+    @Inject(RefreshTokenUseCase) private readonly refreshTokenUseCase: RefreshTokenUseCase,
+    @Inject(LogoutUseCase) private readonly logoutUseCase: LogoutUseCase,
+    @Inject(GetProfileUseCase) private readonly getProfileUseCase: GetProfileUseCase,
   ) {}
 
   @Post('register')

@@ -6,6 +6,7 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
   output: 'static',
   adapter: vercel(),
+  srcDir: './src/presentation',
   integrations: [react(), sitemap()],
   vite: {
     ssr: {

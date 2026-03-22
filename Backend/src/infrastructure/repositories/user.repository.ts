@@ -1,11 +1,13 @@
-import type { IUserRepository } from '../../domain/interfaces';
-import type { User } from '../../domain/entities';
+import { Inject } from '@nestjs/common';
+import type { IUserRepository } from '../../domain/interfaces/user-repository.interface';
+import type { User } from '../../domain/entities/user.entity';
 import { eq } from 'drizzle-orm';
 import { users } from '../../database/schema';
 
 export class UserRepository implements IUserRepository {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  constructor(private readonly db: any) {}
+  constructor(
+    @Inject('DB') private readonly db: any,
+  ) {}
 
   async findByEmail(email: string): Promise<User | null> {
     const user = await this.db.query.users.findFirst({

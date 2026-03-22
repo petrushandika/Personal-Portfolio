@@ -11,6 +11,7 @@ Comprehensive documentation for building a modern Personal Portfolio with integr
 
 ### Architecture & Design
 - [ARCHITECTURE](ARCHITECTURE.md) - Clean architecture implementation details
+- [BACKEND](BACKEND.md) - Backend Clean Architecture detailed guide
 - [SCHEMA](SCHEMA.md) - Database schema with Drizzle ORM definitions
 - [DESIGN](DESIGN.md) - Design system with colors, typography, and components
 - [STACK](STACK.md) - Complete technology stack reference

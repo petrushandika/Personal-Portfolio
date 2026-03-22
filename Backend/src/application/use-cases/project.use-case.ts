@@ -1,9 +1,12 @@
-import { Inject } from '@nestjs/common';
-import type { IProjectRepository, ICacheService } from '../../domain/interfaces';
-import type { Project } from '../../domain/entities';
-import type { CreateProjectDto, UpdateProjectDto } from '../dto';
+import { Inject, Injectable } from '@nestjs/common';
+import type { IProjectRepository } from '../../domain/interfaces/project-repository.interface';
+import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
+import type { Project } from '../../domain/entities/project.entity';
+import type { CreateProjectDto } from '../dto/project.dto';
+import type { UpdateProjectDto } from '../dto/project.dto';
 import { TProjectRepository, TCacheService } from '../../domain/tokens';
 
+@Injectable()
 export class GetProjectsUseCase {
   constructor(
     @Inject(TProjectRepository) private readonly projectRepository: IProjectRepository,
@@ -22,6 +25,7 @@ export class GetProjectsUseCase {
   }
 }
 
+@Injectable()
 export class GetProjectBySlugUseCase {
   constructor(
     @Inject(TProjectRepository) private readonly projectRepository: IProjectRepository,
@@ -44,6 +48,7 @@ export class GetProjectBySlugUseCase {
   }
 }
 
+@Injectable()
 export class CreateProjectUseCase {
   constructor(
     @Inject(TProjectRepository) private readonly projectRepository: IProjectRepository,
@@ -57,6 +62,7 @@ export class CreateProjectUseCase {
   }
 }
 
+@Injectable()
 export class UpdateProjectUseCase {
   constructor(
     @Inject(TProjectRepository) private readonly projectRepository: IProjectRepository,
@@ -76,6 +82,7 @@ export class UpdateProjectUseCase {
   }
 }
 
+@Injectable()
 export class DeleteProjectUseCase {
   constructor(
     @Inject(TProjectRepository) private readonly projectRepository: IProjectRepository,
