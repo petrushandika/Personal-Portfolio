@@ -1,14 +1,15 @@
 import { ExternalLink, Github, Star } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
+import StackIcon from 'tech-stack-icons';
 import type { Project } from '../../../core/entities/project';
 import { apiClient } from '../../../infrastructure/api/api';
 
-interface ProjectsShowcaseProps {
+interface ProjectsProps {
   limit?: number;
   featured?: boolean;
 }
 
-export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcaseProps) {
+export function Projects({ limit = 6, featured = true }: ProjectsProps) {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -77,7 +78,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
           className="group glass-panel overflow-hidden hover-glow flex flex-col md:flex-row border border-white/10 hover:border-brand-500/30 transition-all duration-300"
         >
           {/* Image */}
-          <div className="relative aspect-square md:w-1/3 overflow-hidden bg-[#0A0A1F] border-b md:border-b-0 md:border-r border-white/5 shrink-0">
+          <div className="relative aspect-square md:w-1/3 overflow-hidden bg-black border-b md:border-b-0 md:border-r border-white/5 shrink-0">
             {project.thumbnail ? (
               <img
                 src={project.thumbnail}
@@ -104,7 +105,7 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
               </div>
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-[#0A0A1F] via-[#0A0A1F]/10 to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black via-black/10 to-transparent opacity-40 group-hover:opacity-10 transition-opacity duration-500" />
           </div>
 
           {/* Content */}
@@ -126,9 +127,10 @@ export function ProjectsShowcase({ limit = 6, featured = true }: ProjectsShowcas
                   {project.techStack.map((tech: string) => (
                     <span
                       key={tech}
-                      className="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-300 text-xs font-mono rounded"
+                      className="px-2.5 py-1 bg-white/5 border border-white/10 text-brand-300 text-xs font-mono rounded flex items-center gap-1.5"
                     >
-                      {tech}
+                      <StackIcon name={tech as any} className="w-3.5 h-3.5 inline-block" />
+                      <span className="capitalize">{tech.replace('js', '.js')}</span>
                     </span>
                   ))}
                 </div>

@@ -2,23 +2,23 @@
 @plugin "@tailwindcss/typography";
 
 @theme {
-  --color-brand-50: #eef2ff;
-  --color-brand-100: #e0e7ff;
-  --color-brand-200: #c7d2fe;
-  --color-brand-300: #a5b4fc;
-  --color-brand-400: #818cf8;
-  --color-brand-500: #6366f1;
-  --color-brand-600: #4f46e5;
-  --color-brand-700: #4338ca;
-  --color-brand-800: #3730a3;
-  --color-brand-900: #312e81;
-  --color-brand-950: #1e1b4b;
+  --color-brand-50: #f9fafb;
+  --color-brand-100: #f3f4f6;
+  --color-brand-200: #e5e7eb;
+  --color-brand-300: #d1d5db;
+  --color-brand-400: #9ca3af;
+  --color-brand-500: #ffffff; /* White as high-contrast primary */
+  --color-brand-600: #e5e7eb;
+  --color-brand-700: #374151;
+  --color-brand-800: #1f2937;
+  --color-brand-900: #111827;
+  --color-brand-950: #09090b;
 
-  --color-accent-400: #ec4899;
-  --color-accent-500: #d946ef;
+  --color-accent-400: #e5e7eb;
+  --color-accent-500: #9ca3af;
 
-  --color-bg-base: #030014;
-  --color-bg-card: #0a0a1f;
+  --color-bg-base: #000000; /* Pure Black Base */
+  --color-bg-card: #0a0a0a; /* Dark Rich Grey Card */
   --color-edge: rgba(255, 255, 255, 0.1);
 
   --font-sans: "Inter", system-ui, sans-serif;
@@ -36,8 +36,8 @@
 
   body {
     @apply antialiased min-h-screen relative overflow-x-hidden;
-    background-image: radial-gradient(circle at 15% 50%, rgba(79, 70, 229, 0.12), transparent 25%),
-      radial-gradient(circle at 85% 30%, rgba(217, 70, 239, 0.12), transparent 25%);
+    background-image: radial-gradient(circle at 15% 50%, rgba(255, 255, 255, 0.04), transparent 30%),
+      radial-gradient(circle at 85% 30%, rgba(255, 255, 255, 0.02), transparent 30%);
   }
 
   /* Custom pattern overlay */
@@ -60,7 +60,7 @@
 
 @layer components {
   .glass-panel {
-    @apply bg-[#0A0A1F]/60 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
+    @apply bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl shadow-2xl;
   }
 
   .text-gradient {
@@ -75,11 +75,11 @@
   }
 
   .btn-primary {
-    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full bg-brand-600 text-white hover:bg-brand-500 transition-all duration-300 shadow-[0_0_15px_rgba(79,70,229,0.4)] hover:shadow-[0_0_25px_rgba(79,70,229,0.6)] hover:-translate-y-0.5;
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full bg-white text-black hover:bg-gray-200 transition-all duration-300 shadow-[0_0_15px_rgba(255,255,255,0.1)] hover:shadow-[0_0_25px_rgba(255,255,255,0.2)] hover:-translate-y-0.5;
   }
 
   .btn-secondary {
-    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 backdrop-blur-md transition-all duration-300 hover:border-brand-500/50 hover:shadow-[0_0_15px_rgba(99,102,241,0.2)];
+    @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-full bg-white/5 border border-white/10 text-white hover:bg-white/10 backdrop-blur-md transition-all duration-300 hover:border-white/30 hover:shadow-[0_0_15px_rgba(255,255,255,0.05)];
   }
 }
 
@@ -96,4 +96,39 @@
   100% {
     transform: translate(0px, 0px) scale(1);
   }
+}
+
+/* React Quill Snow Theme Dark Mode Overrides */
+.ql-toolbar.ql-snow {
+  background-color: transparent !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+.ql-container.ql-snow {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  font-family: inherit !important;
+}
+.ql-toolbar.ql-snow .ql-stroke {
+  stroke: #e2e8f0 !important;
+}
+.ql-toolbar.ql-snow .ql-fill {
+  fill: #e2e8f0 !important;
+}
+.ql-toolbar.ql-snow .ql-picker {
+  color: #e2e8f0 !important;
+}
+.ql-snow .ql-picker-options {
+  background-color: #111111 !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+.ql-editor {
+  background-color: rgba(0, 0, 0, 0.5) !important;
+  color: #ffffff !important;
+  min-height: 250px;
+}
+.ql-editor.ql-blank::before {
+  color: rgba(255, 255, 255, 0.4) !important;
 }

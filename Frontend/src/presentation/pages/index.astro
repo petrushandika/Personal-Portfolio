@@ -1,8 +1,11 @@
 ---
-import { ArticlesShowcase } from '../components/main/ArticlesShowcase';
+import { Articles } from '../components/main/Articles';
 import { Contact } from '../components/main/Contact';
+import { Education } from '../components/main/Education';
+import { Experience } from '../components/main/Experience';
 import { Hero } from '../components/main/Hero';
-import { ProjectsShowcase } from '../components/main/ProjectsShowcase';
+import { Projects } from '../components/main/Projects';
+import { Skills } from '../components/main/Skills';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -10,14 +13,26 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   title="Petrus Handika - Full Stack Developer"
   description="Portfolio of Petrus Handika, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies."
 >
-  <main>
+  <main class="space-y-12">
     <Hero />
 
-    <section id="projects" class="py-24 relative mt-16">
+    <section id="skills" class="py-24 relative mt-16 scroll-mt-20">
+      <Skills client:visible />
+    </section>
+
+    <section id="experience" class="py-24 relative scroll-mt-20">
+      <Experience client:visible />
+    </section>
+
+    <section id="education" class="py-24 relative scroll-mt-20">
+      <Education client:visible />
+    </section>
+
+    <section id="projects" class="py-24 relative scroll-mt-20">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <div class="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end gap-6 border-b border-white/10 pb-6">
+        <div class="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">02.</span> 
+            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">04.</span> 
             Featured Projects
           </h2>
           <div class="hidden md:block w-px h-8 bg-white/10 ml-4"></div>
@@ -27,28 +42,22 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <div class="w-full">
-          <ProjectsShowcase client:visible limit={6} />
+          <Projects client:visible limit={6} />
           
           <div class="text-center mt-12">
-            <a 
-              href="/projects" 
-              class="btn-secondary group gap-2"
-            >
+            <a href="/projects" class="btn-secondary group">
               View All Projects
-              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <section id="blog" class="py-24 relative">
+    <section id="blog" class="py-24 relative scroll-mt-20">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
-        <div class="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end gap-6 border-b border-white/10 pb-6">
+        <div class="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">03.</span> 
+            <span class="text-brand-400 font-mono text-xl md:text-2xl font-normal">05.</span> 
             Latest Articles
           </h2>
           <div class="hidden md:block w-px h-8 bg-white/10 ml-4"></div>
@@ -58,23 +67,18 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
         
         <div class="w-full">
-          <ArticlesShowcase client:visible limit={3} />
+          <Articles client:visible limit={3} />
           
           <div class="text-center mt-12">
-            <a 
-              href="/blog" 
-              class="btn-secondary group gap-2"
-            >
+            <a href="/blog" class="btn-secondary group">
               View All Articles
-              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-              </svg>
             </a>
           </div>
         </div>
       </div>
     </section>
-    <section id="contact" class="py-24 relative">
+
+    <section id="contact" class="py-24 relative scroll-mt-20">
       <Contact client:visible />
     </section>
   </main>

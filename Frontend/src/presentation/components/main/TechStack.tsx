@@ -1,7 +1,7 @@
 import React from 'react';
 import StackIcon from 'tech-stack-icons';
 
-interface TechStackShowcaseProps {
+interface TechStackProps {
   limit?: number;
 }
 
@@ -20,7 +20,7 @@ const techStackList: { name: string; icon: string }[] = [
   { name: 'NestJS', icon: 'nestjs' },
 ];
 
-export function TechStackShowcase() {
+export function TechStack() {
   const displayTech = techStackList;
 
   return (

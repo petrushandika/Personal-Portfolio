@@ -39,7 +39,7 @@ export function Contact({
   ];
 
   return (
-    <section id="contact" className="py-24 relative overflow-hidden">
+    <section id="contact" className="relative overflow-hidden">
       {/* Background elements */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-brand-500/10 rounded-full blur-[100px] animate-blob" />
@@ -48,9 +48,9 @@ export function Contact({
 
       <div className="container mx-auto px-4 md:px-8 relative z-10">
         {/* Consistent Section Header */}
-        <div className="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end gap-6 border-b border-white/10 pb-6 w-full">
+        <div className="text-left items-start md:items-end mb-16 flex flex-col md:flex-row gap-6 border-b border-white/10 pb-6 w-full">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
-            <span className="text-brand-400 font-mono text-xl md:text-2xl font-normal">04.</span>
+            <span className="text-brand-400 font-mono text-xl md:text-2xl font-normal">06.</span>
             What's Next?
           </h2>
           <div className="hidden md:block w-px h-8 bg-white/10 ml-4" />
@@ -124,7 +124,7 @@ export function Contact({
                     type="text"
                     id="name"
                     required
-                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-sm"
                     placeholder="Your Name"
                   />
                 </div>
@@ -139,7 +139,7 @@ export function Contact({
                     type="email"
                     id="form_email"
                     required
-                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-sm"
                     placeholder="your@email.com"
                   />
                 </div>
@@ -154,7 +154,7 @@ export function Contact({
                     id="message"
                     required
                     rows={4}
-                    className="w-full bg-[#0A0A1F]/60 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500 text-sm"
+                    className="w-full bg-black/40 border border-white/10 rounded-xl px-4 py-3 text-white focus:border-white focus:outline-none focus:ring-1 focus:ring-white text-sm"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -162,7 +162,6 @@ export function Contact({
                   type="submit"
                   className="w-full btn-primary py-3 rounded-xl flex justify-center text-sm font-semibold mt-6"
                 >
-                  <Mail className="w-4 h-4" />
                   <span>Send Message</span>
                 </button>
               </form>

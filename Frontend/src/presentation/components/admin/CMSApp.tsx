@@ -1,19 +1,29 @@
 import {
+  Bold,
   Briefcase,
   Check,
   Edit2,
   Eye,
   EyeOff,
   FileText,
+  Heading1,
+  Image as ImageIcon,
+  Italic,
+  Link2,
+  List,
   LogIn,
   LogOut,
   Plus,
   Trash2,
   X,
 } from 'lucide-react';
+import { marked } from 'marked';
 import type React from 'react';
 import { useEffect, useState } from 'react';
+import ReactQuill from 'react-quill-new';
+import StackIcon from 'tech-stack-icons';
 import { apiClient } from '../../../infrastructure/api/api';
+import 'react-quill-new/dist/quill.snow.css';
 
 export function CMSApp() {
   const [token, setToken] = useState<string | null>(null);
@@ -90,13 +100,20 @@ export function CMSApp() {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [thumbnailUrl, setThumbnailUrl] = useState<string>('');
   const [uploading, setUploading] = useState(false);
+  const [content, setContent] = useState<string>('');
+  const [isPreview, setIsPreview] = useState<boolean>(false);
+  const [selectedTechs, setSelectedTechs] = useState<string[]>([]);
 
   // Sync state with editingItem when it changes
   useEffect(() => {
     if (editingItem) {
       setThumbnailUrl(activeTab === 'articles' ? editingItem.featuredImage : editingItem.thumbnail);
+      setContent(editingItem.content || '');
+      setSelectedTechs(editingItem.techStack || []);
     } else {
       setThumbnailUrl('');
+      setContent('');
+      setSelectedTechs([]);
     }
   }, [editingItem, activeTab]);
 
@@ -171,7 +188,7 @@ export function CMSApp() {
 
   if (!token) {
     return (
-      <div className="flex items-center justify-center min-h-screen bg-[#030014] p-4">
+      <div className="flex items-center justify-center min-h-screen bg-bg-base p-4">
         <div className="glass-panel p-8 w-full max-w-md border border-brand-500/20">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold tracking-tight text-white mb-2">CMS Login</h1>
@@ -195,7 +212,7 @@ export function CMSApp() {
                 id="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
                 required
               />
             </div>
@@ -212,7 +229,7 @@ export function CMSApp() {
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                  className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 pr-10 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
+                  className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 pr-10 text-white focus:border-brand-500 focus:outline-none focus:ring-1 focus:ring-brand-500"
                   required
                 />
                 <button
@@ -238,11 +255,11 @@ export function CMSApp() {
   }
 
   return (
-    <div className="flex flex-col md:flex-row h-screen bg-[#030014] text-gray-200 overflow-hidden">
+    <div className="flex flex-col md:flex-row h-screen bg-bg-base text-gray-200 overflow-hidden">
       {/* Mobile Header Overlay Toggler */}
-      <header className="md:hidden p-4 border-b border-white/10 flex items-center justify-between bg-[#0A0A1F]/80 backdrop-blur-md sticky top-0 z-50">
+      <header className="md:hidden p-4 border-b border-white/10 flex items-center justify-between bg-black/80 backdrop-blur-md sticky top-0 z-50">
         <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-          <span className="text-brand-400">/</span> Admin CMS
+          Admin CMS
         </h1>
         <button
           type="button"
@@ -274,13 +291,13 @@ export function CMSApp() {
 
       {/* Sidebar */}
       <aside
-        className={`w-64 glass-panel border-r border-white/10 flex flex-col fixed md:sticky top-0 bottom-0 left-0 z-50 md:z-auto bg-[#030014] transform md:transform-none transition-transform duration-300 ${
+        className={`w-64 glass-panel border-r border-white/10 flex flex-col fixed md:sticky top-0 bottom-0 left-0 z-50 md:z-auto bg-bg-base transform md:transform-none transition-transform duration-300 ${
           isSidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'
         }`}
       >
         <div className="p-6 border-b border-white/10 hidden md:block">
           <h1 className="text-xl font-bold text-white tracking-tight flex items-center gap-2">
-            <span className="text-brand-400">/</span> Admin CMS
+            Admin CMS
           </h1>
         </div>
         <nav className="flex-1 p-4 space-y-2 mt-16 md:mt-0">
@@ -412,7 +429,7 @@ export function CMSApp() {
         ) : (
           <div className="p-8 flex-1">
             <div className="w-full glass-panel p-6 md:p-8 border border-brand-500/30 shadow-2xl">
-              <div className="pb-6 border-b border-white/10 flex justify-between items-center bg-[#0A0A1F]/50 z-10">
+              <div className="pb-6 border-b border-white/10 flex justify-between items-center bg-black/50 z-10">
                 <h3 className="text-xl font-bold flex items-center gap-2">
                   <span className="w-2 h-2 rounded-full bg-brand-500" />
                   {editingItem ? 'Edit' : 'Create'}{' '}
@@ -443,7 +460,7 @@ export function CMSApp() {
                     id="title"
                     defaultValue={editingItem?.title}
                     required
-                    className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                    className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                   />
                 </div>
 
@@ -462,7 +479,7 @@ export function CMSApp() {
                         defaultValue={editingItem?.excerpt}
                         required
                         rows={2}
-                        className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                       />
                     </div>
                     <div>
@@ -476,7 +493,7 @@ export function CMSApp() {
                         name="status"
                         id="status"
                         defaultValue={editingItem?.status || 'draft'}
-                        className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                       >
                         <option value="draft">Draft</option>
                         <option value="published">Published</option>
@@ -498,24 +515,116 @@ export function CMSApp() {
                         defaultValue={editingItem?.description}
                         required
                         rows={2}
-                        className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                        className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                       />
                     </div>
                     <div>
-                      <label
-                        htmlFor="techStack"
-                        className="block text-xs uppercase tracking-wider text-gray-400 mb-1"
-                      >
-                        Technologies (comma separated)
-                      </label>
-                      <input
-                        name="techStack"
-                        id="techStack"
-                        defaultValue={editingItem?.techStack?.join(', ')}
-                        required
-                        className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
-                        placeholder="React, Node.js, Tailwind..."
-                      />
+                      <div className="block text-xs uppercase tracking-wider text-gray-400 mb-2">
+                        Technologies / Tech Stack
+                      </div>
+                      <div className="bg-black/40 border border-white/10 rounded-xl p-4">
+                        {/* Selected list */}
+                        {selectedTechs.length > 0 && (
+                          <div className="flex flex-wrap gap-2 mb-4 border-b border-white/5 pb-4">
+                            {selectedTechs.map((t) => (
+                              <span
+                                key={t}
+                                className="flex items-center gap-1.5 px-2 py-0.5 bg-brand-500/10 border border-brand-500/20 rounded-full text-xs font-semibold text-gray-200 transition-colors"
+                              >
+                                <StackIcon name={t as any} className="w-3.5 h-3.5" />
+                                <span className="capitalize">{t.replace('js', '.js')}</span>
+                                <button
+                                  type="button"
+                                  onClick={() =>
+                                    setSelectedTechs((prev) => prev.filter((x) => x !== t))
+                                  }
+                                  className="text-gray-400 hover:text-white"
+                                >
+                                  <X className="w-3.5 h-3.5" />
+                                </button>
+                              </span>
+                            ))}
+                          </div>
+                        )}
+
+                        {/* Grid of Choices */}
+                        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 max-h-48 overflow-y-auto pr-2 custom-scrollbar">
+                          {[
+                            { id: 'reactjs', name: 'React' },
+                            { id: 'nextjs', name: 'Next.js' },
+                            { id: 'vuejs', name: 'Vue.js' },
+                            { id: 'angular', name: 'Angular' },
+                            { id: 'typescript', name: 'TypeScript' },
+                            { id: 'javascript', name: 'JavaScript' },
+                            { id: 'tailwindcss', name: 'Tailwind' },
+                            { id: 'nodejs', name: 'Node.js' },
+                            { id: 'nestjs', name: 'Nest.js' },
+                            { id: 'expressjs', name: 'Express' },
+                            { id: 'golang', name: 'Go' },
+                            { id: 'php', name: 'PHP' },
+                            { id: 'laravel', name: 'Laravel' },
+                            { id: 'postgresql', name: 'PostgreSQL' },
+                            { id: 'mysql', name: 'MySQL' },
+                            { id: 'mongodb', name: 'MongoDB' },
+                            { id: 'firebase', name: 'Firebase' },
+                            { id: 'supabase', name: 'Supabase' },
+                            { id: 'docker', name: 'Docker' },
+                            { id: 'python', name: 'Python' },
+                            { id: 'django', name: 'Django' },
+                            { id: 'flutter', name: 'Flutter' },
+                            { id: 'git', name: 'Git' },
+                            { id: 'figma', name: 'Figma' },
+                          ].map((tech) => {
+                            const isSelected = selectedTechs.indexOf(tech.id) !== -1;
+                            return (
+                              <button
+                                type="button"
+                                key={tech.id}
+                                onClick={() => {
+                                  setSelectedTechs((prev) =>
+                                    isSelected
+                                      ? prev.filter((x) => x !== tech.id)
+                                      : [...prev, tech.id]
+                                  );
+                                }}
+                                className={`flex items-center gap-2 px-3 py-1.5 rounded-lg border text-left transition-all duration-200 ${
+                                  isSelected
+                                    ? 'bg-brand-500/10 border-brand-500/50 text-white'
+                                    : 'bg-black/20 border-white/5 hover:border-white/20 text-gray-400 hover:text-white'
+                                }`}
+                              >
+                                <StackIcon
+                                  name={tech.id as any}
+                                  className={`w-4 h-4 ${isSelected ? 'grayscale-0' : 'grayscale filter'}`}
+                                />
+                                <span className="text-xs truncate">{tech.name}</span>
+                              </button>
+                            );
+                          })}
+                        </div>
+
+                        {/* Custom Input */}
+                        <div className="flex gap-2 mt-3 pt-3 border-t border-white/5">
+                          <input
+                            type="text"
+                            placeholder="Type another tech & press Enter..."
+                            className="flex-1 bg-black border border-white/10 rounded-lg px-3 py-1.5 text-xs text-white focus:outline-none focus:border-brand-500"
+                            onKeyDown={(e) => {
+                              if (e.key === 'Enter') {
+                                e.preventDefault();
+                                const val = (e.target as HTMLInputElement).value
+                                  .trim()
+                                  .toLowerCase();
+                                if (val && selectedTechs.indexOf(val) === -1) {
+                                  setSelectedTechs((prev) => [...prev, val]);
+                                  (e.target as HTMLInputElement).value = '';
+                                }
+                              }
+                            }}
+                          />
+                        </div>
+                      </div>
+                      <input type="hidden" name="techStack" value={selectedTechs.join(',')} />
                     </div>
                     <div className="flex flex-col sm:flex-row gap-4">
                       <div className="flex-1">
@@ -529,7 +638,7 @@ export function CMSApp() {
                           name="liveUrl"
                           id="liveUrl"
                           defaultValue={editingItem?.liveUrl}
-                          className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                          className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                         />
                       </div>
                       <div className="flex-1">
@@ -543,7 +652,7 @@ export function CMSApp() {
                           name="githubUrl"
                           id="githubUrl"
                           defaultValue={editingItem?.githubUrl}
-                          className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
+                          className="w-full bg-black border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none"
                         />
                       </div>
                     </div>
@@ -553,7 +662,7 @@ export function CMSApp() {
                         name="featured"
                         id="featured"
                         defaultChecked={editingItem?.featured}
-                        className="w-4 h-4 bg-[#0A0A1F] border-white/10 rounded text-brand-500 focus:ring-brand-500"
+                        className="w-4 h-4 bg-black border-white/10 rounded text-brand-500 focus:ring-brand-500"
                       />
                       <label htmlFor="featured" className="text-sm font-medium text-gray-300">
                         Mark as Featured Project
@@ -563,52 +672,99 @@ export function CMSApp() {
                 )}
 
                 <div>
-                  <label
-                    htmlFor="content"
-                    className="block text-xs uppercase tracking-wider text-gray-400 mb-1"
-                  >
-                    Content (Markdown)
-                  </label>
-                  <textarea
-                    name="content"
-                    id="content"
-                    defaultValue={editingItem?.content}
-                    required
-                    rows={8}
-                    className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-3 text-white focus:border-brand-500 focus:outline-none font-mono text-sm"
-                    placeholder="Write your content here..."
-                  />
+                  <div className="flex justify-between items-center mb-1.5 border-b border-white/5 pb-1">
+                    <label
+                      htmlFor="content"
+                      className="block text-xs uppercase tracking-wider text-gray-400"
+                    >
+                      Content
+                    </label>
+                  </div>
+                  <div className="bg-black border border-white/10 rounded-lg overflow-hidden focus-within:border-brand-500">
+                    <ReactQuill
+                      theme="snow"
+                      value={content}
+                      onChange={setContent}
+                      placeholder="Start writing as if using Word..."
+                      className="text-white h-72 max-h-[400px]"
+                      modules={{
+                        toolbar: [
+                          [{ header: [1, 2, 3, false] }],
+                          ['bold', 'italic', 'underline', 'strike'],
+                          [{ list: 'ordered' }, { list: 'bullet' }],
+                          ['link', 'image', 'code-block'],
+                          ['clean'],
+                        ],
+                      }}
+                    />
+                  </div>
+                  <input type="hidden" name="content" value={content} />
                 </div>
 
-                <div>
+                <div className="space-y-4">
                   <label
                     htmlFor="thumbnail_file"
-                    className="block text-xs uppercase tracking-wider text-gray-400 mb-1"
+                    className="block text-xs uppercase tracking-wider text-gray-400"
                   >
-                    Image {activeTab === 'articles' ? '(Featured Image)' : '(Thumbnail)'}
+                    Cover Image / Thumbnail
                   </label>
-                  <p className="text-xs text-brand-400 mb-2">
+
+                  <label
+                    htmlFor="thumbnail_file"
+                    className={`w-full h-56 rounded-2xl border-2 border-dashed ${
+                      uploading
+                        ? 'border-brand-500/40 bg-brand-500/5'
+                        : 'border-white/10 hover:border-white/20 bg-black/40'
+                    } flex flex-col items-center justify-center cursor-pointer group relative overflow-hidden transition-all duration-300`}
+                  >
+                    {thumbnailUrl ? (
+                      <>
+                        <img
+                          src={
+                            thumbnailUrl.indexOf('http') === 0
+                              ? thumbnailUrl
+                              : `${((import.meta as any).env?.PUBLIC_API_URL || 'http://localhost:3000/api').replace('/api', '')}${thumbnailUrl}`
+                          }
+                          alt="Preview"
+                          className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                        />
+                        <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 flex flex-col items-center justify-center transition-opacity duration-300 backdrop-blur-sm">
+                          <ImageIcon className="w-8 h-8 text-white mb-2" />
+                          <span className="text-sm font-medium text-white">
+                            Click or drag to change
+                          </span>
+                        </div>
+                      </>
+                    ) : (
+                      <div className="flex flex-col items-center gap-3 text-center">
+                        <div className="w-14 h-14 rounded-full bg-white/5 flex items-center justify-center border border-white/10 group-hover:scale-110 transition-transform duration-300">
+                          <ImageIcon className="w-6 h-6 text-gray-300" />
+                        </div>
+                        <div>
+                          <p className="text-sm font-medium text-gray-200">Upload an image</p>
+                          <p className="text-xs text-gray-500 mt-1">
+                            Click anywhere inside this area to select a file
+                          </p>
+                        </div>
+                      </div>
+                    )}
+
+                    <input
+                      type="file"
+                      id="thumbnail_file"
+                      accept="image/*"
+                      onChange={handleFileUpload}
+                      className="hidden"
+                    />
+                  </label>
+
+                  <p className="text-xs text-gray-500">
                     Images are automatically converted to WebP for SEO and performance.
                   </p>
-                  <input
-                    type="file"
-                    id="thumbnail_file"
-                    accept="image/*"
-                    onChange={handleFileUpload}
-                    className="w-full bg-[#0A0A1F] border border-white/10 rounded-lg px-4 py-2 text-white focus:border-brand-500 focus:outline-none file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-xs file:font-semibold file:bg-brand-500/20 file:text-brand-400 hover:file:bg-brand-500/30"
-                  />
-                  {uploading && <p className="text-xs text-brand-400 mt-1">Uploading...</p>}
-                  {thumbnailUrl && (
-                    <div className="mt-4 relative w-32 aspect-square group">
-                      <img
-                        src={
-                          thumbnailUrl.indexOf('http') === 0
-                            ? thumbnailUrl
-                            : `${((import.meta as any).env?.PUBLIC_API_URL || 'http://localhost:3000/api').replace('/api', '')}${thumbnailUrl}`
-                        }
-                        alt="Preview"
-                        className="w-full h-full object-cover rounded-lg border border-white/10"
-                      />
+                  {uploading && (
+                    <div className="flex items-center gap-2 text-xs text-brand-400">
+                      <span className="animate-spin w-3 h-3 border-2 border-brand-500 border-t-transparent rounded-full" />
+                      Uploading...
                     </div>
                   )}
                 </div>
@@ -624,8 +780,8 @@ export function CMSApp() {
                   >
                     Cancel
                   </button>
-                  <button type="submit" className="btn-primary py-2 px-6 flex items-center gap-2">
-                    <Check className="w-4 h-4" /> Save
+                  <button type="submit" className="btn-primary py-2 px-6">
+                    Upload
                   </button>
                 </div>
               </form>

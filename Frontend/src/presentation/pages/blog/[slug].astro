@@ -43,7 +43,7 @@ try {
   description={_article?.metaDescription || _article?.excerpt}
 >
   <main class="py-16 relative overflow-hidden min-h-screen">
-    <div class="absolute inset-0 bg-[#030014] z-[-1]" />
+    <div class="absolute inset-0 bg-bg-base z-[-1]" />
     <div class="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
       {_error ? (
         <div class="text-center py-24 glass-panel border border-brand-500/20">
@@ -76,7 +76,7 @@ try {
                 class="w-full h-64 md:h-96 object-cover rounded-2xl mb-8 shadow-[0_0_30px_rgba(99,102,241,0.2)] border border-white/10"
               />
             ) : (
-              <div class="w-full h-64 md:h-96 rounded-2xl mb-8 bg-[#0A0A1F] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-[0_0_30px_rgba(99,102,241,0.2)]">
+              <div class="w-full h-64 md:h-96 rounded-2xl mb-8 bg-black border border-white/10 flex items-center justify-center relative overflow-hidden shadow-[0_0_30px_rgba(99,102,241,0.2)]">
                 <div class="absolute inset-0 bg-brand-900/20" />
                 <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]" />
                 <span class="text-7xl filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] relative z-10">📝</span>

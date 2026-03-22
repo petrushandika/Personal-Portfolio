@@ -2,11 +2,11 @@ import React, { useEffect, useState } from 'react';
 import type { Article } from '../../../core/entities/article';
 import { apiClient } from '../../../infrastructure/api/api';
 
-interface ArticlesShowcaseProps {
+interface ArticlesProps {
   limit?: number;
 }
 
-export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
+export function Articles({ limit = 3 }: ArticlesProps) {
   const [articles, setArticles] = useState<Article[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +85,7 @@ export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
           className="group glass-panel overflow-hidden hover-glow flex flex-col h-full"
         >
           {/* Image */}
-          <div className="relative h-48 overflow-hidden bg-[#0A0A1F] border-b border-white/5">
+          <div className="relative h-48 overflow-hidden bg-black border-b border-white/5">
             {article.featuredImage ? (
               <img
                 src={article.featuredImage}
@@ -105,7 +105,7 @@ export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
               </div>
             )}
 
-            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A1F] via-[#0A0A1F]/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
           </div>
 
           {/* Content */}

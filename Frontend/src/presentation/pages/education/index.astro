@@ -1,16 +1,16 @@
 ---
-import { Contact as ContactComponent } from '../../components/main/Contact';
+import { Education } from '../../components/main/Education';
 import BaseLayout from '../../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout 
-  title="Contact - Petrus Handika"
-  description="Get in touch with Petrus Handika for collaboration, freelance opportunities, or just to say hi."
+  title="Education - Petrus Handika"
+  description="Educational background and qualifications of Petrus Handika, Full Stack Developer."
 >
   <main class="py-24 relative overflow-hidden">
     <div class="absolute inset-0 bg-bg-base z-[-1]" />
     <div class="container mx-auto px-4 md:px-8 relative z-10">
-      <ContactComponent client:load />
+      <Education client:load />
     </div>
   </main>
 </BaseLayout>

@@ -27,6 +27,7 @@
     "marked": "^15.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-quill-new": "^3.8.3",
     "tailwind-merge": "^3.0.0",
     "tailwindcss": "^4.0.0",
     "tech-stack-icons": "^3.7.1",
