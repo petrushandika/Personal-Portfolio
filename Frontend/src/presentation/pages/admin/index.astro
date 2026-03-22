@@ -1,0 +1,12 @@
+---
+import { CMSApp } from '../../components/admin/CMSApp';
+import AdminLayout from '../../layouts/AdminLayout.astro';
+---
+
+<AdminLayout 
+  title="Admin CMS - Petrus Handika"
+  description="Content Management System for Petrus Handika Portfolio"
+>
+  <!-- Using client:only="react" so the CMS handles its own rendering and auth state -->
+  <CMSApp client:only="react" />
+</AdminLayout>

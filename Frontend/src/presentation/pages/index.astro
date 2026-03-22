@@ -1,10 +1,7 @@
 ---
-import { About } from '../components/About';
-import { ArticlesShowcase } from '../components/ArticlesShowcase';
-import { Contact } from '../components/Contact';
-import { Hero } from '../components/Hero';
-import { ProjectsShowcase } from '../components/ProjectsShowcase';
-import { TechStackShowcase } from '../components/TechStackShowcase';
+import { ArticlesShowcase } from '../components/main/ArticlesShowcase';
+import { Hero } from '../components/main/Hero';
+import { ProjectsShowcase } from '../components/main/ProjectsShowcase';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -15,11 +12,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main>
     <Hero />
 
-    <TechStackShowcase limit={8} />
-
-    <About />
-
-    <section id="projects" class="py-24 relative">
+    <section id="projects" class="py-24 relative mt-16">
       <div class="container mx-auto px-4 md:px-8 relative z-10">
         <div class="text-center md:text-left mb-16 flex flex-col md:flex-row md:items-end gap-6 border-b border-white/10 pb-6">
           <h2 class="text-4xl md:text-5xl font-bold text-gray-100 tracking-tight flex items-center gap-4">
@@ -76,7 +69,5 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         </div>
       </div>
     </section>
-
-    <Contact />
   </main>
 </BaseLayout>

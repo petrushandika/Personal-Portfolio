@@ -30,18 +30,20 @@ const { title, description } = Astro.props;
           </a>
           
           <div class="hidden md:flex items-center gap-8">
-            <a href="#about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
-            <a href="#projects" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
-            <a href="#blog" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Blog</a>
-            <a href="#contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
+            <a href="/about" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">About</a>
+            <a href="/projects" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Projects</a>
+            <a href="/blog" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Blog</a>
+            <a href="/contact" class="text-sm font-medium text-gray-400 hover:text-white transition-colors">Contact</a>
           </div>
 
-          <a 
-            href="#contact" 
-            class="hidden md:inline-flex btn-primary"
-          >
-            Let's Talk
-          </a>
+          <div class="hidden md:flex items-center gap-4">
+            <a 
+              href="/contact" 
+              class="hidden md:inline-flex btn-primary"
+            >
+              Let's Talk
+            </a>
+          </div>
         </div>
       </div>
     </nav>
@@ -76,10 +78,10 @@ const { title, description } = Astro.props;
           <div>
             <h4 class="font-semibold mb-4 text-white">Quick Links</h4>
             <ul class="space-y-3">
-              <li><a href="#about" class="hover:text-brand-400 transition-colors">About</a></li>
-              <li><a href="#projects" class="hover:text-brand-400 transition-colors">Projects</a></li>
-              <li><a href="#blog" class="hover:text-brand-400 transition-colors">Blog</a></li>
-              <li><a href="#contact" class="hover:text-brand-400 transition-colors">Contact</a></li>
+              <li><a href="/about" class="hover:text-brand-400 transition-colors">About</a></li>
+              <li><a href="/projects" class="hover:text-brand-400 transition-colors">Projects</a></li>
+              <li><a href="/blog" class="hover:text-brand-400 transition-colors">Blog</a></li>
+              <li><a href="/contact" class="hover:text-brand-400 transition-colors">Contact</a></li>
             </ul>
           </div>
           

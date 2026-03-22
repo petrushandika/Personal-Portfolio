@@ -1,0 +1,23 @@
+---
+import { About as AboutComponent } from '../../components/main/About';
+import { TechStackShowcase } from '../../components/main/TechStackShowcase';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+---
+
+<BaseLayout 
+  title="About - Petrus Handika"
+  description="Learn more about Petrus Handika, a Full Stack Developer specializing in React, Next.js, Node.js, and modern web technologies."
+>
+  <main class="py-24 relative overflow-hidden">
+    <div class="absolute inset-0 bg-[#030014] z-[-1]" />
+    
+    <!-- We mount the TechStackShowcase and About component -->
+    <div class="mt-8">
+      <AboutComponent />
+      
+      <div class="mt-8 border-t border-white/5 pt-16">
+        <TechStackShowcase />
+      </div>
+    </div>
+  </main>
+</BaseLayout>
