@@ -1,3 +1,4 @@
+import { ArrowRight, ExternalLink, Sparkles } from 'lucide-react';
 import React from 'react';
 
 interface HeroProps {
@@ -7,111 +8,118 @@ interface HeroProps {
 }
 
 export function Hero({
-  name = 'Petrus Handika',
-  title = 'Full-Stack Developer',
-  description = 'Passionate about building beautiful, functional web applications with modern technologies. Always eager to learn and create innovative solutions.',
+  name = 'Petrus Handika.',
+  title = 'I build robust web applications.',
+  description = "I'm a Full-Stack Developer specializing in building (and occasionally designing) exceptional digital experiences. Currently, I'm focused on building accessible, human-centered products using modern technologies.",
 }: HeroProps) {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
-      {/* Background with gradient */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary-50 via-white to-purple-50" />
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden pt-24 pb-16">
+      {/* Animated glowing blobs */}
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-[100px] animate-blob" />
+      <div
+        className="absolute bottom-1/4 right-1/4 w-96 h-96 bg-accent-500/20 rounded-full blur-[100px] animate-blob"
+        style={{ animationDelay: '2s' }}
+      />
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-brand-500/10 rounded-full blur-[120px] animate-blob"
+        style={{ animationDelay: '4s' }}
+      />
 
-      {/* Animated background elements */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-primary-200/30 rounded-full blur-3xl" />
-        <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-purple-200/30 rounded-full blur-3xl" />
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-primary-100/50 to-purple-100/50 rounded-full blur-3xl" />
-      </div>
+      <div className="container mx-auto px-4 md:px-8 relative z-10">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content */}
+          <div className="order-2 lg:order-1 flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="inline-flex items-center gap-2 px-4 py-2 bg-brand-500/10 border border-brand-500/20 rounded-full mb-8 shadow-[0_0_15px_rgba(99,102,241,0.15)]">
+              <Sparkles className="w-4 h-4 text-brand-400 animate-pulse" />
+              <span className="text-sm font-mono text-brand-300">
+                Available for new opportunities
+              </span>
+            </div>
 
-      <div className="container mx-auto px-4 md:px-8 relative z-10 py-32">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Badge */}
-          <div className="inline-flex items-center gap-2 px-4 py-2 bg-white/80 backdrop-blur-sm rounded-full border border-gray-200/50 shadow-sm mb-8">
-            <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
-            <span className="text-sm text-gray-600">Available for new projects</span>
-          </div>
+            <h1 className="text-lg md:text-xl font-mono text-brand-400 mb-4 tracking-wide">
+              Hi, my name is
+            </h1>
 
-          {/* Name */}
-          <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 tracking-tight">
-            Hi, I'm{' '}
-            <span className="bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
+            <h2 className="text-5xl md:text-7xl lg:text-[5rem] font-bold text-gray-100 mb-4 tracking-tight leading-[1.1]">
               {name}
-            </span>
-          </h1>
+            </h2>
 
-          {/* Title */}
-          <h2 className="text-2xl md:text-3xl lg:text-4xl font-semibold text-gray-700 mb-6">
-            {title}
-          </h2>
+            <h3 className="text-4xl md:text-6xl lg:text-[4rem] font-bold text-gray-400 mb-6 tracking-tight leading-[1.1]">
+              {title}
+            </h3>
 
-          {/* Description */}
-          <p className="text-lg md:text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">
-            {description}
-          </p>
+            <p className="text-lg text-gray-400 mb-10 max-w-xl leading-relaxed font-light">
+              {description}
+            </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <a
-              href="#projects"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-primary-600 to-purple-600 text-white font-semibold rounded-full hover:shadow-xl hover:shadow-primary-500/25 hover:scale-105 transition-all duration-300"
-            >
-              View My Work
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={2}
-                  d="M17 8l4 4m0 0l-4 4m4-4H3"
-                />
-              </svg>
-            </a>
-            <a
-              href="#contact"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white text-gray-700 font-semibold rounded-full border-2 border-gray-200 hover:border-primary-500 hover:text-primary-600 transition-all duration-300"
-            >
-              Get In Touch
-            </a>
+            <div className="flex flex-col sm:flex-row gap-5 justify-center lg:justify-start w-full sm:w-auto">
+              <a href="#projects" className="btn-primary">
+                Checkout my work!
+              </a>
+              <a href="/resume.pdf" target="_blank" rel="noreferrer" className="btn-secondary">
+                Resume
+              </a>
+            </div>
+
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-8 md:gap-12 mt-12 pt-8 border-t border-white/10 w-full max-w-lg">
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">5+</div>
+                <div className="text-xs md:text-sm font-medium text-brand-400 uppercase tracking-wider">
+                  Years Exp
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">20+</div>
+                <div className="text-xs md:text-sm font-medium text-brand-400 uppercase tracking-wider">
+                  Projects
+                </div>
+              </div>
+              <div>
+                <div className="text-3xl md:text-4xl font-bold text-white mb-1">10+</div>
+                <div className="text-xs md:text-sm font-medium text-brand-400 uppercase tracking-wider">
+                  Clients
+                </div>
+              </div>
+            </div>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 mt-20 max-w-lg mx-auto">
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                5+
+          {/* Image Placeholder */}
+          <div className="order-1 lg:order-2 flex justify-center lg:justify-end relative mb-10 lg:mb-0">
+            <div className="relative w-56 h-56 md:w-72 md:h-72 lg:w-[24rem] lg:h-[24rem]">
+              {/* Decorative Frame Elements - Abusaid style */}
+              <div className="absolute inset-0 bg-transparent border-2 border-brand-400 rounded-xl translate-x-5 translate-y-5 transition-transform duration-500 hover:translate-x-3 hover:translate-y-3 z-0" />
+
+              {/* Actual Image Container (Empty for now) */}
+              <div className="w-full h-full relative z-10 flex flex-col justify-center items-center overflow-hidden group bg-[#112240] rounded-xl border border-brand-500/20">
+                {/* 
+                  NOTE FOR USER: 
+                  Place your image here. Example:
+                  <img src="/your-photo.jpg" alt="Petrus Handika" className="absolute inset-0 w-full h-full object-cover rounded-[14px]" />
+                */}
+                <div className="w-20 h-20 mb-4 rounded-full bg-white/5 border border-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-500">
+                  <svg
+                    className="w-10 h-10 text-brand-400"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                    />
+                  </svg>
+                </div>
+                <p className="text-brand-300 font-mono text-sm tracking-wide text-center px-4">
+                  [ Profile Image ]
+                </p>
+                <div className="absolute inset-0 bg-brand-500/20 group-hover:bg-transparent transition-colors duration-500 z-20 pointer-events-none" />
               </div>
-              <div className="text-sm text-gray-500 mt-1">Years Experience</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                20+
-              </div>
-              <div className="text-sm text-gray-500 mt-1">Projects</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                10+
-              </div>
-              <div className="text-sm text-gray-500 mt-1">Clients</div>
             </div>
           </div>
         </div>
-      </div>
-
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-        <svg
-          className="w-6 h-6 text-gray-400"
-          fill="none"
-          stroke="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth={2}
-            d="M19 14l-7 7m0 0l-7-7m7 7V3"
-          />
-        </svg>
       </div>
     </section>
   );

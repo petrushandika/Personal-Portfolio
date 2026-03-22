@@ -42,17 +42,18 @@ try {
   title={_article?.title || 'Article Not Found'} 
   description={_article?.metaDescription || _article?.excerpt}
 >
-  <main class="py-16 bg-gradient-to-b from-white via-gray-50 to-white">
-    <div class="container mx-auto px-4 md:px-8 max-w-4xl">
+  <main class="py-16 relative overflow-hidden min-h-screen">
+    <div class="absolute inset-0 bg-[#030014] z-[-1]" />
+    <div class="container mx-auto px-4 md:px-8 max-w-4xl relative z-10">
       {_error ? (
-        <div class="text-center py-16">
-          <div class="w-20 h-20 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <svg class="w-10 h-10 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <div class="text-center py-24 glass-panel border border-brand-500/20">
+          <div class="w-20 h-20 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <svg class="w-10 h-10 text-brand-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
             </svg>
           </div>
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">{_error}</h1>
-          <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3 bg-indigo-600 text-white rounded-full font-medium hover:bg-indigo-700 transition-colors">
+          <h1 class="text-4xl font-bold text-white mb-4 tracking-tight">{_error}</h1>
+          <a href="/blog" class="inline-flex items-center gap-2 px-6 py-3 bg-white/10 text-white rounded-full font-medium hover:bg-white/20 transition-all border border-white/20 mt-4">
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
             </svg>
@@ -60,36 +61,42 @@ try {
           </a>
         </div>
       ) : _article ? (
-        <article>
-          <header class="mb-12 text-center">
-            <a href="/blog" class="inline-flex items-center gap-2 text-indigo-600 hover:text-indigo-700 text-sm font-medium mb-6">
+        <article class="relative">
+          <header class="mb-12 text-center glass-panel p-8 md:p-12">
+            <a href="/blog" class="inline-flex items-center gap-2 text-brand-400 hover:text-accent-400 text-sm font-medium mb-8 transition-colors">
               <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
               </svg>
               Back to Blog
             </a>
-            {_article.featuredImage && (
+            {_article.featuredImage ? (
               <img 
                 src={_article.featuredImage} 
                 alt={_article.title}
-                class="w-full h-64 md:h-96 object-cover rounded-2xl mb-8 shadow-lg"
+                class="w-full h-64 md:h-96 object-cover rounded-2xl mb-8 shadow-[0_0_30px_rgba(99,102,241,0.2)] border border-white/10"
               />
+            ) : (
+              <div class="w-full h-64 md:h-96 rounded-2xl mb-8 bg-[#0A0A1F] border border-white/10 flex items-center justify-center relative overflow-hidden shadow-[0_0_30px_rgba(99,102,241,0.2)]">
+                <div class="absolute inset-0 bg-brand-900/20" />
+                <div class="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]" />
+                <span class="text-7xl filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)] relative z-10">📝</span>
+              </div>
             )}
-            <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">{_article.title}</h1>
-            <div class="flex items-center justify-center gap-4 text-gray-500">
+            <h1 class="text-4xl md:text-5xl font-bold text-white mb-6 tracking-tight leading-tight">{_article.title}</h1>
+            <div class="flex items-center justify-center gap-4 text-gray-400 font-mono text-sm">
               <time>
                 {new Date(_article.publishedAt).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
               </time>
               {_article.category && (
                 <>
-                  <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
-                  <span class="px-3 py-1 bg-gray-100 rounded-full text-sm">{_article.category}</span>
+                  <span class="w-1 h-1 bg-brand-500 rounded-full shadow-[0_0_5px_rgba(99,102,241,1)]"></span>
+                  <span class="px-3 py-1 bg-white/5 border border-white/10 rounded-full">{_article.category}</span>
                 </>
               )}
             </div>
           </header>
           
-          <div class="prose prose-lg max-w-none bg-white rounded-2xl p-8 md:p-12 shadow-sm border border-gray-100" id="article-content">
+          <div class="prose prose-lg prose-invert max-w-none glass-panel p-8 md:p-12 mb-12 shadow-sm text-gray-300 font-light leading-relaxed" id="article-content">
           </div>
           
           <script define:vars={{ content: _article.content }}>

@@ -42,8 +42,11 @@ export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
     return (
       <div className="grid md:grid-cols-3 gap-8">
         {[...Array(limit)].map((_, i) => (
-          <div key={i} className="animate-pulse">
-            <div className="bg-gray-200 rounded-2xl h-64" />
+          <div key={i} className="animate-pulse glass-panel p-4">
+            <div className="bg-white/5 rounded-2xl h-40 mb-4 border border-white/10" />
+            <div className="bg-white/5 rounded-lg h-4 w-1/4 mb-4" />
+            <div className="bg-white/5 rounded-lg h-6 w-3/4 mb-3" />
+            <div className="bg-white/5 rounded-lg h-4 w-full mb-2" />
           </div>
         ))}
       </div>
@@ -52,10 +55,10 @@ export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
 
   if (error || articles.length === 0) {
     return (
-      <div className="text-center py-16 bg-white rounded-2xl border border-dashed border-gray-300">
-        <div className="w-16 h-16 bg-gray-100 rounded-full flex items-center justify-center mx-auto mb-4">
+      <div className="text-center py-16 glass-panel border border-dashed border-brand-500/20">
+        <div className="w-16 h-16 bg-white/5 border border-white/10 rounded-full flex items-center justify-center mx-auto mb-4">
           <svg
-            className="w-8 h-8 text-gray-400"
+            className="w-8 h-8 text-brand-400"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
@@ -68,53 +71,69 @@ export function ArticlesShowcase({ limit = 3 }: ArticlesShowcaseProps) {
             />
           </svg>
         </div>
-        <p className="text-gray-500">No articles available yet.</p>
-        <p className="text-sm text-gray-400 mt-1">Check back soon for new content!</p>
+        <p className="text-gray-300 font-medium">No articles available yet.</p>
+        <p className="text-sm text-gray-500 mt-1">Check back soon for new content!</p>
       </div>
     );
   }
 
   return (
-    <div className="grid md:grid-cols-3 gap-8">
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
       {articles.map((article) => (
         <article
           key={article.id}
-          className="group bg-white rounded-2xl border border-gray-100 overflow-hidden hover:shadow-2xl hover:shadow-gray-200/50 transition-all duration-500 hover:-translate-y-2"
+          className="group glass-panel overflow-hidden hover-glow flex flex-col h-full"
         >
           {/* Image */}
-          <div className="relative h-40 overflow-hidden bg-gradient-to-br from-primary-100 to-purple-100">
+          <div className="relative h-48 overflow-hidden bg-[#0A0A1F] border-b border-white/5">
             {article.featuredImage ? (
               <img
                 src={article.featuredImage}
                 alt={article.title}
-                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+                className="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700"
               />
             ) : (
-              <div className="w-full h-full flex items-center justify-center">
-                <span className="text-5xl">📝</span>
+              <div className="w-full h-full flex flex-col items-center justify-center relative overflow-hidden">
+                <div className="absolute inset-0 bg-brand-900/20" />
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(99,102,241,0.15)_0,transparent_70%)]" />
+                <div className="w-16 h-16 rounded-full bg-white/5 flex items-center justify-center mb-2 z-10 border border-white/10">
+                  <span className="text-3xl filter drop-shadow-[0_0_8px_rgba(255,255,255,0.5)]">
+                    📝
+                  </span>
+                </div>
+                <span className="text-sm font-mono text-brand-300 z-10">[ Article Cover ]</span>
               </div>
             )}
+
+            <div className="absolute inset-0 bg-gradient-to-t from-[#0A0A1F] via-[#0A0A1F]/20 to-transparent opacity-60 group-hover:opacity-30 transition-opacity duration-500" />
           </div>
 
           {/* Content */}
-          <div className="p-6">
-            <time className="text-sm text-gray-500 mb-2 block">
+          <div className="p-6 flex flex-col flex-1">
+            <time className="text-sm text-brand-400 mb-3 block font-mono">
               {formatDate(article.publishedAt)}
             </time>
 
-            <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors line-clamp-2">
+            <h3 className="text-lg font-bold text-white mb-3 group-hover:text-brand-400 transition-colors line-clamp-2 drop-shadow-sm">
               <a href={`/blog/${article.slug}`}>{article.title}</a>
             </h3>
 
-            <p className="text-gray-600 text-sm line-clamp-3">{article.excerpt}</p>
+            <p className="text-gray-400 text-sm line-clamp-3 mb-6 flex-1 font-light leading-relaxed">
+              {article.excerpt}
+            </p>
 
-            <div className="mt-4 pt-4 border-t border-gray-100">
+            <div className="mt-auto pt-4 border-t border-white/10">
               <a
                 href={`/blog/${article.slug}`}
-                className="inline-flex items-center gap-2 text-primary-600 hover:text-primary-700 text-sm font-medium transition-colors"
+                className="inline-flex items-center gap-2 text-brand-400 hover:text-accent-400 text-sm font-medium transition-colors group/link"
               >
-                Read More
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                Read Article
+                <svg
+                  className="w-4 h-4 group-hover/link:translate-x-1 transition-transform"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
