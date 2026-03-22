@@ -1,9 +1,8 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import type { IProjectRepository } from '../../domain/interfaces/project-repository.interface';
 import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
 import type { Project } from '../../domain/entities/project.entity';
-import type { CreateProjectDto } from '../dto/project.dto';
-import type { UpdateProjectDto } from '../dto/project.dto';
+import type { CreateProjectDto, UpdateProjectDto } from '../dto/project.dto';
 import { TProjectRepository, TCacheService } from '../../domain/tokens';
 
 @Injectable()
@@ -40,7 +39,7 @@ export class GetProjectBySlugUseCase {
 
     const project = await this.projectRepository.findBySlug(slug);
     if (!project) {
-      throw new Error('Project not found');
+      throw new NotFoundException(`Project with slug '${slug}' not found`);
     }
 
     await this.cacheService.set(cacheKey, project, '10m');
@@ -72,7 +71,7 @@ export class UpdateProjectUseCase {
   async execute(id: string, dto: UpdateProjectDto): Promise<Project> {
     const existing = await this.projectRepository.findById(id);
     if (!existing) {
-      throw new Error('Project not found');
+      throw new NotFoundException(`Project with id '${id}' not found`);
     }
 
     const project = await this.projectRepository.update(id, dto);
@@ -92,7 +91,7 @@ export class DeleteProjectUseCase {
   async execute(id: string): Promise<void> {
     const existing = await this.projectRepository.findById(id);
     if (!existing) {
-      throw new Error('Project not found');
+      throw new NotFoundException(`Project with id '${id}' not found`);
     }
 
     await this.projectRepository.delete(id);

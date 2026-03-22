@@ -1,10 +1,8 @@
-import { Inject, Injectable } from '@nestjs/common';
+import { Inject, Injectable, NotFoundException } from '@nestjs/common';
 import type { IArticleRepository } from '../../domain/interfaces/article-repository.interface';
 import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
-import type { Article } from '../../domain/entities/article.entity';
-import type { CreateArticleDto } from '../dto/article.dto';
-import type { UpdateArticleDto } from '../dto/article.dto';
-import type { PaginationDto } from '../dto/article.dto';
+import type { Article, ArticleWithAuthor } from '../../domain/entities/article.entity';
+import type { CreateArticleDto, UpdateArticleDto, PaginationDto } from '../dto/article.dto';
 import { TArticleRepository, TCacheService } from '../../domain/tokens';
 
 export interface PaginatedResult<T> {
@@ -17,6 +15,15 @@ export interface PaginatedResult<T> {
   };
 }
 
+/**
+ * Calculates estimated reading time based on word count.
+ * Average reading speed: 200 words per minute.
+ */
+function calculateReadingTime(content: string): number {
+  const wordCount = content.trim().split(/\s+/).length;
+  return Math.max(1, Math.ceil(wordCount / 200));
+}
+
 @Injectable()
 export class GetArticlesUseCase {
   constructor(
@@ -24,17 +31,17 @@ export class GetArticlesUseCase {
     @Inject(TCacheService) private readonly cacheService: ICacheService,
   ) {}
 
-  async execute(params: PaginationDto): Promise<PaginatedResult<Article>> {
+  async execute(params: PaginationDto): Promise<PaginatedResult<ArticleWithAuthor>> {
     const page = params.page ?? 1;
     const limit = Math.min(params.limit ?? 10, 50);
-    const cacheKey = `articles:${JSON.stringify(params)}`;
+    const cacheKey = `articles:${JSON.stringify({ ...params, page, limit })}`;
 
-    const cached = await this.cacheService.get<PaginatedResult<Article>>(cacheKey);
+    const cached = await this.cacheService.get<PaginatedResult<ArticleWithAuthor>>(cacheKey);
     if (cached) return cached;
 
     const { data, total } = await this.articleRepository.findAll({ ...params, page, limit });
 
-    const result: PaginatedResult<Article> = {
+    const result: PaginatedResult<ArticleWithAuthor> = {
       data,
       meta: { page, limit, total, totalPages: Math.ceil(total / limit) },
     };
@@ -51,15 +58,15 @@ export class GetArticleBySlugUseCase {
     @Inject(TCacheService) private readonly cacheService: ICacheService,
   ) {}
 
-  async execute(slug: string): Promise<Article> {
+  async execute(slug: string): Promise<ArticleWithAuthor> {
     const cacheKey = `article:${slug}`;
 
-    const cached = await this.cacheService.get<Article>(cacheKey);
+    const cached = await this.cacheService.get<ArticleWithAuthor>(cacheKey);
     if (cached) return cached;
 
     const article = await this.articleRepository.findBySlug(slug);
     if (!article) {
-      throw new Error('Article not found');
+      throw new NotFoundException(`Article with slug '${slug}' not found`);
     }
 
     await this.cacheService.set(cacheKey, article, '10m');
@@ -75,10 +82,14 @@ export class CreateArticleUseCase {
   ) {}
 
   async execute(dto: CreateArticleDto, authorId: string): Promise<Article> {
+    const readingTime = calculateReadingTime(dto.content);
+
     const data = {
       ...dto,
       authorId,
       status: 'draft' as const,
+      tags: dto.tags ?? [],
+      readingTime,
       publishedAt: dto.publishedAt ? new Date(dto.publishedAt) : undefined,
     };
     const article = await this.articleRepository.create(data);
@@ -98,14 +109,19 @@ export class UpdateArticleUseCase {
   async execute(id: string, dto: UpdateArticleDto): Promise<Article> {
     const existing = await this.articleRepository.findById(id);
     if (!existing) {
-      throw new Error('Article not found');
+      throw new NotFoundException(`Article with id '${id}' not found`);
     }
 
-    const data = {
-      ...dto,
-      publishedAt: dto.publishedAt ? new Date(dto.publishedAt) : undefined,
-    };
-    const article = await this.articleRepository.update(id, data);
+    const data: Record<string, unknown> = { ...dto };
+
+    if (dto.content) {
+      data.readingTime = calculateReadingTime(dto.content);
+    }
+    if (dto.publishedAt) {
+      data.publishedAt = new Date(dto.publishedAt);
+    }
+
+    const article = await this.articleRepository.update(id, data as Partial<Article>);
     await this.cacheService.del(`article:${existing.slug}`);
     await this.cacheService.delPattern('articles:*');
     return article;
@@ -122,7 +138,7 @@ export class DeleteArticleUseCase {
   async execute(id: string): Promise<void> {
     const existing = await this.articleRepository.findById(id);
     if (!existing) {
-      throw new Error('Article not found');
+      throw new NotFoundException(`Article with id '${id}' not found`);
     }
 
     await this.articleRepository.delete(id);

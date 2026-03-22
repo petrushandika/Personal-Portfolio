@@ -1,12 +1,22 @@
-import { Inject, Injectable } from '@nestjs/common';
+import {
+  ConflictException,
+  Inject,
+  Injectable,
+  UnauthorizedException,
+  NotFoundException,
+} from '@nestjs/common';
 import type { IAuthService } from '../../domain/interfaces/auth-service.interface';
 import type { IPasswordService } from '../../domain/interfaces/password-service.interface';
 import type { IJwtService } from '../../domain/interfaces/jwt-service.interface';
 import type { IUserRepository } from '../../domain/interfaces/user-repository.interface';
 import type { User } from '../../domain/entities/user.entity';
-import type { LoginDto } from '../dto/auth.dto';
-import type { RegisterDto } from '../dto/auth.dto';
-import { TUserRepository, TPasswordService, TJwtService, TAuthService } from '../../domain/tokens';
+import type { LoginDto, RegisterDto } from '../dto/auth.dto';
+import {
+  TUserRepository,
+  TPasswordService,
+  TJwtService,
+  TAuthService,
+} from '../../domain/tokens';
 
 @Injectable()
 export class RegisterUseCase {
@@ -18,7 +28,7 @@ export class RegisterUseCase {
   async execute(dto: RegisterDto): Promise<Omit<User, 'passwordHash'>> {
     const existing = await this.userRepository.findByEmail(dto.email);
     if (existing) {
-      throw new Error('Email already registered');
+      throw new ConflictException('Email already registered');
     }
 
     const passwordHash = await this.passwordService.hash(dto.password);
@@ -26,10 +36,19 @@ export class RegisterUseCase {
     const user = await this.userRepository.create({
       email: dto.email,
       passwordHash,
+      name: dto.name,
       role: 'admin',
     });
 
-    return { id: user.id, email: user.email, role: user.role, createdAt: user.createdAt, updatedAt: user.updatedAt };
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      avatar: user.avatar,
+      role: user.role,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+    };
   }
 }
 
@@ -49,12 +68,12 @@ export class LoginUseCase {
   }> {
     const user = await this.userRepository.findByEmail(dto.email);
     if (!user) {
-      throw new Error('Invalid credentials');
+      throw new UnauthorizedException('Invalid email or password');
     }
 
     const isValid = await this.passwordService.verify(dto.password, user.passwordHash);
     if (!isValid) {
-      throw new Error('Invalid credentials');
+      throw new UnauthorizedException('Invalid email or password');
     }
 
     const accessToken = await this.jwtService.generateAccessToken({
@@ -69,7 +88,15 @@ export class LoginUseCase {
     return {
       accessToken,
       refreshToken,
-      user: { id: user.id, email: user.email, role: user.role, createdAt: user.createdAt, updatedAt: user.updatedAt },
+      user: {
+        id: user.id,
+        email: user.email,
+        name: user.name,
+        avatar: user.avatar,
+        role: user.role,
+        createdAt: user.createdAt,
+        updatedAt: user.updatedAt,
+      },
     };
   }
 }
@@ -98,9 +125,19 @@ export class LogoutUseCase {
 export class GetProfileUseCase {
   constructor(@Inject(TUserRepository) private readonly userRepository: IUserRepository) {}
 
-  async execute(userId: string): Promise<Omit<User, 'passwordHash'> | null> {
+  async execute(userId: string): Promise<Omit<User, 'passwordHash'>> {
     const user = await this.userRepository.findById(userId);
-    if (!user) return null;
-    return { id: user.id, email: user.email, role: user.role, createdAt: user.createdAt, updatedAt: user.updatedAt };
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+    return {
+      id: user.id,
+      email: user.email,
+      name: user.name,
+      avatar: user.avatar,
+      role: user.role,
+      createdAt: user.createdAt,
+      updatedAt: user.updatedAt,
+    };
   }
 }

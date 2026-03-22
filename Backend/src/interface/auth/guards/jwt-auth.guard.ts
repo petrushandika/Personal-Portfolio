@@ -13,10 +13,15 @@ export class JwtAuthGuard {
 
     const token = authHeader.substring(7);
 
+    const jwtSecret = process.env.JWT_SECRET;
+    if (!jwtSecret) {
+      throw new Error('JWT_SECRET environment variable is required for authentication');
+    }
+
     try {
       const { payload } = await jwtVerify(
         token,
-        new TextEncoder().encode(process.env.JWT_SECRET ?? '')
+        new TextEncoder().encode(jwtSecret)
       );
 
       request.user = {

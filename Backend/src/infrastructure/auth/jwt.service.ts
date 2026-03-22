@@ -38,7 +38,10 @@ export class JwtService implements IJwtService {
 export const provideJwtService = {
   provide: TJwtService,
   useFactory: (configService: ConfigService) => {
-    const jwtSecret = configService.get<string>('JWT_SECRET') ?? '';
+    const jwtSecret = configService.get<string>('JWT_SECRET');
+    if (!jwtSecret) {
+      throw new Error('JWT_SECRET environment variable is required');
+    }
     return new JwtService(jwtSecret);
   },
   inject: [ConfigService],

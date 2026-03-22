@@ -4,20 +4,20 @@ import {
   Get,
   HttpCode,
   HttpStatus,
-  Inject,
   Post,
   Req,
   UseGuards,
+  Inject,
 } from '@nestjs/common';
 import type { Request } from 'express';
-import type { LoginDto } from '../../application/dto/auth.dto';
-import type { RegisterDto } from '../../application/dto/auth.dto';
-import type { RefreshDto } from '../../application/dto/auth.dto';
-import { RegisterUseCase } from '../../application/use-cases/auth.use-case';
-import { LoginUseCase } from '../../application/use-cases/auth.use-case';
-import { RefreshTokenUseCase } from '../../application/use-cases/auth.use-case';
-import { LogoutUseCase } from '../../application/use-cases/auth.use-case';
-import { GetProfileUseCase } from '../../application/use-cases/auth.use-case';
+import { LoginDto, RegisterDto, RefreshDto } from '../../application/dto/auth.dto';
+import {
+  RegisterUseCase,
+  LoginUseCase,
+  RefreshTokenUseCase,
+  LogoutUseCase,
+  GetProfileUseCase,
+} from '../../application/use-cases/auth.use-case';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';
 
 @Controller('auth')
@@ -31,15 +31,12 @@ export class AuthController {
   ) {}
 
   @Post('register')
+  @HttpCode(HttpStatus.CREATED)
   async register(@Body() dto: RegisterDto) {
     const user = await this.registerUseCase.execute(dto);
     return {
       success: true,
-      data: {
-        id: user.id,
-        email: user.email,
-        role: user.role,
-      },
+      data: user,
     };
   }
 
@@ -49,15 +46,7 @@ export class AuthController {
     const result = await this.loginUseCase.execute(dto);
     return {
       success: true,
-      data: {
-        accessToken: result.accessToken,
-        refreshToken: result.refreshToken,
-        user: {
-          id: result.user.id,
-          email: result.user.email,
-          role: result.user.role,
-        },
-      },
+      data: result,
     };
   }
 
@@ -78,6 +67,7 @@ export class AuthController {
     return {
       success: true,
       data: null,
+      message: 'Logged out successfully',
     };
   }
 

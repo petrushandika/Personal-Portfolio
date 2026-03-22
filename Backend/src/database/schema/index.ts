@@ -9,15 +9,23 @@ import {
   varchar,
 } from 'drizzle-orm/pg-core';
 
+// ============================================================
+// Users
+// ============================================================
 export const users = pgTable('users', {
   id: uuid('id').primaryKey().defaultRandom(),
   email: varchar('email', { length: 255 }).notNull().unique(),
   passwordHash: varchar('password_hash', { length: 255 }).notNull(),
+  name: varchar('name', { length: 255 }),
+  avatar: varchar('avatar', { length: 500 }),
   role: varchar('role', { length: 50 }).notNull().default('admin'),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
+// ============================================================
+// Refresh Tokens
+// ============================================================
 export const refreshTokens = pgTable('refresh_tokens', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id')
@@ -28,6 +36,32 @@ export const refreshTokens = pgTable('refresh_tokens', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
+// ============================================================
+// Categories
+// ============================================================
+export const categories = pgTable('categories', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 100 }).notNull().unique(),
+  slug: varchar('slug', { length: 100 }).notNull().unique(),
+  description: text('description'),
+  color: varchar('color', { length: 7 }).default('#6366f1'),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+  updatedAt: timestamp('updated_at').defaultNow().notNull(),
+});
+
+// ============================================================
+// Tags
+// ============================================================
+export const tags = pgTable('tags', {
+  id: uuid('id').primaryKey().defaultRandom(),
+  name: varchar('name', { length: 100 }).notNull().unique(),
+  slug: varchar('slug', { length: 100 }).notNull().unique(),
+  createdAt: timestamp('created_at').defaultNow().notNull(),
+});
+
+// ============================================================
+// Articles
+// ============================================================
 export const articles = pgTable('articles', {
   id: uuid('id').primaryKey().defaultRandom(),
   slug: varchar('slug', { length: 255 }).notNull().unique(),
@@ -36,7 +70,10 @@ export const articles = pgTable('articles', {
   content: text('content').notNull(),
   featuredImage: varchar('featured_image', { length: 500 }),
   status: varchar('status', { length: 50 }).notNull().default('draft'),
-  metaTitle: varchar('meta_title', { length: 255 }),
+  categoryId: uuid('category_id').references(() => categories.id, { onDelete: 'set null' }),
+  tags: text('tags').array().notNull().default([]),
+  readingTime: integer('reading_time').default(0),
+  metaTitle: varchar('meta_title', { length: 60 }),
   metaDescription: text('meta_description'),
   ogImage: varchar('og_image', { length: 500 }),
   canonicalUrl: varchar('canonical_url', { length: 500 }),
@@ -50,6 +87,9 @@ export const articles = pgTable('articles', {
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
+// ============================================================
+// Projects
+// ============================================================
 export const projects = pgTable('projects', {
   id: uuid('id').primaryKey().defaultRandom(),
   slug: varchar('slug', { length: 255 }).notNull().unique(),
@@ -64,10 +104,16 @@ export const projects = pgTable('projects', {
   thumbnail: varchar('thumbnail', { length: 500 }),
   featured: boolean('featured').notNull().default(false),
   order: integer('order').notNull().default(0),
+  metaTitle: varchar('meta_title', { length: 60 }),
+  metaDescription: text('meta_description'),
+  ogImage: varchar('og_image', { length: 500 }),
   createdAt: timestamp('created_at').defaultNow().notNull(),
   updatedAt: timestamp('updated_at').defaultNow().notNull(),
 });
 
+// ============================================================
+// Audit Logs
+// ============================================================
 export const auditLogs = pgTable('audit_logs', {
   id: uuid('id').primaryKey().defaultRandom(),
   userId: uuid('user_id').references(() => users.id, { onDelete: 'set null' }),
@@ -80,9 +126,16 @@ export const auditLogs = pgTable('audit_logs', {
   createdAt: timestamp('created_at').defaultNow().notNull(),
 });
 
+// ============================================================
+// Type Exports
+// ============================================================
 export type User = typeof users.$inferSelect;
 export type NewUser = typeof users.$inferInsert;
 export type RefreshToken = typeof refreshTokens.$inferSelect;
+export type Category = typeof categories.$inferSelect;
+export type NewCategory = typeof categories.$inferInsert;
+export type Tag = typeof tags.$inferSelect;
+export type NewTag = typeof tags.$inferInsert;
 export type Article = typeof articles.$inferSelect;
 export type NewArticle = typeof articles.$inferInsert;
 export type Project = typeof projects.$inferSelect;

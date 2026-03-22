@@ -3,24 +3,26 @@ import {
   Controller,
   Delete,
   Get,
-  Inject,
+  HttpCode,
+  HttpStatus,
   Param,
   Post,
   Put,
   Query,
   Req,
   UseGuards,
+  Inject,
 } from '@nestjs/common';
 import type { Request } from 'express';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import type { CreateArticleDto } from '../../application/dto/article.dto';
-import type { UpdateArticleDto } from '../../application/dto/article.dto';
-import type { PaginationDto } from '../../application/dto/article.dto';
-import { GetArticlesUseCase } from '../../application/use-cases/article.use-case';
-import { GetArticleBySlugUseCase } from '../../application/use-cases/article.use-case';
-import { CreateArticleUseCase } from '../../application/use-cases/article.use-case';
-import { UpdateArticleUseCase } from '../../application/use-cases/article.use-case';
-import { DeleteArticleUseCase } from '../../application/use-cases/article.use-case';
+import { CreateArticleDto, UpdateArticleDto, PaginationDto } from '../../application/dto/article.dto';
+import {
+  GetArticlesUseCase,
+  GetArticleBySlugUseCase,
+  CreateArticleUseCase,
+  UpdateArticleUseCase,
+  DeleteArticleUseCase,
+} from '../../application/use-cases/article.use-case';
 
 @Controller('articles')
 export class ArticleController {
@@ -52,6 +54,7 @@ export class ArticleController {
 
   @Post()
   @UseGuards(JwtAuthGuard)
+  @HttpCode(HttpStatus.CREATED)
   async create(@Body() dto: CreateArticleDto, @Req() req: Request) {
     const user = (req as Request & { user: { userId: string } }).user;
     const article = await this.createArticleUseCase.execute(dto, user.userId);
@@ -73,11 +76,13 @@ export class ArticleController {
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
+  @HttpCode(HttpStatus.OK)
   async delete(@Param('id') id: string) {
     await this.deleteArticleUseCase.execute(id);
     return {
       success: true,
       data: null,
+      message: 'Article deleted successfully',
     };
   }
 }

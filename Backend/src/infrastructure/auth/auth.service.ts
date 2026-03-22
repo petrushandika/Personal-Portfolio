@@ -1,4 +1,4 @@
-import { Inject } from '@nestjs/common';
+import { Inject, UnauthorizedException } from '@nestjs/common';
 import { eq } from 'drizzle-orm';
 import type { IAuthService } from '../../domain/interfaces/auth-service.interface';
 import type { IJwtService } from '../../domain/interfaces/jwt-service.interface';
@@ -6,11 +6,12 @@ import type { IUserRepository } from '../../domain/interfaces/user-repository.in
 import type { User } from '../../domain/entities/user.entity';
 import { refreshTokens } from '../../database/schema';
 import { TJwtService, TUserRepository } from '../../domain/tokens';
+import type { NodePgDatabase } from 'drizzle-orm/node-postgres';
+import type * as schema from '../../database/schema';
 
 export class AuthService implements IAuthService {
   constructor(
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    @Inject('DB') private readonly db: any,
+    @Inject('DB') private readonly db: NodePgDatabase<typeof schema>,
     @Inject(TJwtService) private readonly jwtService: IJwtService,
     @Inject(TUserRepository) private readonly userRepository: IUserRepository,
   ) {}
@@ -21,7 +22,8 @@ export class AuthService implements IAuthService {
       throw new Error('Email already registered');
     }
 
-    const passwordHash = await (await import('argon2')).default.hash(password);
+    const { hash } = await import('argon2');
+    const passwordHash = await hash(password);
 
     return this.userRepository.create({
       email,
@@ -37,12 +39,13 @@ export class AuthService implements IAuthService {
   }> {
     const user = await this.userRepository.findByEmail(email);
     if (!user) {
-      throw new Error('Invalid credentials');
+      throw new UnauthorizedException('Invalid credentials');
     }
 
-    const isValid = await (await import('argon2')).default.verify(user.passwordHash, password);
+    const { verify } = await import('argon2');
+    const isValid = await verify(user.passwordHash, password);
     if (!isValid) {
-      throw new Error('Invalid credentials');
+      throw new UnauthorizedException('Invalid credentials');
     }
 
     const accessToken = await this.jwtService.generateAccessToken({
@@ -65,14 +68,15 @@ export class AuthService implements IAuthService {
     });
 
     if (!storedToken || storedToken.expiresAt < new Date()) {
-      throw new Error('Invalid refresh token');
+      throw new UnauthorizedException('Invalid or expired refresh token');
     }
 
     const user = await this.userRepository.findById(storedToken.userId);
     if (!user) {
-      throw new Error('User not found');
+      throw new UnauthorizedException('User not found');
     }
 
+    // Token rotation: delete old, create new
     await this.db.delete(refreshTokens).where(eq(refreshTokens.id, storedToken.id));
 
     const newAccessToken = await this.jwtService.generateAccessToken({
@@ -98,7 +102,7 @@ export class AuthService implements IAuthService {
 
   async saveRefreshToken(userId: string, refreshToken: string): Promise<void> {
     const tokenHash = await this.jwtService.hashToken(refreshToken);
-    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000);
+    const expiresAt = new Date(Date.now() + 7 * 24 * 60 * 60 * 1000); // 7 days
 
     await this.db.insert(refreshTokens).values({
       userId,

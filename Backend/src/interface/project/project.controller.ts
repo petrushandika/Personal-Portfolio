@@ -3,21 +3,24 @@ import {
   Controller,
   Delete,
   Get,
-  Inject,
+  HttpCode,
+  HttpStatus,
   Param,
   Post,
   Put,
   Query,
   UseGuards,
+  Inject,
 } from '@nestjs/common';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
-import type { CreateProjectDto } from '../../application/dto/project.dto';
-import type { UpdateProjectDto } from '../../application/dto/project.dto';
-import { GetProjectsUseCase } from '../../application/use-cases/project.use-case';
-import { GetProjectBySlugUseCase } from '../../application/use-cases/project.use-case';
-import { CreateProjectUseCase } from '../../application/use-cases/project.use-case';
-import { UpdateProjectUseCase } from '../../application/use-cases/project.use-case';
-import { DeleteProjectUseCase } from '../../application/use-cases/project.use-case';
+import { CreateProjectDto, UpdateProjectDto } from '../../application/dto/project.dto';
+import {
+  GetProjectsUseCase,
+  GetProjectBySlugUseCase,
+  CreateProjectUseCase,
+  UpdateProjectUseCase,
+  DeleteProjectUseCase,
+} from '../../application/use-cases/project.use-case';
 
 @Controller('projects')
 export class ProjectController {
@@ -50,6 +53,7 @@ export class ProjectController {
 
   @Post()
   @UseGuards(JwtAuthGuard)
+  @HttpCode(HttpStatus.CREATED)
   async create(@Body() dto: CreateProjectDto) {
     const project = await this.createProjectUseCase.execute(dto);
     return {
@@ -70,11 +74,13 @@ export class ProjectController {
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard)
+  @HttpCode(HttpStatus.OK)
   async delete(@Param('id') id: string) {
     await this.deleteProjectUseCase.execute(id);
     return {
       success: true,
       data: null,
+      message: 'Project deleted successfully',
     };
   }
 }

@@ -8,15 +8,18 @@ export interface Project {
   slug: string;
   title: string;
   description: string;
-  content?: string;
+  content?: string | null;
   techStack: string[];
   techStackIcons: TechStackIcon[];
-  githubUrl?: string;
-  liveUrl?: string;
+  githubUrl?: string | null;
+  liveUrl?: string | null;
   images: string[];
-  thumbnail?: string;
+  thumbnail?: string | null;
   featured: boolean;
   order: number;
+  metaTitle?: string | null;
+  metaDescription?: string | null;
+  ogImage?: string | null;
   createdAt: Date;
   updatedAt: Date;
 }

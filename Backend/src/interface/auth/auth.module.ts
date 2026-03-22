@@ -9,11 +9,13 @@ import { AuthService } from '../../infrastructure/auth/auth.service';
 import { provideJwtService } from '../../infrastructure/auth/jwt.service';
 import { DatabaseModule } from '../../infrastructure/database/database.module';
 import { TUserRepository, TPasswordService, TAuthService } from '../../domain/tokens';
-import { RegisterUseCase } from '../../application/use-cases/auth.use-case';
-import { LoginUseCase } from '../../application/use-cases/auth.use-case';
-import { RefreshTokenUseCase } from '../../application/use-cases/auth.use-case';
-import { LogoutUseCase } from '../../application/use-cases/auth.use-case';
-import { GetProfileUseCase } from '../../application/use-cases/auth.use-case';
+import {
+  RegisterUseCase,
+  LoginUseCase,
+  RefreshTokenUseCase,
+  LogoutUseCase,
+  GetProfileUseCase,
+} from '../../application/use-cases/auth.use-case';
 
 @Module({
   imports: [
@@ -21,10 +23,14 @@ import { GetProfileUseCase } from '../../application/use-cases/auth.use-case';
     JwtModule.registerAsync({
       global: true,
       inject: [ConfigService],
-      useFactory: (configService: ConfigService) => ({
-        secret: configService.get<string>('JWT_SECRET'),
-        signOptions: { expiresIn: '15m' },
-      }),
+      useFactory: (configService: ConfigService) => {
+        const secret = configService.get<string>('JWT_SECRET');
+        if (!secret) throw new Error('JWT_SECRET environment variable is required');
+        return {
+          secret,
+          signOptions: { expiresIn: '15m' },
+        };
+      },
     }),
   ],
   controllers: [AuthController],

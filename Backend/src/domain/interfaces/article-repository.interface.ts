@@ -1,4 +1,4 @@
-import type { Article } from '../entities/article.entity';
+import type { Article, ArticleWithAuthor } from '../entities/article.entity';
 
 export interface IArticleRepository {
   findAll(params: {
@@ -6,8 +6,10 @@ export interface IArticleRepository {
     limit?: number;
     status?: string;
     search?: string;
-  }): Promise<{ data: Article[]; total: number }>;
-  findBySlug(slug: string): Promise<Article | null>;
+    categoryId?: string;
+    tag?: string;
+  }): Promise<{ data: ArticleWithAuthor[]; total: number }>;
+  findBySlug(slug: string): Promise<ArticleWithAuthor | null>;
   findById(id: string): Promise<Article | null>;
   create(data: Partial<Article> & { authorId: string }): Promise<Article>;
   update(id: string, data: Partial<Article>): Promise<Article>;

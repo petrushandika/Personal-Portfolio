@@ -88,30 +88,42 @@ graph TB
         AUTH_CTRL["AuthController"]
         ARTICLE_CTRL["ArticleController"]
         PROJECT_CTRL["ProjectController"]
-        MEDIA_CTRL["MediaController"]
+        CATEGORY_CTRL["CategoryController"]
+        HEALTH_CTRL["HealthController"]
         JWT_GUARD["JwtAuthGuard"]
         THROTTLE_GUARD["ThrottlerGuard"]
+        EXCEPTION_FILTER["HttpExceptionFilter"]
     end
 
-    subgraph Application["application/ (Use Cases)"]
-        AUTH_USECASE["LoginUseCase"]
-        ARTICLE_USECASE["ArticleUseCase"]
-        PROJECT_USECASE["ProjectUseCase"]
+    subgraph Application["application/ (Use Cases, DTOs)"]
+        AUTH_USECASE["Auth UseCases"]
+        ARTICLE_USECASE["Article UseCases"]
+        PROJECT_USECASE["Project UseCases"]
+        CATEGORY_USECASE["Category UseCases"]
+        DTOS["Validated DTOs (class-validator)"]
     end
 
     subgraph Infrastructure["infrastructure/ (Implementations)"]
         USER_REPO["UserRepository"]
         ARTICLE_REPO["ArticleRepository"]
-        CACHE["RedisCacheService"]
+        PROJECT_REPO["ProjectRepository"]
+        CATEGORY_REPO["CategoryRepository"]
+        AUDIT_REPO["AuditLogRepository"]
+        CACHE["CacheService / NullCacheService"]
         JWT_SVC["JwtService"]
-        HASH_SVC["HashService"]
+        HASH_SVC["PasswordService"]
     end
 
     subgraph Domain["domain/ (Pure TypeScript)"]
         USER_ENTITY["User Entity"]
-        ARTICLE_ENTITY["Article Entity"]
+        ARTICLE_ENTITY["Article / ArticleWithAuthor"]
+        PROJECT_ENTITY["Project Entity"]
+        CATEGORY_ENTITY["Category Entity"]
+        AUDIT_ENTITY["AuditLog Entity"]
         I_USER_REPO["IUserRepository"]
         I_ARTICLE_REPO["IArticleRepository"]
+        I_PROJECT_REPO["IProjectRepository"]
+        I_CATEGORY_REPO["ICategoryRepository"]
     end
 
     Interface --> Application
@@ -261,6 +273,7 @@ classDiagram
 graph LR
     subgraph Auth["/auth"]
         LOGIN["POST /login"]
+        REGISTER["POST /register"]
         REFRESH["POST /refresh"]
         LOGOUT["POST /logout"]
         ME["GET /me"]
@@ -282,10 +295,16 @@ graph LR
         DELETE_P["DELETE /:id"]
     end
 
-    subgraph Media["/media"]
-        UPLOAD["POST /upload"]
-        LIST_M["GET /"]
-        DELETE_M["DELETE /:id"]
+    subgraph Categories["/categories"]
+        LIST_C["GET /"]
+        GET_C["GET /:slug"]
+        CREATE_C["POST /"]
+        UPDATE_C["PUT /:id"]
+        DELETE_C["DELETE /:id"]
+    end
+
+    subgraph Health["/health"]
+        HEALTH_CHECK["GET /"]
     end
 ```
 

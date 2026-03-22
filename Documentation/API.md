@@ -514,6 +514,127 @@ Delete project. **Requires authentication.**
 }
 ```
 
+## Category Endpoints
+
+### GET /categories
+
+Get all categories.
+
+**Response (200):**
+```typescript
+{
+  "success": true,
+  "data": [
+    {
+      "id": "uuid",
+      "name": "Web Development",
+      "slug": "web-development",
+      "description": "Articles about web development",
+      "color": "#6366f1",
+      "createdAt": "2024-01-01T00:00:00.000Z",
+      "updatedAt": "2024-01-01T00:00:00.000Z"
+    }
+  ]
+}
+```
+
+---
+
+### GET /categories/:slug
+
+Get single category by slug.
+
+**Response (200):**
+```typescript
+{
+  "success": true,
+  "data": {
+    "id": "uuid",
+    "name": "Web Development",
+    "slug": "web-development",
+    "description": "Articles about web development",
+    "color": "#6366f1",
+    "createdAt": "2024-01-01T00:00:00.000Z",
+    "updatedAt": "2024-01-01T00:00:00.000Z"
+  }
+}
+```
+
+---
+
+### POST /categories
+
+Create new category. **Requires authentication.**
+
+**Request:**
+```typescript
+{
+  "name": "Web Development",
+  "slug": "web-development",
+  "description": "Articles about web development", // optional
+  "color": "#6366f1" // optional, hex color code
+}
+```
+
+**Validation Rules:**
+- `name`: Required, max 100 characters
+- `slug`: Required, lowercase, hyphens only, unique
+- `description`: Optional, max 500 characters
+- `color`: Optional, hex color code (7 chars including #)
+
+**Response (201):**
+```typescript
+{
+  "success": true,
+  "data": {
+    "id": "uuid",
+    "name": "Web Development",
+    "slug": "web-development",
+    // ... full category object
+  }
+}
+```
+
+---
+
+### PUT /categories/:id
+
+Update existing category. **Requires authentication.**
+
+**Request:**
+```typescript
+{
+  "name": "Updated Name", // optional
+  "description": "Updated description" // optional
+}
+```
+
+**Response (200):**
+```typescript
+{
+  "success": true,
+  "data": {
+    "id": "uuid",
+    // ... updated category object
+  }
+}
+```
+
+---
+
+### DELETE /categories/:id
+
+Delete category. **Requires authentication.**
+
+**Response (200):**
+```typescript
+{
+  "success": true,
+  "data": null,
+  "message": "Category deleted successfully"
+}
+```
+
 ## Media Endpoints
 
 ### POST /media/upload

@@ -6,6 +6,7 @@ import { CacheModule } from './infrastructure/cache/cache.module';
 import { DatabaseModule } from './infrastructure/database/database.module';
 import { ArticleModule } from './interface/article/article.module';
 import { AuthModule } from './interface/auth/auth.module';
+import { CategoryModule } from './interface/category/category.module';
 import { HealthModule } from './interface/health/health.module';
 import { ProjectModule } from './interface/project/project.module';
 
@@ -27,6 +28,7 @@ import { ProjectModule } from './interface/project/project.module';
     HealthModule,
     ArticleModule,
     ProjectModule,
+    CategoryModule,
   ],
   providers: [
     {

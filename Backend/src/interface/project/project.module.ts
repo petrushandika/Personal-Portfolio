@@ -3,11 +3,13 @@ import { ProjectController } from './project.controller';
 import { ProjectRepository } from '../../infrastructure/repositories/project.repository';
 import { DatabaseModule } from '../../infrastructure/database/database.module';
 import { TProjectRepository } from '../../domain/tokens';
-import { GetProjectsUseCase } from '../../application/use-cases/project.use-case';
-import { GetProjectBySlugUseCase } from '../../application/use-cases/project.use-case';
-import { CreateProjectUseCase } from '../../application/use-cases/project.use-case';
-import { UpdateProjectUseCase } from '../../application/use-cases/project.use-case';
-import { DeleteProjectUseCase } from '../../application/use-cases/project.use-case';
+import {
+  GetProjectsUseCase,
+  GetProjectBySlugUseCase,
+  CreateProjectUseCase,
+  UpdateProjectUseCase,
+  DeleteProjectUseCase,
+} from '../../application/use-cases/project.use-case';
 
 @Module({
   imports: [DatabaseModule],

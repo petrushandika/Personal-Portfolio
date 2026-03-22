@@ -1,4 +1,5 @@
 import { Module, Logger, Global } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import Redis from 'ioredis';
 import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
 import { TCacheService } from '../../domain/tokens';
@@ -14,41 +15,50 @@ export class CacheService implements ICacheService {
   private redis: Redis;
   private isConnected = false;
   private logger = new Logger('CacheService');
+  private authFailed = false;
 
   constructor(redisUrl: string, redisPassword?: string) {
     this.redis = new Redis(redisUrl, {
       maxRetriesPerRequest: 3,
       password: redisPassword ?? undefined,
-      retryStrategy(times) {
-        const delay = Math.min(times * 50, 2000);
-        return delay;
+      retryStrategy: (times: number) => {
+        if (this.authFailed) return null; // Stop retrying on auth failure
+        if (times > 5) return null; // Max 5 retries
+        return Math.min(times * 200, 2000);
       },
+      lazyConnect: false,
+      enableReadyCheck: true,
     });
 
     this.redis.on('connect', () => {
-      this.isConnected = true;
-      this.logger.log('Redis connected');
-    });
-    this.redis.on('error', (err) => {
-      this.isConnected = false;
-      if (err.message.includes('NOAUTH') || err.message.includes('Authentication')) {
-        this.logger.warn('Redis authentication failed, using null cache');
-      } else {
-        this.logger.warn('Redis connection error:', err.message);
+      if (!this.authFailed) {
+        this.isConnected = true;
+        this.logger.log('Redis connected');
       }
     });
-    this.redis.on('ready', () => {
-      this.isConnected = true;
+
+    this.redis.on('error', (err: Error) => {
+      this.isConnected = false;
+      if (err.message.includes('NOAUTH') || err.message.includes('Authentication') || err.message.includes('ERR AUTH')) {
+        if (!this.authFailed) {
+          this.authFailed = true;
+          this.logger.warn('Redis authentication failed — falling back to no-op cache');
+          this.redis.disconnect(false);
+        }
+      } else if (!this.authFailed) {
+        this.logger.warn(`Redis error: ${err.message}`);
+      }
     });
+
+    this.redis.on('ready', () => {
+      if (!this.authFailed) {
+        this.isConnected = true;
+      }
+    });
+
     this.redis.on('close', () => {
       this.isConnected = false;
     });
-  }
-
-  async onModuleInit() {
-    // ioredis auto-connects, no need to call connect()
-    // Just wait a bit to see if connection succeeds
-    await new Promise((resolve) => setTimeout(resolve, 100));
   }
 
   async get<T>(key: string): Promise<T | null> {
@@ -67,12 +77,12 @@ export class CacheService implements ICacheService {
     try {
       const serialized = JSON.stringify(value);
       if (ttl) {
-        await this.redis.setex(key, this.parseTtl(ttl) ?? 300, serialized);
+        await this.redis.setex(key, this.parseTtl(ttl), serialized);
       } else {
         await this.redis.set(key, serialized);
       }
     } catch {
-      // Silently fail
+      // Silently fail — cache is optional
     }
   }
 
@@ -120,7 +130,19 @@ export class CacheService implements ICacheService {
   providers: [
     {
       provide: TCacheService,
-      useClass: NullCacheService,
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => {
+        const redisUrl = configService.get<string>('REDIS_URL');
+        if (redisUrl) {
+          const redisPassword = configService.get<string>('REDIS_PASSWORD');
+          const logger = new Logger('CacheModule');
+          logger.log('Redis URL configured, attempting connection...');
+          return new CacheService(redisUrl, redisPassword);
+        }
+        const logger = new Logger('CacheModule');
+        logger.log('No REDIS_URL configured — using NullCacheService (no-op cache)');
+        return new NullCacheService();
+      },
     },
   ],
   exports: [TCacheService],
