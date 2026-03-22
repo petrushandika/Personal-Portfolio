@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
-import { apiClient } from '../../../infrastructure/api/api';
 import type { Article } from '../../../core/entities/article';
+import { apiClient } from '../../../infrastructure/api/api';
 
 interface ArticlesShowcaseProps {
   limit?: number;

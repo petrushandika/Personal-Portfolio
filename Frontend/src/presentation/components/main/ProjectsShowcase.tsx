@@ -1,7 +1,7 @@
 import { ExternalLink, Github, Star } from 'lucide-react';
 import React, { useEffect, useState } from 'react';
-import { apiClient } from '../../../infrastructure/api/api';
 import type { Project } from '../../../core/entities/project';
+import { apiClient } from '../../../infrastructure/api/api';
 
 interface ProjectsShowcaseProps {
   limit?: number;

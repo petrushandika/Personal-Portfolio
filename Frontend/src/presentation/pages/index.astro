@@ -25,18 +25,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </span>
         </div>
         
-        <ProjectsShowcase client:visible limit={6} />
-        
-        <div class="text-center mt-12">
-          <a 
-            href="/projects" 
-            class="btn-secondary group gap-2"
-          >
-            View All Projects
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+        <div class="w-full">
+          <ProjectsShowcase client:visible limit={6} />
+          
+          <div class="text-center mt-12">
+            <a 
+              href="/projects" 
+              class="btn-secondary group gap-2"
+            >
+              View All Projects
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -54,18 +56,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           </span>
         </div>
         
-        <ArticlesShowcase client:visible limit={3} />
-        
-        <div class="text-center mt-12">
-          <a 
-            href="/blog" 
-            class="btn-secondary group gap-2"
-          >
-            View All Articles
-            <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-            </svg>
-          </a>
+        <div class="w-full">
+          <ArticlesShowcase client:visible limit={3} />
+          
+          <div class="text-center mt-12">
+            <a 
+              href="/blog" 
+              class="btn-secondary group gap-2"
+            >
+              View All Articles
+              <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
