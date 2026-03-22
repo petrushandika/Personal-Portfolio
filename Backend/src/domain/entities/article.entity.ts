@@ -8,6 +8,10 @@ export interface Article {
   status: 'draft' | 'published';
   metaTitle?: string;
   metaDescription?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  schemaMarkup?: Record<string, unknown>;
   authorId: string;
   publishedAt?: Date;
   createdAt: Date;

@@ -11,6 +11,7 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
+import type { Request } from 'express';
 import { JwtAuthGuard } from '../auth/guards/jwt-auth.guard';
 import type { CreateArticleDto } from '../../application/dto/article.dto';
 import type { UpdateArticleDto } from '../../application/dto/article.dto';
@@ -51,8 +52,8 @@ export class ArticleController {
 
   @Post()
   @UseGuards(JwtAuthGuard)
-  async create(@Body() dto: CreateArticleDto, @Req() req: any) {
-    const user = req.user;
+  async create(@Body() dto: CreateArticleDto, @Req() req: Request) {
+    const user = (req as Request & { user: { userId: string } }).user;
     const article = await this.createArticleUseCase.execute(dto, user.userId);
     return {
       success: true,

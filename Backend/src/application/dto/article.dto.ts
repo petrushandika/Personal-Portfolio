@@ -6,6 +6,10 @@ export class CreateArticleDto {
   featuredImage?: string;
   metaTitle?: string;
   metaDescription?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  schemaMarkup?: Record<string, unknown>;
   publishedAt?: string | Date;
 }
 
@@ -18,6 +22,10 @@ export class UpdateArticleDto {
   status?: 'draft' | 'published';
   metaTitle?: string;
   metaDescription?: string;
+  ogImage?: string;
+  canonicalUrl?: string;
+  robots?: string;
+  schemaMarkup?: Record<string, unknown>;
   publishedAt?: string | Date;
 }
 

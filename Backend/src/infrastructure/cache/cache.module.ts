@@ -1,5 +1,4 @@
 import { Module, Logger, Global } from '@nestjs/common';
-import { ConfigService } from '@nestjs/config';
 import Redis from 'ioredis';
 import type { ICacheService } from '../../domain/interfaces/cache-service.interface';
 import { TCacheService } from '../../domain/tokens';
@@ -19,7 +18,7 @@ export class CacheService implements ICacheService {
   constructor(redisUrl: string, redisPassword?: string) {
     this.redis = new Redis(redisUrl, {
       maxRetriesPerRequest: 3,
-      password: redisPassword || undefined,
+      password: redisPassword ?? undefined,
       retryStrategy(times) {
         const delay = Math.min(times * 50, 2000);
         return delay;

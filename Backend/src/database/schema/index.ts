@@ -38,6 +38,10 @@ export const articles = pgTable('articles', {
   status: varchar('status', { length: 50 }).notNull().default('draft'),
   metaTitle: varchar('meta_title', { length: 255 }),
   metaDescription: text('meta_description'),
+  ogImage: varchar('og_image', { length: 500 }),
+  canonicalUrl: varchar('canonical_url', { length: 500 }),
+  robots: varchar('robots', { length: 100 }).default('index,follow'),
+  schemaMarkup: json('schema_markup'),
   authorId: uuid('author_id')
     .notNull()
     .references(() => users.id),
@@ -53,9 +57,11 @@ export const projects = pgTable('projects', {
   description: text('description').notNull(),
   content: text('content'),
   techStack: text('tech_stack').array().notNull().default([]),
+  techStackIcons: json('tech_stack_icons').notNull().default([]),
   githubUrl: varchar('github_url', { length: 500 }),
   liveUrl: varchar('live_url', { length: 500 }),
   images: text('images').array().notNull().default([]),
+  thumbnail: varchar('thumbnail', { length: 500 }),
   featured: boolean('featured').notNull().default(false),
   order: integer('order').notNull().default(0),
   createdAt: timestamp('created_at').defaultNow().notNull(),

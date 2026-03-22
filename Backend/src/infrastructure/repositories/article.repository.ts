@@ -6,6 +6,7 @@ import { articles } from '../../database/schema';
 
 export class ArticleRepository implements IArticleRepository {
   constructor(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject('DB') private readonly db: any,
   ) {}
 
@@ -40,6 +41,7 @@ export class ArticleRepository implements IArticleRepository {
       this.db.select({ count: sql<number>`count(*)` }).from(articles).where(whereClause),
     ]);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const mappedData: Article[] = data.map((row: any) => ({
       id: row.id,
       slug: row.slug,
@@ -50,6 +52,10 @@ export class ArticleRepository implements IArticleRepository {
       status: row.status as 'draft' | 'published',
       metaTitle: row.metaTitle ?? undefined,
       metaDescription: row.metaDescription ?? undefined,
+      ogImage: row.ogImage ?? undefined,
+      canonicalUrl: row.canonicalUrl ?? undefined,
+      robots: row.robots ?? 'index,follow',
+      schemaMarkup: row.schemaMarkup ?? undefined,
       authorId: row.authorId,
       publishedAt: row.publishedAt ?? undefined,
       createdAt: row.createdAt,
@@ -78,7 +84,7 @@ export class ArticleRepository implements IArticleRepository {
   async create(data: Partial<Article> & { authorId: string }): Promise<Article> {
     const [article] = await this.db
       .insert(articles)
-      .values(data as any)
+      .values(data as Record<string, unknown>)
       .returning();
     return article as Article;
   }

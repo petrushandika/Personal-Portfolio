@@ -6,6 +6,7 @@ import { projects } from '../../database/schema';
 
 export class ProjectRepository implements IProjectRepository {
   constructor(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject('DB') private readonly db: any,
   ) {}
 
@@ -14,16 +15,19 @@ export class ProjectRepository implements IProjectRepository {
     const orderBy = featuredOnly ? asc(projects.order) : desc(projects.createdAt);
 
     const data = await this.db.select().from(projects).where(condition).orderBy(orderBy);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     return data.map((row: any) => ({
       id: row.id,
       slug: row.slug,
       title: row.title,
       description: row.description,
       content: row.content ?? undefined,
-      techStack: row.techStack,
+      techStack: row.techStack ?? [],
+      techStackIcons: row.techStackIcons ?? [],
       githubUrl: row.githubUrl ?? undefined,
       liveUrl: row.liveUrl ?? undefined,
-      images: row.images,
+      images: row.images ?? [],
+      thumbnail: row.thumbnail ?? undefined,
       featured: row.featured,
       order: row.order,
       createdAt: row.createdAt,
@@ -48,6 +52,7 @@ export class ProjectRepository implements IProjectRepository {
   }
 
   async create(data: Partial<Project>): Promise<Project> {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [project] = await this.db.insert(projects).values(data as any).returning();
     return project as Project;
   }

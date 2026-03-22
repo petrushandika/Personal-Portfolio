@@ -6,6 +6,7 @@ import { users } from '../../database/schema';
 
 export class UserRepository implements IUserRepository {
   constructor(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject('DB') private readonly db: any,
   ) {}
 

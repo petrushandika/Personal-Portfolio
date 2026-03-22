@@ -8,8 +8,8 @@ import { refreshTokens } from '../../database/schema';
 import { TJwtService, TUserRepository } from '../../domain/tokens';
 
 export class AuthService implements IAuthService {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   constructor(
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     @Inject('DB') private readonly db: any,
     @Inject(TJwtService) private readonly jwtService: IJwtService,
     @Inject(TUserRepository) private readonly userRepository: IUserRepository,

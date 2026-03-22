@@ -9,6 +9,7 @@ import {
   Req,
   UseGuards,
 } from '@nestjs/common';
+import type { Request } from 'express';
 import type { LoginDto } from '../../application/dto/auth.dto';
 import type { RegisterDto } from '../../application/dto/auth.dto';
 import type { RefreshDto } from '../../application/dto/auth.dto';
@@ -82,8 +83,8 @@ export class AuthController {
 
   @Get('me')
   @UseGuards(JwtAuthGuard)
-  async me(@Req() req: any) {
-    const user = req.user;
+  async me(@Req() req: Request) {
+    const user = (req as Request & { user: { userId: string } }).user;
     const profile = await this.getProfileUseCase.execute(user.userId);
     return {
       success: true,
