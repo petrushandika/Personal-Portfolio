@@ -1,0 +1,62 @@
+[
+  {
+    "route": "/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/redminote12/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/drivexdiwali/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/marketplacecreatives/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/bannerrefresh/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/artworks/",
+    "width": 1440,
+    "errors": []
+  },
+  {
+    "route": "/",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "route": "/redminote12/",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "route": "/drivexdiwali/",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "route": "/marketplacecreatives/",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "route": "/bannerrefresh/",
+    "width": 390,
+    "errors": []
+  },
+  {
+    "route": "/artworks/",
+    "width": 390,
+    "errors": []
+  }
+]

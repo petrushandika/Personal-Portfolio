@@ -1,0 +1,12 @@
+/* Personal copy has different lengths than the original visual reference. */
+#contact a[href^="mailto:"] { display: inline-block; max-width: 100%; overflow-wrap: anywhere; }
+@media (max-width: 767px) {
+  #contact > div:first-child { box-sizing: border-box; }
+  #contact > div:first-child > div { width: 100%; min-width: 0; }
+  #contact a[href^="mailto:"] { font-size: 19px; line-height: 1.4; }
+  #works > div { padding-top: 24px; }
+  #works h2 { font-size: 30px; }
+  #works .gap-8 { gap: 12px; }
+  #timeline h2 { font-size: 28px; line-height: 1.15; }
+  #timeline img { min-width: 260px; }
+}

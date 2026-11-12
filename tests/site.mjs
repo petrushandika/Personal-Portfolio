@@ -21,8 +21,8 @@ try{
     await page.evaluate(async()=>{await Promise.all([...document.querySelectorAll('video')].filter(v=>v.getBoundingClientRect().width).map(v=>new Promise(resolve=>{v.pause();const seek=()=>{v.pause();v.currentTime=1;v.addEventListener('seeked',resolve,{once:true});};if(v.readyState>=2)seek();else v.addEventListener('loadeddata',seek,{once:true});setTimeout(resolve,5000);})));});
     await page.screenshot({path:`tests/output/hero-${width}.png`});
     await page.locator('header button').click();await page.waitForTimeout(900);assert.equal(await page.getByRole('link',{name:'Timeline',exact:true}).count(),1);await page.getByRole('link',{name:'Works',exact:true}).click();await page.waitForTimeout(1200);
-    await page.getByText('Redmi Note 12',{exact:true}).click();await page.getByText('brief',{exact:true}).click();await page.waitForTimeout(1200);assert.equal(await page.getByText('Hey Anurag,',{exact:false}).count(),1);await page.keyboard.press('Escape');await page.getByText('Hey Anurag,',{exact:false}).waitFor({state:'detached',timeout:5000});
-    await page.getByText('Project',{exact:true}).click();await page.waitForURL('**/redminote12/');await page.getByRole('link',{name:'Back to Works'}).click();await page.waitForURL('**/#works');
+    await page.getByText('Product Systems',{exact:true}).click();await page.getByText('brief',{exact:true}).click();await page.waitForTimeout(1200);assert.equal(await page.getByText('Petrus’s study notes',{exact:false}).count(),1);await page.keyboard.press('Escape');await page.getByText('Petrus’s study notes',{exact:false}).waitFor({state:'detached',timeout:5000});
+    await page.getByText('Project',{exact:true}).click();await page.waitForURL('**/redminote12/');await page.getByRole('link',{name:'Back to Studies'}).click();await page.waitForURL('**/#works');
     await page.locator('#about').scrollIntoViewIfNeeded();await page.waitForTimeout(1200);const card=await page.locator('#about .cursor-grab').first().elementHandle();const before=await card.evaluate(e=>e.style.zIndex);const box=await card.boundingBox();await page.mouse.move(box.x+box.width/2,box.y+box.height/2);await page.mouse.down();await page.waitForTimeout(100);for(let step=1;step<=10;step++){await page.mouse.move(box.x+box.width/2+step*12,box.y+box.height/2);await page.waitForTimeout(40);}await page.mouse.up();await page.waitForTimeout(800);assert.notEqual(await card.evaluate(e=>e.style.zIndex),before);
     await page.locator('#contact').scrollIntoViewIfNeeded();const [download]=await Promise.all([page.waitForEvent('download'),page.getByRole('button',{name:'Download Resume'}).click()]);assert.equal(await download.failure(),null);
    }else{
@@ -32,7 +32,7 @@ try{
     await page.evaluate(()=>scrollTo(0,0));await page.waitForTimeout(500);
     await page.screenshot({path:`tests/output/${route.replaceAll('/','')}-${width}.png`});
     if(route==='/artworks/')assert.equal(await page.locator('canvas').count(),1);
-    assert.equal(await page.getByRole('link',{name:'Back to Works'}).count(),1);
+    assert.equal(await page.getByRole('link',{name:'Back to Studies'}).count(),1);
    }
    const state=await page.evaluate(()=>({scrollWidth:document.documentElement.scrollWidth,width:innerWidth,broken:[...document.images].filter(i=>i.getAttribute('src')&&(!i.complete||!i.naturalWidth)).map(i=>i.src)}));
    results.push({route,width,errors,failed,external:[...new Set(external)],state});await fs.writeFile('tests/output/results.json',JSON.stringify(results,null,2));

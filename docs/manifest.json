@@ -1,8 +1,8 @@
 [
   {
-    "path": "Resume/Anurag Bandyopadhyay Designer.pdf",
-    "bytes": 1068422,
-    "sha256": "79d9d38ad3acb8819e385c6fb7169f3da6307e330d227ef23bf3ac592698bacc"
+    "path": "Resume/Petrus Handika.pdf",
+    "bytes": 3764,
+    "sha256": "73890e243e8c0b8ff4b676b6d56b3f3d95c5492594fcec5e43c9b330ab558146"
   },
   {
     "path": "_next/static/chunks/19-ea1c143060ae55e1.js",
@@ -40,34 +40,34 @@
     "sha256": "318a7737092c1ca026bb948006c6c3d2ae55d28a38f7ff6eff98b9840a6ee38e"
   },
   {
-    "path": "_next/static/chunks/app/artworks/page-f0cab903184f09de.js",
-    "bytes": 16073,
-    "sha256": "9d6c0228b81b8600215feec7e8e45294187a112380fd62b8efebfcd493aec364"
+    "path": "_next/static/chunks/app/artworks/page-55ec98828071fdf5.js",
+    "bytes": 16412,
+    "sha256": "55ec98828071fdf54f20f14ca4fdbb2e348b880f8f4bdcb1e0796f9bf41346ad"
   },
   {
-    "path": "_next/static/chunks/app/bannerrefresh/page-317e548be2e5a8d0.js",
-    "bytes": 31908,
-    "sha256": "bd82560f9c283b7310f31fff4f860ef47293721789f342dbee35565a677a38cd"
+    "path": "_next/static/chunks/app/bannerrefresh/page-b9f2995e492893c2.js",
+    "bytes": 31946,
+    "sha256": "b9f2995e492893c218c53077b15cd7d9420a3d35fb8c7e1f878a50aa7c99d502"
   },
   {
-    "path": "_next/static/chunks/app/drivexdiwali/page-fe0696520790e2e7.js",
-    "bytes": 13414,
-    "sha256": "731562b38581eba4a5ca77728a1f189e8073dcf1bc4a91d416c87b35a3e133f5"
+    "path": "_next/static/chunks/app/drivexdiwali/page-4c75b2b147043bec.js",
+    "bytes": 13980,
+    "sha256": "4c75b2b147043bec18202d679f9e78e7bde1a07207e51c65c1b4e122daee71b0"
   },
   {
-    "path": "_next/static/chunks/app/marketplacecreatives/page-47a31cc784c0eec6.js",
-    "bytes": 13302,
-    "sha256": "a9f94d3e4182f3436eb1cd7009f39132273d5d357b56cd7a257a055bd4c04dab"
+    "path": "_next/static/chunks/app/marketplacecreatives/page-3ff151466ec76a8a.js",
+    "bytes": 13508,
+    "sha256": "3ff151466ec76a8a569453ec80fef5abac0b47ac8453c0c22981cf80395c952b"
   },
   {
-    "path": "_next/static/chunks/app/page-5ec50d8abe30bce2.js",
-    "bytes": 31451,
-    "sha256": "851e0f32267029acfec780cf733c0b1f9e5f897ef0f5be681a75a091bb638b7c"
+    "path": "_next/static/chunks/app/page-775c08fc0bfabbb7.js",
+    "bytes": 30921,
+    "sha256": "775c08fc0bfabbb746637e9638f8b948108f311f4fbd998ac4578af042bf0336"
   },
   {
-    "path": "_next/static/chunks/app/redminote12/page-a77da362cbae2721.js",
-    "bytes": 34281,
-    "sha256": "5c6d551657d772e495f374dbf8a26c2431e1aeedd0d3ff44daef58e80fe89775"
+    "path": "_next/static/chunks/app/redminote12/page-a5b45e0a06339d90.js",
+    "bytes": 34749,
+    "sha256": "a5b45e0a06339d90da3051551f0bf8c35fa9a7bf20e630d4f5d1cbeafbd21bf6"
   },
   {
     "path": "_next/static/chunks/b536a0f1.735739bb10e9c3d3.js",
@@ -126,23 +126,23 @@
   },
   {
     "path": "artworks/index.html",
-    "bytes": 10896,
-    "sha256": "bddfe8619e59e18d6e03a499050a72fc09443b2c61a42b19bdb1ff36bd9974f7"
+    "bytes": 11233,
+    "sha256": "5e25404b67ffbad0d4afd41692d0572de7e04b07db307b6973b006260b46a370"
   },
   {
     "path": "artworks.html",
-    "bytes": 10896,
-    "sha256": "bddfe8619e59e18d6e03a499050a72fc09443b2c61a42b19bdb1ff36bd9974f7"
+    "bytes": 11233,
+    "sha256": "5e25404b67ffbad0d4afd41692d0572de7e04b07db307b6973b006260b46a370"
   },
   {
     "path": "bannerrefresh/index.html",
-    "bytes": 59114,
-    "sha256": "030ab566db803c3da2e6ed0a49f86b42e73c4b17411961a7247186bf784e201b"
+    "bytes": 59190,
+    "sha256": "d96237b72dd356977a105671f2a8aa2a044d73f2865cc9dd16a78ba35c3fdc38"
   },
   {
     "path": "bannerrefresh.html",
-    "bytes": 59114,
-    "sha256": "030ab566db803c3da2e6ed0a49f86b42e73c4b17411961a7247186bf784e201b"
+    "bytes": 59190,
+    "sha256": "d96237b72dd356977a105671f2a8aa2a044d73f2865cc9dd16a78ba35c3fdc38"
   },
   {
     "path": "cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
@@ -151,28 +151,28 @@
   },
   {
     "path": "drivexdiwali/index.html",
-    "bytes": 44581,
-    "sha256": "c80e0c9ba5c52465b6edd5c65bc654cd72dc9142d5cb6bbfbaed38efb12d846d"
+    "bytes": 45173,
+    "sha256": "05aeab4f177811f94469cced2f095f2945ef61fde0d83f0771c72684fc8d4369"
   },
   {
     "path": "drivexdiwali.html",
-    "bytes": 44581,
-    "sha256": "c80e0c9ba5c52465b6edd5c65bc654cd72dc9142d5cb6bbfbaed38efb12d846d"
+    "bytes": 45173,
+    "sha256": "05aeab4f177811f94469cced2f095f2945ef61fde0d83f0771c72684fc8d4369"
   },
   {
     "path": "index.html",
-    "bytes": 26882,
-    "sha256": "f3f8b181d9201007eb482bdf012f92a50ddcbca0a0f3aeb709906032a181083a"
+    "bytes": 22794,
+    "sha256": "df18521e6448f0370a3f72abf63a8004788988a3336a1d21fa930920935e58ae"
   },
   {
     "path": "marketplacecreatives/index.html",
-    "bytes": 30576,
-    "sha256": "0b3582d9d0f738f2806cd7428e7a90a71e67be9e7bbd9beaf47a3caaff9bec35"
+    "bytes": 30802,
+    "sha256": "aad0081552c71d6d394d917fcee5930e58ee7bab07b6d17214910306600165c7"
   },
   {
     "path": "marketplacecreatives.html",
-    "bytes": 30576,
-    "sha256": "0b3582d9d0f738f2806cd7428e7a90a71e67be9e7bbd9beaf47a3caaff9bec35"
+    "bytes": 30802,
+    "sha256": "aad0081552c71d6d394d917fcee5930e58ee7bab07b6d17214910306600165c7"
   },
   {
     "path": "patterns/cream-paper.png",
@@ -180,14 +180,44 @@
     "sha256": "6ea793f50b20a0a1eec2c43323f77ea8833bd05ab80b0af6b2f4f7982e5c6d7a"
   },
   {
+    "path": "profile.css",
+    "bytes": 592,
+    "sha256": "7736c0c0ac88aa331c9c07b9f56af28faf13dfd8b6ae412c8a6915fc9f587480"
+  },
+  {
     "path": "redminote12/index.html",
-    "bytes": 48900,
-    "sha256": "8e3f6145cff105c345391ba7d10593467a56ee6da522cce9ae3fe77d9511d1ec"
+    "bytes": 49296,
+    "sha256": "7a80d3bc2ac38e0b6d213f2523947ef7e41c77b94e939f57c737eea290554e80"
   },
   {
     "path": "redminote12.html",
-    "bytes": 48900,
-    "sha256": "8e3f6145cff105c345391ba7d10593467a56ee6da522cce9ae3fe77d9511d1ec"
+    "bytes": 49296,
+    "sha256": "7a80d3bc2ac38e0b6d213f2523947ef7e41c77b94e939f57c737eea290554e80"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/about.svg",
+    "bytes": 1456,
+    "sha256": "63ad619b0528da9bf77613cb7113f42ba1ea8a6008b3cf14f644ee372094ce5d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/interests.svg",
+    "bytes": 1213,
+    "sha256": "34d629f4bd9b16633a2243a9aa557ae3ea4c34ec27f4044b97f9edf906443641"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/journey.svg",
+    "bytes": 960,
+    "sha256": "9abdc7c6ce0d69d2613289832a6784340e55df7165660f4e33ac59ef0d5e7a2a"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/projects.svg",
+    "bytes": 1199,
+    "sha256": "ad564f8d2587f4d022404a62c9e6409b1d790325520d4edf61da42d9c3d58f91"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/tools.svg",
+    "bytes": 461,
+    "sha256": "68732aee1a11469f284516c644591fb897c405e1fefc1fc528c640769af14be9"
   },
   {
     "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Aries.optimized.jpg",
@@ -855,16 +885,6 @@
     "sha256": "8c6b7dbaaa925bebbdbaaad980c7f260705de1adc64fdc5d9beb04353c378e6b"
   },
   {
-    "path": "storage/v1/object/public/portfolio-assets/public/Sections/collaborations.optimized.png",
-    "bytes": 238828,
-    "sha256": "d43bb3b8e172e9e0ac296360f4ed7d38df4134256585a266483a911cdea4a3b3"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Sections/timeline.optimized.png",
-    "bytes": 394228,
-    "sha256": "f6e743f0d0771b72386498d2e57b0460c46a93c69451c3c73f0ee4d11438df76"
-  },
-  {
     "path": "storage/v1/object/public/portfolio-assets/public/Video/1_optimized.mp4",
     "bytes": 3581223,
     "sha256": "c838b63e6ec71800493985f96f10fdb39d224b309f891192788fe67ba4a59145"
@@ -913,40 +933,5 @@
     "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M5_optimized.mp4",
     "bytes": 990670,
     "sha256": "3e2fdf7be3d1570cceafd2c483e9d1b6e7baa05448083bb0f72ec53f110deecc"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/Bade_Parde_Xiaomi_optimized.mp4",
-    "bytes": 3392342,
-    "sha256": "291b4d47eaef9d4fbccc91636c04ec3899f3d02eb65aa145bcdf37547f1f70e5"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/Farzi_optimized.mp4",
-    "bytes": 1806246,
-    "sha256": "915a67c8bb627b4ae66eace76e47497e49a44aff86cd47735913ec2d889077c2"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/MemeBoss_optimized.mp4",
-    "bytes": 21595028,
-    "sha256": "533647d6f5b27a87001fa4e53da44cba6fdf60442a7d3c43e2e0356e357a67c7"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/bade_parde_optimized.mp4",
-    "bytes": 5010453,
-    "sha256": "53ac64e66095e1fbe2e65a6be92dc3f87e71efb2bed49ddcdd269fce90265d77"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/kalimba_optimized.mp4",
-    "bytes": 5789006,
-    "sha256": "c713d5420bc27d67cabdb78c42513b8a5c9c548307b882de141946ef852a15bd"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/ooty-motorcycleast_optimized.mp4",
-    "bytes": 36539085,
-    "sha256": "b0d9dbcbf18b378518a86db2b65e9678bbafaf50608de2fd2577541cec913cf6"
-  },
-  {
-    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/xiaomi_optimized.mp4",
-    "bytes": 14659811,
-    "sha256": "53b1d71155bad1963ffa2880f2803d1de4be03abaec4a5efc90781521cc07676"
   }
 ]

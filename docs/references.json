@@ -1,0 +1,912 @@
+{
+  "scope": "Five project-detail routes only; text-only personalization of a third-party static public bundle. Original route URLs, image paths, CSS, components, and canvas behaviour retained. No original TypeScript source available. Global metadata and owner-link personalization are outside this map.",
+  "source": {
+    "creator": "Cartooneast / Anurag Bandyopadhyay",
+    "material": "Existing third-party public portfolio bundle and its reference imagery; source files listed per route. Attribution does not assert a licence or transfer authorship.",
+    "ownership_notice": "Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika."
+  },
+  "curator": "Petrus Handika",
+  "claims_policy": "Visual-reference studies only. No client collaborations, shipped work, original image production, measured impact, or career facts are asserted.",
+  "routes": {
+    "/redminote12": {
+      "title": "Product Systems",
+      "type": "Study",
+      "files": [
+        "public/redminote12/index.html",
+        "public/redminote12.html",
+        "public/_next/static/chunks/app/redminote12/page-a77da362cbae2721.js"
+      ],
+      "replacements": [
+        {
+          "from": "Back to Works",
+          "to": "Back to Studies"
+        },
+        {
+          "from": "Role",
+          "to": "Curator"
+        },
+        {
+          "from": "Scope",
+          "to": "Study Focus"
+        },
+        {
+          "from": "Year",
+          "to": "Type"
+        },
+        {
+          "from": "2023",
+          "to": "Study"
+        },
+        {
+          "from": "Impact",
+          "to": "Study Takeaways"
+        },
+        {
+          "from": "Redmi Note 12 Series",
+          "to": "Product Systems"
+        },
+        {
+          "from": "Designing a Scalable Launch System Across Product, Platform, and Physical Worlds",
+          "to": "Visual-reference study curated by Petrus Handika: how a product identity travels across formats. Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika."
+        },
+        {
+          "from": "Visual Direction,",
+          "to": "Petrus Handika,"
+        },
+        {
+          "from": "Campaign Design",
+          "to": "Reference Curation"
+        },
+        {
+          "from": "Key Visual, Product Exp,",
+          "to": "Product Hierarchy,"
+        },
+        {
+          "from": "OOH, Launch Event",
+          "to": "Cross-format Patterns"
+        },
+        {
+          "from": "1. The Product",
+          "to": "1. Reading the Product"
+        },
+        {
+          "from": "About the Series",
+          "to": "A Product-led Reference"
+        },
+        {
+          "from": "The Redmi Note 12 Series was positioned as a performance-first smartphone lineup, combining a 200MP camera, 5G capability, and a refined design language.",
+          "to": "This third-party reference brings product imagery, feature messaging, and launch formats into one visual collection. Petrus presents it for observation, not as an authored campaign."
+        },
+        {
+          "from": "The goal was to create a visual system that elevates the product beyond its segment.",
+          "to": "Study question: how can hierarchy keep a complex product story readable?"
+        },
+        {
+          "from": "Colours & Variants",
+          "to": "Colour and Material Notes"
+        },
+        {
+          "from": "A range of finishes designed to feel bold, modern, and premium. Showcasing material feel, light interaction, and distraction-free presentation.",
+          "to": "Compare how lighting, colour, and negative space distinguish the supplied product references. These are observations of existing imagery, not new product designs."
+        },
+        {
+          "from": "Arctic White",
+          "to": "White Finish Reference"
+        },
+        {
+          "from": "Frosted Green",
+          "to": "Green Finish Reference"
+        },
+        {
+          "from": "Glacier Blue",
+          "to": "Pale Blue Reference"
+        },
+        {
+          "from": "Iceberg Blue",
+          "to": "Cool Blue Reference"
+        },
+        {
+          "from": "Matte Black",
+          "to": "Matte Finish Reference"
+        },
+        {
+          "from": "Mystique Blue",
+          "to": "Deep Blue Reference"
+        },
+        {
+          "from": "Onyx Black",
+          "to": "Dark Finish Reference"
+        },
+        {
+          "from": "Stardust Purple",
+          "to": "Purple Finish Reference"
+        },
+        {
+          "from": "The Brief",
+          "to": "Questions for Review"
+        },
+        {
+          "from": "Design a launch system that:",
+          "to": "Read the reference through three lenses:"
+        },
+        {
+          "from": "Works across digital, web, and physical environments.",
+          "to": "Compare the same composition across screen and physical formats."
+        },
+        {
+          "from": "Highlights key features like camera and performance.",
+          "to": "Notice which product details receive the strongest emphasis."
+        },
+        {
+          "from": "Maintains consistency from mobile screens to large-scale formats.",
+          "to": "Look for recurring hierarchy at small and large scales."
+        },
+        {
+          "from": "One system. ",
+          "to": "One reference. "
+        },
+        {
+          "from": "Multiple touchpoints.",
+          "to": "Several readings."
+        },
+        {
+          "from": "2. The Key Visual",
+          "to": "2. Reading the Composition"
+        },
+        {
+          "from": "The Idea",
+          "to": "Composition Notes"
+        },
+        {
+          "from": "The product was positioned as ",
+          "to": "The supplied composition uses "
+        },
+        {
+          "from": "“SuperNote”",
+          "to": "monumental scale"
+        },
+        {
+          "from": " — powerful, precise, and larger than life. The approach moved away from conventional product advertising to:",
+          "to": " to make the device a focal point. Useful details to inspect include:"
+        },
+        {
+          "from": "Cinematic storytelling",
+          "to": "Narrative lighting cues"
+        },
+        {
+          "from": "Strong environmental scale",
+          "to": "Subject-to-environment ratios"
+        },
+        {
+          "from": "Product-first compositions",
+          "to": "Product-centred framing"
+        },
+        {
+          "from": "Master Key Visual",
+          "to": "Primary Composition Reference"
+        },
+        {
+          "from": "The foundation of the entire campaign.",
+          "to": "A reference for comparing hierarchy across related images."
+        },
+        {
+          "from": "Exploration",
+          "to": "Comparative Reading"
+        },
+        {
+          "from": "Initial explorations focused on defining a visual language that balances innovation with clarity. This included lighting studies, camera-led compositions, and environmental storytelling.",
+          "to": "These supplied variations invite comparison of lighting, camera placement, and environmental context. Their inclusion documents visual references, not a design process performed by Petrus."
+        },
+        {
+          "from": " Designed as a cinematic reveal",
+          "to": " Observe the reveal and framing"
+        },
+        {
+          "from": " Focused on depth, contrast, and dominance",
+          "to": " Compare depth and contrast"
+        },
+        {
+          "from": " Built to adapt across formats",
+          "to": " Check how crops change emphasis"
+        },
+        {
+          "from": "On Stage",
+          "to": "Large-format References"
+        },
+        {
+          "from": "The same visual system extended into launch presentations and large-format displays. Designed for high-impact screens, structured for clarity at scale, maintaining consistency everywhere.",
+          "to": "The stage imagery provides another scale for reading the same visual language. Compare distance, contrast, and text density; no event production or collaboration by Petrus is implied."
+        },
+        {
+          "from": "3. Product Experience",
+          "to": "3. Reading the Interface"
+        },
+        {
+          "from": "Product Page",
+          "to": "Interface Reference"
+        },
+        {
+          "from": "The visual system was translated into a live product experience, ensuring consistency between campaign and conversion.",
+          "to": "The supplied interface captures offer a reference for studying section order and product emphasis. They are not interfaces built or shipped by Petrus."
+        },
+        {
+          "from": "Integrated storytelling with product highlights",
+          "to": "Observe the relationship between narrative and features"
+        },
+        {
+          "from": "Maintained visual hierarchy across sections",
+          "to": "Compare heading levels and section rhythm"
+        },
+        {
+          "from": "Optimized for clarity, flow, and engagement",
+          "to": "Consider clarity without assuming engagement results"
+        },
+        {
+          "from": " From campaign to conversion — one continuous experience.",
+          "to": " From image to interface: inspect continuity, not conversion claims."
+        },
+        {
+          "from": "mi.com/in/product/redmi-note-12",
+          "to": "Original product-page reference"
+        },
+        {
+          "from": "4. The Rollout",
+          "to": "4. Reading the Context"
+        },
+        {
+          "from": "In the Wild",
+          "to": "Physical-format References"
+        },
+        {
+          "from": "The campaign was executed across multiple cities in India, spanning Billboards, Metro panels, and Retail displays. Design focused on instant readability, strong visual recall, and clear feature communication.",
+          "to": "The supplied outdoor and retail images show compositions in different surroundings. Use them to compare legibility and cropping; this page does not claim rollout work or measured recall by Petrus."
+        },
+        {
+          "from": "Launch Experience",
+          "to": "Presentation Reference"
+        },
+        {
+          "from": "The on-ground launch brought the system to life with large-scale presentation design and screen-first storytelling. Cohesive visual language across stage and media.",
+          "to": "The embedded source video adds presentation context to the visual collection. It is a third-party reference, not a launch, film, or presentation produced by Petrus."
+        },
+        {
+          "from": "Built a unified visual system across all touchpoints.",
+          "to": "Recurring visual cues can be compared across the supplied formats."
+        },
+        {
+          "from": "Successfully scaled from digital to physical environments.",
+          "to": "Scale changes invite different readability checks."
+        },
+        {
+          "from": "Elevated perception of the product as premium and performance-driven.",
+          "to": "No perception, performance, or business outcomes are attributed to this study."
+        },
+        {
+          "from": "Let's build design that doesn't just look good —",
+          "to": "A reference for thinking in systems —"
+        },
+        {
+          "from": "but works everywhere.",
+          "to": "not a claim of authorship."
+        }
+      ]
+    },
+    "/drivexdiwali": {
+      "title": "Storytelling Systems",
+      "type": "Study",
+      "files": [
+        "public/drivexdiwali/index.html",
+        "public/drivexdiwali.html",
+        "public/_next/static/chunks/app/drivexdiwali/page-fe0696520790e2e7.js"
+      ],
+      "replacements": [
+        {
+          "from": "Back to Works",
+          "to": "Back to Studies"
+        },
+        {
+          "from": "Role",
+          "to": "Curator"
+        },
+        {
+          "from": "Design Lead",
+          "to": "Petrus Handika"
+        },
+        {
+          "from": "Scope",
+          "to": "Study Focus"
+        },
+        {
+          "from": "Year",
+          "to": "Type"
+        },
+        {
+          "from": "2025",
+          "to": "Study"
+        },
+        {
+          "from": "Impact",
+          "to": "Study Takeaways"
+        },
+        {
+          "from": "DriveX Diwali Campaign",
+          "to": "Storytelling Systems"
+        },
+        {
+          "from": "Ride Back Home",
+          "to": "A Visual-reference Reading Curated by Petrus Handika. Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika."
+        },
+        {
+          "from": "Key Visual, Storyboard,",
+          "to": "Narrative Structure,"
+        },
+        {
+          "from": "Print Medium",
+          "to": "Cross-format Reading"
+        },
+        {
+          "from": "The Challenge",
+          "to": "Questions for Review"
+        },
+        {
+          "from": "Design a campaign that:",
+          "to": "Read the supplied story through four questions:"
+        },
+        {
+          "from": "Speaks to people who couldn’t go home for Diwali",
+          "to": "How does the story establish distance from home?"
+        },
+        {
+          "from": "Feels festive without falling into clichés",
+          "to": "Which details suggest a festive setting?"
+        },
+        {
+          "from": "Balances emotion with a subtle, relatable tone",
+          "to": "How is emotion conveyed without excess exposition?"
+        },
+        {
+          "from": "Scales seamlessly across video, KV, and print",
+          "to": "What changes between motion, still imagery, and print?"
+        },
+        {
+          "from": "One idea. ",
+          "to": "One reference. "
+        },
+        {
+          "from": "Multiple emotions.",
+          "to": "Several perspectives."
+        },
+        {
+          "from": "The Idea",
+          "to": "Narrative Notes"
+        },
+        {
+          "from": "“Ride Back Home” reimagined through last-minute urgency",
+          "to": "Observe how urgency gives the supplied story its structure"
+        },
+        {
+          "from": "For those who decide late—but still make it home",
+          "to": "Read the journey as a narrative device, not a campaign claim"
+        },
+        {
+          "from": "Focused on emotional connection over location",
+          "to": "Compare emotional cues with geographic details"
+        },
+        {
+          "from": "Rooted in real, everyday moments",
+          "to": "Notice familiar gestures and domestic details"
+        },
+        {
+          "from": "Loading Film...",
+          "to": "Loading Reference Film..."
+        },
+        {
+          "from": "On Screen",
+          "to": "Motion Reference"
+        },
+        {
+          "from": "Film built on a simple human insight",
+          "to": "Consider the central tension in the supplied film"
+        },
+        {
+          "from": "Captures absence, resolves with connection",
+          "to": "Observe the contrast between absence and connection"
+        },
+        {
+          "from": "Avoided over-dramatic storytelling",
+          "to": "Compare restraint with more explicit emotional cues"
+        },
+        {
+          "from": "Designed for digital-first consumption",
+          "to": "Inspect pacing and framing at screen scale"
+        },
+        {
+          "from": "Key Visual",
+          "to": "Primary Still Reference"
+        },
+        {
+          "from": "Alt KVs",
+          "to": "Related Still References"
+        },
+        {
+          "from": "Strong emotional resonance",
+          "to": "Emotional cues offer material for narrative analysis"
+        },
+        {
+          "from": "High recall across formats",
+          "to": "Repeated motifs can be compared; recall was not measured here"
+        },
+        {
+          "from": "Cohesive storytelling across touchpoints",
+          "to": "Still and motion formats reveal different storytelling constraints"
+        },
+        {
+          "from": "Elevated festive communication for DriveX",
+          "to": "No campaign delivery or business outcomes are claimed by Petrus"
+        },
+        {
+          "from": "We didn’t just celebrate Diwali.",
+          "to": "Reading how stories connect."
+        },
+        {
+          "from": "We made it feel closer.",
+          "to": "Curated references, not client work."
+        }
+      ]
+    },
+    "/marketplacecreatives": {
+      "title": "Commerce Interfaces",
+      "type": "Study",
+      "files": [
+        "public/marketplacecreatives/index.html",
+        "public/marketplacecreatives.html",
+        "public/_next/static/chunks/app/marketplacecreatives/page-47a31cc784c0eec6.js"
+      ],
+      "replacements": [
+        {
+          "from": "Back to Works",
+          "to": "Back to Studies"
+        },
+        {
+          "from": "Role",
+          "to": "Curator"
+        },
+        {
+          "from": "Design Lead",
+          "to": "Petrus Handika"
+        },
+        {
+          "from": "Scope",
+          "to": "Study Focus"
+        },
+        {
+          "from": "Year",
+          "to": "Type"
+        },
+        {
+          "from": "2025",
+          "to": "Study"
+        },
+        {
+          "from": "Project Overview",
+          "to": "Reference Overview"
+        },
+        {
+          "from": "PROJECT",
+          "to": "REFERENCE"
+        },
+        {
+          "from": "Content",
+          "to": "Reading Notes"
+        },
+        {
+          "from": "Visual Direction",
+          "to": "Visual Observations"
+        },
+        {
+          "from": "Marketplace Listing Creative",
+          "to": "Commerce Interfaces"
+        },
+        {
+          "from": "Designing high-conversion marketplace assets across Amazon and Flipkart for multiple brands.",
+          "to": "Visual-reference study curated by Petrus Handika: product communication and hierarchy in commerce imagery. Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika."
+        },
+        {
+          "from": "Catalogue Design, A+ Content,",
+          "to": "Catalogue Hierarchy,"
+        },
+        {
+          "from": "Amazon & Flipkart Assets,",
+          "to": "Commerce Patterns,"
+        },
+        {
+          "from": "Visual Refresh, Conversion-Focused Design",
+          "to": "Copy and Image Relationships"
+        },
+        {
+          "from": "Balancing brand story with performance.",
+          "to": "Reading product information at a glance."
+        },
+        {
+          "from": "“I worked on marketplace creatives for Lumio, Amazfit, and Mivi, focusing on building visually consistent and high-performing listing assets. The goal was to balance brand storytelling with clear product communication, optimized for conversion across e-commerce platforms.”",
+          "to": "This collection uses third-party Lumio, Amazfit, and Mivi imagery to examine information hierarchy, repeated layouts, and the relationship between copy and product photography. Petrus curates these references; he does not claim brand collaborations, asset production, or conversion results."
+        },
+        {
+          "from": "Designed a 5-day preheat campaign using marketplace banners",
+          "to": "Compare the sequence of supplied banner references"
+        },
+        {
+          "from": "Each banner revealed a key product feature",
+          "to": "Notice how individual frames prioritise product details"
+        },
+        {
+          "from": "Strong visual identity built around Lumio’s neon green brand language",
+          "to": "Observe how neon green acts as a recurring visual cue"
+        },
+        {
+          "from": "Focused on building anticipation and visual recall",
+          "to": "Consider repetition without assuming audience recall"
+        },
+        {
+          "from": "High contrast",
+          "to": "Contrast as a reading cue"
+        },
+        {
+          "from": "Neon green dominant palette",
+          "to": "Green palette reference"
+        },
+        {
+          "from": "Futuristic, energetic look",
+          "to": "Technology-led styling reference"
+        },
+        {
+          "from": "Refreshed product listing assets",
+          "to": "Inspect the supplied product-listing compositions"
+        },
+        {
+          "from": "Followed existing brand guidelines closely",
+          "to": "Look for recurring typography and colour choices"
+        },
+        {
+          "from": "Improved visual clarity and hierarchy",
+          "to": "Assess hierarchy without claiming an improvement"
+        },
+        {
+          "from": "Ensured consistency across catalogue and A+ content",
+          "to": "Compare consistency across the supplied commerce formats"
+        },
+        {
+          "from": "Clean, minimal",
+          "to": "Minimal composition reference"
+        },
+        {
+          "from": "Premium fitness-tech aesthetic",
+          "to": "Fitness-product presentation"
+        },
+        {
+          "from": "Structured layouts",
+          "to": "Layout rhythm reference"
+        },
+        {
+          "from": "Refreshed catalogue assets for Amazon and Flipkart",
+          "to": "Read the supplied catalogue images as interface references"
+        },
+        {
+          "from": "Applied a copy-first design approach",
+          "to": "Notice where copy leads the composition"
+        },
+        {
+          "from": "Focused on clear messaging and feature communication",
+          "to": "Examine the order of messages and product details"
+        },
+        {
+          "from": "Designed for quick scanning and high engagement",
+          "to": "Evaluate scan paths without claiming engagement results"
+        },
+        {
+          "from": "Bold typography",
+          "to": "Typographic emphasis reference"
+        },
+        {
+          "from": "Clean layout system",
+          "to": "Spacing and grouping reference"
+        },
+        {
+          "from": "Communication-first visuals",
+          "to": "Message-to-image balance"
+        },
+        {
+          "from": "Designing for marketplaces isn’t just about visuals—",
+          "to": "Commerce references invite closer reading —"
+        },
+        {
+          "from": "it’s about clarity, speed, and conversion.",
+          "to": "not unverified conversion claims."
+        }
+      ]
+    },
+    "/bannerrefresh": {
+      "title": "AI Workflows",
+      "type": "Study",
+      "files": [
+        "public/bannerrefresh/index.html",
+        "public/bannerrefresh.html",
+        "public/_next/static/chunks/app/bannerrefresh/page-317e548be2e5a8d0.js"
+      ],
+      "replacements": [
+        {
+          "from": "Back to Works",
+          "to": "Back to Studies"
+        },
+        {
+          "from": "Role",
+          "to": "Curator"
+        },
+        {
+          "from": "Design Lead",
+          "to": "Petrus Handika"
+        },
+        {
+          "from": "Scope",
+          "to": "Study Focus"
+        },
+        {
+          "from": "Year",
+          "to": "Type"
+        },
+        {
+          "from": "2026",
+          "to": "Study"
+        },
+        {
+          "from": "Project Overview",
+          "to": "Reference Overview"
+        },
+        {
+          "from": "Banner Refresh",
+          "to": "AI Workflows"
+        },
+        {
+          "from": "Rebuilding banner visuals using AI-assisted, node-based workflows for better control and output.",
+          "to": "Visual-reference study curated by Petrus Handika: inspecting image-editing steps through an interactive node canvas. Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika."
+        },
+        {
+          "from": "Banner Design, Image Gen,",
+          "to": "Image-editing References,"
+        },
+        {
+          "from": "AI Workflow, Visual Enhancement",
+          "to": "Workflow Reading"
+        },
+        {
+          "from": "From stock-heavy to premium logic.",
+          "to": "Reading an image workflow, step by step."
+        },
+        {
+          "from": "Refreshed existing banners with a focus on stronger visuals",
+          "to": "Compare supplied source and result images as visual references"
+        },
+        {
+          "from": "Moved away from stock-heavy imagery",
+          "to": "Look for changes in setting, lighting, and framing"
+        },
+        {
+          "from": "Built a node-based workflow using Nano Banana in Freepik Spaces",
+          "to": "Explore the preserved node canvas as a reference diagram, not a workflow built by Petrus"
+        },
+        {
+          "from": "Focused on control, consistency, and premium output",
+          "to": "Assess visual consistency without claiming production results"
+        },
+        {
+          "from": "Active",
+          "to": "Reference"
+        },
+        {
+          "from": "Module 01: Professional Photography",
+          "to": "Study 01: Portrait Lighting"
+        },
+        {
+          "from": "Raw Image",
+          "to": "Source Reference"
+        },
+        {
+          "from": "AI Prompt",
+          "to": "Prompt Notes"
+        },
+        {
+          "from": "Use a shallow depth-of-field shot at 85mm f/1.8, featuring a portrait of two people shaking hands. Do not alter the posture of the individuals, and keep their faces and expressions unchanged.",
+          "to": "Reference reading: compare shallow-focus portrait styling with the supplied source. Inspect whether poses, expressions, and facial details remain consistent; no generation by Petrus is claimed."
+        },
+        {
+          "from": "Final Image",
+          "to": "Result Reference"
+        },
+        {
+          "from": "Module 01",
+          "to": "Study 01"
+        },
+        {
+          "from": "Professional Portraiture",
+          "to": "Portrait Lighting"
+        },
+        {
+          "from": "Breakdown",
+          "to": "Review Checklist"
+        },
+        {
+          "from": "STEP 0",
+          "to": "CHECK 0"
+        },
+        {
+          "from": "Capture a professional shot using the available camera and lens setup",
+          "to": "Inspect framing and focus in the supplied source portrait"
+        },
+        {
+          "from": "Provide a prompt to enhance the image, making it look more premium and studio-shot",
+          "to": "Compare the apparent lighting and background treatment"
+        },
+        {
+          "from": "Iterate on the output to achieve the desired final quality",
+          "to": "Check facial and hand details without assuming a production process"
+        },
+        {
+          "from": "Module 02",
+          "to": "Study 02"
+        },
+        {
+          "from": "Scene Change",
+          "to": "Scene Comparison"
+        },
+        {
+          "from": "Input the model shot with the existing setting and pointer",
+          "to": "Identify the subject and its original visual context"
+        },
+        {
+          "from": "Select a location that matches the perspective",
+          "to": "Compare horizon lines and camera perspective"
+        },
+        {
+          "from": "Provide prompts to seamlessly integrate the scene",
+          "to": "Inspect light direction and subject edges"
+        },
+        {
+          "from": "Iterate until the desired final result is achieved",
+          "to": "Look for compositing inconsistencies in the supplied result"
+        },
+        {
+          "from": "Module 02: Scene Change",
+          "to": "Study 02: Scene Comparison"
+        },
+        {
+          "from": "Shot",
+          "to": "Subject Reference"
+        },
+        {
+          "from": "Location",
+          "to": "Setting Reference"
+        },
+        {
+          "from": "Text Prompt",
+          "to": "Reference Notes"
+        },
+        {
+          "from": "shot of people at location, captured as a realistic portrait using an 85mm lens at f/1.8. Maintain natural lighting, authentic skin tones, and realistic depth of field.",
+          "to": "Reference reading: examine how the supplied subject and setting relate through perspective, skin tones, lighting, and depth of field. This is commentary on existing images, not an executed prompt."
+        },
+        {
+          "from": "Module 03: Environment Rebuild",
+          "to": "Study 03: Environment Comparison"
+        },
+        {
+          "from": "@shot of people and a scooter from this image, placed at @location. Ensure the integration looks seamless and natural, as if captured in a single frame. Shot on a 50mm lens at f/1.8 with realistic lighting, depth of field, and perspective.",
+          "to": "Reference reading: compare the people, scooter, and environment across the supplied images. Look for consistent scale, shadows, and depth; the diagram does not establish authorship or generation history."
+        },
+        {
+          "from": "Module 03",
+          "to": "Study 03"
+        },
+        {
+          "from": "Environment Rebuild",
+          "to": "Environment Comparison"
+        },
+        {
+          "from": "Start with the subject image, preserving the original pose and framing",
+          "to": "Compare the subject pose and framing across the supplied pair"
+        },
+        {
+          "from": "Break down the perspective, lighting direction, and depth cues of the shot",
+          "to": "Identify perspective, lighting direction, and depth cues"
+        },
+        {
+          "from": "Introduce a new environment that aligns with these visual parameters",
+          "to": "Check whether the setting follows those same cues"
+        },
+        {
+          "from": "Guide the transformation using precise prompts for seamless blending",
+          "to": "Inspect boundaries and contact shadows for visible discontinuities"
+        },
+        {
+          "from": "Continuously refine details until the final output looks naturally captured in the new setting",
+          "to": "Record visual questions rather than assume the result is authentic"
+        },
+        {
+          "from": "Module 04",
+          "to": "Study 04"
+        },
+        {
+          "from": "Styling & Localization",
+          "to": "Styling and Context"
+        },
+        {
+          "from": "Use the base model shot while keeping the original pose and composition intact",
+          "to": "Compare pose and composition between the supplied images"
+        },
+        {
+          "from": "Modify the attire to suit the target audience and context",
+          "to": "Observe differences in clothing and texture"
+        },
+        {
+          "from": "Place the subjects in a localized environment that reflects regional relevance",
+          "to": "Read environmental details without inferring audience research"
+        },
+        {
+          "from": "Ensure the styling and location feel naturally connected",
+          "to": "Check whether clothing, setting, and lighting appear coherent"
+        },
+        {
+          "from": "Iterate until the final output looks authentic and culturally aligned",
+          "to": "Note that visual plausibility does not establish cultural accuracy"
+        },
+        {
+          "from": "Module 04: Styling & Localization",
+          "to": "Study 04: Styling and Context"
+        },
+        {
+          "from": "Attire",
+          "to": "Clothing Reference"
+        },
+        {
+          "from": "Place the @shot subjects on the porch of a house at @location, ensuring a realistic and seamless integration. Shot on a Canon 1DX with an 85mm f/1.8 lens. Adjust the house perspective if needed, keep the scooter present, maintain original posture, and ensure correct proportions. The seller model is wearing @attire.",
+          "to": "Reference reading: inspect the supplied subject, house, scooter, and clothing together. Compare proportions, pose, and perspective. These notes describe a study of existing imagery, not a client brief or a prompt run by Petrus."
+        },
+        {
+          "from": "Designing banners is no longer just about placement—",
+          "to": "A workflow can be read as a system —"
+        },
+        {
+          "from": "it’s about building the image itself.",
+          "to": "these images remain attributed references."
+        }
+      ]
+    },
+    "/artworks": {
+      "title": "Visual",
+      "type": "Study",
+      "files": [
+        "public/artworks/index.html",
+        "public/artworks.html",
+        "public/_next/static/chunks/app/artworks/page-f0cab903184f09de.js"
+      ],
+      "replacements": [
+        {
+          "from": "Back to Works",
+          "to": "Back to Studies"
+        },
+        {
+          "from": "My Favourite",
+          "to": "Visual"
+        },
+        {
+          "from": "Timepass",
+          "to": "Explorations"
+        },
+        {
+          "from": null,
+          "to": "Visual-reference study curated by Petrus Handika. Type: Study. Focus: composition and spatial browsing. Reference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika.",
+          "placement": "Visible caption beneath the existing heading, mirrored in the route JS chunk."
+        }
+      ]
+    }
+  }
+}

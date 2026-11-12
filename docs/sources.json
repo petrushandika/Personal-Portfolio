@@ -1,0 +1,98 @@
+{
+  "subject": "Petrus Handika",
+  "scope": "Public profile research only; no site or application code modified.",
+  "method": "Searched local Obsidian portfolio notes first, then independently checked unauthenticated GitHub public API, public README files, and indexed LinkedIn results. Local notes used for discovery, not as independent public proof.",
+  "sources": [
+    {
+      "id": "github-profile",
+      "url": "https://api.github.com/users/petrushandika",
+      "public_url": "https://github.com/petrushandika",
+      "observed": {"login": "petrushandika", "name": "Petrus Handika", "location": "Jakarta"},
+      "notes": "GitHub location differs in specificity from LinkedIn; use Indonesia in site copy. Do not use the informal GitHub bio as professional copy."
+    },
+    {
+      "id": "github-readme",
+      "url": "https://api.github.com/repos/petrushandika/petrushandika/readme",
+      "public_url": "https://github.com/petrushandika/petrushandika/blob/main/README.md",
+      "observed": {
+        "headline": "A passionate FullStack Developer",
+        "linkedin": "https://www.linkedin.com/in/petrushandika/",
+        "instagram": "https://instagram.com/petrushandika",
+        "twitter": "https://twitter.com/petrushandika",
+        "skills": ["JavaScript", "TypeScript", "React", "Node.js", "NestJS", "Express", "Go", "Python", "PostgreSQL", "MySQL", "Prisma", "Git"]
+      },
+      "notes": "Social URLs are self-linked, not independent checks of account availability. README learning-status wording appears older than professional LinkedIn headline."
+    },
+    {
+      "id": "linkedin",
+      "url": "https://www.linkedin.com/in/petrushandika/",
+      "indexed_url": "https://linkedin.com/in/petrushandika",
+      "regional_url": "https://id.linkedin.com/in/petrushandika",
+      "verification": "Exact profile found through web search and cross-linked by public GitHub profile README. Public extraction returned only part of the profile; search returned additional experience and education excerpts.",
+      "observed": {
+        "headline": "Full Stack Developer | Machine Learning & AI Integrations",
+        "location": "Bogor Regency, West Java, Indonesia",
+        "about_focus": ["Information Systems", "scalable web architecture", "JavaScript/TypeScript", "React.js", "Next.js", "Node.js", "NestJS", "Go", "PostgreSQL", "MySQL", "Docker", "CI/CD"],
+        "experience": [
+          {"role": "Full Stack Developer", "organization": "Astronacci International", "dates_as_listed": "September 2025 – Present"},
+          {"role": "Full Stack Developer", "organization": "14DAYPILOT Flight Academy", "dates_as_listed": "September 2025 – Present"},
+          {"role": "Web Developer", "organization": "PT Estetindo Global Indonesia - The Aesthetics Dental & Skin", "dates_as_listed": "September 2024 – September 2025", "note": "A separate September–November 2025 entry also appears. Do not merge them into an invented tenure."},
+          {"role": "Machine Learning Engineer Cohort", "organization": "Coding Camp powered by DBS Foundation", "dates_as_listed": "February 2025 – June 2025"}
+        ],
+        "education": {"institution": "Universitas Gunadarma", "program_as_indexed": "Computer Science and Information Technology", "dates_as_indexed": "2022 – 2026"}
+      },
+      "notes": "Self-reported public profile facts, not employer or university verification. No degree award or graduation status independently established. Do not claim metrics, awards, zero-downtime outcomes, or sole authorship. Employer project details intentionally omitted."
+    },
+    {
+      "id": "public-projects-api",
+      "url": "https://api.github.com/users/petrushandika/repos?per_page=100&type=owner&sort=updated",
+      "notes": "Unauthenticated public repository metadata checked. Selected projects below are public and fork=false; this alone does not establish sole authorship, production maturity, or original design ownership."
+    },
+    {
+      "id": "danaku",
+      "url": "https://github.com/petrushandika/Danaku",
+      "readme_url": "https://github.com/petrushandika/Danaku/blob/main/README.md",
+      "api_url": "https://api.github.com/repos/petrushandika/Danaku/readme",
+      "observed": {"language": "TypeScript", "purpose": "Personal finance management", "documented_features": ["monthly budgeting", "expense tracking", "financial reports", "asset management"]},
+      "copy": "A personal finance app for monthly budgeting, expense tracking, financial reports, and asset management.",
+      "notes": "README includes roadmap items; do not describe all planned features as completed or claim live deployment was tested."
+    },
+    {
+      "id": "reluv",
+      "url": "https://github.com/petrushandika/Reluv-App",
+      "readme_url": "https://github.com/petrushandika/Reluv-App/blob/main/README.md",
+      "api_url": "https://api.github.com/repos/petrushandika/Reluv-App/readme",
+      "observed": {"purpose": "Preloved fashion e-commerce", "documented_stack": ["Next.js", "React", "TypeScript", "NestJS", "PostgreSQL", "Prisma"]},
+      "copy": "A preloved fashion marketplace with a Next.js frontend and NestJS backend, covering product listings, shopping carts, and order management.",
+      "notes": "Public repository, but README says Private - All rights reserved. Link as public source, not an open-source license or unrestricted reuse claim."
+    },
+    {
+      "id": "structra",
+      "url": "https://github.com/petrushandika/Structra",
+      "readme_url": "https://github.com/petrushandika/Structra/blob/main/README.md",
+      "api_url": "https://api.github.com/repos/petrushandika/Structra/readme",
+      "observed": {"purpose": "AI-powered UI structure engineering", "documented_inputs": ["visual designs", "text", "HTML/CSS"], "documented_stack": ["Next.js", "TypeScript", "Bun", "Elysia.js", "Prisma", "PostgreSQL"]},
+      "copy": "An AI-assisted UI engineering project that analyzes visual and textual inputs to organize reusable frontend structures.",
+      "notes": "README credits a team and contains placeholder documentation. Do not claim sole authorship, full completion, or that it created the Cartooneast design."
+    }
+  ],
+  "suggested_copy": {
+    "name": "Petrus Handika",
+    "headline": "Full Stack Developer | Machine Learning & AI Integrations",
+    "hero": "I build web applications, backend systems, and AI integrations.",
+    "about": "I'm Petrus Handika, a full stack developer based in Indonesia. I work with JavaScript, TypeScript, React, Next.js, Node.js, and Go to connect responsive interfaces with reliable backend systems. My public projects explore personal finance, e-commerce, and AI-assisted frontend engineering.",
+    "expertise_labels": ["Full Stack Development", "Backend & API Development", "AI Integrations", "Database Design"],
+    "education_safe": "Universitas Gunadarma — Computer Science and Information Technology",
+    "contact_heading": "Let's build something useful.",
+    "contact_body": "Have a web application or AI integration in mind? Let's talk.",
+    "primary_links": {"github": "https://github.com/petrushandika", "linkedin": "https://www.linkedin.com/in/petrushandika/"}
+  },
+  "guardrails": [
+    "Do not publish internal infrastructure identifiers, private repositories, client systems, or credentials.",
+    "Do not claim Petrus originated Cartooneast's design, illustration, animation, client work, testimonials, awards, or case studies.",
+    "Replace inherited client and testimonial claims with verified developer copy or omit those sections.",
+    "Do not infer sole authorship from repository ownership or fork=false.",
+    "Do not claim completed degree, quantified impact, years of experience, or availability for hire without further confirmation.",
+    "Prefer source repository links over untested demo URLs."
+  ]
+}
