@@ -1,0 +1,62 @@
+[
+  {
+    "route": "redminote12",
+    "width": 1440,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "drivexdiwali",
+    "width": 1440,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "marketplacecreatives",
+    "width": 1440,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "bannerrefresh",
+    "width": 1440,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "artworks",
+    "width": 1440,
+    "identical": false,
+    "mean_absolute_channel_difference": 2.2844935699588476
+  },
+  {
+    "route": "redminote12",
+    "width": 390,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "drivexdiwali",
+    "width": 390,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "marketplacecreatives",
+    "width": 390,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "bannerrefresh",
+    "width": 390,
+    "identical": true,
+    "mean_absolute_channel_difference": 0.0
+  },
+  {
+    "route": "artworks",
+    "width": 390,
+    "identical": false,
+    "mean_absolute_channel_difference": 10.884832097865273
+  }
+]

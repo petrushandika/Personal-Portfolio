@@ -1,0 +1,952 @@
+[
+  {
+    "path": "Resume/Anurag Bandyopadhyay Designer.pdf",
+    "bytes": 1068422,
+    "sha256": "79d9d38ad3acb8819e385c6fb7169f3da6307e330d227ef23bf3ac592698bacc"
+  },
+  {
+    "path": "_next/static/chunks/19-ea1c143060ae55e1.js",
+    "bytes": 20965,
+    "sha256": "aff16da4fe9f080217a1813ccbb667f8bad752e7290824cbe7cb4e1628adc593"
+  },
+  {
+    "path": "_next/static/chunks/23-e3a0fd11d2430b77.js",
+    "bytes": 123385,
+    "sha256": "82021b15322d7bf82089a943a4506cd1c4d4253c950216f1bf1890dfbaab38f0"
+  },
+  {
+    "path": "_next/static/chunks/517.132bc816ad373263.js",
+    "bytes": 7853,
+    "sha256": "10d1d5d57102d10fcda17fec8789b4e25bf7a5881db906022a4abf9b8b21e05d"
+  },
+  {
+    "path": "_next/static/chunks/548-d74208ff41feeccc.js",
+    "bytes": 11312,
+    "sha256": "bcb8da681b91271a46b18fc2d34526ca392c482b1c7be676b67227e1081c8f93"
+  },
+  {
+    "path": "_next/static/chunks/690-e9bd4f1c2d32e3aa.js",
+    "bytes": 10618,
+    "sha256": "b906049e7d988fb9fbf1846fdd06fba019b1634bd90ad57f942cf0407019d2e6"
+  },
+  {
+    "path": "_next/static/chunks/921-fc6ace8bad09e792.js",
+    "bytes": 153706,
+    "sha256": "f53337266f691c0dfd5da28717b825fe3ba24f08e5fe540f702a54398c8e977b"
+  },
+  {
+    "path": "_next/static/chunks/949.5971fd85868859c6.js",
+    "bytes": 135747,
+    "sha256": "318a7737092c1ca026bb948006c6c3d2ae55d28a38f7ff6eff98b9840a6ee38e"
+  },
+  {
+    "path": "_next/static/chunks/app/artworks/page-f0cab903184f09de.js",
+    "bytes": 16073,
+    "sha256": "9d6c0228b81b8600215feec7e8e45294187a112380fd62b8efebfcd493aec364"
+  },
+  {
+    "path": "_next/static/chunks/app/bannerrefresh/page-317e548be2e5a8d0.js",
+    "bytes": 31908,
+    "sha256": "bd82560f9c283b7310f31fff4f860ef47293721789f342dbee35565a677a38cd"
+  },
+  {
+    "path": "_next/static/chunks/app/drivexdiwali/page-fe0696520790e2e7.js",
+    "bytes": 13414,
+    "sha256": "731562b38581eba4a5ca77728a1f189e8073dcf1bc4a91d416c87b35a3e133f5"
+  },
+  {
+    "path": "_next/static/chunks/app/marketplacecreatives/page-47a31cc784c0eec6.js",
+    "bytes": 13302,
+    "sha256": "a9f94d3e4182f3436eb1cd7009f39132273d5d357b56cd7a257a055bd4c04dab"
+  },
+  {
+    "path": "_next/static/chunks/app/page-5ec50d8abe30bce2.js",
+    "bytes": 31451,
+    "sha256": "851e0f32267029acfec780cf733c0b1f9e5f897ef0f5be681a75a091bb638b7c"
+  },
+  {
+    "path": "_next/static/chunks/app/redminote12/page-a77da362cbae2721.js",
+    "bytes": 34281,
+    "sha256": "5c6d551657d772e495f374dbf8a26c2431e1aeedd0d3ff44daef58e80fe89775"
+  },
+  {
+    "path": "_next/static/chunks/b536a0f1.735739bb10e9c3d3.js",
+    "bytes": 671308,
+    "sha256": "5ed57db40fce41d7de459127143b5de70bd2d644eeff68587de771ff047ee229"
+  },
+  {
+    "path": "_next/static/chunks/fd9d1056-d796dea454d0709d.js",
+    "bytes": 172831,
+    "sha256": "71ed963804cbd4b773b16a2e290fb534288140999cca4833a8ff300a9d72a9b1"
+  },
+  {
+    "path": "_next/static/chunks/main-app-af589dec29700cf3.js",
+    "bytes": 458,
+    "sha256": "a07fb7ecdde8878b9429b74549cdf62d4e5bce784d1ebf31156826c88735e4b6"
+  },
+  {
+    "path": "_next/static/chunks/polyfills-78c92fac7aa8fdd8.js",
+    "bytes": 91381,
+    "sha256": "e903cec1d59e0157bcc7e4ac883ae6f866babb60e4aa01b9485aa096b9722200"
+  },
+  {
+    "path": "_next/static/chunks/webpack-f71345b119c638ab.js",
+    "bytes": 3848,
+    "sha256": "c55413e97b98d7ca20ad5dd1bfead69aae430a9bd7e3d52bd84044467ac2f8af"
+  },
+  {
+    "path": "_next/static/css/5ef0f09b80ebc4e0.css",
+    "bytes": 53377,
+    "sha256": "1f43edba68542c6ae44bb75f0f6b662d9c29f6b9e5f0f3e6e102894364676cfe"
+  },
+  {
+    "path": "_next/static/media/0c310187b552b27d-s.woff2",
+    "bytes": 24900,
+    "sha256": "491120b4e13e635424c4d694ec7d92199c9737068bca45bd8c97bfd9553ac9ac"
+  },
+  {
+    "path": "_next/static/media/9b4fbfc777bb173a-s.woff2",
+    "bytes": 26568,
+    "sha256": "7c65d4c41246a2b013d561dbccbb29ae0bbed975944cc65fd75846a95495b4b4"
+  },
+  {
+    "path": "_next/static/media/a74fb1607b845cb0-s.p.woff2",
+    "bytes": 28336,
+    "sha256": "1b092c711df1c7ad200c2bc73305c792315ff882adbac925d79fb432bc0673c3"
+  },
+  {
+    "path": "_next/static/media/d426c6df177f02c4-s.woff2",
+    "bytes": 8812,
+    "sha256": "38c9711c2da1dd13c3eae64a25d91ab21da83aec9207a498fda3939bd9b8977b"
+  },
+  {
+    "path": "_next/static/media/e210f091ebfac73b-s.p.woff2",
+    "bytes": 53040,
+    "sha256": "3cf06771841c778db94dfc003a9239338613c07a9e8c8125d0641a1ba6e7977a"
+  },
+  {
+    "path": "artworks/index.html",
+    "bytes": 10896,
+    "sha256": "bddfe8619e59e18d6e03a499050a72fc09443b2c61a42b19bdb1ff36bd9974f7"
+  },
+  {
+    "path": "artworks.html",
+    "bytes": 10896,
+    "sha256": "bddfe8619e59e18d6e03a499050a72fc09443b2c61a42b19bdb1ff36bd9974f7"
+  },
+  {
+    "path": "bannerrefresh/index.html",
+    "bytes": 59114,
+    "sha256": "030ab566db803c3da2e6ed0a49f86b42e73c4b17411961a7247186bf784e201b"
+  },
+  {
+    "path": "bannerrefresh.html",
+    "bytes": 59114,
+    "sha256": "030ab566db803c3da2e6ed0a49f86b42e73c4b17411961a7247186bf784e201b"
+  },
+  {
+    "path": "cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+    "bytes": 1239,
+    "sha256": "2595496fe48df6fcf9b1bc57c29a744c121eb4dd11566466bc13d2e52e6bbcc8"
+  },
+  {
+    "path": "drivexdiwali/index.html",
+    "bytes": 44581,
+    "sha256": "c80e0c9ba5c52465b6edd5c65bc654cd72dc9142d5cb6bbfbaed38efb12d846d"
+  },
+  {
+    "path": "drivexdiwali.html",
+    "bytes": 44581,
+    "sha256": "c80e0c9ba5c52465b6edd5c65bc654cd72dc9142d5cb6bbfbaed38efb12d846d"
+  },
+  {
+    "path": "index.html",
+    "bytes": 26882,
+    "sha256": "f3f8b181d9201007eb482bdf012f92a50ddcbca0a0f3aeb709906032a181083a"
+  },
+  {
+    "path": "marketplacecreatives/index.html",
+    "bytes": 30576,
+    "sha256": "0b3582d9d0f738f2806cd7428e7a90a71e67be9e7bbd9beaf47a3caaff9bec35"
+  },
+  {
+    "path": "marketplacecreatives.html",
+    "bytes": 30576,
+    "sha256": "0b3582d9d0f738f2806cd7428e7a90a71e67be9e7bbd9beaf47a3caaff9bec35"
+  },
+  {
+    "path": "patterns/cream-paper.png",
+    "bytes": 11803,
+    "sha256": "6ea793f50b20a0a1eec2c43323f77ea8833bd05ab80b0af6b2f4f7982e5c6d7a"
+  },
+  {
+    "path": "redminote12/index.html",
+    "bytes": 48900,
+    "sha256": "8e3f6145cff105c345391ba7d10593467a56ee6da522cce9ae3fe77d9511d1ec"
+  },
+  {
+    "path": "redminote12.html",
+    "bytes": 48900,
+    "sha256": "8e3f6145cff105c345391ba7d10593467a56ee6da522cce9ae3fe77d9511d1ec"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Aries.optimized.jpg",
+    "bytes": 505544,
+    "sha256": "13111d55b3d993d5f67d0c31f4bf805464bdf788f60d3b3e602bcaca125dbb3f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Chandler.optimized.jpg",
+    "bytes": 971965,
+    "sha256": "a610de3d46108de3ff7948425d6d95259fd1d90acf2b2d54fe1b2c3a73e65885"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-NAMI.optimized.jpg",
+    "bytes": 844720,
+    "sha256": "58ce7308164b15e5c9a95179a72f47df5a37dfa43612b9d4f14fea09389884d7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-Shantanu_.optimized.jpg",
+    "bytes": 342013,
+    "sha256": "b64b7c939a50a185716640175b972da2d82eaa4ada62654ae5f7954442065b71"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_173_-1.optimized.jpg",
+    "bytes": 880514,
+    "sha256": "45f8d9f4af1f1cf101014137d8d978605cb512bc5fa82ce8ec1978efdf4943ed"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_202__1.optimized.jpg",
+    "bytes": 1133816,
+    "sha256": "812fcc6ce59f35c6162a22c919e4d4177b05163010039f34bb11bd24e235528e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Hozier.optimized.jpg",
+    "bytes": 1713213,
+    "sha256": "44425f1ce875d5f68cebd7e5fa5243fb29bdb14fb0826af19ea8336ba1593d00"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/I_Quit_smoking.optimized.jpg",
+    "bytes": 823708,
+    "sha256": "05417ba3828248edabdb52a0b532e0953401e2ed367b7c1cc9e8abfa26bf8284"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Infinite_Pillar_of_Fire.optimized.jpg",
+    "bytes": 1032266,
+    "sha256": "c244a0a757ae373e215a8895c7e3f99666311a53eb899d5282de200486e07fd0"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Jiraya_JA.optimized.jpg",
+    "bytes": 868565,
+    "sha256": "a3334c1fe7ac567f5694c01d9491cc772992dd36380adf8755506fff3b5db6a2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Joey.optimized.jpg",
+    "bytes": 1551454,
+    "sha256": "ce5e26c7ee27631501a644dc5442d261d46a6a30a0e9aabc1b4bd570d744a040"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Minato.optimized.jpg",
+    "bytes": 1797189,
+    "sha256": "c6589cd9ba2ac339217294b8160a14262c8d23bb20e7d7e26689e1264a3b290f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Pinkman.optimized.jpg",
+    "bytes": 1170740,
+    "sha256": "63db63ddfbaeb8d872a01a865ebcc21143a4821aa8cbd67a277f558a3ea47cd5"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Princes_Ghat.optimized.jpg",
+    "bytes": 1216684,
+    "sha256": "01e34fdda584743d7597340ba4c80b8b272394c40bf67f54edd8adc00802e15f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/PsychCat.optimized.jpg",
+    "bytes": 401031,
+    "sha256": "5bf4448cc38de8372e3aa55155d8995f2bd04c6ab322a696337bc5fa2ce6e752"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Psych_Dog.optimized.jpg",
+    "bytes": 465770,
+    "sha256": "b287a5d29a9a28a45af48ff879be1a31e7e8885132b366aadc68dbeaa03c6547"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Taurus.optimized.jpg",
+    "bytes": 651955,
+    "sha256": "e423b35697861467739ae69335f2b5980d73428c4d6ac9cb899d3f858960a341"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 10.optimized.jpg",
+    "bytes": 339843,
+    "sha256": "c653dae2bcd0b4d2dd8ad6ff7109e6c29d2fdd53e3b2ba0feb35ed5c198cb1f5"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 11.optimized.jpg",
+    "bytes": 637434,
+    "sha256": "5230f9022951f50307776ad6a83667d78d7b5beae44290fe75086c6f0759e54d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 12.optimized.jpg",
+    "bytes": 656949,
+    "sha256": "39713285843426d8c540e7e7b7ccc586605f473ff5a2deadc8c21538b03b6c19"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 5.optimized.jpg",
+    "bytes": 493117,
+    "sha256": "e2d009a259ab729254b31318ed1360a315ded14d609c9e7f00bb4fbf91d6e9c7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 6.optimized.jpg",
+    "bytes": 2261251,
+    "sha256": "14e8d6231410b917f0778d937a3c318f9a638b5e7dbcedb94842f4a72759c4a0"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 7.optimized.jpg",
+    "bytes": 388367,
+    "sha256": "b4b99f2d6a659daf3e662b89d97055167c36330d782d50070d219e0ed79e5230"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 8.optimized.jpg",
+    "bytes": 1037479,
+    "sha256": "9040f1721e03b7f06c1aaabe8bbcbc862cafa093032bc7369074db421d67fbbe"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 9.optimized.jpg",
+    "bytes": 905930,
+    "sha256": "05fb71d3969d0254c8a9f109437b3085ce6912d1e51f1062b74200bbb70dd271"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Wall_E.optimized.jpg",
+    "bytes": 1246701,
+    "sha256": "f8ad63fb8168c5b7e9f6cfcfbec5ad0df807e953dfed9b674f9784464467e9fa"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Walter_White.optimized.jpg",
+    "bytes": 773817,
+    "sha256": "590200b43c99d7fe27cf8238a550c137d0d98e7a205b070fc233fe073a4880e6"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/_Mascot.optimized.jpg",
+    "bytes": 230247,
+    "sha256": "d3ec2b6ffc9656878802df16c3c77dce9dc9099793c457d776bf1952a6667df1"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Artworks/floating.optimized.png",
+    "bytes": 3436683,
+    "sha256": "bc47f7f9fbf9dcf3690a1be9c36dfa5db1f490726c529d5de3a6e0e9bcabb4c7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 1/Final.optimized.png",
+    "bytes": 3357006,
+    "sha256": "6c49ddb1e418c7e43ca8c4955df12d97d6724e62a7dfb2f21c3561d4a300cb02"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 1/Raw.optimized.jpg",
+    "bytes": 398837,
+    "sha256": "2c38c95e3a40a4cfb137301014dbbd01b01f070372af69dc28e93997869bc128"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Final.optimized.png",
+    "bytes": 3215354,
+    "sha256": "0edc75beab7c64b19f93f0f0351141b8a1b8577c1815bf12933ccfa512d1b597"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Location.optimized.png",
+    "bytes": 4802325,
+    "sha256": "c6439bc2c4fc7a35754ac682b71e42894a54cfc286b73b7f1b6475c7faeeadc2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Shot.optimized.jpg",
+    "bytes": 583968,
+    "sha256": "a46abcfc5a5220085b973a9922d8e01263901a5564251571a6c28fda657ddc7d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Final.optimized.png",
+    "bytes": 3919991,
+    "sha256": "deb391a0198186a201ec70f9b8c14dd8741ea2f1409d286f65aad52afca92fd7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Location.optimized.png",
+    "bytes": 8242145,
+    "sha256": "da62aceabec18a9b52d927ed2bad8269dcaf7108dbf7baa3c123d2e713d0407d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Shot.optimized.jpg",
+    "bytes": 405388,
+    "sha256": "e7ec567c48ed7d2554d61c883efad5ca20d333877663eb0f8794d058b8f3d915"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Attire.optimized.png",
+    "bytes": 10174161,
+    "sha256": "e695dee880eda7f9ea31de9a36c025c25a744d0683768debbec55c1fe07c1740"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Final.optimized.png",
+    "bytes": 3816144,
+    "sha256": "c4fb21a9736248065f75c056b629190dd154545b3690b46e106a4caa59a5d87f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Location.optimized.png",
+    "bytes": 5528812,
+    "sha256": "001cbd1f79924e471992b854459e55e97510ab5e572a2c1aa8c438219003b160"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Shot.optimized.jpg",
+    "bytes": 505036,
+    "sha256": "c0e364ce0ac8d3f190b29907e76c6c3c0750f3c970c50c016c401bbf5a730aee"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/4da1cdf5-403e-49e1-b8f4-d4a9d8040e74_optimized.mp4",
+    "bytes": 2024824,
+    "sha256": "8f20fab8c1adfccfdf6614211a6f573310ce6502ebc83452a04d421ab03745de"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_145736.optimized.jpg",
+    "bytes": 860476,
+    "sha256": "f74048cc4dd9794b3ed4d1d13a846a17be277efef3fb9399914f0b720459f0e8"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_185947.optimized.jpg",
+    "bytes": 639069,
+    "sha256": "5b914d87e7381c9b8b46b1493b98a694175a8cd24d6ed168a92919f713264e5e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_9959_optimized.mp4",
+    "bytes": 20375198,
+    "sha256": "2fa585d64fc1118e8799a2100f1b3bead3d50ecfaf7812736726e93ca88642ae"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/VID_20250926_164321_optimized.mp4",
+    "bytes": 14961637,
+    "sha256": "a04011dbec0bfaf886fc3f52178370514bbce6bc99adbe0d37b397cb2dff9b41"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_1.webp",
+    "bytes": 595236,
+    "sha256": "9152d35460e8dcd9e1e2f0167b38112bc8a8c6f8becad095b01e9e91b981be5b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_2.webp",
+    "bytes": 1123276,
+    "sha256": "9d9bf0765de30b583f7f93a38d4e0ff87eec6f88b4dd071aa7189beb0559997a"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_3.webp",
+    "bytes": 973562,
+    "sha256": "da553a3ccf98e1b61f3caf7a83e37f410c3922497ac6fad07412f77576784601"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_4.webp",
+    "bytes": 732564,
+    "sha256": "094459acfc9983164dc30869737c881734ae4265357717e4419a96bf6a2ab062"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_5.webp",
+    "bytes": 981026,
+    "sha256": "7a8a5cf2e28b3d21820cb421cbd51bc23ca0b28b9a8cc60c0a56a662b650299a"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_6.webp",
+    "bytes": 719634,
+    "sha256": "5f966d19961dd4bf0587dce3ce308c219bcc8d60806eb43cc5aa6b320abcf60e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Master_For_Print.webp",
+    "bytes": 758032,
+    "sha256": "4c9e4181b3df10fb406a4ff5789373de29bdf3ff92b82f5e96c002323b492ad7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0001.optimized.jpg",
+    "bytes": 51119,
+    "sha256": "dff868d62dd6bc23a56e2ef7798d7f284359e8ff90d077ad02cf2fd4105e4033"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0002.optimized.jpg",
+    "bytes": 293156,
+    "sha256": "3e3c1163908a4a337000bd01e96551f9531a3039b4225a380e86aef9cc60db8d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0003.optimized.jpg",
+    "bytes": 261179,
+    "sha256": "b03a7b10b21cb720cc8c31f6ed44a3217e029adfc440854e22687448b900700b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0004.optimized.jpg",
+    "bytes": 212532,
+    "sha256": "32876c99e64ace2831dc4d8041c0f6b8d888ac5a4a74cc05bbc78969ae098e04"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0005.optimized.jpg",
+    "bytes": 239154,
+    "sha256": "952e0b441e82fe1dedbc2401f55b300ae75ce4dffa91b4b91f71f31d82b30e79"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0006.optimized.jpg",
+    "bytes": 88979,
+    "sha256": "20759c48fda8f98361a1f026997764ac2c356eed2d2084506ccaf87083416206"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0007.optimized.jpg",
+    "bytes": 336821,
+    "sha256": "99c2a5cb3aa507c85e410def9a7b62ed67eb023796b44d2dc984bcff974c4608"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0008.optimized.jpg",
+    "bytes": 264314,
+    "sha256": "9c9408e2c74fcf9533b85ff8c85132907cbaa1ad888c0b8bac700a0ce18894cd"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0009.optimized.jpg",
+    "bytes": 220884,
+    "sha256": "dd9f05a80b756915ecf72d0ce634c89e4c6066aa9d8ad18145d18e18856b7250"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0010.optimized.jpg",
+    "bytes": 189673,
+    "sha256": "0e11d5f5ea3e13cd99cb28b2620647364803ce9bb5081650fcb4aa3e94c5d3aa"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0011.optimized.jpg",
+    "bytes": 195223,
+    "sha256": "573588a569efcecad3b23fbbd9811005c3913d5fe627f841b452d657b297b3b1"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0012.optimized.jpg",
+    "bytes": 301688,
+    "sha256": "59e3a098c3f93b409f06e7a4e6bdfbd8ca8a025a0266816a6f493a20e5f9a149"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0013.optimized.jpg",
+    "bytes": 255947,
+    "sha256": "ee13c387850c8af0b02acffdff666a9ecac12f200108f8b9dbef4bab7bed0595"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0014.optimized.jpg",
+    "bytes": 214460,
+    "sha256": "7620a28c8f3e16c3014ec2ac7af0fa581bcb7d3992612ef5e178779a624d535a"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0015.optimized.jpg",
+    "bytes": 189254,
+    "sha256": "a3190568aa21acb4dd266292335ae6d5b122865fa9f3eae06441ccc800c13232"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0016.optimized.jpg",
+    "bytes": 252080,
+    "sha256": "7104d925358e8ce901e87ccbdcc2c6142878c81cd3615afaadd8e9591139a528"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0017.optimized.jpg",
+    "bytes": 181799,
+    "sha256": "b6e0bbdec15d96e4facba65ddb4e417e8da88979e402630a3008da40078ab07b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0018.optimized.jpg",
+    "bytes": 172123,
+    "sha256": "5faa842e1f98428fc35942912ac8797e946abfc291e91ff193ee62e8198e056d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0019.optimized.jpg",
+    "bytes": 262265,
+    "sha256": "0563eaafcebb61311cb5f8e5c833847b3cb0a5e2f0e73d060040066cdce5dbf8"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0020.optimized.jpg",
+    "bytes": 192170,
+    "sha256": "a025a137c90eba29d604bdb741cb7f54da971527ad214c1941a18ae02c6422b0"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0021.optimized.jpg",
+    "bytes": 199650,
+    "sha256": "6b97fdbdcbb17fa443a93926c0c1030bbfdc40bf1aa3183989e8ac1973485aae"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0022.optimized.jpg",
+    "bytes": 200807,
+    "sha256": "e19f64ef6349c577ec4766c1cee1de2b66d6654d2596fe4f6d8aa3dd3e37f1c9"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0023.optimized.jpg",
+    "bytes": 176524,
+    "sha256": "19ece7012e5ac3cae67a6c2433a851cec2620dc3c13b7afa1a2f79c2536130a7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0024.optimized.jpg",
+    "bytes": 244198,
+    "sha256": "17732258f4f57ec60670cf957b9a1331fb7eb93e3dcc7a5e29d1bc159f500fe3"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0025.optimized.jpg",
+    "bytes": 168305,
+    "sha256": "391f332c43700fb2ee37828b281692e48ec54975b24e77fe850045feebca19a8"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/AMZ ov.optimized.png",
+    "bytes": 125312,
+    "sha256": "ba5079bb073db8a646c53c92ce01a43906a54f2b806a927a2f5ec365d16da614"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/Screenshot.optimized.jpg",
+    "bytes": 1537761,
+    "sha256": "23bc40c16ee0b4bca303d97583f0617e1f1f71e7e510c99005900f1bc8c6ad6b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/amazfit.optimized.png",
+    "bytes": 92878,
+    "sha256": "acf7fb600c1aade01e11d7193d6912487daa645362f60b57931dfd83fcccf31e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/lumio.optimized.png",
+    "bytes": 60322,
+    "sha256": "da53851563cf358c69332e827ddd99612d2c9057469bfa3c5e43ffbc573d6617"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/mivi.optimized.png",
+    "bytes": 67356,
+    "sha256": "161f1e227d96767edbc2f5865c40a66af06c6782ea0b749c009f4a4a1a6028d4"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Amazon.optimized.png",
+    "bytes": 1233948,
+    "sha256": "43287938e970e81f9d2db5fab84881727fc2179cf644e547361de666b7ba9e80"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio1.optimized.jpg",
+    "bytes": 70384,
+    "sha256": "3c5b53e23e23a083f33fd1c248660b5d3058afa3fff0471c0752531c0664ad83"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio2.optimized.jpg",
+    "bytes": 131484,
+    "sha256": "2ed7ef0f93bdb7378e1d752ee8906e69f09af3cae839a267a87935289096b792"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio3.optimized.jpg",
+    "bytes": 150129,
+    "sha256": "a9088a969cd569bcd8c69c53c62d29ce7180570e3acbccb59f80843fa49e6223"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio4.optimized.jpg",
+    "bytes": 97785,
+    "sha256": "c4f1909ec4f01aeaceef9743700850d1317316995f874a836fa0d98e10fcaa43"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio5.optimized.jpg",
+    "bytes": 87154,
+    "sha256": "3015b791c41d536ffdf04cf05121d347dc12bd4c2806feb315225e88b8bd84c6"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/1.optimized.jpg",
+    "bytes": 242132,
+    "sha256": "507693b3cb399c4d8da26207e96baa0428ed3180a2ac12e64b35c6c5c68d6204"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/2.optimized.jpg",
+    "bytes": 536638,
+    "sha256": "dd6b20956da77ea46735cc5f155aa241553962b13e7ad1e069b2a01ca5f17637"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/3.optimized.jpg",
+    "bytes": 406187,
+    "sha256": "b1162a1100e4ead4e40e3b05b7d85e0cbed4f0bb8c2ddc3ad2bef1fa58ad1b5a"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/4.optimized.jpg",
+    "bytes": 522929,
+    "sha256": "20f03420efe07644afb9eedf400caad6696d6cb79d3e5e89ef03d6c943e9acd2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/5.optimized.jpg",
+    "bytes": 360076,
+    "sha256": "7f9da9f0649d253883c26d30eb9311989f0bcc355706e0f67b8c6eab5fb648a3"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/6.optimized.jpg",
+    "bytes": 474803,
+    "sha256": "1dbf161fcfd714aa74531e30ef8f56ca43f28d24d91716e85de61eb6dd9c4353"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/7.optimized.jpg",
+    "bytes": 644295,
+    "sha256": "414a2daea9fb8d3a8785a5c9a4b9564b0c9219157bda85b9718df90f86bf5bd4"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/AMZ Catalogue.optimized.png",
+    "bytes": 1034480,
+    "sha256": "7dad00e92e7bcde7c96cf0ab51c28e717d35c794fa88ab907b2493e2515fbf1e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Arctic White.optimized.jpg",
+    "bytes": 329659,
+    "sha256": "9d602f6ef5888e21f28547a68060662879d864c73d837edd43d39c635396a44b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Frosted Green.optimized.jpg",
+    "bytes": 174245,
+    "sha256": "7c89ed8d1fd774abe65521fb4e8098e957c12cbf6e19b1fd223d208073c3cfd4"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Glacier Blue.optimized.jpg",
+    "bytes": 190036,
+    "sha256": "c69a6d91d6aed1ba2f65af6be0e60d266f7a91d871c28fbf5290b2ea7c16ea55"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Icerberg Blue.optimized.jpg",
+    "bytes": 234847,
+    "sha256": "56c307106a3397d347115f2f8ed1a4881b3d06b31069d2f653a29310a725d944"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Matte Black.optimized.jpg",
+    "bytes": 187722,
+    "sha256": "81e2628b8cc4a41af94ad2f0c96dd077ca9e696689e1e6089ca2104917c1c4cf"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Mystique Blue.optimized.jpg",
+    "bytes": 171052,
+    "sha256": "5fd1eb1afc7804c7ffba18286a4b0b420bb4b3f034c99fc765cf85239fb533d4"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Onyx Black.optimized.jpg",
+    "bytes": 180314,
+    "sha256": "47a74fe77f9abf742d08c8b04ab594ca7030f2173e2dde64baaedc32ef2b4cc3"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Stardust Purple.optimized.jpg",
+    "bytes": 196057,
+    "sha256": "0e49c6e75e65750784a02b0965aca05425cb06e993efc9372d2a61d07006360e"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Desktop.optimized.jpg",
+    "bytes": 2765975,
+    "sha256": "b73e04618123ef7ae9732e2351c432e6001727fd838c397935c8892fe7c04026"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Header.optimized.jpg",
+    "bytes": 309754,
+    "sha256": "c5767ea0d96ae9af1a2f54c7d966436e7fe9ce65a23ae526078831b08022a585"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 1.optimized.jpg",
+    "bytes": 179578,
+    "sha256": "3797d20ac9c3ab18039007887abd2fdb4ad413ca06363c6a1152d4ab54bbb683"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 2.optimized.jpg",
+    "bytes": 138092,
+    "sha256": "3a4e03896974000c909531223eef6344f3f902c4b99c15149ddcf48f32569027"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 3.optimized.jpg",
+    "bytes": 108999,
+    "sha256": "819307380552ce8ccf291cef9e1ded0e12ab50dfde8ac0f00dbc7ec382b27055"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 4.optimized.jpg",
+    "bytes": 272510,
+    "sha256": "061dd1f9a69bf1332eb6a020057b4e52007a98c724161bcd04764fedb04892b0"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 5.optimized.jpg",
+    "bytes": 267763,
+    "sha256": "ac4e39985fb9efe5e21301da10eeb88330e9026a341af22782873d4795f4b3e6"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 6.optimized.jpg",
+    "bytes": 190174,
+    "sha256": "38d546f2aeb58fafc6d228aaefd1f58d7d8fde5e7361b78a48febf0bdaa6cb0d"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 7.optimized.jpg",
+    "bytes": 265922,
+    "sha256": "8a72fc39a0b59bec98851183981a0236db2d646347cd8c5b3444e210765c53d8"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 1.optimized.jpg",
+    "bytes": 163329,
+    "sha256": "16733da34a0018e267f9e4e62d5d380c58c2e3c109d1c99100391dbf0bdd9d22"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 2.optimized.jpg",
+    "bytes": 351352,
+    "sha256": "1f878a51936e3616fd4abcec70a4f38bee0673915c1eafcf34df5f1315614c67"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 3.optimized.jpg",
+    "bytes": 370205,
+    "sha256": "fe33da06f04789903a487a5134c62272a7e1ff47686fe8e031d10552808aecf1"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 4.optimized.jpg",
+    "bytes": 355235,
+    "sha256": "bff3f8f6f11a166804388659ed3e6b1937d23cb2bb1bd0b84892bb592c5d5d54"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV.optimized.jpg",
+    "bytes": 98271,
+    "sha256": "b7edae9dce4678fda37aaa22528cec3f39db34fab15c5c9d37056e406b39d2d3"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Mobile.optimized.jpg",
+    "bytes": 6648868,
+    "sha256": "e29b98be233b7a71a0d87822aa393b75474f1d0d6ead05afa033865514bcc4a2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH Horizontal.optimized.jpg",
+    "bytes": 188673,
+    "sha256": "e4a4e8eb9adb6c7ca72396ffbf2fc865e18eb889a983808375a484fc8d857da7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH Verticle.optimized.jpg",
+    "bytes": 532153,
+    "sha256": "103ded264592341c899c498cd17f614aae1d845682a42e213593382fb4847995"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH1.optimized.jpg",
+    "bytes": 358602,
+    "sha256": "d01a4a5ad7baae3176651a9651509261910ed6171a61ac49d758152cec24ebce"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH10.optimized.jpg",
+    "bytes": 275148,
+    "sha256": "efa99737fc2cbaee4cca72bdbaa595c1ce25baf2c208678a3ffbdb7514865205"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH11.optimized.jpg",
+    "bytes": 323525,
+    "sha256": "9e50daa5b4b6350e6a92b7abbd201822a2a59d6c2c3c51313e099527fa88cddf"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH2.optimized.jpg",
+    "bytes": 518177,
+    "sha256": "6e91be317439edf8d5f2bc6107089cd621ec895482d7f665651975bcd4105137"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH3.optimized.jpg",
+    "bytes": 454859,
+    "sha256": "c276a48ae6c7df5bccca882d29748d083f8da5fe4e1027e0a8039f47e703c5e2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH4.optimized.jpg",
+    "bytes": 328271,
+    "sha256": "e1431d8d9dda9856388b67f69d9a6a4654437a8fda2f147f54df78436d82a710"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH5.optimized.jpg",
+    "bytes": 382288,
+    "sha256": "632282f591335a66337ce52f6f358fb9e43274810ad265f948a000300ee1cc87"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH6.optimized.jpg",
+    "bytes": 436387,
+    "sha256": "3d73b1f02a78e804c22468f57e98657c5a4e8fa5a21635cc94e73e7c5421c69f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH7.optimized.jpg",
+    "bytes": 1109254,
+    "sha256": "4c2fc900f4ba57cd2641794b0259fe12c1211c42bd409451fafc904b219d2e33"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH8.optimized.jpg",
+    "bytes": 440793,
+    "sha256": "750fca0c21d57721e6ed243705f2759b8d1d24e25631b66be1cd85ca71db2d6f"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH9.optimized.jpg",
+    "bytes": 357347,
+    "sha256": "8c6b7dbaaa925bebbdbaaad980c7f260705de1adc64fdc5d9beb04353c378e6b"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/collaborations.optimized.png",
+    "bytes": 238828,
+    "sha256": "d43bb3b8e172e9e0ac296360f4ed7d38df4134256585a266483a911cdea4a3b3"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Sections/timeline.optimized.png",
+    "bytes": 394228,
+    "sha256": "f6e743f0d0771b72386498d2e57b0460c46a93c69451c3c73f0ee4d11438df76"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/1_optimized.mp4",
+    "bytes": 3581223,
+    "sha256": "c838b63e6ec71800493985f96f10fdb39d224b309f891192788fe67ba4a59145"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/2_optimized.mp4",
+    "bytes": 2798684,
+    "sha256": "5892cfd5610416a79e683dbdb123605e7b373d96b5c4e9ea34915731a4fb0637"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/3_optimized.mp4",
+    "bytes": 4740397,
+    "sha256": "3a6aa7567c9e3bdd45b7915891a155a67dbb2d970ac71aff29d99992792138df"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/4_optimized.mp4",
+    "bytes": 4714041,
+    "sha256": "285824999422d42e4e12db0e0c33a204566810866e7b82c71cac3fc9d709805c"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/5_optimized.mp4",
+    "bytes": 2140904,
+    "sha256": "db00dd07e638ca64cdd707510e5abbe98f77186a36ceb8e9e15d6c034bfc1416"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M1_optimized.mp4",
+    "bytes": 1822562,
+    "sha256": "b501a24e217e83274899a4c2b2bab35d097d221818a352595d1d9d576d133efe"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M2_optimized.mp4",
+    "bytes": 1459479,
+    "sha256": "8ffb667f8d6a38fe8c0a68e955bd7eaee91d49923f554e6b8ffcf9aee5cdda2c"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M3_optimized.mp4",
+    "bytes": 2520320,
+    "sha256": "dab8dd43c44449b8b41827be8f95c469c0cb158319d81f0135453d6068cdf146"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M4_optimized.mp4",
+    "bytes": 2449171,
+    "sha256": "3f20cabc9885c22cbaa12d67366c5245a918fcd9dded5aeabc34937a9d4524af"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Video/M/M5_optimized.mp4",
+    "bytes": 990670,
+    "sha256": "3e2fdf7be3d1570cceafd2c483e9d1b6e7baa05448083bb0f72ec53f110deecc"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/Bade_Parde_Xiaomi_optimized.mp4",
+    "bytes": 3392342,
+    "sha256": "291b4d47eaef9d4fbccc91636c04ec3899f3d02eb65aa145bcdf37547f1f70e5"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/Farzi_optimized.mp4",
+    "bytes": 1806246,
+    "sha256": "915a67c8bb627b4ae66eace76e47497e49a44aff86cd47735913ec2d889077c2"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/MemeBoss_optimized.mp4",
+    "bytes": 21595028,
+    "sha256": "533647d6f5b27a87001fa4e53da44cba6fdf60442a7d3c43e2e0356e357a67c7"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/bade_parde_optimized.mp4",
+    "bytes": 5010453,
+    "sha256": "53ac64e66095e1fbe2e65a6be92dc3f87e71efb2bed49ddcdd269fce90265d77"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/kalimba_optimized.mp4",
+    "bytes": 5789006,
+    "sha256": "c713d5420bc27d67cabdb78c42513b8a5c9c548307b882de141946ef852a15bd"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/ooty-motorcycleast_optimized.mp4",
+    "bytes": 36539085,
+    "sha256": "b0d9dbcbf18b378518a86db2b65e9678bbafaf50608de2fd2577541cec913cf6"
+  },
+  {
+    "path": "storage/v1/object/public/portfolio-assets/public/Videos/Me/xiaomi_optimized.mp4",
+    "bytes": 14659811,
+    "sha256": "53b1d71155bad1963ffa2880f2803d1de4be03abaec4a5efc90781521cc07676"
+  }
+]

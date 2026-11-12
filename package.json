@@ -1,0 +1,11 @@
+{
+  "name": "personal-portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Static Cartooneast reproduction with locally hosted assets",
+  "scripts": {
+    "start": "python3 server.py",
+    "test": "node tests/site.mjs"
+  },
+  "devDependencies": {"playwright": "1.64.1"}
+}

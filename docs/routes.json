@@ -1,0 +1,2407 @@
+{
+  "scope": "Complete literal and resolved dynamic inventory for six recovered public page bundles. Not a server filesystem inventory; asset availability not verified. No public files modified.",
+  "routes": [
+    {
+      "path": "/",
+      "public_document": "/",
+      "document_status": 200,
+      "clean_path_status": 200
+    },
+    {
+      "path": "/redminote12",
+      "public_document": "/redminote12.html",
+      "document_status": 200,
+      "clean_path_status": 403
+    },
+    {
+      "path": "/drivexdiwali",
+      "public_document": "/drivexdiwali.html",
+      "document_status": 200,
+      "clean_path_status": 404
+    },
+    {
+      "path": "/marketplacecreatives",
+      "public_document": "/marketplacecreatives.html",
+      "document_status": 200,
+      "clean_path_status": 404
+    },
+    {
+      "path": "/bannerrefresh",
+      "public_document": "/bannerrefresh.html",
+      "document_status": 200,
+      "clean_path_status": 404
+    },
+    {
+      "path": "/artworks",
+      "public_document": "/artworks.html",
+      "document_status": 200,
+      "clean_path_status": 404
+    }
+  ],
+  "anchors": [
+    "/#home",
+    "/#works",
+    "/#timeline",
+    "/#about",
+    "/#contact"
+  ],
+  "routing_warning": "Direct project paths blocked/missing; .html public static documents recovered successfully before stop instruction. No further remote probes.",
+  "asset_transform": {
+    "base_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public",
+    "prefix": "public/",
+    "video": "mp4 or mov -> _optimized.mp4 (case-insensitive)",
+    "image": "png/jpg/jpeg/tiff -> .optimized.jpg; transparent PNG -> .optimized.png",
+    "unchanged": "webp; http URLs pass through; resume does not use helper"
+  },
+  "assets": [
+    {
+      "source_path": "/Resume/Anurag Bandyopadhyay Designer.pdf",
+      "effective_path": "/Resume/Anurag Bandyopadhyay Designer.pdf",
+      "url": "https://cartooneast.in/Resume/Anurag Bandyopadhyay Designer.pdf",
+      "encoded_url": "https://cartooneast.in/Resume/Anurag%20Bandyopadhyay%20Designer.pdf",
+      "kind": "resume",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Aries.jpg",
+      "effective_path": "/Sections/Artworks/arts/Aries.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Aries.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Aries.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Chandler.jpg",
+      "effective_path": "/Sections/Artworks/arts/Chandler.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Chandler.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Chandler.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Comment-NAMI.jpg",
+      "effective_path": "/Sections/Artworks/arts/Comment-NAMI.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-NAMI.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-NAMI.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Comment-Shantanu_.jpg",
+      "effective_path": "/Sections/Artworks/arts/Comment-Shantanu_.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-Shantanu_.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Comment-Shantanu_.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/DSP_173_-1.jpg",
+      "effective_path": "/Sections/Artworks/arts/DSP_173_-1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_173_-1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_173_-1.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/DSP_202__1.jpg",
+      "effective_path": "/Sections/Artworks/arts/DSP_202__1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_202__1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/DSP_202__1.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Hozier.jpg",
+      "effective_path": "/Sections/Artworks/arts/Hozier.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Hozier.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Hozier.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/I_Quit_smoking.jpg",
+      "effective_path": "/Sections/Artworks/arts/I_Quit_smoking.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/I_Quit_smoking.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/I_Quit_smoking.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Infinite_Pillar_of_Fire.jpg",
+      "effective_path": "/Sections/Artworks/arts/Infinite_Pillar_of_Fire.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Infinite_Pillar_of_Fire.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Infinite_Pillar_of_Fire.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Jiraya_JA.jpg",
+      "effective_path": "/Sections/Artworks/arts/Jiraya_JA.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Jiraya_JA.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Jiraya_JA.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Joey.jpg",
+      "effective_path": "/Sections/Artworks/arts/Joey.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Joey.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Joey.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Minato.jpg",
+      "effective_path": "/Sections/Artworks/arts/Minato.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Minato.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Minato.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Pinkman.jpg",
+      "effective_path": "/Sections/Artworks/arts/Pinkman.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Pinkman.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Pinkman.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Princes_Ghat.jpg",
+      "effective_path": "/Sections/Artworks/arts/Princes_Ghat.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Princes_Ghat.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Princes_Ghat.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/PsychCat.jpg",
+      "effective_path": "/Sections/Artworks/arts/PsychCat.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/PsychCat.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/PsychCat.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Psych_Dog.jpg",
+      "effective_path": "/Sections/Artworks/arts/Psych_Dog.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Psych_Dog.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Psych_Dog.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Taurus.jpg",
+      "effective_path": "/Sections/Artworks/arts/Taurus.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Taurus.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Taurus.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 10.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 10.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 10.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%2010.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 11.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 11.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 11.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%2011.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 12.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 12.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 12.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%2012.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 5.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 5.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 5.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%205.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 6.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 6.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 6.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%206.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 7.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 7.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 7.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%207.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 8.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 8.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 8.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%208.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Untitled_Artwork 9.jpg",
+      "effective_path": "/Sections/Artworks/arts/Untitled_Artwork 9.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork 9.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Untitled_Artwork%209.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Wall_E.jpg",
+      "effective_path": "/Sections/Artworks/arts/Wall_E.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Wall_E.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Wall_E.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/Walter_White.jpg",
+      "effective_path": "/Sections/Artworks/arts/Walter_White.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Walter_White.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/Walter_White.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/arts/_Mascot.jpg",
+      "effective_path": "/Sections/Artworks/arts/_Mascot.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/_Mascot.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/arts/_Mascot.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Artworks/floating.png",
+      "effective_path": "/Sections/Artworks/floating.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/floating.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Artworks/floating.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/artworks"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/artworks--page-f0cab903184f09de.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 1/Final.png",
+      "effective_path": "/Sections/Banners/Banner 1/Final.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 1/Final.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%201/Final.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 1/Raw.jpeg",
+      "effective_path": "/Sections/Banners/Banner 1/Raw.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 1/Raw.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%201/Raw.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 2/Final.png",
+      "effective_path": "/Sections/Banners/Banner 2/Final.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Final.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%202/Final.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 2/Location.png",
+      "effective_path": "/Sections/Banners/Banner 2/Location.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Location.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%202/Location.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 2/Shot.jpeg",
+      "effective_path": "/Sections/Banners/Banner 2/Shot.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 2/Shot.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%202/Shot.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 3/Final.png",
+      "effective_path": "/Sections/Banners/Banner 3/Final.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Final.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%203/Final.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 3/Location.png",
+      "effective_path": "/Sections/Banners/Banner 3/Location.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Location.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%203/Location.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 3/Shot.jpeg",
+      "effective_path": "/Sections/Banners/Banner 3/Shot.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 3/Shot.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%203/Shot.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 4/Attire.png",
+      "effective_path": "/Sections/Banners/Banner 4/Attire.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Attire.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%204/Attire.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 4/Final.png",
+      "effective_path": "/Sections/Banners/Banner 4/Final.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Final.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%204/Final.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 4/Location.png",
+      "effective_path": "/Sections/Banners/Banner 4/Location.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Location.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%204/Location.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Banners/Banner 4/Shot.jpeg",
+      "effective_path": "/Sections/Banners/Banner 4/Shot.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner 4/Shot.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Banners/Banner%204/Shot.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/bannerrefresh"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/BTS/4da1cdf5-403e-49e1-b8f4-d4a9d8040e74.mp4",
+      "effective_path": "/Sections/DriveX_Diwali/BTS/4da1cdf5-403e-49e1-b8f4-d4a9d8040e74_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/4da1cdf5-403e-49e1-b8f4-d4a9d8040e74_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/4da1cdf5-403e-49e1-b8f4-d4a9d8040e74_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/BTS/IMG_20250925_145736.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/BTS/IMG_20250925_145736.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_145736.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_145736.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/BTS/IMG_20250925_185947.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/BTS/IMG_20250925_185947.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_185947.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_20250925_185947.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/BTS/IMG_9959.MOV",
+      "effective_path": "/Sections/DriveX_Diwali/BTS/IMG_9959_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_9959_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/IMG_9959_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/BTS/VID_20250926_164321.mp4",
+      "effective_path": "/Sections/DriveX_Diwali/BTS/VID_20250926_164321_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/VID_20250926_164321_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/BTS/VID_20250926_164321_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_1.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_1.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_1.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_1.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_2.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_2.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_2.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_2.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_3.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_3.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_3.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_3.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_4.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_4.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_4.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_4.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_5.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_5.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_5.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_5.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Idea_6.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Idea_6.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_6.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Idea_6.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Ideas/Master_For_Print.webp",
+      "effective_path": "/Sections/DriveX_Diwali/Ideas/Master_For_Print.webp",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Master_For_Print.webp",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Ideas/Master_For_Print.webp",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0001.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0001.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0001.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0001.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0002.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0002.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0002.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0002.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0003.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0003.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0003.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0003.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0004.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0004.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0004.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0004.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0005.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0005.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0005.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0005.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0006.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0006.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0006.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0006.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0007.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0007.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0007.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0007.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0008.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0008.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0008.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0008.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0009.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0009.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0009.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0009.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0010.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0010.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0010.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0010.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0011.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0011.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0011.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0011.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0012.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0012.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0012.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0012.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0013.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0013.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0013.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0013.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0014.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0014.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0014.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0014.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0015.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0015.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0015.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0015.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0016.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0016.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0016.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0016.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0017.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0017.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0017.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0017.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0018.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0018.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0018.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0018.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0019.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0019.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0019.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0019.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0020.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0020.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0020.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0020.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0021.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0021.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0021.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0021.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0022.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0022.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0022.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0022.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0023.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0023.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0023.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0023.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0024.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0024.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0024.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0024.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0025.jpg",
+      "effective_path": "/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0025.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0025.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/DriveX_Diwali/Slides/DriveX_Diwali_2025_page-0025.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/drivexdiwali"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Amazfit/AMZ ov.png",
+      "effective_path": "/Sections/Ecom/Amazfit/AMZ ov.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/AMZ ov.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/AMZ%20ov.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Amazfit/Screenshot.jpg",
+      "effective_path": "/Sections/Ecom/Amazfit/Screenshot.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/Screenshot.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Amazfit/Screenshot.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Logos/amazfit.png",
+      "effective_path": "/Sections/Ecom/Logos/amazfit.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/amazfit.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/amazfit.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Logos/lumio.png",
+      "effective_path": "/Sections/Ecom/Logos/lumio.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/lumio.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/lumio.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Logos/mivi.png",
+      "effective_path": "/Sections/Ecom/Logos/mivi.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/mivi.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Logos/mivi.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Amazon.png",
+      "effective_path": "/Sections/Ecom/Lumio/Amazon.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Amazon.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Amazon.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Lumio1.jpg",
+      "effective_path": "/Sections/Ecom/Lumio/Lumio1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio1.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Lumio2.jpg",
+      "effective_path": "/Sections/Ecom/Lumio/Lumio2.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio2.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio2.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Lumio3.jpg",
+      "effective_path": "/Sections/Ecom/Lumio/Lumio3.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio3.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio3.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Lumio4.jpg",
+      "effective_path": "/Sections/Ecom/Lumio/Lumio4.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio4.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio4.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Lumio/Lumio5.jpg",
+      "effective_path": "/Sections/Ecom/Lumio/Lumio5.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio5.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Lumio/Lumio5.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/1.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/1.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/2.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/2.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/2.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/2.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/3.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/3.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/3.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/3.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/4.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/4.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/4.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/4.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/5.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/5.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/5.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/5.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/6.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/6.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/6.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/6.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/7.jpg",
+      "effective_path": "/Sections/Ecom/Mivi/7.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/7.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/7.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Ecom/Mivi/AMZ Catalogue.png",
+      "effective_path": "/Sections/Ecom/Mivi/AMZ Catalogue.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/AMZ Catalogue.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Ecom/Mivi/AMZ%20Catalogue.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/marketplacecreatives"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Arctic White.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Arctic White.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Arctic White.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Arctic%20White.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Frosted Green.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Frosted Green.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Frosted Green.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Frosted%20Green.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Glacier Blue.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Glacier Blue.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Glacier Blue.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Glacier%20Blue.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Icerberg Blue.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Icerberg Blue.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Icerberg Blue.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Icerberg%20Blue.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Matte Black.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Matte Black.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Matte Black.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Matte%20Black.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Mystique Blue.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Mystique Blue.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Mystique Blue.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Mystique%20Blue.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Onyx Black.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Onyx Black.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Onyx Black.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Onyx%20Black.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Colors/Stardust Purple.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Colors/Stardust Purple.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Colors/Stardust Purple.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Colors/Stardust%20Purple.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Desktop.png",
+      "effective_path": "/Sections/Redmi Note 12/Desktop.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Desktop.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Desktop.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Header.jpg",
+      "effective_path": "/Sections/Redmi Note 12/Header.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Header.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Header.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 1.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%201.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 2.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 2.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 2.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%202.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 3.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 3.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 3.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%203.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 4.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 4.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 4.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%204.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 5.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 5.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 5.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%205.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 6.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 6.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 6.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%206.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV SKETCH 7.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV SKETCH 7.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV SKETCH 7.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20SKETCH%207.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV Stage 1.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV Stage 1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20Stage%201.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV Stage 2.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV Stage 2.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 2.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20Stage%202.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV Stage 3.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV Stage 3.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 3.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20Stage%203.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV Stage 4.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV Stage 4.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV Stage 4.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV%20Stage%204.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/KV/KV.jpg",
+      "effective_path": "/Sections/Redmi Note 12/KV/KV.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/KV/KV.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/KV/KV.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/Mobile.png",
+      "effective_path": "/Sections/Redmi Note 12/Mobile.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/Mobile.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/Mobile.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH Horizontal.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH Horizontal.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH Horizontal.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH%20Horizontal.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH Verticle.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH Verticle.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH Verticle.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH%20Verticle.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH1.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH1.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH1.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH1.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH10.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH10.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH10.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH10.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH11.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH11.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH11.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH11.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH2.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH2.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH2.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH2.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH3.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH3.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH3.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH3.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH4.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH4.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH4.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH4.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH5.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH5.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH5.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH5.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH6.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH6.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH6.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH6.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH7.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH7.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH7.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH7.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH8.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH8.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH8.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH8.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/Redmi Note 12/OOH/OOH9.jpg",
+      "effective_path": "/Sections/Redmi Note 12/OOH/OOH9.optimized.jpg",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi Note 12/OOH/OOH9.optimized.jpg",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/Redmi%20Note%2012/OOH/OOH9.optimized.jpg",
+      "kind": "image",
+      "routes": [
+        "/redminote12"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "evidence/recon/redminote12--page-a77da362cbae2721.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/collaborations.png",
+      "effective_path": "/Sections/collaborations.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/collaborations.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/collaborations.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Sections/timeline.png",
+      "effective_path": "/Sections/timeline.optimized.png",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/timeline.optimized.png",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Sections/timeline.optimized.png",
+      "kind": "image",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/1.mp4",
+      "effective_path": "/Video/1_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/1_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/1_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/2.mp4",
+      "effective_path": "/Video/2_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/2_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/2_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/3.mp4",
+      "effective_path": "/Video/3_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/3_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/3_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/4.mp4",
+      "effective_path": "/Video/4_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/4_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/4_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/5.mp4",
+      "effective_path": "/Video/5_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/5_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/5_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/M/M1.mp4",
+      "effective_path": "/Video/M/M1_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M1_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M1_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/M/M2.mp4",
+      "effective_path": "/Video/M/M2_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M2_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M2_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/M/M3.mp4",
+      "effective_path": "/Video/M/M3_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M3_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M3_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/M/M4.mp4",
+      "effective_path": "/Video/M/M4_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M4_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M4_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Video/M/M5.mp4",
+      "effective_path": "/Video/M/M5_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M5_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Video/M/M5_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": true,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/Bade_Parde_Xiaomi.mp4",
+      "effective_path": "/Videos/Me/Bade_Parde_Xiaomi_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/Bade_Parde_Xiaomi_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/Bade_Parde_Xiaomi_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/Farzi.mp4",
+      "effective_path": "/Videos/Me/Farzi_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/Farzi_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/Farzi_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/MemeBoss.mp4",
+      "effective_path": "/Videos/Me/MemeBoss_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/MemeBoss_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/MemeBoss_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/bade_parde.mp4",
+      "effective_path": "/Videos/Me/bade_parde_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/bade_parde_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/bade_parde_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/kalimba.mp4",
+      "effective_path": "/Videos/Me/kalimba_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/kalimba_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/kalimba_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/ooty-motorcycleast.mp4",
+      "effective_path": "/Videos/Me/ooty-motorcycleast_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/ooty-motorcycleast_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/ooty-motorcycleast_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    },
+    {
+      "source_path": "/Videos/Me/xiaomi.mp4",
+      "effective_path": "/Videos/Me/xiaomi_optimized.mp4",
+      "url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/xiaomi_optimized.mp4",
+      "encoded_url": "https://hnjbexpbcrnysfepjwst.supabase.co/storage/v1/object/public/portfolio-assets/public/Videos/Me/xiaomi_optimized.mp4",
+      "kind": "video",
+      "routes": [
+        "/"
+      ],
+      "dynamic": false,
+      "source_files": [
+        "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js"
+      ]
+    }
+  ],
+  "frontend_dependencies": [
+    {
+      "path": "/_next/static/chunks/19-ea1c143060ae55e1.js",
+      "url": "https://cartooneast.in/_next/static/chunks/19-ea1c143060ae55e1.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/23-e3a0fd11d2430b77.js",
+      "url": "https://cartooneast.in/_next/static/chunks/23-e3a0fd11d2430b77.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/517.132bc816ad373263.js",
+      "url": "https://cartooneast.in/_next/static/chunks/517.132bc816ad373263.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/548-d74208ff41feeccc.js",
+      "url": "https://cartooneast.in/_next/static/chunks/548-d74208ff41feeccc.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/690-e9bd4f1c2d32e3aa.js",
+      "url": "https://cartooneast.in/_next/static/chunks/690-e9bd4f1c2d32e3aa.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/921-fc6ace8bad09e792.js",
+      "url": "https://cartooneast.in/_next/static/chunks/921-fc6ace8bad09e792.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/949.5971fd85868859c6.js",
+      "url": "https://cartooneast.in/_next/static/chunks/949.5971fd85868859c6.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/app/artworks/page-f0cab903184f09de.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/artworks/page-f0cab903184f09de.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/app/bannerrefresh/page-317e548be2e5a8d0.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/bannerrefresh/page-317e548be2e5a8d0.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/app/drivexdiwali/page-fe0696520790e2e7.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/drivexdiwali/page-fe0696520790e2e7.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/app/marketplacecreatives/page-47a31cc784c0eec6.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/marketplacecreatives/page-47a31cc784c0eec6.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/app/page-5ec50d8abe30bce2.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/page-5ec50d8abe30bce2.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/app/redminote12/page-a77da362cbae2721.js",
+      "url": "https://cartooneast.in/_next/static/chunks/app/redminote12/page-a77da362cbae2721.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/b536a0f1.735739bb10e9c3d3.js",
+      "url": "https://cartooneast.in/_next/static/chunks/b536a0f1.735739bb10e9c3d3.js",
+      "present_local": false
+    },
+    {
+      "path": "/_next/static/chunks/fd9d1056-d796dea454d0709d.js",
+      "url": "https://cartooneast.in/_next/static/chunks/fd9d1056-d796dea454d0709d.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/main-app-af589dec29700cf3.js",
+      "url": "https://cartooneast.in/_next/static/chunks/main-app-af589dec29700cf3.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js",
+      "url": "https://cartooneast.in/_next/static/chunks/polyfills-78c92fac7aa8fdd8.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/chunks/webpack-f71345b119c638ab.js",
+      "url": "https://cartooneast.in/_next/static/chunks/webpack-f71345b119c638ab.js",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/css/5ef0f09b80ebc4e0.css",
+      "url": "https://cartooneast.in/_next/static/css/5ef0f09b80ebc4e0.css",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/media/0c310187b552b27d-s.woff2",
+      "url": "https://cartooneast.in/_next/static/media/0c310187b552b27d-s.woff2",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/media/9b4fbfc777bb173a-s.woff2",
+      "url": "https://cartooneast.in/_next/static/media/9b4fbfc777bb173a-s.woff2",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/media/a74fb1607b845cb0-s.p.woff2",
+      "url": "https://cartooneast.in/_next/static/media/a74fb1607b845cb0-s.p.woff2",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/media/d426c6df177f02c4-s.woff2",
+      "url": "https://cartooneast.in/_next/static/media/d426c6df177f02c4-s.woff2",
+      "present_local": true
+    },
+    {
+      "path": "/_next/static/media/e210f091ebfac73b-s.p.woff2",
+      "url": "https://cartooneast.in/_next/static/media/e210f091ebfac73b-s.p.woff2",
+      "present_local": true
+    },
+    {
+      "path": "/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "url": "https://cartooneast.in/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js",
+      "present_local": true
+    }
+  ],
+  "external_assets": [
+    "https://www.transparenttextures.com/patterns/cream-paper.png"
+  ],
+  "external_embeds": [
+    "https://www.youtube.com/embed/5K65VAHS37U?autoplay=1&mute=1&loop=1&playlist=5K65VAHS37U&playsinline=1&controls=0&modestbranding=1",
+    "https://www.youtube.com/embed/dBSJ2NY9oq0?rel=0&modestbranding=1"
+  ],
+  "external_links": [
+    "https://www.linkedin.com/in/anurag-bandyopadhyay-a4430713a/",
+    "https://www.instagram.com/lucidgrapher/",
+    "https://www.behance.net/anurag19",
+    "https://wa.me/917890574459",
+    "mailto:anujoy006@gmail.com",
+    "https://www.awwwards.com/sites/cartooneast-portfolio"
+  ],
+  "analytics_not_required": [
+    "https://static.cloudflareinsights.com/beacon.min.js/vce701823e78c4301a35b7e07294d87301792088814092"
+  ],
+  "sources": [
+    {
+      "path": "public/_next/static/chunks/app/page-5ec50d8abe30bce2.js",
+      "bytes": 31511,
+      "sha256": "bd2190f037388efabb54687f9603a90d686f6a9b66620ea7257a4e9398dd9184"
+    },
+    {
+      "path": "evidence/recon/artworks--page-f0cab903184f09de.js",
+      "bytes": 16119,
+      "sha256": "b3c38fe36c04637731a820145f3c922c6a7a968a27822a5ce3aa0e0ed6c08f29"
+    },
+    {
+      "path": "evidence/recon/bannerrefresh--page-317e548be2e5a8d0.js",
+      "bytes": 31954,
+      "sha256": "ce455c86b66ecce14a7f1cf82d5effb36362101b3118338220d5753a5dd03f9f"
+    },
+    {
+      "path": "evidence/recon/drivexdiwali--page-fe0696520790e2e7.js",
+      "bytes": 13420,
+      "sha256": "1af628ebd6a4bc8c75cd9e04ebc852768f22519533032a84fa0bd91777b5be0c"
+    },
+    {
+      "path": "evidence/recon/marketplacecreatives--page-47a31cc784c0eec6.js",
+      "bytes": 13308,
+      "sha256": "60dbe0b2a2ac1da5bd6efdeccad1c27dd23a7f7efb4a5ae976b219fe378a862e"
+    },
+    {
+      "path": "evidence/recon/redminote12--page-a77da362cbae2721.js",
+      "bytes": 34327,
+      "sha256": "38c6628c39831a057094a251c167eb6eeb6015797daae2fea2e96a32b6a79404"
+    }
+  ],
+  "limitations": [
+    "Lazy artwork WebGL chunk and shared carousel module behavior not fully inspected. Chunk paths enumerated from webpack runtime.",
+    "All media URLs inferred from actual helper code; no media HTTP success claim.",
+    "Direct clean project routes do not load consistently; local mirror should map both clean and .html routes."
+  ],
+  "counts": {
+    "page_routes": 6,
+    "public_document_paths": 6,
+    "anchors": 5,
+    "content_assets": 153,
+    "content_by_kind": {
+      "video": 20,
+      "resume": 1,
+      "image": 132
+    },
+    "content_per_route": {
+      "/": 20,
+      "/redminote12": 36,
+      "/drivexdiwali": 37,
+      "/marketplacecreatives": 19,
+      "/bannerrefresh": 12,
+      "/artworks": 29
+    },
+    "dynamic_content_assets": 85,
+    "frontend_dependencies": 25,
+    "external_texture_assets": 1,
+    "external_embeds": 2,
+    "total_asset_urls_excluding_embeds_analytics": 179,
+    "page_bundles_analyzed": 6
+  }
+}
