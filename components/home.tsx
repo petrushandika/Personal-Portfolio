@@ -85,10 +85,10 @@ export default function Home() {
           <div className="w-full flex justify-center lg:justify-end">
             <div className="flex flex-col items-start gap-8 w-full lg:max-w-[50%] lg:translate-x-48">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#1c1c1c] text-left lg:whitespace-nowrap">
-                Visual Studies
+                Selected Projects
               </h2>
               <p className="text-xs">
-                Design reference: Cartooneast. Not my client work.
+                My contributions, verified commits, and real local captures.
               </p>
               <div className="w-full lg:pl-4 mt-2 md:mt-6">
                 <WorksTree onBrief={setBrief} />

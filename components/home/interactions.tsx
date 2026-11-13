@@ -1,4 +1,5 @@
 "use client";
+import projects from "../../data/projects.json";
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
@@ -150,32 +151,7 @@ function Icon({
   );
 }
 
-const studies = [
-  {
-    id: "redmi-note-12",
-    name: "Product Systems",
-    label: "Project",
-    url: "/redminote12/",
-  },
-  {
-    id: "drivex-diwali",
-    name: "Storytelling Systems",
-    label: "Campaign",
-    url: "/drivexdiwali/",
-  },
-  {
-    id: "marketplace-creatives",
-    name: "Commerce Interfaces",
-    label: "Assets",
-    url: "/marketplacecreatives/",
-  },
-  {
-    id: "banner-refresh",
-    name: "AI Workflows",
-    label: "banners",
-    url: "/bannerrefresh/",
-  },
-];
+const studies = projects.map(project => ({id:project.slug,name:project.title,label:"Project",url:`/${project.slug}/`}));
 
 function TreeRow({
   name,
@@ -263,29 +239,12 @@ export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
           </AnimatePresence>
         </div>
       ))}
-      <div className="w-full">
-        <TreeRow
-          name="Visual Explorations"
-          icon="file"
-          onClick={() => {
-            window.location.href = "/artworks/";
-          }}
-        />
-      </div>
+
     </div>
   );
 }
 
-const briefs: Record<string, string> = {
-  "redmi-note-12-brief":
-    "Petrus’s study notes\n\nProduct systems connect interface, content and interaction. I approach web development with clear components, predictable behavior and maintainable code.\n\nThis page is a visual-reference study, not a client project of mine. Imagery: Cartooneast / Anurag Bandyopadhyay.\n\nMy software projects: github.com/petrushandika",
-  "drivex-diwali-brief":
-    "Petrus’s study notes\n\nA clear story makes an interface easier to follow. This reference explores pacing, hierarchy and how a consistent idea travels between formats.\n\nReference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika.",
-  "marketplace-creatives-brief":
-    "Petrus’s study notes\n\nCommerce interfaces need clear information, reusable components and a direct path from discovery to action.\n\nThese visuals are reference material for interface study, not evidence of my work for the featured brands.\n\nReference imagery: Cartooneast / Anurag Bandyopadhyay.",
-  "banner-refresh-brief":
-    "Petrus’s study notes\n\nAI workflows are most useful when inputs, transformations and review steps remain understandable. I am interested in connecting software and automation without hiding the human decisions.\n\nReference imagery: Cartooneast / Anurag Bandyopadhyay. Not client work by Petrus Handika.",
-};
+const briefs: Record<string,string> = Object.fromEntries(projects.map(p=>[`${p.slug}-brief`,`${p.title} — Project notes\n\n${p.summary}\n\n${p.role}\n\n${p.contributions.join("\n")}\n\nScreenshots captured from the app running locally on Mac. Detailed contribution evidence and capture limitations are on the project page.`]));
 
 export function BriefModal({
   brief,

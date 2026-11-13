@@ -1,0 +1,215 @@
+[
+  {
+    "slug": "danaku",
+    "title": "Danaku",
+    "category": "Personal project \u00b7 Finance UI",
+    "role": "Full-stack developer \u2014 personal project",
+    "summary": "A personal-finance application with modular landing pages and responsive spending interfaces.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
+    "contributions": [
+      "Expanded landing, features, platform and authentication layouts with reusable components.",
+      "Improved responsive transaction rows and mobile action visibility."
+    ],
+    "limitations": [
+      "Capture shows the public landing and features UI. Banking, payments and authenticated financial records were not exercised.",
+      "User counts, testimonials and financial outcomes in the original app are illustrative marketing content, not verified portfolio results."
+    ],
+    "images": [
+      {
+        "src": "/projects/danaku/1.webp",
+        "alt": "Danaku \u2014 Landing page",
+        "caption": "Landing page. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/danaku/2.webp",
+        "alt": "Danaku \u2014 Features page",
+        "caption": "Features page. Actual Mac-local browser capture; no production form submission."
+      }
+    ],
+    "revision": "d8d434f1583021c30dbfa080090f31de0d58c450",
+    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "commits": [
+      {
+        "sha": "457564e731b2ad95cc2d1038ff96d0f37b1c062e",
+        "summary": "feat(frontend): expand landing page sections and refine authentication UI",
+        "url": "https://github.com/petrushandika/Danaku/commit/457564e731b2ad95cc2d1038ff96d0f37b1c062e"
+      }
+    ],
+    "repository": "https://github.com/petrushandika/Danaku"
+  },
+  {
+    "slug": "reluv",
+    "title": "Reluv",
+    "category": "Personal project \u00b7 Commerce UI",
+    "role": "Frontend developer \u2014 personal project",
+    "summary": "A preowned-fashion commerce interface with scroll-aware navigation and responsive browsing components.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Zustand"
+    ],
+    "contributions": [
+      "Implemented scroll-direction-aware navigation and submenu visibility.",
+      "Refined responsive review cards, expanded text and carousel presentation."
+    ],
+    "limitations": [
+      "Capture uses the committed revision plus the existing local Footer icon compatibility fix; original worktree was not changed.",
+      "Products API was disabled. Orders, payments, shipping and login submission were not exercised.",
+      "Ratings, sales counts and discounts shown in the app are not verified customer or business results."
+    ],
+    "images": [
+      {
+        "src": "/projects/reluv/1.webp",
+        "alt": "Reluv \u2014 Public browsing homepage",
+        "caption": "Public browsing homepage. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/reluv/2.webp",
+        "alt": "Reluv \u2014 Sign-in interface",
+        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission."
+      }
+    ],
+    "revision": "6fa583afb6e16cf7849d8f4631e6b89469ecaf01",
+    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "commits": [
+      {
+        "sha": "afdda13ddf865870715e9e64881a52f67ceb844c",
+        "summary": "feat(frontend): enhance Navbar with scroll-based submenu visibility and opacity effects",
+        "url": "https://github.com/petrushandika/Reluv-App/commit/afdda13ddf865870715e9e64881a52f67ceb844c"
+      }
+    ],
+    "repository": "https://github.com/petrushandika/Reluv-App"
+  },
+  {
+    "slug": "14daypilot",
+    "title": "14DAYPILOT",
+    "category": "Team project \u00b7 Aviation",
+    "role": "Frontend contributor \u2014 Astronacci / 14DAYPILOT team",
+    "summary": "A flight-training company website connecting program information, public content and enquiry interfaces.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "React Query"
+    ],
+    "contributions": [
+      "Implemented bounded PDF zoom controls and scaling for the TrueNorth viewer.",
+      "Refined server-backed blog search, query cache separation and pagination behavior."
+    ],
+    "limitations": [
+      "Team/employer project: the full site design, content and imagery are not claimed as sole work.",
+      "Screenshots show public landing/about pages, not authenticated PDFs or backend search verification.",
+      "Business claims belong to the original company site. Forms, bookings and production services were not submitted or exercised."
+    ],
+    "images": [
+      {
+        "src": "/projects/14daypilot/1.webp",
+        "alt": "14DAYPILOT \u2014 Public company homepage",
+        "caption": "Public company homepage. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/14daypilot/2.webp",
+        "alt": "14DAYPILOT \u2014 About the company",
+        "caption": "About the company. Actual Mac-local browser capture; no production form submission."
+      }
+    ],
+    "revision": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "commits": [
+      {
+        "sha": "a084c59b9e9d0aeb4bf4e1f128427cc5e4f7fec8",
+        "summary": "fix(pilot-blog): scroll to top on pagination and use server-side search"
+      }
+    ]
+  },
+  {
+    "slug": "jetflow",
+    "title": "JETFLOW / A320",
+    "category": "Team project \u00b7 Aviation",
+    "role": "Frontend contributor \u2014 Astronacci / 14DAYPILOT team",
+    "summary": "Public type-rating program interfaces with clearer training information and pilot enquiry input handling.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript"
+    ],
+    "contributions": [
+      "Expanded A320 training overviews and accessible imagery; integrated local training video.",
+      "Implemented country dial-code selection, numeric phone input and normalized contact validation."
+    ],
+    "limitations": [
+      "Team/employer project; contribution scope is limited to the verified changes listed here.",
+      "Only public program screens were captured. Booking, payments, enquiry submissions and CMS services were not exercised.",
+      "Training, certification and program-duration claims are company content, not independently audited results."
+    ],
+    "images": [
+      {
+        "src": "/projects/jetflow/1.webp",
+        "alt": "JETFLOW / A320 \u2014 Type-rating homepage",
+        "caption": "Type-rating homepage. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/jetflow/2.webp",
+        "alt": "JETFLOW / A320 \u2014 A320 program page",
+        "caption": "A320 program page. Actual Mac-local browser capture; no production form submission."
+      }
+    ],
+    "revision": "dae2c6b32ceb9caf72acc115b44743761955df5f",
+    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "commits": [
+      {
+        "sha": "78c77ecd2ca2da12a77f97663264aeafd3d79145",
+        "summary": "feat: enhance Airbus A320 training content with detailed program overviews and add training video"
+      }
+    ]
+  },
+  {
+    "slug": "scalp",
+    "title": "Scalp Analytics",
+    "category": "Personal project \u00b7 Health-tracking UI",
+    "role": "Full-stack developer \u2014 personal project",
+    "summary": "A health-tracking application interface for scalp photos, habits, nutrition and care routines.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "FastAPI"
+    ],
+    "contributions": [
+      "Redesigned login and registration layouts with shared form controls and visual hierarchy.",
+      "Refined dashboard, habits, nutrition and photo-management components, including meal-grid presentation."
+    ],
+    "limitations": [
+      "Screenshots show the real locally rendered login and registration UI without signing in or creating accounts.",
+      "AI diagnosis, clinical accuracy and treatment efficacy were not evaluated. This is not a validated medical product.",
+      "Active-user counts and benefit claims in the source UI are unverified marketing placeholders."
+    ],
+    "images": [
+      {
+        "src": "/projects/scalp/1.webp",
+        "alt": "Scalp Analytics \u2014 Sign-in interface",
+        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/scalp/2.webp",
+        "alt": "Scalp Analytics \u2014 Registration interface",
+        "caption": "Registration interface. Actual Mac-local browser capture; no production form submission."
+      }
+    ],
+    "revision": "c458f720bcb3e94327860db5e8533cde7300c5f3",
+    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "commits": [
+      {
+        "sha": "c458f720bcb3e94327860db5e8533cde7300c5f3",
+        "summary": "feat(frontend): polish UI consistency, light sidebar, premium lucide icons, and grid meal logger",
+        "url": "https://github.com/petrushandika/Scalp-Analytics/commit/c458f720bcb3e94327860db5e8533cde7300c5f3"
+      }
+    ],
+    "repository": "https://github.com/petrushandika/Scalp-Analytics"
+  }
+]

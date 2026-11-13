@@ -20,19 +20,15 @@ Production build is a Next static export in `out/`. Preview serves it on127.0.0.
 
 ```sh
 npm test
-TEST_URL=http://127.0.0.1:18440 npm run test:identity
-TEST_URL=http://127.0.0.1:18440 node tests/interactions.mjs
-TEST_URL=http://127.0.0.1:18440 node tests/details.mjs
-TEST_URL=http://127.0.0.1:18440 node tests/export.mjs
-PARITY_URL=http://127.0.0.1:18440 PARITY_LABEL=after node tests/parity.mjs
+TEST_URL=https://petrushandika.com npm test
 ```
 
-`npm test` starts its own isolated preview18441 and tests6routes ×2viewports. Identity suite requires an already running preview. Parity script captures20page/section states; compare same viewport and paused video frame to a separately captured baseline. Dynamic animation frames are not claimed universally pixel-identical. YouTube is externally dependent and blocked in automated runs.
+`npm test` starts an isolated preview18443 and checks five project pages on desktop/mobile, homepage folder/brief controls, screenshot lightboxes, assets/overflow and five legacy aliases. Original study-specific suites are historical; they are not current content acceptance tests.
 
 `npm run build` writes `out/manifest.json` and compatible `.html` project aliases. `scripts/deploy.py` verifies clean and pushed HEAD, builds/tests, deploys static export to a new Nginx release, checks hashes/public routes. Previous release remains available for rollback.
 
 ## Content and rights
 
-Profile sources and verified wording: `docs/personalization.md`. Five detail routes remain explicitly credited visual studies pending the separate real-project screenshot work. Original third-party artwork/design rights are retained; public availability is not a licence. Existing third-party library notices remain. `noindex,nofollow` remains unchanged, not access control.
+Profile sources and verified wording: `docs/personalization.md`. Five selected projects now use actual Mac-local screenshots and verified contribution commits; see `docs/projects.md` and `docs/captures.json`. Employer work is scoped team contribution, not sole authorship. Original third-party artwork/design rights are retained; public availability is not a licence. Existing third-party library notices remain. `noindex,nofollow` remains unchanged, not access control.
 
 Historical `docs/evidence` and mirror manifest describe earlier releases, not the generated current Next build. Current artifact manifest is generated in `out/`.

@@ -8,7 +8,8 @@
     "build": "next build && node scripts/export.mjs",
     "start": "python3 server.py",
     "typecheck": "tsc --noEmit",
-    "test": "node tests/site.mjs",
+    "test": "node tests/projects.mjs",
+    "test:legacy": "node tests/site.mjs",
     "test:identity": "node tests/identity.mjs"
   },
   "dependencies": {

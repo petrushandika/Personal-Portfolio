@@ -1,0 +1,96 @@
+{
+  "projects": 5,
+  "screenshots": 10,
+  "captures": [
+    {
+      "project": "danaku",
+      "route": "/",
+      "status": 200,
+      "captured_at": "2026-11-13T05:38:46.001Z",
+      "source_sha256": "824dde30336fdd831fd8637eb0424a516f9c7449e4c6d51c17de5218a9246637",
+      "published_sha256": "dbbe0989c3684883ad8b599cbd985107e7512a8eb2d15c37b54bb784be3ffe25",
+      "path": "/projects/danaku/1.webp"
+    },
+    {
+      "project": "danaku",
+      "route": "/features",
+      "status": 200,
+      "captured_at": "2026-11-13T05:38:56.049Z",
+      "source_sha256": "bccd32d3dbefb7f2fda67287b857b274361c96acebda7b7524518bc319b07cb3",
+      "published_sha256": "f0d8bb8a1dd7c9387811a50b2eee840079866f7742f2d584aef0dae8e34f3a76",
+      "path": "/projects/danaku/2.webp"
+    },
+    {
+      "project": "reluv",
+      "route": "/home",
+      "status": 200,
+      "captured_at": "2026-11-13T05:41:42.777Z",
+      "source_sha256": "4ca9273bfe240b3c0b34e7d2a26d16a0a4056103d3de2f4343cee2a44330809e",
+      "published_sha256": "022d034bee4c1e4410f463c4596ca82a2beb6557f1681226cd9fc9c0636e944a",
+      "path": "/projects/reluv/1.webp"
+    },
+    {
+      "project": "reluv",
+      "route": "/login",
+      "status": 200,
+      "captured_at": "2026-11-13T05:41:53.212Z",
+      "source_sha256": "592fcf8e0ecb9fc69d42101db6a2004e816a53d2dc0aed29824173cf103bbb12",
+      "published_sha256": "6921cb84ec968e8d0f00564b141a192c762a1181cf4512a2b9f9035cd90e1a81",
+      "path": "/projects/reluv/2.webp"
+    },
+    {
+      "project": "14daypilot",
+      "route": "/",
+      "status": 200,
+      "captured_at": "2026-11-13T05:43:31.761Z",
+      "source_sha256": "ae179a566f7918bf54630086950b11edc556952e72330848e51a4ec48c1c93d8",
+      "published_sha256": "b16b9d082921dcfd2dc3b1c81aff629bc7838854739a25dde946ca5b4bee0140",
+      "path": "/projects/14daypilot/1.webp"
+    },
+    {
+      "project": "14daypilot",
+      "route": "/about-us",
+      "status": 200,
+      "captured_at": "2026-11-13T05:43:46.771Z",
+      "source_sha256": "8eacfe35d346f45bf70d2ada65912b2ed73d6fffc5a6e121316eb3a83853e866",
+      "published_sha256": "e11a2a2348abd262f3e86453423e126adae7f8bd3df90de3a752458410ca399e",
+      "path": "/projects/14daypilot/2.webp"
+    },
+    {
+      "project": "jetflow",
+      "route": "/",
+      "status": 200,
+      "captured_at": "2026-11-13T05:44:59.194Z",
+      "source_sha256": "dbc6d98ff0b6c58a634c636108884578dc806730f327ec25c5e851b594d1b150",
+      "published_sha256": "96180b2d89aff38684bed2a19e6cf216e83d381c1cc880e70886506075f8c42e",
+      "path": "/projects/jetflow/1.webp"
+    },
+    {
+      "project": "jetflow",
+      "route": "/a320-type-rating",
+      "status": 200,
+      "captured_at": "2026-11-13T05:45:12.985Z",
+      "source_sha256": "e03574f4f503ea10aba1a26da164abddb69dba39ffae370f4bf52071aeb0589e",
+      "published_sha256": "7a7f919353bf783cf1e22d5c4a06bc8f8d2efe48c0392f4d421ef7dd654a5bb8",
+      "path": "/projects/jetflow/2.webp"
+    },
+    {
+      "project": "scalp",
+      "route": "/login",
+      "status": 200,
+      "captured_at": "2026-11-13T05:46:11.788Z",
+      "source_sha256": "9612e3cddfa971dde261483e50137ec42239769a42dc10aa9b098e0e07d8d1d8",
+      "published_sha256": "235a7b3f4300a2d4296203a4bbaae18e3d45dbe748cc91e24ec009a32540f92f",
+      "path": "/projects/scalp/1.webp"
+    },
+    {
+      "project": "scalp",
+      "route": "/register",
+      "status": 200,
+      "captured_at": "2026-11-13T05:46:22.167Z",
+      "source_sha256": "cc8971e38d7f4a9e43a8b7f40f8dbee025396c0fdf60b776030272526f61be12",
+      "published_sha256": "eb8a0d45d3c0f382ed8319473e0aa9cf0275a11859f205cce085b7b9cd9e7e57",
+      "path": "/projects/scalp/2.webp"
+    }
+  ]
+}
