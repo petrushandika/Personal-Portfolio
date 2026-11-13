@@ -2,7 +2,7 @@
 from http.server import ThreadingHTTPServer, SimpleHTTPRequestHandler
 from pathlib import Path
 import os,re
-ROOT=Path(__file__).parent/'public'
+ROOT=Path(__file__).parent/os.environ.get('STATIC_ROOT','out')
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
     def end_headers(self):

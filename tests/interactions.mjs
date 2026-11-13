@@ -1,0 +1,88 @@
+import assert from 'node:assert/strict';
+import {chromium} from 'playwright';
+
+const origin=process.env.TEST_URL||process.env.INTERACTIONS_URL||'http://127.0.0.1:18442';
+const browser=await chromium.launch({headless:true,args:['--enable-unsafe-swiftshader']});
+const results=[];
+const deadline=setTimeout(()=>{console.error('Interaction suite exceeded 90 seconds');process.exit(1);},90000);
+try {
+ const page=await browser.newPage({viewport:{width:1440,height:900}});
+ page.setDefaultTimeout(10000);
+ await page.route('https://www.youtube.com/**',r=>r.abort());
+ const errors=[];page.on('pageerror',e=>errors.push(e.message));
+ await page.goto(origin+'/drivexdiwali/',{waitUntil:'domcontentloaded'});
+ const carousel=page.locator('[aria-label="Reference slides"]').first();
+ const track=carousel.locator('[data-slide-track]');
+ await carousel.getByRole('button',{name:'Next slide',exact:true}).click();
+ assert.equal(await track.evaluate(e=>e.style.transform),'translateX(-100%)');
+ await carousel.getByRole('button',{name:'Previous slide',exact:true}).click();
+ assert.equal(await track.evaluate(e=>e.style.transform),'translateX(0%)');
+ await carousel.focus();await page.keyboard.press('ArrowRight');
+ assert.equal(await track.evaluate(e=>e.style.transform),'translateX(-100%)');
+ await carousel.getByRole('button',{name:'Go to slide 1',exact:true}).click();
+ assert(await carousel.getByRole('button',{name:'Previous slide',exact:true}).isDisabled());
+ results.push('carousel buttons, keyboard, dots and boundary: PASS');
+ await page.goto(origin+'/bannerrefresh/',{waitUntil:'domcontentloaded'});
+ const zoomIn=page.getByRole('button',{name:'Zoom in',exact:true}).first();
+ const workflow=zoomIn.locator('xpath=../..');
+ await zoomIn.click();await zoomIn.click();
+ assert.equal(await workflow.getByRole('button',{name:'Reset zoom',exact:true}).textContent(),'120%');
+ const node=workflow.locator('[aria-label^="Inspect "]').first();
+ await node.evaluate(e=>e.scrollIntoView({block:'center'}));
+ await page.waitForTimeout(700);
+ const before=await node.evaluate(e=>({x:new DOMMatrix(getComputedStyle(e).transform).m41,y:new DOMMatrix(getComputedStyle(e).transform).m42}));
+ const box=await node.boundingBox();
+ await page.mouse.move(box.x+30,box.y+30);await page.mouse.down();await page.mouse.move(box.x+90,box.y+66,{steps:6});await page.mouse.up();
+ const after=await node.evaluate(e=>({x:new DOMMatrix(getComputedStyle(e).transform).m41,y:new DOMMatrix(getComputedStyle(e).transform).m42}));
+ assert(Math.abs(after.x-before.x-50)<1,`zoomed drag x: ${after.x-before.x}`);
+ assert(Math.abs(after.y-before.y-30)<1,`zoomed drag y: ${after.y-before.y}`);
+ assert.equal(await page.getByRole('dialog').count(),0,'drag must not open modal');
+ await node.dispatchEvent('lostpointercapture');
+ await node.dispatchEvent('pointermove',{clientX:800,clientY:800});
+ assert.deepEqual(await node.evaluate(e=>({x:new DOMMatrix(getComputedStyle(e).transform).m41,y:new DOMMatrix(getComputedStyle(e).transform).m42})),after);
+ await workflow.getByRole('button',{name:'Zoom out',exact:true}).click();
+ assert.equal(await workflow.getByRole('button',{name:'Reset zoom',exact:true}).textContent(),'110%');
+ await workflow.getByRole('button',{name:'Reset zoom',exact:true}).click();
+ assert.equal(await workflow.getByRole('button',{name:'Reset zoom',exact:true}).textContent(),'100%');
+ await node.click();await page.getByRole('dialog').waitFor();await page.keyboard.press('Escape');
+ await page.getByRole('dialog').waitFor({state:'detached'});
+ await node.focus();await page.keyboard.press('Enter');await page.getByRole('dialog').waitFor();
+ await page.getByRole('button',{name:'Close reference',exact:true}).click();
+ await page.getByRole('dialog').waitFor({state:'detached'});
+ results.push('workflow zoom, zoom-correct drag, pointer cleanup, modal and Escape: PASS');
+ await page.addInitScript(()=>{
+  window.__galleryProbe={draws:0,capture:true,pixels:0,hash:0};
+  const original=WebGL2RenderingContext.prototype.drawElements;
+  WebGL2RenderingContext.prototype.drawElements=function(...args){
+   original.apply(this,args);const p=window.__galleryProbe;p.draws++;
+   if(!p.capture)return;
+   const data=new Uint8Array(this.drawingBufferWidth*this.drawingBufferHeight*4);
+   this.readPixels(0,0,this.drawingBufferWidth,this.drawingBufferHeight,this.RGBA,this.UNSIGNED_BYTE,data);
+   let pixels=0,hash=0;for(let i=0;i<data.length;i+=4){if(data[i+3])pixels++;hash=(Math.imul(hash,31)+data[i]+data[i+1]+data[i+2]+data[i+3])|0;}
+   if(pixels>200){p.pixels=pixels;p.hash=hash;p.capture=false;}
+  };
+ });
+ await page.goto(origin+'/artworks/',{waitUntil:'domcontentloaded'});
+ const canvas=page.locator('canvas');await canvas.waitFor();
+ await page.waitForFunction(()=>window.__galleryProbe.pixels>200);
+ const rendered=await page.evaluate(()=>({...window.__galleryProbe}));
+ await canvas.hover();const scrollBefore=await page.evaluate(()=>scrollY);
+ await page.evaluate(()=>{window.__galleryProbe.capture=true;window.__galleryProbe.pixels=0;});
+ await page.mouse.wheel(0,900);
+ await page.waitForFunction(old=>window.__galleryProbe.pixels>200&&window.__galleryProbe.hash!==old,rendered.hash);
+ assert.equal(await page.evaluate(()=>scrollY),scrollBefore,'gallery wheel must not scroll page');
+ assert((await page.evaluate(()=>window.__galleryProbe.draws))>rendered.draws);
+ assert.deepEqual(errors,[]);
+ results.push('gallery actual WebGL draw/readPixels, nonempty pixels, wheel changes pixels without page scroll: PASS');
+ await page.close();
+ const fallback=await browser.newPage({viewport:{width:1440,height:900}});fallback.setDefaultTimeout(10000);
+ const fallbackErrors=[];fallback.on('pageerror',e=>fallbackErrors.push(e.message));
+ await fallback.addInitScript(()=>{const original=HTMLCanvasElement.prototype.getContext;HTMLCanvasElement.prototype.getContext=function(type,...args){if(/webgl/i.test(type))return null;return original.call(this,type,...args);};});
+ await fallback.goto(origin+'/artworks/',{waitUntil:'domcontentloaded'});
+ const message=fallback.getByText('WebGL not supported. Showing image list:',{exact:true});await message.waitFor();
+ const images=message.locator('..').locator('img');assert.equal(await images.count(),28);
+ await fallback.waitForFunction(()=>[...document.querySelectorAll('img')].filter(i=>i.closest('.grid')&&i.complete&&i.naturalWidth>0).length===28);
+ assert.equal(await fallback.locator('canvas').count(),0);assert.deepEqual(fallbackErrors,[]);
+ results.push('forced WebGL unavailable: original fallback text and 28 loaded images, no crash: PASS');
+ console.log(JSON.stringify({origin,results},null,2));
+} finally {clearTimeout(deadline);await browser.close();}
