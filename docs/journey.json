@@ -1,0 +1,46 @@
+{
+  "layout": "Original2000x1681 raster; all pixels outside5 logo+caption slots unchanged",
+  "sources": [
+    {
+      "name": "Astronacci International",
+      "source_url": "https://astronacci.com/images/website/logo-footer-home.png",
+      "official_page_url": "https://www.astronacci.com/",
+      "width": 250,
+      "height": 155,
+      "mode": "RGBA",
+      "bytes": 14055,
+      "sha256": "511545b35ed516c495a788e12e39926f7b1c957a8b6b2779f9d29f3b51df1949"
+    },
+    {
+      "name": "PT Estetindo / The Aesthetics Skin",
+      "source_url": "https://res.cloudinary.com/dit12s6em/image/upload/v1780999437/logo_metqg2.png",
+      "official_page_url": "https://theaestheticsskin.com/",
+      "width": 12500,
+      "height": 5495,
+      "mode": "RGBA",
+      "bytes": 721934,
+      "sha256": "8c16e2d6d1a887faeb09b3565429eba5d0033cc15dc9a872429b7d5162a0e71b"
+    },
+    {
+      "name": "Coding Camp DBS Foundation (Dicoding alternative)",
+      "source_url": "https://dicoding-web-img.sgp1.digitaloceanspaces.com/original/commons/certificate_logo.png",
+      "official_page_url": "https://www.dicoding.com/programs/dbsfcodingcamp",
+      "width": 189,
+      "height": 52,
+      "mode": "P",
+      "bytes": 2000,
+      "sha256": "4e1e12eb2dcf4b51da20521f4d6362bd0d67f76071b65b75409c698e13e40f61"
+    },
+    {
+      "name": "Universitas Gunadarma",
+      "source_url": "https://www.gunadarma.ac.id/wp-content/uploads/2024/03/logoug-1-1.png",
+      "official_page_url": "https://www.gunadarma.ac.id/",
+      "width": 1600,
+      "height": 500,
+      "mode": "RGBA",
+      "bytes": 79484,
+      "sha256": "1da1496863feda2954b18132d41913f6fcd6887f86a9c7296d79456747cf2d74"
+    }
+  ],
+  "captions": "Verified employment/program or neutral role labels; not inherited dates"
+}

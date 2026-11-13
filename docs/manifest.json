@@ -60,9 +60,9 @@
     "sha256": "3ff151466ec76a8a569453ec80fef5abac0b47ac8453c0c22981cf80395c952b"
   },
   {
-    "path": "_next/static/chunks/app/page-775c08fc0bfabbb7.js",
-    "bytes": 30921,
-    "sha256": "775c08fc0bfabbb746637e9638f8b948108f311f4fbd998ac4578af042bf0336"
+    "path": "_next/static/chunks/app/page-37445c39e25ba50a.js",
+    "bytes": 30922,
+    "sha256": "37445c39e25ba50abb4413ea2c903fc12f80476f92d678f7d2e1497e52291b68"
   },
   {
     "path": "_next/static/chunks/app/redminote12/page-a5b45e0a06339d90.js",
@@ -161,8 +161,8 @@
   },
   {
     "path": "index.html",
-    "bytes": 22794,
-    "sha256": "df18521e6448f0370a3f72abf63a8004788988a3336a1d21fa930920935e58ae"
+    "bytes": 22796,
+    "sha256": "63538d3fe1df36fbaa1f1e077e5ee878e11c8eafe882a9879393cae05224e7a8"
   },
   {
     "path": "marketplacecreatives/index.html",
@@ -181,8 +181,8 @@
   },
   {
     "path": "profile.css",
-    "bytes": 592,
-    "sha256": "7736c0c0ac88aa331c9c07b9f56af28faf13dfd8b6ae412c8a6915fc9f587480"
+    "bytes": 499,
+    "sha256": "29907c963ada618f39b13dce11997e14cf8373e92c427e46b9db0c912281a10b"
   },
   {
     "path": "redminote12/index.html",
@@ -205,9 +205,9 @@
     "sha256": "34d629f4bd9b16633a2243a9aa557ae3ea4c34ec27f4044b97f9edf906443641"
   },
   {
-    "path": "storage/v1/object/public/portfolio-assets/public/Profile/journey.svg",
-    "bytes": 960,
-    "sha256": "9abdc7c6ce0d69d2613289832a6784340e55df7165660f4e33ac59ef0d5e7a2a"
+    "path": "storage/v1/object/public/portfolio-assets/public/Profile/journey.webp",
+    "bytes": 122180,
+    "sha256": "83c76e6d63c4a56e08d1b9e6e15d7ba4faba1da07f4ba9a7ccd8d38f91acdb6c"
   },
   {
     "path": "storage/v1/object/public/portfolio-assets/public/Profile/projects.svg",
