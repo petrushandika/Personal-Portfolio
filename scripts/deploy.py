@@ -54,7 +54,9 @@ mv -Tf /site/current-next-{release} /site/current
 
 try:
     switch('releases/' + release)
-    for route in ['', 'danaku', 'reluv', '14daypilot', 'jetflow', 'scalp', 'redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks']:
+    projects = json.loads((ROOT / 'data/projects.json').read_text())
+    routes = list(dict.fromkeys([''] + [p['slug'] for p in projects] + ['redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks']))
+    for route in routes:
         url = 'https://petrushandika.com/' + (route + '/' if route else '')
         with urllib.request.urlopen(url, timeout=30) as response:
             assert response.status == 200
@@ -63,4 +65,4 @@ except BaseException:
     switch(str(previous))
     assert (SITE / 'current').readlink() == previous
     raise
-print(json.dumps({'revision': revision, 'files': len(manifest), 'framework': 'Next.js', 'routes': 11, 'verified': True, 'rollback': str(previous)}))
+print(json.dumps({'revision': revision, 'files': len(manifest), 'framework': 'Next.js', 'routes': len(routes), 'verified': True, 'rollback': str(previous)}))
