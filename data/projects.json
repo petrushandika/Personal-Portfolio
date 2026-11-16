@@ -89,22 +89,35 @@
     "slug": "14daypilot",
     "title": "14DAYPILOT",
     "category": "Team project \u00b7 Aviation",
-    "role": "Frontend contributor \u2014 Astronacci / 14DAYPILOT team",
-    "summary": "A flight-training company website connecting program information, public content and enquiry interfaces.",
+    "role": "Full-stack contributor \u2014 14DAYPILOT team; scoped work across separate repositories",
+    "summary": "An aviation product family spanning academy websites, editorial CMSs, flight-training operations and online learning.",
     "stack": [
       "Next.js",
       "React",
       "TypeScript",
-      "React Query"
+      "Laravel",
+      "Inertia.js",
+      "Strapi",
+      "Elysia",
+      "Prisma",
+      "PostgreSQL",
+      "MySQL"
     ],
     "contributions": [
-      "Implemented bounded PDF zoom controls and scaling for the TrueNorth viewer.",
-      "Refined server-backed blog search, query cache separation and pagination behavior."
+      "Adjusted training-program navigation layouts and responsive article video embeds.",
+      "Revised the A320 pilot-profile form, validation/action code and landing-page analytics integration.",
+      "Implemented article activity-history interfaces and structured authorization/not-found responses across editorial content types.",
+      "Added custom password-reset mail delivery and review-image download functionality.",
+      "Integrated video-upload/processing service support and migrated file-upload implementation to S3.",
+      "Added article activity-log administration and explicit authorization/not-found error handling."
     ],
     "limitations": [
-      "Team/employer project: the full site design, content and imagery are not claimed as sole work.",
-      "Screenshots show public landing/about pages, not authenticated PDFs or backend search verification.",
-      "Business claims belong to the original company site. Forms, bookings and production services were not submitted or exercised."
+      "Authenticated administration captures use local sample/seed data, not production customers, revenue or flight activity. Public website captures have external application APIs disabled.",
+      "Team project: product identity, branding and the entire application are not claimed as sole work. Contribution summaries are bounded by inspected commits.",
+      "Per-module source references are audited repository heads; the hero retains its original captured revision. Screens come from separate application sessions, not an end-to-end integration run.",
+      "E-learning authenticated through its real local login API with the app's non-production reCAPTCHA testing mode; the browser login widget was not verified. Video upload, payments, email and external integrations were not exercised.",
+      "Strapi content pages returned a noncritical 404 for /admin/ai-feature-config; the content-manager screen rendered. Its broken content-type-builder route is excluded.",
+      "Related Flutter app is ecosystem context only, not a verified personal contribution."
     ],
     "images": [
       {
@@ -116,14 +129,245 @@
         "src": "/projects/14daypilot/2.webp",
         "alt": "14DAYPILOT \u2014 About the company",
         "caption": "About the company. Actual Mac-local browser capture; no production form submission."
+      },
+      {
+        "src": "/projects/14daypilot/jet-training.webp",
+        "alt": "Jet type-rating program website",
+        "caption": "typerating-compro: actual public program interface. Enquiry submissions and payments were not exercised."
+      },
+      {
+        "src": "/projects/14daypilot/flight-operations.webp",
+        "alt": "Flight training administration: training programs",
+        "caption": "admin-14daypilot: authenticated local DEVELOPER session, seeded sample programs; not production records. Account area redacted."
+      },
+      {
+        "src": "/projects/14daypilot/editorial-roles.webp",
+        "alt": "CMS Compro: roles and module access",
+        "caption": "cmscompro: actual local superadmin role-management screen. Sample local environment; account footer redacted."
+      },
+      {
+        "src": "/projects/14daypilot/learning-chapters.webp",
+        "alt": "E-learning chapter management",
+        "caption": "elearning14day: authenticated local admin, repository-seeded chapters and lessons. Not production learning activity. Account footer and dev indicator redacted."
+      },
+      {
+        "src": "/projects/14daypilot/jet-editorial.webp",
+        "alt": "Jet CMS: article content management",
+        "caption": "cms-14daypilotjet: actual local Strapi content manager with sample content and placeholder media; no claim of live publishing."
       }
     ],
     "revision": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
-    "runtime": "Run individually on a Mac in an isolated source copy. Local Next.js frontend; external application APIs disabled. Public UI capture only.",
+    "runtime": "Public frontend and authenticated admin screens were captured in separate Mac-local sessions. Admin roles: DEVELOPER, superadmin, admin and Strapi Super Admin. Local databases and sample content only. Stored captures are historical evidence, not a current service-health claim.",
     "commits": [
       {
         "sha": "a084c59b9e9d0aeb4bf4e1f128427cc5e4f7fec8",
         "summary": "fix(pilot-blog): scroll to top on pagination and use server-side search"
+      },
+      {
+        "sha": "116a4646d5b425e88613708f0cf7fbda6b27595b",
+        "summary": "cmscompro: Implemented article activity-history interfaces and structured authorization/not-found responses across editorial content types."
+      },
+      {
+        "sha": "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
+        "summary": "admin-14daypilot: Added custom password-reset mail delivery and review-image download functionality."
+      },
+      {
+        "sha": "111276148eaaf2d989be7a7b05ebd503e4f89df1",
+        "summary": "elearning14day: Integrated video-upload/processing service support and migrated file-upload implementation to S3."
+      },
+      {
+        "sha": "f93904b0c7feafbcaea688d562a2c94932b8b120",
+        "summary": "cms-14daypilotjet: Added article activity-log administration and explicit authorization/not-found error handling."
+      }
+    ],
+    "accent": "#176a59",
+    "modules": [
+      {
+        "name": "compro14day-fe",
+        "kind": "Academy website \u00b7 Next.js",
+        "description": "Public flight-academy website presenting pilot-training programs and editorial content.",
+        "contribution": "Adjusted training-program navigation layouts and responsive article video embeds.",
+        "sha": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+        "image": "/projects/14daypilot/1.webp"
+      },
+      {
+        "name": "typerating-compro",
+        "kind": "Jet training website \u00b7 Next.js",
+        "description": "Public jet/type-rating training website, including an Airbus A320 program landing page and pilot-profile enquiries.",
+        "contribution": "Revised the A320 pilot-profile form, validation/action code and landing-page analytics integration.",
+        "sha": "dae2c6b32ceb9caf72acc115b44743761955df5f",
+        "image": "/projects/14daypilot/jet-training.webp"
+      },
+      {
+        "name": "cmscompro",
+        "kind": "Editorial administration \u00b7 Laravel / React",
+        "description": "Content management for the 14DAYPILOT academy website, including articles, testimonials and program-related editorial content.",
+        "contribution": "Implemented article activity-history interfaces and structured authorization/not-found responses across editorial content types.",
+        "sha": "116a4646d5b425e88613708f0cf7fbda6b27595b",
+        "image": "/projects/14daypilot/editorial-roles.webp"
+      },
+      {
+        "name": "admin-14daypilot",
+        "kind": "Flight operations \u00b7 Laravel / React",
+        "description": "Flight-training administration and management application.",
+        "contribution": "Added custom password-reset mail delivery and review-image download functionality.",
+        "sha": "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
+        "image": "/projects/14daypilot/flight-operations.webp"
+      },
+      {
+        "name": "elearning14day",
+        "kind": "Learning platform \u00b7 Next.js / Elysia",
+        "description": "Online learning and digital-commerce platform for courses, quizzes and digital products.",
+        "contribution": "Integrated video-upload/processing service support and migrated file-upload implementation to S3.",
+        "sha": "3ef6a18fb2d19e994e016502b512dc100b0f6089",
+        "image": "/projects/14daypilot/learning-chapters.webp"
+      },
+      {
+        "name": "cms-14daypilotjet",
+        "kind": "Jet editorial CMS \u00b7 Strapi",
+        "description": "Editorial CMS for the jet/type-rating website, managing articles, authors, categories and programs.",
+        "contribution": "Added article activity-log administration and explicit authorization/not-found error handling.",
+        "sha": "f93904b0c7feafbcaea688d562a2c94932b8b120",
+        "image": "/projects/14daypilot/jet-editorial.webp"
+      },
+      {
+        "name": "Fourteen-Day-Pilot",
+        "kind": "Mobile app \u00b7 Flutter \u00b7 team context",
+        "description": "Flutter mobile application within the 14DAYPILOT ecosystem; KB also groups a separate CMS with it.",
+        "contribution": "Related team application. No matching author evidence was found in the inspected local history; not claimed as my implementation. No runtime capture supplied.",
+        "sha": "5ab89af2d298cd78080ea82f48931e7fba20b569"
+      }
+    ]
+  },
+  {
+    "slug": "astronacci",
+    "title": "Astronacci",
+    "category": "Team ecosystem \u00b7 Commerce & membership",
+    "role": "Full-stack contributor \u2014 scoped work across Astronacci applications",
+    "summary": "A connected application family: Ashop commerce, subscription payments, accounting integration, membership access and customer-service tools.",
+    "stack": [
+      "React",
+      "TypeScript",
+      "Apollo GraphQL",
+      "Express",
+      "PostGraphile",
+      "PostgreSQL",
+      "Laravel",
+      "Go"
+    ],
+    "contributions": [
+      "Implemented checkout/purchase tracking and deduplication handling. Inspected source changes; live ad-conversion delivery was not exercised.",
+      "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied.",
+      "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified.",
+      "Implemented subscription activation/reminders and payment-processing safeguards; fixed membership access handling after early renewal.",
+      "Improved invoice reconciliation before creation and membership-to-accounting customer/package mapping."
+    ],
+    "limitations": [
+      "Available images show Ashop public account interfaces only. Other products are source-documented modules, not authenticated dashboard captures.",
+      "Ashop local admin verification is incomplete: missing RBAC/schema objects blocked rendering. A local account row is not proof of full UI access. No production data or credentials are published.",
+      "Related products and source-level links do not establish that a complete cross-service flow was tested. Payments, accounting sync, messaging and conversion delivery were not exercised.",
+      "Team/employer work: contribution scope is limited to inspected commits. Flutter apps are team context, not claimed as personal implementations."
+    ],
+    "images": [
+      {
+        "src": "/projects/astronacci/ashop-signin.webp",
+        "alt": "Ashop storefront sign-in interface",
+        "caption": "web-ashop: actual Mac-local public sign-in screen. This is not an authenticated commerce dashboard or proof of checkout execution."
+      },
+      {
+        "src": "/projects/astronacci/ashop-registration.webp",
+        "alt": "Ashop storefront registration interface",
+        "caption": "web-ashop: actual public registration interface; no account submission or production service call exercised in this capture."
+      }
+    ],
+    "revision": "8b43eee189935b1b69d8f0c608759f0a664d8f2a",
+    "runtime": "Public Ashop screens captured from a Mac-local frontend with production application APIs disabled. Authenticated Ashop admin capture remains unverified.",
+    "modules": [
+      {
+        "name": "ashop/web-ashop",
+        "kind": "Ashop \u00b7 storefront \u00b7 React / Apollo",
+        "description": "Customer storefront and account interfaces with guest-checkout campaign pages and purchase-tracking logic.",
+        "contribution": "Implemented checkout/purchase tracking and deduplication handling. Inspected source changes; live ad-conversion delivery was not exercised.",
+        "sha": "8b43eee189935b1b69d8f0c608759f0a664d8f2a",
+        "image": "/projects/astronacci/ashop-signin.webp"
+      },
+      {
+        "name": "ashop/admin-ashop",
+        "kind": "Ashop \u00b7 administration \u00b7 React / Apollo",
+        "description": "Administration for products, transactions, campaign checkout pages, customer paths and sales reporting.",
+        "contribution": "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied.",
+        "sha": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8"
+      },
+      {
+        "name": "ashop/api-ashop",
+        "kind": "Ashop \u00b7 services \u00b7 Express / PostGraphile",
+        "description": "GraphQL and HTTP services supporting the Ashop storefront, campaign checkout and administration.",
+        "contribution": "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified.",
+        "sha": "7de675d5febbb71e32b7a281754d7d7b6681f46f"
+      },
+      {
+        "name": "astropay",
+        "kind": "Payments & subscriptions \u00b7 Laravel",
+        "description": "Astronacci membership, order and payment administration, including subscription activation and renewals.",
+        "contribution": "Implemented subscription activation/reminders and payment-processing safeguards; fixed membership access handling after early renewal.",
+        "sha": "4185da7db0857c239ec7cc1e36c0482ea5d7e2bd"
+      },
+      {
+        "name": "accurate",
+        "kind": "Accounting integration \u00b7 Laravel",
+        "description": "Accounting integration and synchronization for customers, products, membership sales and invoices.",
+        "contribution": "Improved invoice reconciliation before creation and membership-to-accounting customer/package mapping.",
+        "sha": "38e57f411ebf1c6630d673a8d9c4847e3777c50a"
+      },
+      {
+        "name": "crm-astronacci/frontend",
+        "kind": "CRM \u00b7 frontend \u00b7 React",
+        "description": "Customer-service and conversation interface in the CRM application family.",
+        "contribution": "Implemented debounced quick-reply search and input-derived search state. Source evidence only; no runtime capture supplied.",
+        "sha": "b5391f9f16bdd6e79002ae01922a0b4ecf74159c"
+      },
+      {
+        "name": "crm-astronacci/backend",
+        "kind": "CRM \u00b7 backend services",
+        "description": "Backend search services supporting customer-service quick replies.",
+        "contribution": "Added a quick-reply chat method and DTO and refined grouped search filtering. Source evidence only; no runtime capture supplied.",
+        "sha": "4164c09dabfa71e94714c163a70df91a63c48597"
+      },
+      {
+        "name": "go-aclub",
+        "kind": "Membership API \u00b7 Go",
+        "description": "Member and subscription API in the Aclub application family.",
+        "contribution": "Added Basic Plan entitlement and member-existence endpoints. Source evidence only; no runtime capture supplied.",
+        "sha": "fc7003ed3745c3466092af79d51d8e25063b9dfa"
+      },
+      {
+        "name": "aclub_backend",
+        "kind": "Membership access \u00b7 backend",
+        "description": "Backend access checks for subscription-gated Aclub content.",
+        "contribution": "Added feature-flagged server-side Basic Plan checks for Zoom links and Weekly Outlook. Source evidence only; live entitlement enforcement not exercised.",
+        "sha": "8d3dce01d5fa8605ad45fdb37b76629be6903560"
+      },
+      {
+        "name": "aclub-superapp",
+        "kind": "Mobile app \u00b7 Flutter \u00b7 team context",
+        "description": "Astronacci mobile superapp with community/chat features.",
+        "contribution": "Related mobile team product. No matching personal author evidence in the inspected history; no implementation ownership or runtime claim.",
+        "sha": "d31da981b9c66569494eb64258e86f3a21c02353"
+      }
+    ],
+    "accent": "#a72e36",
+    "commits": [
+      {
+        "sha": "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
+        "summary": "Implemented checkout/purchase tracking and deduplication handling. Inspected source changes; live ad-conversion delivery was not exercised."
+      },
+      {
+        "sha": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8",
+        "summary": "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied."
+      },
+      {
+        "sha": "7de675d5febbb71e32b7a281754d7d7b6681f46f",
+        "summary": "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified."
       }
     ]
   },
