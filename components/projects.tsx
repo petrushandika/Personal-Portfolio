@@ -110,7 +110,12 @@ export function ProjectPage({ project }: { project: Project }) {
 
   function selectImage(index: number) {
     setSelectedIndex(index);
-    filmstrip.current?.querySelectorAll<HTMLElement>('.project-screenshot')[index - 1]?.scrollIntoView({ behavior: reducedMotion ? 'instant' : 'smooth', block: 'nearest', inline: 'center' });
+    const strip = filmstrip.current;
+    const frame = strip?.querySelectorAll<HTMLElement>('.project-screenshot')[index - 1];
+    if (strip && frame) {
+      const left = frame.getBoundingClientRect().left - strip.getBoundingClientRect().left + strip.scrollLeft;
+      strip.scrollTo({ left: left - (strip.clientWidth - frame.clientWidth) / 2, behavior: reducedMotion ? 'instant' : 'smooth' });
+    }
   }
 
   function screenshot(image: Project['images'][number], index: number) {

@@ -8,6 +8,7 @@ import {
   useMotionValue,
   useSpring,
   useTransform,
+  useReducedMotion,
   type MotionValue,
 } from "framer-motion";
 
@@ -166,6 +167,7 @@ function TreeRow({
   onClick: () => void;
   expanded?: boolean;
 }) {
+  const reducedMotion = useReducedMotion();
   return (
     <motion.div
       role="button"
@@ -179,9 +181,9 @@ function TreeRow({
       }}
       onClick={onClick}
       className={`flex items-center gap-3 md:gap-4 py-2 cursor-pointer text-[#1c1c1c] hover:opacity-70 transition-opacity${child ? " ml-8" : ""}`}
-      initial={{ opacity: 0, y: 10 }}
+      initial={child && !reducedMotion ? { opacity: 0, y: 10 } : false}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3 }}
+      transition={{ duration: reducedMotion ? 0 : 0.3 }}
     >
       <div className="shrink-0 text-current">
         <Icon name={icon} className="w-6 h-6 md:w-8 md:h-8 stroke-[1.5]" />
@@ -196,6 +198,7 @@ function TreeRow({
 }
 
 export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
+  const reducedMotion = useReducedMotion();
   const [open, setOpen] = useState<string | null>(null);
   return (
     <div className="flex flex-col gap-2 md:gap-4 w-full">
@@ -210,10 +213,10 @@ export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
           <AnimatePresence>
             {open === study.id && (
               <motion.div
-                initial={{ height: 0, opacity: 0 }}
+                initial={reducedMotion ? false : { height: 0, opacity: 0 }}
                 animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3, ease: "easeInOut" }}
+                transition={{ duration: reducedMotion ? 0 : 0.3, ease: "easeInOut" }}
                 className="overflow-hidden"
               >
                 <div className="w-full">

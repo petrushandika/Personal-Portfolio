@@ -30,6 +30,8 @@ try{
  }
  const aliases={redminote12:'danaku',drivexdiwali:'14daypilot',marketplacecreatives:'reluv',bannerrefresh:'jetflow',artworks:'scalp'};
  for(const [alias,target] of Object.entries(aliases)){const r=await fetch(origin+'/'+alias+'/');assert.equal(r.status,200);assert((await r.text()).includes(`data-project="${target}"`));}
- const ecosystem=spawnSync(process.execPath,['tests/ecosystems.mjs'],{env:{...process.env,TEST_URL:origin},stdio:'inherit'});assert.equal(ecosystem.status,0,'Ecosystem browser checks failed');
+ for(const suite of ['tests/ecosystems.mjs','tests/interaction-regressions.mjs']) {
+  const run=spawnSync(process.execPath,[suite],{env:{...process.env,TEST_URL:origin},stdio:'inherit'});assert.equal(run.status,0,`${suite} failed`);
+ }
  assert.equal(results.length,projects.length*2);await fs.writeFile('tests/output/projects/results.json',JSON.stringify(results,null,2));console.log(`PASS ${results.length} project cases, 2 homepage cases, ${Object.keys(aliases).length} legacy aliases`);
 }finally{await browser?.close();server?.kill();}
