@@ -1,5 +1,6 @@
 "use client";
 import projects from "../../data/projects.json";
+import './works.css';
 
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import {
@@ -152,7 +153,7 @@ function Icon({
   );
 }
 
-const studies = projects.map(project => ({id:project.slug,name:project.title,label:"Project",url:`/${project.slug}/`}));
+const studies = projects.map(project => ({id:project.slug,name:project.title,workType:project.workType,label:"Project",url:`/${project.slug}/`}));
 
 function TreeRow({
   name,
@@ -200,9 +201,14 @@ function TreeRow({
 export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
   const reducedMotion = useReducedMotion();
   const [open, setOpen] = useState<string | null>(null);
+  const [filter, setFilter] = useState("all");
   return (
     <div className="flex flex-col gap-2 md:gap-4 w-full">
-      {studies.map((study) => (
+      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter work by ownership">
+        {[["all", "All work"], ["personal", "Personal"], ["organization", "Organization"]].map(([value, label]) => <button key={value} type="button" aria-pressed={filter === value} onClick={() => { setFilter(value); setOpen(null); }} className={`min-h-11 rounded-full border px-3 py-2 text-xs transition-colors ${filter === value ? "bg-[#1c1c1c] text-white border-[#1c1c1c]" : "bg-white/70 text-[#1c1c1c] border-black/20"}`}>{label}</button>)}
+      </div>
+      <div className="max-h-[32vh] lg:max-h-[52vh] overflow-y-auto overscroll-contain pr-2" data-work-list>
+      {studies.filter(study => filter === "all" || study.workType === filter).map((study) => (
         <div key={study.id} className="w-full">
           <TreeRow
             name={study.name}
@@ -242,12 +248,13 @@ export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
           </AnimatePresence>
         </div>
       ))}
-
+      </div>
+      <p className="text-xs">Scroll the list to explore more work.</p>
     </div>
   );
 }
 
-const briefs: Record<string,string> = Object.fromEntries(projects.map(p=>[`${p.slug}-brief`,`${p.title} — Project notes\n\n${p.summary}\n\n${p.role}\n\n${p.contributions.join("\n")}\n\nScreenshots captured from the app running locally on Mac. Detailed contribution evidence and capture limitations are on the project page.`]));
+const briefs: Record<string,string> = Object.fromEntries(projects.map(p=>[`${p.slug}-brief`,`${p.title} — Project notes\n\n${p.summary}\n\n${p.role}\n\n${p.contributions.join("\n")}\n\n${p.captureStatus === "source-only" ? "Source-reviewed case study. No runtime screenshot published." : "Screenshots captured from the app running locally on Mac."} Detailed contribution evidence and capture limitations are on the project page.`]));
 
 export function BriefModal({
   brief,

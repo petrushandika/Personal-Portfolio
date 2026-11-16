@@ -17,10 +17,10 @@ try{
  await p.screenshot({path:`tests/output/projects/home-${width}.png`});
  for(const project of projects){
  assert.equal((await p.goto(origin+'/'+project.slug+'/')).status(),200);
- await p.evaluate(()=>document.fonts.ready);await p.locator('.project-screenshot img').first().evaluate(i=>i.decode());
+ await p.evaluate(()=>document.fonts.ready);if(project.images.length) await p.locator('.project-screenshot img').first().evaluate(i=>i.decode());
  assert.equal(await p.getByRole('heading',{name:project.title+'.',exact:true}).count(),1);
  assert.equal(await p.locator('.project-screenshot').count(),project.images.length);
- await p.locator('.project-screenshot__button').first().click();await p.getByRole('dialog').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'detached'});
+ if(project.images.length){await p.locator('.project-screenshot__button').first().click();await p.getByRole('dialog').waitFor();await p.keyboard.press('Escape');await p.getByRole('dialog').waitFor({state:'detached'});}else{assert.equal(await p.getByRole('region',{name:'Source-reviewed contribution'}).count(),1);}
  await p.evaluate(async()=>{await Promise.all([...document.images].map(i=>{i.loading='eager';return i.decode().catch(()=>null);}));});
  const state=await p.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,broken:[...document.images].filter(i=>i.complete&&!i.naturalWidth).map(i=>i.src)}));assert.equal(state.width,state.scroll);assert.deepEqual(state.broken,[]);
  assert(!/Cartooneast|Anurag|Visual-reference study/.test(await p.locator('main').innerText()));
@@ -30,7 +30,7 @@ try{
  }
  const aliases={redminote12:'danaku',drivexdiwali:'14daypilot',marketplacecreatives:'reluv',bannerrefresh:'jetflow',artworks:'scalp'};
  for(const [alias,target] of Object.entries(aliases)){const r=await fetch(origin+'/'+alias+'/');assert.equal(r.status,200);assert((await r.text()).includes(`data-project="${target}"`));}
- for(const suite of ['tests/ecosystems.mjs','tests/interaction-regressions.mjs']) {
+ for(const suite of ['tests/ecosystem-data.mjs','tests/work-evidence.mjs','tests/work-filters.mjs','tests/ecosystems.mjs','tests/interaction-regressions.mjs']) {
   const run=spawnSync(process.execPath,[suite],{env:{...process.env,TEST_URL:origin},stdio:'inherit'});assert.equal(run.status,0,`${suite} failed`);
  }
  assert.equal(results.length,projects.length*2);await fs.writeFile('tests/output/projects/results.json',JSON.stringify(results,null,2));console.log(`PASS ${results.length} project cases, 2 homepage cases, ${Object.keys(aliases).length} legacy aliases`);
