@@ -59,6 +59,15 @@
 .project-module-preview > span { display: block; padding: 10px; font-size: 11px; }
 .project-module-source { font-size: 11px; margin-top: 24px; }
 .project-module-source summary { cursor: pointer; margin-bottom: 10px; }
+.project-image-evidence { padding: 12px 20px; font-size: 11px; line-height: 1.6; overflow-wrap: anywhere; background: #f4f4ed; color: #454b40; }
+.project-image-evidence summary { cursor: pointer; font-weight: 600; }
+.project-image-evidence p { margin: 10px 0; }
+.project-image-evidence ul { padding-left: 16px; }
+.project-image-evidence code { font-size: 10px; }
+.project-gallery-selected figcaption > div { min-width: 0; }
+.project-source-study { grid-column: 1 / -1; padding: clamp(24px, 5vw, 72px); border-radius: 24px; background: #e9ece1; border-left: 4px solid var(--project-accent); }
+.project-source-study > p { max-width: 750px; }
+.project-source-study__facts { display: flex; flex-wrap: wrap; gap: 12px 32px; margin-top: 32px; font-size: 12px; }
 .project-contributions { grid-column: span 8; }
 .project-stack { position: relative; grid-column: span 4; overflow: hidden; background: #e9ece1; }
 .project-list { margin: 0; padding: 0; list-style: none; }

@@ -15,11 +15,14 @@ export type Project = {
   contributions: string[];
   limitations: string[];
   repository?: string;
-  commits: { sha: string; url?: string; summary: string }[];
-  images: { src: string; alt: string; caption: string }[];
+  captureStatus: string;
+  workType: string;
+  organization: string;
+  commits: { sha: string; url?: string; summary: string; author: string; scope: string }[];
+  images: { src: string; alt: string; caption: string; evidence: { kind: string; note: string; commitShas: string[] } }[];
   revision: string;
   runtime: string;
-  modules?: { name: string; kind: string; description: string; contribution?: string; sha?: string; image?: string }[];
+  modules?: { name: string; kind: string; description: string; contribution?: string; sha?: string; image?: string; sourceRevision?: string; commitShas: string[] }[];
   accent?: string;
 };
 
@@ -32,6 +35,10 @@ function externalUrl(value?: string) {
   } catch {
     return undefined;
   }
+}
+
+function ImageEvidence({ image }: { image: Project['images'][number] }) {
+  return <details className="project-image-evidence"><summary>{image.evidence.kind === 'contribution' ? 'Contribution-linked screen' : 'Application context'} · Commit evidence</summary><p>{image.evidence.note}</p><ul>{image.evidence.commitShas.map(sha => <li key={sha}><code>{sha}</code></li>)}</ul></details>;
 }
 
 function ScreenshotModal({ images, index, onChange, onClose }: {
@@ -79,7 +86,7 @@ function ScreenshotModal({ images, index, onChange, onClose }: {
         </div>
         <figure>
           <img src={image.src} alt={image.alt} />
-          {image.caption && <figcaption id={captionId}>{image.caption}</figcaption>}
+          {image.caption && <figcaption id={captionId}>{image.caption}<ImageEvidence image={image} /></figcaption>}
         </figure>
       </div>
     </dialog>, document.body,
@@ -128,6 +135,7 @@ export function ProjectPage({ project }: { project: Project }) {
           <span className="project-screenshot__hint" aria-hidden="true">View full screen ↗</span>
         </button>
         {image.caption && <figcaption><span className="project-image-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span>{image.caption}</figcaption>}
+        <ImageEvidence image={image} />
       </figure>
     );
   }
@@ -143,6 +151,8 @@ export function ProjectPage({ project }: { project: Project }) {
           </section>
 
           {project.images[0] && <motion.div className="project-hero-stage" {...reveal()}>{screenshot(project.images[0], 0)}<div className="project-hero-note"><span>01 / The product, in focus</span><span>Actual application capture ↗</span></div></motion.div>}
+
+          {project.captureStatus === 'source-only' && <section className="project-source-study" aria-label="Source-reviewed contribution"><p className="project-eyebrow">Source-reviewed work · {project.organization}</p><h2>Implementation, not a mockup<span>.</span></h2><p>{project.summary}</p><div className="project-source-study__facts"><span>{project.commits.length} author-matched commit references</span><span>No runtime capture published</span></div></section>}
 
           {activeModule && <motion.section className="project-modules" {...reveal()} aria-labelledby={`${moduleId}-heading`}>
             <div className="project-section-heading"><div><p className="project-eyebrow">One brand. Connected products.</p><h2 id={`${moduleId}-heading`}>Inside the ecosystem<span>.</span></h2></div><span className="project-section-index">01 — Explore</span></div>
@@ -164,7 +174,7 @@ export function ProjectPage({ project }: { project: Project }) {
                   <p className="project-eyebrow">{activeModule.kind}</p><h3>{activeModule.name}</h3><p>{activeModule.description}</p>
                   {activeModule.contribution && <div className="project-module-contribution"><span className="project-eyebrow">My contribution</span><p>{activeModule.contribution}</p></div>}
                   {moduleImage && <button type="button" className="project-module-preview" aria-label={`Expand screenshot: ${moduleImage.alt}`} aria-haspopup="dialog" onClick={() => setExpandedIndex(project.images.indexOf(moduleImage))}><img src={moduleImage.src} alt={moduleImage.alt} loading="lazy" /><span>Explore screen ↗</span></button>}
-                  {activeModule.sha && <details className="project-module-source"><summary>Source reference</summary><code>{activeModule.sha}</code></details>}
+                  <details className="project-module-source"><summary>My commits · {activeModule.commitShas.length} references</summary><ul>{project.commits.filter(c => activeModule.commitShas.includes(c.sha)).map(c => <li key={c.sha}><code>{c.sha}</code><p>{c.summary}</p></li>)}</ul>{activeModule.sourceRevision && <p>Audited repository revision (not necessarily my commit): <code>{activeModule.sourceRevision}</code></p>}</details>
                 </motion.div>
               </div>
             </div>
@@ -180,17 +190,17 @@ export function ProjectPage({ project }: { project: Project }) {
             <div className="project-section-heading"><div><p className="project-eyebrow">A closer look</p><h2>In the details<span>.</span></h2></div><div className="project-controls"><button type="button" aria-label="Previous gallery screenshot" onClick={() => selectImage((selectedIndex - 1 + project.images.length) % project.images.length)}>←</button><span aria-live="polite">{String(selectedIndex + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}</span><button type="button" aria-label="Next gallery screenshot" onClick={() => selectImage((selectedIndex + 1) % project.images.length)}>→</button></div></div>
             {selectedImage && <figure className="project-gallery-selected"><button type="button" className="project-gallery-selected__button" aria-label={`Expand selected screenshot: ${selectedImage.alt}`} aria-haspopup="dialog" onClick={() => setExpandedIndex(selectedIndex)} onKeyDown={(event) => {
               if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); selectImage((selectedIndex + (event.key === 'ArrowRight' ? 1 : -1) + project.images.length) % project.images.length); }
-            }}><img src={selectedImage.src} alt={selectedImage.alt} loading="lazy" /><span className="project-screenshot__hint" aria-hidden="true">View full screen ↗</span></button><figcaption>{selectedImage.caption}<span>Use ← → to explore · Enter to expand</span></figcaption></figure>}
+            }}><img src={selectedImage.src} alt={selectedImage.alt} loading="lazy" /><span className="project-screenshot__hint" aria-hidden="true">View full screen ↗</span></button><figcaption><div>{selectedImage.caption}<ImageEvidence image={selectedImage} /></div><span>Use ← → to explore · Enter to expand</span></figcaption></figure>}
             <div className="project-filmstrip" ref={filmstrip}>{project.images.slice(1).map((image, index) => screenshot(image, index + 1))}</div>
             <p className="project-gallery-note">Scroll to browse. Focus a frame to preview; select to expand.</p>
           </motion.section>}
 
-          <div className="project-capture-note"><span aria-hidden="true">↳</span><p>Real application captures, not mockups. {project.limitations[0] ?? 'Screens show the captured revision; availability and data may differ from production.'}</p></div>
+          <div className="project-capture-note"><span aria-hidden="true">↳</span><p>{project.captureStatus === 'source-only' ? 'Source evidence, not a runtime demonstration.' : 'Real application captures, not mockups.'} {project.limitations[0] ?? 'Screens show the captured revision; availability and data may differ from production.'}</p></div>
           <details className="project-evidence"><summary><span>Behind the case study</span><span className="project-evidence-summary">Source evidence, runtime & caveats <span aria-hidden="true">＋</span></span></summary><div className="project-evidence-grid">
-            <section><p className="project-eyebrow">Source evidence</p><h2>Commits & revision</h2><dl className="project-facts"><div><dt>Captured revision</dt><dd><code>{project.revision}</code></dd></div></dl>
+            <section><p className="project-eyebrow">Source evidence</p><h2>Commits & revision</h2><dl className="project-facts"><div><dt>Reference revision (capture details below)</dt><dd><code>{project.revision}</code></dd></div></dl>
               {project.commits.length > 0 ? <ul className="project-commits">{project.commits.map((commit, index) => {
                 const url = externalUrl(commit.url);
-                return <li key={`${commit.sha}-${index}`}>{url ? <a className="project-link" href={url} target="_blank" rel="noopener noreferrer"><code>{commit.sha}</code><span aria-hidden="true"> ↗</span><span className="project-sr-only"> (opens in a new tab)</span></a> : <code>{commit.sha}</code>}<p>{commit.summary}</p></li>;
+                return <li key={`${commit.sha}-${index}`}>{url ? <a className="project-link" href={url} target="_blank" rel="noopener noreferrer"><code>{commit.sha}</code><span aria-hidden="true"> ↗</span><span className="project-sr-only"> (opens in a new tab)</span></a> : <code>{commit.sha}</code>}<p>{commit.summary}</p><small>Author: {commit.author}</small><p>{commit.scope}</p></li>;
               })}</ul> : <p>No commit evidence has been supplied.</p>}
             </section>
             <section className="project-runtime"><p className="project-eyebrow">Capture context</p><h2>Runtime & caveats</h2><p className="project-runtime__description">{project.runtime}</p>{project.limitations.length > 0 && <ul className="project-caveat-list">{project.limitations.map((item, index) => <li key={index}>{item}</li>)}</ul>}</section>

@@ -3,7 +3,7 @@
     "slug": "danaku",
     "title": "Danaku",
     "category": "Personal project \u00b7 Finance UI",
-    "role": "Full-stack developer \u2014 personal project",
+    "role": "Frontend contributor \u2014 personal finance project",
     "summary": "A personal-finance application with modular landing pages and responsive spending interfaces.",
     "stack": [
       "Next.js",
@@ -22,12 +22,26 @@
       {
         "src": "/projects/danaku/1.webp",
         "alt": "Danaku \u2014 Landing page",
-        "caption": "Landing page. Actual Mac-local browser capture; no production form submission."
+        "caption": "Landing page. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the landing/features area changed in my commit. Banking and authenticated transaction flows are outside this capture.",
+          "commitShas": [
+            "457564e731b2ad95cc2d1038ff96d0f37b1c062e"
+          ]
+        }
       },
       {
         "src": "/projects/danaku/2.webp",
         "alt": "Danaku \u2014 Features page",
-        "caption": "Features page. Actual Mac-local browser capture; no production form submission."
+        "caption": "Features page. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the landing/features area changed in my commit. Banking and authenticated transaction flows are outside this capture.",
+          "commitShas": [
+            "457564e731b2ad95cc2d1038ff96d0f37b1c062e"
+          ]
+        }
       }
     ],
     "revision": "d8d434f1583021c30dbfa080090f31de0d58c450",
@@ -36,10 +50,22 @@
       {
         "sha": "457564e731b2ad95cc2d1038ff96d0f37b1c062e",
         "summary": "feat(frontend): expand landing page sections and refine authentication UI",
+        "author": "petrushandika",
+        "scope": "14 files, 515 insertions/329 deletions. Adds reusable LandingSections, dedicated features/platform/partners/testimonials pages, revises landing header/footer and auth layouts. Patch includes historical simulated login state; current main layout instead reads auth store and checks session.",
         "url": "https://github.com/petrushandika/Danaku/commit/457564e731b2ad95cc2d1038ff96d0f37b1c062e"
+      },
+      {
+        "sha": "39f656635343b97d30136cda9c613dd7eb85e022",
+        "summary": "fix(ui): improve transaction history responsiveness for mobile",
+        "author": "petrushandika",
+        "scope": "Spending page changes flex row to responsive stacked layout, aligns amounts/actions and changes action opacity so controls remain visible on mobile. Also fixes lint script. Not initialization or merge.",
+        "url": "https://github.com/petrushandika/Danaku/commit/39f656635343b97d30136cda9c613dd7eb85e022"
       }
     ],
-    "repository": "https://github.com/petrushandika/Danaku"
+    "repository": "https://github.com/petrushandika/Danaku",
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "local-capture"
   },
   {
     "slug": "reluv",
@@ -66,12 +92,26 @@
       {
         "src": "/projects/reluv/1.webp",
         "alt": "Reluv \u2014 Public browsing homepage",
-        "caption": "Public browsing homepage. Actual Mac-local browser capture; no production form submission."
+        "caption": "Public browsing homepage. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the navigation area changed in my commit. A still image does not verify scroll behavior or commerce flows.",
+          "commitShas": [
+            "afdda13ddf865870715e9e64881a52f67ceb844c"
+          ]
+        }
       },
       {
         "src": "/projects/reluv/2.webp",
         "alt": "Reluv \u2014 Sign-in interface",
-        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission."
+        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "afdda13ddf865870715e9e64881a52f67ceb844c"
+          ]
+        }
       }
     ],
     "revision": "6fa583afb6e16cf7849d8f4631e6b89469ecaf01",
@@ -80,10 +120,22 @@
       {
         "sha": "afdda13ddf865870715e9e64881a52f67ceb844c",
         "summary": "feat(frontend): enhance Navbar with scroll-based submenu visibility and opacity effects",
+        "author": "petrushandika",
+        "scope": "2 files, 108 insertions/26 deletions: requestAnimationFrame scroll listener, scroll-direction tracking, submenu visibility/opacity/transform rules and category links; adjusts root content top spacing.",
         "url": "https://github.com/petrushandika/Reluv-App/commit/afdda13ddf865870715e9e64881a52f67ceb844c"
+      },
+      {
+        "sha": "7c862d31e010161e75657621a16a28e6ec002a49",
+        "summary": "fix(reviews): adjust layout and functionality in ReviewCard and ReviewList components",
+        "author": "petrushandika",
+        "scope": "Adds fixed-height responsive review cards, line-clamp and Read More behavior plus carousel rendering. Also adds hardcoded review data: evidence of UI implementation only, not actual customer testimonials.",
+        "url": "https://github.com/petrushandika/Reluv-App/commit/7c862d31e010161e75657621a16a28e6ec002a49"
       }
     ],
-    "repository": "https://github.com/petrushandika/Reluv-App"
+    "repository": "https://github.com/petrushandika/Reluv-App",
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "local-capture"
   },
   {
     "slug": "14daypilot",
@@ -114,70 +166,185 @@
     "limitations": [
       "Authenticated administration captures use local sample/seed data, not production customers, revenue or flight activity. Public website captures have external application APIs disabled.",
       "Team project: product identity, branding and the entire application are not claimed as sole work. Contribution summaries are bounded by inspected commits.",
-      "Per-module source references are audited repository heads; the hero retains its original captured revision. Screens come from separate application sessions, not an end-to-end integration run.",
+      "Module contribution references are author-matched commits; audited repository heads are separately labeled; the hero retains its original captured revision. Screens come from separate application sessions, not an end-to-end integration run.",
       "E-learning authenticated through its real local login API with the app's non-production reCAPTCHA testing mode; the browser login widget was not verified. Video upload, payments, email and external integrations were not exercised.",
       "Strapi content pages returned a noncritical 404 for /admin/ai-feature-config; the content-manager screen rendered. Its broken content-type-builder route is excluded.",
-      "Related Flutter app is ecosystem context only, not a verified personal contribution."
+      "Only repositories with matching inspected author commits are listed as contributions. Related mobile apps without matching evidence are excluded; screenshots do not establish sole ownership."
     ],
     "images": [
       {
         "src": "/projects/14daypilot/1.webp",
         "alt": "14DAYPILOT \u2014 Public company homepage",
-        "caption": "Public company homepage. Actual Mac-local browser capture; no production form submission."
+        "caption": "Public company homepage. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+            "6da38b87c699b101362e848fc352f92a1c0e883f"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/2.webp",
         "alt": "14DAYPILOT \u2014 About the company",
-        "caption": "About the company. Actual Mac-local browser capture; no production form submission."
+        "caption": "About the company. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+            "6da38b87c699b101362e848fc352f92a1c0e883f"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/jet-training.webp",
         "alt": "Jet type-rating program website",
-        "caption": "typerating-compro: actual public program interface. Enquiry submissions and payments were not exercised."
+        "caption": "typerating-compro: actual public program interface. Enquiry submissions and payments were not exercised.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the A320 program area covered by my content/form changes. Enquiry submission and analytics delivery were not exercised.",
+          "commitShas": [
+            "78c77ecd2ca2da12a77f97663264aeafd3d79145",
+            "dae2c6b32ceb9caf72acc115b44743761955df5f",
+            "29c6947251632b915265568458d6e4f86df23884"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/flight-operations.webp",
         "alt": "Flight training administration: training programs",
-        "caption": "admin-14daypilot: authenticated local DEVELOPER session, seeded sample programs; not production records. Account area redacted."
+        "caption": "admin-14daypilot: authenticated local DEVELOPER session, seeded sample programs; not production records. Account area redacted.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
+            "ff1df0639734fb902d148d1f3d0d8fceaf59c1b8"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/editorial-roles.webp",
         "alt": "CMS Compro: roles and module access",
-        "caption": "cmscompro: actual local superadmin role-management screen. Sample local environment; account footer redacted."
+        "caption": "cmscompro: actual local superadmin role-management screen. Sample local environment; account footer redacted.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "116a4646d5b425e88613708f0cf7fbda6b27595b",
+            "375264beb3b6f245ccd16f5ec130ef733ece8ba5"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/learning-chapters.webp",
         "alt": "E-learning chapter management",
-        "caption": "elearning14day: authenticated local admin, repository-seeded chapters and lessons. Not production learning activity. Account footer and dev indicator redacted."
+        "caption": "elearning14day: authenticated local admin, repository-seeded chapters and lessons. Not production learning activity. Account footer and dev indicator redacted.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "111276148eaaf2d989be7a7b05ebd503e4f89df1",
+            "155e4e346f8e8108e45d81a871d1454ada9e1a16"
+          ]
+        }
       },
       {
         "src": "/projects/14daypilot/jet-editorial.webp",
         "alt": "Jet CMS: article content management",
-        "caption": "cms-14daypilotjet: actual local Strapi content manager with sample content and placeholder media; no claim of live publishing."
+        "caption": "cms-14daypilotjet: actual local Strapi content manager with sample content and placeholder media; no claim of live publishing.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "f93904b0c7feafbcaea688d562a2c94932b8b120",
+            "be344b626686bcac471f60dd4f21107c17e6ac8e"
+          ]
+        }
       }
     ],
     "revision": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
     "runtime": "Public frontend and authenticated admin screens were captured in separate Mac-local sessions. Admin roles: DEVELOPER, superadmin, admin and Strapi Super Admin. Local databases and sample content only. Stored captures are historical evidence, not a current service-health claim.",
     "commits": [
       {
-        "sha": "a084c59b9e9d0aeb4bf4e1f128427cc5e4f7fec8",
-        "summary": "fix(pilot-blog): scroll to top on pagination and use server-side search"
+        "sha": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+        "summary": "compro14day-fe: fix: remove sticky/floating positioning from program page nav bar and sidebar",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/(main)/programs/airline-pilot-academy/_components/content-section.tsx, app/(main)/programs/airline-transition-training/airline-transition-training-client.tsx, app/(main)/programs/b737-type-rating/b737-type-rating-client.tsx. Additional changed files inspected."
+      },
+      {
+        "sha": "6da38b87c699b101362e848fc352f92a1c0e883f",
+        "summary": "compro14day-fe: fix: make video embeds in article content fill container width",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/globals.css."
+      },
+      {
+        "sha": "dae2c6b32ceb9caf72acc115b44743761955df5f",
+        "summary": "typerating-compro: OPI-1024: [14DAYPILOT][WEB] Revisi formulir Your pilot profile di landing page A320 Type Rating",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/a320-type-rating/a320-landing.tsx, lib/schemas/a320-profile-schema.ts, utils/actions/a320-profile.ts."
+      },
+      {
+        "sha": "29c6947251632b915265568458d6e4f86df23884",
+        "summary": "typerating-compro: feat: integrate Meta Pixel tracking for A320 landing page to enhance analytics and user tracking",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/a320-type-rating/a320-landing.tsx."
       },
       {
         "sha": "116a4646d5b425e88613708f0cf7fbda6b27595b",
-        "summary": "cmscompro: Implemented article activity-history interfaces and structured authorization/not-found responses across editorial content types."
+        "summary": "cmscompro: feat(cms): return UNAUTHORIZED/FORBIDDEN/ARTICLE_NOT_FOUND codes from activity log endpoints",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Http/Controllers/ArticleController.php, app/Http/Controllers/Concerns/RespondsWithActivityLog.php, app/Http/Controllers/TestimonialController.php. Additional changed files inspected."
+      },
+      {
+        "sha": "375264beb3b6f245ccd16f5ec130ef733ece8ba5",
+        "summary": "cmscompro: feat(cms): add Activity Log to Articles, TrueNorth, and Testimonial Articles",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Http/Controllers/ArticleController.php, app/Http/Controllers/Concerns/RespondsWithActivityLog.php, app/Http/Controllers/TestimonialController.php. Additional changed files inspected."
       },
       {
         "sha": "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
-        "summary": "admin-14daypilot: Added custom password-reset mail delivery and review-image download functionality."
+        "summary": "admin-14daypilot: feat: Implement custom SMTP mailer for password reset notifications in User model",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Models/User.php."
+      },
+      {
+        "sha": "ff1df0639734fb902d148d1f3d0d8fceaf59c1b8",
+        "summary": "admin-14daypilot: feat: Add JPG download functionality for reviews",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Modules/Review/Controllers/Api/ReviewApiController.php, app/Modules/Review/Services/ReviewService.php, app/Services/PdfService.php. Additional changed files inspected."
       },
       {
         "sha": "111276148eaaf2d989be7a7b05ebd503e4f89df1",
-        "summary": "elearning14day: Integrated video-upload/processing service support and migrated file-upload implementation to S3."
+        "summary": "elearning14day: feat(video-management): integrate MAM service for video uploads and processing",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/(admin)/admin/(content-management)/video-management/create/page.tsx, constants/encoder.ts, server/routes/admin/encoder.routes.ts. Additional changed files inspected."
+      },
+      {
+        "sha": "155e4e346f8e8108e45d81a871d1454ada9e1a16",
+        "summary": "elearning14day: feat(upload): migrate from Google Cloud Storage to AWS S3 for file uploads",
+        "author": "petrushandika",
+        "scope": "Changed implementation: bun.lock, package.json, server/utils/gcs-upload.ts."
       },
       {
         "sha": "f93904b0c7feafbcaea688d562a2c94932b8b120",
-        "summary": "cms-14daypilotjet: Added article activity-log administration and explicit authorization/not-found error handling."
+        "summary": "cms-14daypilotjet: feat(cms): return UNAUTHORIZED/FORBIDDEN/ARTICLE_NOT_FOUND codes from activity log endpoint",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/index.ts."
+      },
+      {
+        "sha": "be344b626686bcac471f60dd4f21107c17e6ac8e",
+        "summary": "cms-14daypilotjet: feat(cms): add Activity Log row action to Articles",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/admin/app.tsx, src/api/activity-log/content-types/activity-log/schema.json, src/index.ts."
+      },
+      {
+        "sha": "78c77ecd2ca2da12a77f97663264aeafd3d79145",
+        "summary": "typerating-compro: feat: enhance Airbus A320 training content with detailed program overviews and add training video",
+        "author": "petrushandika",
+        "scope": "A320 program overview, imagery and training-video component."
       }
     ],
     "accent": "#176a59",
@@ -188,7 +355,12 @@
         "description": "Public flight-academy website presenting pilot-training programs and editorial content.",
         "contribution": "Adjusted training-program navigation layouts and responsive article video embeds.",
         "sha": "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
-        "image": "/projects/14daypilot/1.webp"
+        "image": "/projects/14daypilot/1.webp",
+        "commitShas": [
+          "982858d35e235d9aa6a3c136b9e341d6f5ab5461",
+          "6da38b87c699b101362e848fc352f92a1c0e883f"
+        ],
+        "sourceRevision": "982858d35e235d9aa6a3c136b9e341d6f5ab5461"
       },
       {
         "name": "typerating-compro",
@@ -196,7 +368,12 @@
         "description": "Public jet/type-rating training website, including an Airbus A320 program landing page and pilot-profile enquiries.",
         "contribution": "Revised the A320 pilot-profile form, validation/action code and landing-page analytics integration.",
         "sha": "dae2c6b32ceb9caf72acc115b44743761955df5f",
-        "image": "/projects/14daypilot/jet-training.webp"
+        "image": "/projects/14daypilot/jet-training.webp",
+        "commitShas": [
+          "dae2c6b32ceb9caf72acc115b44743761955df5f",
+          "29c6947251632b915265568458d6e4f86df23884"
+        ],
+        "sourceRevision": "dae2c6b32ceb9caf72acc115b44743761955df5f"
       },
       {
         "name": "cmscompro",
@@ -204,7 +381,12 @@
         "description": "Content management for the 14DAYPILOT academy website, including articles, testimonials and program-related editorial content.",
         "contribution": "Implemented article activity-history interfaces and structured authorization/not-found responses across editorial content types.",
         "sha": "116a4646d5b425e88613708f0cf7fbda6b27595b",
-        "image": "/projects/14daypilot/editorial-roles.webp"
+        "image": "/projects/14daypilot/editorial-roles.webp",
+        "commitShas": [
+          "116a4646d5b425e88613708f0cf7fbda6b27595b",
+          "375264beb3b6f245ccd16f5ec130ef733ece8ba5"
+        ],
+        "sourceRevision": "116a4646d5b425e88613708f0cf7fbda6b27595b"
       },
       {
         "name": "admin-14daypilot",
@@ -212,15 +394,25 @@
         "description": "Flight-training administration and management application.",
         "contribution": "Added custom password-reset mail delivery and review-image download functionality.",
         "sha": "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
-        "image": "/projects/14daypilot/flight-operations.webp"
+        "image": "/projects/14daypilot/flight-operations.webp",
+        "commitShas": [
+          "1a13d2522fb2b30f6e78221cb3db660cee6ee614",
+          "ff1df0639734fb902d148d1f3d0d8fceaf59c1b8"
+        ],
+        "sourceRevision": "1a13d2522fb2b30f6e78221cb3db660cee6ee614"
       },
       {
         "name": "elearning14day",
         "kind": "Learning platform \u00b7 Next.js / Elysia",
         "description": "Online learning and digital-commerce platform for courses, quizzes and digital products.",
         "contribution": "Integrated video-upload/processing service support and migrated file-upload implementation to S3.",
-        "sha": "3ef6a18fb2d19e994e016502b512dc100b0f6089",
-        "image": "/projects/14daypilot/learning-chapters.webp"
+        "sha": "111276148eaaf2d989be7a7b05ebd503e4f89df1",
+        "image": "/projects/14daypilot/learning-chapters.webp",
+        "commitShas": [
+          "111276148eaaf2d989be7a7b05ebd503e4f89df1",
+          "155e4e346f8e8108e45d81a871d1454ada9e1a16"
+        ],
+        "sourceRevision": "3ef6a18fb2d19e994e016502b512dc100b0f6089"
       },
       {
         "name": "cms-14daypilotjet",
@@ -228,16 +420,17 @@
         "description": "Editorial CMS for the jet/type-rating website, managing articles, authors, categories and programs.",
         "contribution": "Added article activity-log administration and explicit authorization/not-found error handling.",
         "sha": "f93904b0c7feafbcaea688d562a2c94932b8b120",
-        "image": "/projects/14daypilot/jet-editorial.webp"
-      },
-      {
-        "name": "Fourteen-Day-Pilot",
-        "kind": "Mobile app \u00b7 Flutter \u00b7 team context",
-        "description": "Flutter mobile application within the 14DAYPILOT ecosystem; KB also groups a separate CMS with it.",
-        "contribution": "Related team application. No matching author evidence was found in the inspected local history; not claimed as my implementation. No runtime capture supplied.",
-        "sha": "5ab89af2d298cd78080ea82f48931e7fba20b569"
+        "image": "/projects/14daypilot/jet-editorial.webp",
+        "commitShas": [
+          "f93904b0c7feafbcaea688d562a2c94932b8b120",
+          "be344b626686bcac471f60dd4f21107c17e6ac8e"
+        ],
+        "sourceRevision": "f93904b0c7feafbcaea688d562a2c94932b8b120"
       }
-    ]
+    ],
+    "workType": "organization",
+    "organization": "Astronacci / 14DAYPILOT",
+    "captureStatus": "local-capture"
   },
   {
     "slug": "astronacci",
@@ -260,24 +453,45 @@
       "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied.",
       "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified.",
       "Implemented subscription activation/reminders and payment-processing safeguards; fixed membership access handling after early renewal.",
-      "Improved invoice reconciliation before creation and membership-to-accounting customer/package mapping."
+      "Improved invoice reconciliation before creation and membership-to-accounting customer/package mapping.",
+      "Implemented debounced quick-reply search and input-derived search state. Source evidence only; no runtime capture supplied.",
+      "Added a quick-reply chat method and DTO and refined grouped search filtering. Source evidence only; no runtime capture supplied.",
+      "Added Basic Plan entitlement and member-existence endpoints. Source evidence only; no runtime capture supplied.",
+      "Added feature-flagged server-side Basic Plan checks for Zoom links and Weekly Outlook. Source evidence only; live entitlement enforcement not exercised."
     ],
     "limitations": [
       "Available images show Ashop public account interfaces only. Other products are source-documented modules, not authenticated dashboard captures.",
       "Ashop local admin verification is incomplete: missing RBAC/schema objects blocked rendering. A local account row is not proof of full UI access. No production data or credentials are published.",
       "Related products and source-level links do not establish that a complete cross-service flow was tested. Payments, accounting sync, messaging and conversion delivery were not exercised.",
-      "Team/employer work: contribution scope is limited to inspected commits. Flutter apps are team context, not claimed as personal implementations."
+      "Only repositories with matching inspected author commits are listed as contributions. Related mobile apps without matching evidence are excluded; screenshots do not establish sole ownership.",
+      "The aclub_backend gating reference is from a historical local Git audit. The recorded SHA was unavailable through the current GitHub API; it is not freshly remote-verified."
     ],
     "images": [
       {
         "src": "/projects/astronacci/ashop-signin.webp",
         "alt": "Ashop storefront sign-in interface",
-        "caption": "web-ashop: actual Mac-local public sign-in screen. This is not an authenticated commerce dashboard or proof of checkout execution."
+        "caption": "web-ashop: actual Mac-local public sign-in screen. This is not an authenticated commerce dashboard or proof of checkout execution.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
+            "8b43eee189935b1b69d8f0c608759f0a664d8f2a"
+          ]
+        }
       },
       {
         "src": "/projects/astronacci/ashop-registration.webp",
         "alt": "Ashop storefront registration interface",
-        "caption": "web-ashop: actual public registration interface; no account submission or production service call exercised in this capture."
+        "caption": "web-ashop: actual public registration interface; no account submission or production service call exercised in this capture.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
+            "8b43eee189935b1b69d8f0c608759f0a664d8f2a"
+          ]
+        }
       }
     ],
     "revision": "8b43eee189935b1b69d8f0c608759f0a664d8f2a",
@@ -288,95 +502,225 @@
         "kind": "Ashop \u00b7 storefront \u00b7 React / Apollo",
         "description": "Customer storefront and account interfaces with guest-checkout campaign pages and purchase-tracking logic.",
         "contribution": "Implemented checkout/purchase tracking and deduplication handling. Inspected source changes; live ad-conversion delivery was not exercised.",
-        "sha": "8b43eee189935b1b69d8f0c608759f0a664d8f2a",
-        "image": "/projects/astronacci/ashop-signin.webp"
+        "sha": "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
+        "image": "/projects/astronacci/ashop-signin.webp",
+        "commitShas": [
+          "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
+          "8b43eee189935b1b69d8f0c608759f0a664d8f2a"
+        ],
+        "sourceRevision": "8b43eee189935b1b69d8f0c608759f0a664d8f2a"
       },
       {
         "name": "ashop/admin-ashop",
         "kind": "Ashop \u00b7 administration \u00b7 React / Apollo",
         "description": "Administration for products, transactions, campaign checkout pages, customer paths and sales reporting.",
         "contribution": "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied.",
-        "sha": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8"
+        "sha": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8",
+        "commitShas": [
+          "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8",
+          "8f8b2ef19dfe41c554fbee5fd85c75eddd3a11e2"
+        ],
+        "sourceRevision": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8"
       },
       {
         "name": "ashop/api-ashop",
         "kind": "Ashop \u00b7 services \u00b7 Express / PostGraphile",
         "description": "GraphQL and HTTP services supporting the Ashop storefront, campaign checkout and administration.",
         "contribution": "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified.",
-        "sha": "7de675d5febbb71e32b7a281754d7d7b6681f46f"
+        "sha": "7de675d5febbb71e32b7a281754d7d7b6681f46f",
+        "commitShas": [
+          "7de675d5febbb71e32b7a281754d7d7b6681f46f",
+          "791094734fed94a90db61f20898c01ac77cd83d3"
+        ],
+        "sourceRevision": "7de675d5febbb71e32b7a281754d7d7b6681f46f"
       },
       {
         "name": "astropay",
         "kind": "Payments & subscriptions \u00b7 Laravel",
         "description": "Astronacci membership, order and payment administration, including subscription activation and renewals.",
         "contribution": "Implemented subscription activation/reminders and payment-processing safeguards; fixed membership access handling after early renewal.",
-        "sha": "4185da7db0857c239ec7cc1e36c0482ea5d7e2bd"
+        "sha": "e2c49fdc1acf471e70b66cd0d718927de531862f",
+        "commitShas": [
+          "e2c49fdc1acf471e70b66cd0d718927de531862f",
+          "79f005a07e5d4db2eaae20ca20087e9759ad8e20"
+        ],
+        "sourceRevision": "4185da7db0857c239ec7cc1e36c0482ea5d7e2bd"
       },
       {
         "name": "accurate",
         "kind": "Accounting integration \u00b7 Laravel",
         "description": "Accounting integration and synchronization for customers, products, membership sales and invoices.",
         "contribution": "Improved invoice reconciliation before creation and membership-to-accounting customer/package mapping.",
-        "sha": "38e57f411ebf1c6630d673a8d9c4847e3777c50a"
+        "sha": "56a05fc793ce3a8120956f429442b9db9b616d01",
+        "commitShas": [
+          "56a05fc793ce3a8120956f429442b9db9b616d01",
+          "28ff34068a833126138ff67d0c883d415078946c"
+        ],
+        "sourceRevision": "38e57f411ebf1c6630d673a8d9c4847e3777c50a"
       },
       {
         "name": "crm-astronacci/frontend",
         "kind": "CRM \u00b7 frontend \u00b7 React",
         "description": "Customer-service and conversation interface in the CRM application family.",
         "contribution": "Implemented debounced quick-reply search and input-derived search state. Source evidence only; no runtime capture supplied.",
-        "sha": "b5391f9f16bdd6e79002ae01922a0b4ecf74159c"
+        "sha": "b5391f9f16bdd6e79002ae01922a0b4ecf74159c",
+        "commitShas": [
+          "b5391f9f16bdd6e79002ae01922a0b4ecf74159c",
+          "b895b51508c80a8c3f6fc8c742981c100c1bfd8a"
+        ],
+        "sourceRevision": "b5391f9f16bdd6e79002ae01922a0b4ecf74159c"
       },
       {
         "name": "crm-astronacci/backend",
         "kind": "CRM \u00b7 backend services",
         "description": "Backend search services supporting customer-service quick replies.",
         "contribution": "Added a quick-reply chat method and DTO and refined grouped search filtering. Source evidence only; no runtime capture supplied.",
-        "sha": "4164c09dabfa71e94714c163a70df91a63c48597"
+        "sha": "88281a3eb60f2902f0378f8964112a857776c1d9",
+        "commitShas": [
+          "88281a3eb60f2902f0378f8964112a857776c1d9",
+          "6381cc02825eed08b57b7fcb32b45ca7bfbbef87"
+        ],
+        "sourceRevision": "4164c09dabfa71e94714c163a70df91a63c48597"
       },
       {
         "name": "go-aclub",
         "kind": "Membership API \u00b7 Go",
         "description": "Member and subscription API in the Aclub application family.",
         "contribution": "Added Basic Plan entitlement and member-existence endpoints. Source evidence only; no runtime capture supplied.",
-        "sha": "fc7003ed3745c3466092af79d51d8e25063b9dfa"
+        "sha": "987798886ae860b69f3f92fce628b3dcfd002d47",
+        "commitShas": [
+          "987798886ae860b69f3f92fce628b3dcfd002d47",
+          "bbb57fa71331aa05f9556dbb2a73b1363b6ac458"
+        ],
+        "sourceRevision": "fc7003ed3745c3466092af79d51d8e25063b9dfa"
       },
       {
         "name": "aclub_backend",
         "kind": "Membership access \u00b7 backend",
         "description": "Backend access checks for subscription-gated Aclub content.",
-        "contribution": "Added feature-flagged server-side Basic Plan checks for Zoom links and Weekly Outlook. Source evidence only; live entitlement enforcement not exercised.",
-        "sha": "8d3dce01d5fa8605ad45fdb37b76629be6903560"
-      },
-      {
-        "name": "aclub-superapp",
-        "kind": "Mobile app \u00b7 Flutter \u00b7 team context",
-        "description": "Astronacci mobile superapp with community/chat features.",
-        "contribution": "Related mobile team product. No matching personal author evidence in the inspected history; no implementation ownership or runtime claim.",
-        "sha": "d31da981b9c66569494eb64258e86f3a21c02353"
+        "contribution": "Historical local commit evidence: feature-flagged Basic Plan checks for Zoom links and Weekly Outlook. The recorded commit could not be reverified on GitHub; live behavior was not exercised.",
+        "sha": "b5be89b3b05c67343775d05168d5cd5e228287c5",
+        "commitShas": [
+          "b5be89b3b05c67343775d05168d5cd5e228287c5"
+        ],
+        "sourceRevision": "8d3dce01d5fa8605ad45fdb37b76629be6903560"
       }
     ],
     "accent": "#a72e36",
     "commits": [
       {
         "sha": "61f46f7b6f7ad1b66cbeda97f85dc72fe0ed8a0a",
-        "summary": "Implemented checkout/purchase tracking and deduplication handling. Inspected source changes; live ad-conversion delivery was not exercised."
+        "summary": "ashop/web-ashop: ATR-3690: As a marketer, I want checkout and purchase events sent to Google Analytics 4 and Meta Pixel without duplicates, so that ad conversions are counted correctly.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/page/GuestCheckout/GuestCheckoutForm.tsx, src/page/GuestCheckout/ThankYou.tsx, src/page/GuestCheckout/orderStatus.ts. Additional changed files inspected."
+      },
+      {
+        "sha": "8b43eee189935b1b69d8f0c608759f0a664d8f2a",
+        "summary": "ashop/web-ashop: ATR-3691: As a marketer, I want purchases also sent to Meta through the Conversions API from the server, so that conversions are still counted when the browser blocks the Pixel.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/App.tsx."
       },
       {
         "sha": "e77c1fc3cdd54ef61c364ed80bee8ac202298ec8",
-        "summary": "Implemented guest-checkout page configuration and transaction filtering with campaign totals. Local admin runtime is still blocked by RBAC/schema drift; no successful dashboard capture supplied."
+        "summary": "ashop/admin-ashop: ATR-3684: As an admin, I want transactions labelled and filterable by guest checkout page with order and revenue totals, so that I can measure each campaign's sales.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/page/GuestCheckout/index.tsx, src/page/GuestCheckout/list.test.ts."
+      },
+      {
+        "sha": "8f8b2ef19dfe41c554fbee5fd85c75eddd3a11e2",
+        "summary": "ashop/admin-ashop: ATR-3682: As an admin, I want to create and edit a guest checkout page by choosing a product, URL slug, period and tracking IDs, so that I can launch a no-login checkout link for a campaign.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/page/GuestCheckout/index.tsx, src/page/GuestCheckout/list.test.ts."
       },
       {
         "sha": "7de675d5febbb71e32b7a281754d7d7b6681f46f",
-        "summary": "Implemented campaign transaction reporting and server-side conversion integration. Local schema migration and API reachability were checked previously, but full authenticated admin and payment flows are not verified."
+        "summary": "ashop/api-ashop: ATR-3684: As an admin, I want transactions labelled and filterable by guest checkout page with order and revenue totals, so that I can measure each campaign's sales.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: migrations/sqls/20261112150000-guest-checkout-page-stats-up.sql, test/guest-checkout/page-stats.test.ts."
+      },
+      {
+        "sha": "791094734fed94a90db61f20898c01ac77cd83d3",
+        "summary": "ashop/api-ashop: ATR-3691: As a marketer, I want purchases also sent to Meta through the Conversions API from the server, so that conversions are still counted when the browser blocks the Pixel.",
+        "author": "petrushandika",
+        "scope": "Changed implementation: migrations/sqls/20261112100000-guest-checkout-landing-pages-down.sql, migrations/sqls/20261112100000-guest-checkout-landing-pages-up.sql, src/server.ts. Additional changed files inspected."
+      },
+      {
+        "sha": "e2c49fdc1acf471e70b66cd0d718927de531862f",
+        "summary": "astropay: fix(members): keep Futures/Crypto access after an early renewal",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Console/Commands/SyncStartingMemberships.php, app/Console/Kernel.php, app/Http/Controllers/Controller.php. Additional changed files inspected."
+      },
+      {
+        "sha": "79f005a07e5d4db2eaae20ca20087e9759ad8e20",
+        "summary": "astropay: feat(basic-plan): subscription activation, manual activation, status link email, expiry reminder, BCA flag idempotency and traffic log",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Console/Commands/SendBasicPlanExpiryReminders.php, app/Console/Commands/SyncBasicPlanToAclub.php, app/Console/Kernel.php. Additional changed files inspected."
+      },
+      {
+        "sha": "56a05fc793ce3a8120956f429442b9db9b616d01",
+        "summary": "accurate: fix(basic-plan): reconcile existing invoice before create and hold sync on check failure",
+        "author": "petrushandika",
+        "scope": "Changed implementation: app/Http/Requests/SyncBasicPlanRequest.php, app/Services/BasicPlanSyncService.php, tests/Feature/BasicPlanSyncServiceTest.php."
+      },
+      {
+        "sha": "28ff34068a833126138ff67d0c883d415078946c",
+        "summary": "accurate: fix(membership): map Stocks packages and fix duplicate-customer retry",
+        "author": "petrushandika",
+        "scope": "Changed implementation: .gitignore, app/Traits/ResolvesAccurateCustomer.php, config/membership_sync.php."
+      },
+      {
+        "sha": "b5391f9f16bdd6e79002ae01922a0b4ecf74159c",
+        "summary": "crm-astronacci/frontend: refactor: simplify quick reply search logic by removing backspace listener and deriving query from input state",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/pages/app/chat/ChatBody.js."
+      },
+      {
+        "sha": "b895b51508c80a8c3f6fc8c742981c100c1bfd8a",
+        "summary": "crm-astronacci/frontend: feat: implement debounced quick reply search using new serviceGetQuickReplyChat API",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/pages/app/chat/ChatBody.js, src/pages/app/instagram/IgChatBody.js, src/services/quickReply.js."
+      },
+      {
+        "sha": "88281a3eb60f2902f0378f8964112a857776c1d9",
+        "summary": "crm-astronacci/backend: feat: add quick reply chat method and dto",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/modules/quick-reply/dtos/quick-reply-chat-options.dto.ts, src/modules/quick-reply/quick-reply.controller.ts, src/modules/quick-reply/quick-reply.service.ts."
+      },
+      {
+        "sha": "6381cc02825eed08b57b7fcb32b45ca7bfbbef87",
+        "summary": "crm-astronacci/backend: refactor(quick-reply): use brackets for search query filtering",
+        "author": "petrushandika",
+        "scope": "Changed implementation: src/modules/quick-reply/quick-reply.service.ts."
+      },
+      {
+        "sha": "987798886ae860b69f3f92fce628b3dcfd002d47",
+        "summary": "go-aclub: feat(basic-plan): entitlement endpoint GET /me/subscriptions/basic-plan",
+        "author": "petrushandika",
+        "scope": "Changed implementation: pkg/handlers/basic_plan_entitlement_handler.go, pkg/handlers/basic_plan_entitlement_test.go, pkg/routes/protected_routes.go."
+      },
+      {
+        "sha": "bbb57fa71331aa05f9556dbb2a73b1363b6ac458",
+        "summary": "go-aclub: feat(member): add GET /api/v1/member-exists for the Basic Plan landing page",
+        "author": "petrushandika",
+        "scope": "Changed implementation: pkg/handlers/member_exists_test.go, pkg/handlers/member_membership_status_handler.go, pkg/routes/public_routes.go."
+      },
+      {
+        "sha": "b5be89b3b05c67343775d05168d5cd5e228287c5",
+        "summary": "aclub_backend: feat(basic-plan): server-side gating for Zoom links and Weekly Outlook behind BASIC_PLAN_GATING_ENABLED",
+        "author": "petrushandika",
+        "scope": "Changed implementation: application/controllers/api/Aboutfuture.php, application/controllers/api/Aboutstock.php, application/controllers/api/Outlook.php. Additional changed files inspected."
       }
-    ]
+    ],
+    "workType": "organization",
+    "organization": "Astronacci",
+    "captureStatus": "local-capture"
   },
   {
     "slug": "jetflow",
     "title": "JETFLOW / A320",
-    "category": "Team project \u00b7 Aviation",
+    "category": "Organization contribution \u00b7 14DAYPILOT sub-case",
     "role": "Frontend contributor \u2014 Astronacci / 14DAYPILOT team",
-    "summary": "Public type-rating program interfaces with clearer training information and pilot enquiry input handling.",
+    "summary": "A closer look at the A320 type-rating website within 14DAYPILOT, not a separate product: training content and pilot enquiry input handling.",
     "stack": [
       "Next.js",
       "React",
@@ -395,12 +739,26 @@
       {
         "src": "/projects/jetflow/1.webp",
         "alt": "JETFLOW / A320 \u2014 Type-rating homepage",
-        "caption": "Type-rating homepage. Actual Mac-local browser capture; no production form submission."
+        "caption": "Type-rating homepage. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "context",
+          "note": "Application context only. The referenced commits establish my scoped implementation; this screen does not demonstrate those changes.",
+          "commitShas": [
+            "78c77ecd2ca2da12a77f97663264aeafd3d79145"
+          ]
+        }
       },
       {
         "src": "/projects/jetflow/2.webp",
         "alt": "JETFLOW / A320 \u2014 A320 program page",
-        "caption": "A320 program page. Actual Mac-local browser capture; no production form submission."
+        "caption": "A320 program page. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the A320 program area covered by my content/form changes. Enquiry submission and analytics delivery were not exercised.",
+          "commitShas": [
+            "78c77ecd2ca2da12a77f97663264aeafd3d79145"
+          ]
+        }
       }
     ],
     "revision": "dae2c6b32ceb9caf72acc115b44743761955df5f",
@@ -408,9 +766,26 @@
     "commits": [
       {
         "sha": "78c77ecd2ca2da12a77f97663264aeafd3d79145",
-        "summary": "feat: enhance Airbus A320 training content with detailed program overviews and add training video"
+        "summary": "feat: enhance Airbus A320 training content with detailed program overviews and add training video",
+        "author": "petrushandika",
+        "scope": "Inspected changes: app/(main)/program/airbus-a320-type-rating/airbus-a320-type-rating.tsx, app/a320-type-rating/a320-landing.tsx"
+      },
+      {
+        "sha": "dae2c6b32ceb9caf72acc115b44743761955df5f",
+        "summary": "OPI-1024: [14DAYPILOT][WEB] Revisi formulir Your pilot profile di landing page A320 Type Rating",
+        "author": "petrushandika",
+        "scope": "Pilot-profile form, validation and action changes; submission not exercised."
+      },
+      {
+        "sha": "f883bf5b6486bcdc67ffd4b708dfc4823f4ed7d3",
+        "author": "petrushandika",
+        "summary": "feat: add phone number input with country code selection to A320 profile form",
+        "scope": "Inspected implementation: app/a320-type-rating/a320-landing.tsx, lib/country-dial-codes.ts, lib/schemas/a320-profile-schema.ts."
       }
-    ]
+    ],
+    "workType": "organization",
+    "organization": "Astronacci / 14DAYPILOT",
+    "captureStatus": "local-capture"
   },
   {
     "slug": "scalp",
@@ -437,12 +812,26 @@
       {
         "src": "/projects/scalp/1.webp",
         "alt": "Scalp Analytics \u2014 Sign-in interface",
-        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission."
+        "caption": "Sign-in interface. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the authentication layouts changed in my commit. Login, medical analysis and dashboard data are not exercised.",
+          "commitShas": [
+            "c458f720bcb3e94327860db5e8533cde7300c5f3"
+          ]
+        }
       },
       {
         "src": "/projects/scalp/2.webp",
         "alt": "Scalp Analytics \u2014 Registration interface",
-        "caption": "Registration interface. Actual Mac-local browser capture; no production form submission."
+        "caption": "Registration interface. Actual Mac-local browser capture; no production form submission.",
+        "evidence": {
+          "kind": "contribution",
+          "note": "Shows the authentication layouts changed in my commit. Login, medical analysis and dashboard data are not exercised.",
+          "commitShas": [
+            "c458f720bcb3e94327860db5e8533cde7300c5f3"
+          ]
+        }
       }
     ],
     "revision": "c458f720bcb3e94327860db5e8533cde7300c5f3",
@@ -451,9 +840,207 @@
       {
         "sha": "c458f720bcb3e94327860db5e8533cde7300c5f3",
         "summary": "feat(frontend): polish UI consistency, light sidebar, premium lucide icons, and grid meal logger",
+        "author": "petrushandika",
+        "scope": "Inspected changes: Frontend/app/(auth)/login/page.tsx, Frontend/app/(auth)/register/page.tsx, Frontend/app/(dashboard)/layout.tsx, Frontend/components/auth/Login.tsx",
         "url": "https://github.com/petrushandika/Scalp-Analytics/commit/c458f720bcb3e94327860db5e8533cde7300c5f3"
       }
     ],
-    "repository": "https://github.com/petrushandika/Scalp-Analytics"
+    "repository": "https://github.com/petrushandika/Scalp-Analytics",
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "local-capture"
+  },
+  {
+    "slug": "aesthetics-skin",
+    "title": "The Aesthetics Skin",
+    "category": "Organization contribution \u00b7 Source study",
+    "role": "Scoped contributor \u2014 team-owned application",
+    "summary": "Scoped frontend, dashboard and backend contributions to a team-owned skincare commerce application.",
+    "stack": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "NestJS",
+      "Prisma"
+    ],
+    "contributions": [
+      "Implemented product-list pagination and sorting.",
+      "Improved authentication and cart fetching error handling.",
+      "Refined Prisma connection handling and migrated product dashboard/API components."
+    ],
+    "limitations": [
+      "Source-reviewed case study. No verified application screenshot or runtime session is supplied for this entry.",
+      "Commit authorship supports only the changes described, not sole ownership, production readiness or measured business outcomes."
+    ],
+    "images": [],
+    "revision": "5c47f1ac54664b6e058f156cdcb894b5a109d557",
+    "runtime": "GitHub author-matched non-merge commit details and changed implementation files were reviewed. Application behavior was not exercised for this case study.",
+    "commits": [
+      {
+        "sha": "5c47f1ac54664b6e058f156cdcb894b5a109d557",
+        "author": "petrushandika",
+        "summary": "feat(product): add product list section with pagination and sorting",
+        "scope": "Inspected implementation: src/app/(main)/product/components/FilterSection.tsx, src/app/(main)/product/components/ProductListSection.tsx, src/app/(main)/product/page.tsx, src/styles/globals.css."
+      },
+      {
+        "sha": "a82998600d1e605a46c02e1a5f0494bc96c4c46b",
+        "author": "petrushandika",
+        "summary": "refactor: improve user and cart fetching logic with error handling",
+        "scope": "Inspected implementation: src/context/AuthContext.tsx, src/context/CartContext.tsx."
+      },
+      {
+        "sha": "e7c99e161595f9a11e9adbed91528ffe87d120fe",
+        "author": "petrushandika",
+        "summary": "refactor(prisma): enhance database connection handling with logging and skip option",
+        "scope": "Inspected implementation: src/main.ts, src/prisma/prisma.service.ts."
+      },
+      {
+        "sha": "1ee4942e3a1e1f4c0a3c797e0145d263ef5cefbb",
+        "author": "petrushandika",
+        "summary": "feat: migrate core code to new architecture",
+        "scope": "Inspected implementation: .gitignore, src/components/ui/dialog.tsx, src/configs/config.ts, src/networks/api.ts."
+      }
+    ],
+    "workType": "organization",
+    "organization": "The Aesthetics Skin",
+    "captureStatus": "source-only"
+  },
+  {
+    "slug": "qa-automation",
+    "title": "QA Automation",
+    "category": "Personal project \u00b7 Source study",
+    "role": "Scoped contributor \u2014 personal repository",
+    "summary": "Engineering work on a QA application: connecting browser-run pipelines to an existing knowledge-search service.",
+    "stack": [
+      "Go",
+      "HTTP APIs",
+      "Knowledge retrieval"
+    ],
+    "contributions": [
+      "Integrated knowledge-search HTTP results into the browser pipeline.",
+      "Added contract and error-path tests for retrieval integration; this does not claim authorship of the underlying vector-search engine."
+    ],
+    "limitations": [
+      "Source-reviewed case study. No verified application screenshot or runtime session is supplied for this entry.",
+      "Commit authorship supports only the changes described, not sole ownership, production readiness or measured business outcomes."
+    ],
+    "images": [],
+    "revision": "efd16adc39de5a495973db68c199044810861a17",
+    "runtime": "GitHub author-matched non-merge commit details and changed implementation files were reviewed. Application behavior was not exercised for this case study.",
+    "commits": [
+      {
+        "sha": "efd16adc39de5a495973db68c199044810861a17",
+        "author": "petrushandika",
+        "summary": "feat: preserve deployed pgvector knowledge retrieval",
+        "scope": "Inspected implementation: apps/api/internal/assistant/knowledge.go, apps/api/internal/pipeline/browser.go, apps/api/internal/pipeline/kb_search_test.go."
+      }
+    ],
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "source-only"
+  },
+  {
+    "slug": "inventory-management",
+    "title": "Inventory Management",
+    "category": "Personal project \u00b7 Source study",
+    "role": "Scoped contributor \u2014 personal repository",
+    "summary": "Full-stack inventory changes connecting minimum-stock rules, product forms, stock alerts and report exports.",
+    "stack": [
+      "Next.js",
+      "TypeScript",
+      "Prisma"
+    ],
+    "contributions": [
+      "Added minimum-stock fields and validation across schema, controllers and product forms.",
+      "Added stock-state indicators and CSV, Excel, PDF and print export integration."
+    ],
+    "limitations": [
+      "Source-reviewed case study. No verified application screenshot or runtime session is supplied for this entry.",
+      "Commit authorship supports only the changes described, not sole ownership, production readiness or measured business outcomes."
+    ],
+    "images": [],
+    "revision": "5267ba13fa48034ffb93ff2b125fbf06e8b8665d",
+    "runtime": "GitHub author-matched non-merge commit details and changed implementation files were reviewed. Application behavior was not exercised for this case study.",
+    "commits": [
+      {
+        "sha": "5267ba13fa48034ffb93ff2b125fbf06e8b8665d",
+        "author": "petrushandika",
+        "summary": "feat: add minimum stock management to products, update product creation and editing forms, enhance inventory and product pages with stock status indicators, and integrate report export functionality across various components",
+        "scope": "Inspected implementation: client/package-lock.json, client/package.json, client/src/app/(components)/ExportReportMenu/index.tsx, client/src/app/(components)/Navbar/index.tsx.",
+        "url": "https://github.com/petrushandika/Inventory-Management/commit/5267ba13fa48034ffb93ff2b125fbf06e8b8665d"
+      }
+    ],
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "source-only",
+    "repository": "https://github.com/petrushandika/Inventory-Management"
+  },
+  {
+    "slug": "auth-service",
+    "title": "Auth Service",
+    "category": "Personal project \u00b7 Source study",
+    "role": "Scoped contributor \u2014 personal repository",
+    "summary": "Backend authentication work focused on confidential-client validation during OAuth token exchange.",
+    "stack": [
+      "Go",
+      "OAuth"
+    ],
+    "contributions": [
+      "Required client-secret validation for confidential clients.",
+      "Updated exchange-handler error responses and API documentation."
+    ],
+    "limitations": [
+      "Source-reviewed case study. No verified application screenshot or runtime session is supplied for this entry.",
+      "Commit authorship supports only the changes described, not sole ownership, production readiness or measured business outcomes."
+    ],
+    "images": [],
+    "revision": "4296e0d8286347f42a953da430b804a37d26fe95",
+    "runtime": "GitHub author-matched non-merge commit details and changed implementation files were reviewed. Application behavior was not exercised for this case study.",
+    "commits": [
+      {
+        "sha": "4296e0d8286347f42a953da430b804a37d26fe95",
+        "author": "petrushandika",
+        "summary": "Enhance OAuth exchange process by requiring client_secret for confidential clients and updating error handling for invalid credentials",
+        "scope": "Inspected implementation: docs/api.md, internal/handler/identity.go, internal/service/oauth.go."
+      }
+    ],
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "source-only"
+  },
+  {
+    "slug": "supervisor-cli",
+    "title": "Supervisor CLI",
+    "category": "Personal project \u00b7 Source study",
+    "role": "Scoped contributor \u2014 personal repository",
+    "summary": "An interactive command-line interface, implemented as the default CLI entry point.",
+    "stack": [
+      "TypeScript",
+      "CLI"
+    ],
+    "contributions": [
+      "Added an interactive shell module.",
+      "Connected the default CLI action to the interactive command flow."
+    ],
+    "limitations": [
+      "Source-reviewed case study. No verified application screenshot or runtime session is supplied for this entry.",
+      "Commit authorship supports only the changes described, not sole ownership, production readiness or measured business outcomes."
+    ],
+    "images": [],
+    "revision": "97a2d47a3fad6e6cb31f7ce7439634421f07d33d",
+    "runtime": "GitHub author-matched non-merge commit details and changed implementation files were reviewed. Application behavior was not exercised for this case study.",
+    "commits": [
+      {
+        "sha": "97a2d47a3fad6e6cb31f7ce7439634421f07d33d",
+        "author": "petrushandika",
+        "summary": "feat: add futuristic interactive shell as default command",
+        "scope": "Inspected implementation: src/cli.ts, src/commands/interactive.ts.",
+        "url": "https://github.com/petrushandika/Supervisor-CLI/commit/97a2d47a3fad6e6cb31f7ce7439634421f07d33d"
+      }
+    ],
+    "workType": "personal",
+    "organization": "Personal projects",
+    "captureStatus": "source-only",
+    "repository": "https://github.com/petrushandika/Supervisor-CLI"
   }
 ]

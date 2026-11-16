@@ -1,0 +1,7 @@
+/* The reference stylesheet is precompiled; new utilities need explicit CSS. */
+[data-work-list] { max-height: 26vh; overflow-y: auto; overscroll-behavior: contain; padding-right: 8px; scrollbar-width: thin; }
+[aria-label="Filter work by ownership"] { display: flex; flex-wrap: wrap; gap: 8px; }
+[aria-label="Filter work by ownership"] button { min-height: 44px; padding: 8px 12px; border: 1px solid #a3a39c; border-radius: 999px; background: #ffffffb3; color: #1c1c1c; font-size: 12px; }
+[aria-label="Filter work by ownership"] button[aria-pressed="true"] { background: #1c1c1c; color: #fff; border-color: #1c1c1c; }
+[aria-label="Filter work by ownership"] button:focus-visible { outline: 2px solid #354f78; outline-offset: 3px; }
+@media (min-width: 1024px) { [data-work-list] { max-height: 46vh; } #works > div > div > div { transform: none; max-width: 48%; } }
