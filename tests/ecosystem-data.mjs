@@ -7,7 +7,7 @@ for (const name of ['compro14day-fe','typerating-compro','cmscompro','admin-14da
 }
 const astro = projects.find(p => p.slug === 'astronacci');
 assert(astro, 'Missing Astronacci ecosystem');
-for (const name of ['web-ashop','admin-ashop','api-ashop']) assert(astro.modules.some(m => m.name.includes(name)), `Astronacci missing ${name}`);
+for (const name of ['web-ashop','admin-ashop','crm-astronacci/frontend']) assert(astro.modules.some(m => m.name.includes(name)), `Astronacci missing ${name}`);
 for (const project of projects) {
   for (const image of project.images) {
     assert(image.src.startsWith('/projects/') && !image.src.includes('..'));

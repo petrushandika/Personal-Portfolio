@@ -152,7 +152,7 @@ export function ProjectPage({ project }: { project: Project }) {
 
           {project.images[0] && <motion.div className="project-hero-stage" {...reveal()}>{screenshot(project.images[0], 0)}<div className="project-hero-note"><span>01 / Application preview</span><span>Actual application capture ↗</span></div></motion.div>}
 
-          {project.captureStatus === 'source-only' && <section className="project-source-study" aria-label="Source-reviewed contribution"><p className="project-eyebrow">Source-reviewed work · {project.organization}</p><h2>Code changes<span>.</span></h2><p>{project.summary}</p><div className="project-source-study__facts"><span>{project.commits.length} author-matched commit references</span><span>No runtime capture published</span></div></section>}
+          {project.captureStatus === 'source-only' && <section className="project-source-study" aria-label="Source-reviewed contribution"><p className="project-eyebrow">Project · {project.organization}</p><h2>Code changes<span>.</span></h2><p>{project.summary}</p><div className="project-source-study__facts"><span>{project.commits.length} commit references</span><span>Screenshots not available</span></div></section>}
 
           {activeModule && <motion.section className="project-modules" {...reveal()} aria-labelledby={`${moduleId}-heading`}>
             <div className="project-section-heading"><div><p className="project-eyebrow">Projects</p><h2 id={`${moduleId}-heading`}>Related applications<span>.</span></h2></div><span className="project-section-index">01 — Explore</span></div>
@@ -181,10 +181,10 @@ export function ProjectPage({ project }: { project: Project }) {
           </motion.section>}
 
           <motion.section className="project-card project-contributions" {...reveal()}>
-            <p className="project-eyebrow">The work behind the screen</p><h2>What I contributed<span>.</span></h2>
+            <p className="project-eyebrow">Contribution</p><h2>My changes<span>.</span></h2>
             {project.contributions.length > 0 ? <ul className="project-list">{project.contributions.map((item, index) => <li key={index}><span className="project-list-number" aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{item}</span></li>)}</ul> : <p>Contribution details have not been supplied.</p>}
           </motion.section>
-          <motion.section className="project-card project-stack" {...reveal(0.1)}><p className="project-eyebrow">Built with</p><h2>The toolkit<span>.</span></h2><ul className="project-tags">{project.stack.map((item, index) => <li key={index}>{item}</li>)}</ul><span className="project-stack-mark" aria-hidden="true">↗</span></motion.section>
+          <motion.section className="project-card project-stack" {...reveal(0.1)}><p className="project-eyebrow">Built with</p><h2>Technologies<span>.</span></h2><ul className="project-tags">{project.stack.map((item, index) => <li key={index}>{item}</li>)}</ul><span className="project-stack-mark" aria-hidden="true">↗</span></motion.section>
 
           {project.images.length > 1 && <motion.section className="project-gallery" aria-label="Project screenshots" {...reveal()}>
             <div className="project-section-heading"><div><p className="project-eyebrow">Gallery</p><h2>Screenshots<span>.</span></h2></div><div className="project-controls"><button type="button" aria-label="Previous gallery screenshot" onClick={() => selectImage((selectedIndex - 1 + project.images.length) % project.images.length)}>←</button><span aria-live="polite">{String(selectedIndex + 1).padStart(2, '0')} / {String(project.images.length).padStart(2, '0')}</span><button type="button" aria-label="Next gallery screenshot" onClick={() => selectImage((selectedIndex + 1) % project.images.length)}>→</button></div></div>
@@ -195,7 +195,7 @@ export function ProjectPage({ project }: { project: Project }) {
             <p className="project-gallery-note">Scroll to browse. Focus a frame to preview; select to expand.</p>
           </motion.section>}
 
-          <div className="project-capture-note"><span aria-hidden="true">↳</span><p>{project.captureStatus === 'source-only' ? 'Source evidence, not a runtime demonstration.' : 'Real application captures, not mockups.'} {project.limitations[0] ?? 'Screens show the captured revision; availability and data may differ from production.'}</p></div>
+          <div className="project-capture-note"><span aria-hidden="true">↳</span><p>{project.captureStatus === 'source-only' ? 'No runtime screenshots are available.' : 'Captured from the local application.'} {project.limitations[0] ?? 'Screens show the captured revision; availability and data may differ from production.'}</p></div>
           <details className="project-evidence"><summary><span>Technical notes</span><span className="project-evidence-summary">Source evidence, runtime & caveats <span aria-hidden="true">＋</span></span></summary><div className="project-evidence-grid">
             <section><p className="project-eyebrow">Source evidence</p><h2>Commits & revision</h2><dl className="project-facts"><div><dt>Reference revision (capture details below)</dt><dd><code>{project.revision}</code></dd></div></dl>
               {project.commits.length > 0 ? <ul className="project-commits">{project.commits.map((commit, index) => {

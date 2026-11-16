@@ -11,6 +11,9 @@
 ## Capture boundaries
 Admin training-program, CMS role-management, e-learning chapter-management and Strapi article screens are actual local captures with sample data. Account areas are visibly redacted, not replaced with invented UI. Blank dashboards, CMS broken-thumbnail list and Strapi soft-404 builder are excluded. Public Ashop account pages are the only successful Ashop captures; admin RBAC repair is incomplete. No production-service end-to-end claim.
 
+## Frontend requirement
+Only applications with frontend source are listed. Standalone Auth Service, Supervisor CLI, Ashop API, payment/accounting integrations and membership backends are excluded. QA Automation remains because its inspected tree contains web pages; the selected contribution is explicitly backend integration within that application. CMS/admin interfaces qualify. `frontend` records identify inspected paths and revisions without treating frontend presence as proof of personal UI authorship. `tests/frontend-selection.mjs` checks this selection.
+
 ## Contributions
 Core modules use bounded summaries from inspected changes, not commit counts as proof of full ownership. Applications without matching author evidence are excluded from the contribution selector. Existing personal-project routes and legacy aliases remain intact.
 
