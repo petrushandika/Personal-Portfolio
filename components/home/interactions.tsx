@@ -199,57 +199,30 @@ function TreeRow({
 }
 
 export function WorksTree({ onBrief }: { onBrief: (id: string) => void }) {
-  const reducedMotion = useReducedMotion();
+  const [folders, setFolders] = useState<string[]>([]);
   const [open, setOpen] = useState<string | null>(null);
-  const [filter, setFilter] = useState("all");
   return (
-    <div className="flex flex-col gap-2 md:gap-4 w-full">
-      <div className="flex flex-wrap gap-2" role="group" aria-label="Filter work by ownership">
-        {[["all", "All work"], ["personal", "Personal"], ["organization", "Organization"]].map(([value, label]) => <button key={value} type="button" aria-pressed={filter === value} onClick={() => { setFilter(value); setOpen(null); }} className={`min-h-11 rounded-full border px-3 py-2 text-xs transition-colors ${filter === value ? "bg-[#1c1c1c] text-white border-[#1c1c1c]" : "bg-white/70 text-[#1c1c1c] border-black/20"}`}>{label}</button>)}
-      </div>
-      <div className="max-h-[32vh] lg:max-h-[52vh] overflow-y-auto overscroll-contain pr-2" data-work-list>
-      {studies.filter(study => filter === "all" || study.workType === filter).map((study) => (
-        <div key={study.id} className="w-full">
-          <TreeRow
-            name={study.name}
-            icon={open === study.id ? "folder-open" : "folder"}
-            expanded={open === study.id}
-            onClick={() => setOpen(open === study.id ? null : study.id)}
-          />
-          <AnimatePresence>
-            {open === study.id && (
-              <motion.div
-                initial={reducedMotion ? false : { height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: reducedMotion ? 0 : 0.3, ease: "easeInOut" }}
-                className="overflow-hidden"
-              >
-                <div className="w-full">
-                  <TreeRow
-                    child
-                    name="brief"
-                    icon="file"
-                    onClick={() => onBrief(`${study.id}-brief`)}
-                  />
-                </div>
-                <div className="w-full">
-                  <TreeRow
-                    child
-                    name={study.label}
-                    icon="file"
-                    onClick={() => {
-                      window.location.href = study.url;
-                    }}
-                  />
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
-      ))}
-      </div>
-      <p className="text-xs">Scroll the list to explore more work.</p>
+    <div className="work-folders">
+    <div data-work-list>
+      {[["personal", "Personal"], ["organization", "Company"]].map(([kind, name]) => {
+        const expanded = folders.includes(kind);
+        return <div key={kind} data-work-folder={kind}>
+          <TreeRow name={name} icon={expanded ? "folder-open" : "folder"} expanded={expanded}
+            onClick={() => setFolders(current => expanded ? current.filter(item => item !== kind) : [...current, kind])} />
+          {expanded && <div className="work-folder-children">
+            {studies.filter(study => study.workType === kind).map(study => <div key={study.id}>
+              <TreeRow name={study.name} icon={open === study.id ? "folder-open" : "folder"} expanded={open === study.id}
+                onClick={() => setOpen(open === study.id ? null : study.id)} />
+              {open === study.id && <div className="work-project-files">
+                <TreeRow child name="brief" icon="file" onClick={() => onBrief(`${study.id}-brief`)} />
+                <a className="work-project-link" href={study.url}><Icon name="file" className="w-6 h-6" />Project</a>
+              </div>}
+            </div>)}
+          </div>}
+        </div>;
+      })}
+    </div>
+    {folders.length > 0 && <p className="work-scroll-hint">Scroll to see all projects.</p>}
     </div>
   );
 }

@@ -11,10 +11,15 @@ import {
 } from "./home/interactions";
 
 /** The original five full-screen compositions, with editable content and local media. */
-export default function Home() {
+export default function Home({ initialSection = "home" }: { initialSection?: string }) {
   const [activeIndex, setActiveIndex] = useState(0);
   const [brief, setBrief] = useState<string | null>(null);
   const sections = useRef<(HTMLElement | null)[]>([]);
+
+  useEffect(() => {
+    const target = document.getElementById(initialSection);
+    target?.scrollIntoView({ behavior: 'instant' });
+  }, [initialSection]);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -88,7 +93,7 @@ export default function Home() {
                 Selected Projects
               </h2>
               <p className="text-xs">
-                My contributions, verified commits, and real local captures.
+                Personal projects and work with company teams.
               </p>
               <div className="w-full lg:pl-4 mt-2 md:mt-6">
                 <WorksTree onBrief={setBrief} />

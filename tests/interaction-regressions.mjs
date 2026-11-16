@@ -12,6 +12,7 @@ try {
  await next.click();await p.waitForTimeout(400);
  assert(Math.abs(await p.evaluate(()=>scrollY)-before)<3,'Gallery navigation moved page vertically');
  await p.goto(origin+'/');await p.locator('#works').scrollIntoViewIfNeeded();
+ await p.getByRole('button',{name:'Personal',exact:true}).click();
  const folder=p.getByRole('button',{name:'Danaku',exact:true});
  await folder.click();
  await p.waitForTimeout(35);
