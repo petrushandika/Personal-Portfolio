@@ -55,7 +55,7 @@ mv -Tf /site/current-next-{release} /site/current
 try:
     switch('releases/' + release)
     projects = json.loads((ROOT / 'data/projects.json').read_text())
-    routes = list(dict.fromkeys([''] + [p['slug'] for p in projects] + ['redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks']))
+    routes = list(dict.fromkeys([''] + [p['slug'] for p in projects] + ['work', 'timeline', 'about', 'contact', 'redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks']))
     for route in routes:
         url = 'https://petrushandika.com/' + (route + '/' if route else '')
         with urllib.request.urlopen(url, timeout=30) as response:

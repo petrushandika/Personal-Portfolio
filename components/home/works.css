@@ -1,7 +1,10 @@
-/* The reference stylesheet is precompiled; new utilities need explicit CSS. */
-[data-work-list] { max-height: 26vh; overflow-y: auto; overscroll-behavior: contain; padding-right: 8px; scrollbar-width: thin; }
-[aria-label="Filter work by ownership"] { display: flex; flex-wrap: wrap; gap: 8px; }
-[aria-label="Filter work by ownership"] button { min-height: 44px; padding: 8px 12px; border: 1px solid #a3a39c; border-radius: 999px; background: #ffffffb3; color: #1c1c1c; font-size: 12px; }
-[aria-label="Filter work by ownership"] button[aria-pressed="true"] { background: #1c1c1c; color: #fff; border-color: #1c1c1c; }
-[aria-label="Filter work by ownership"] button:focus-visible { outline: 2px solid #354f78; outline-offset: 3px; }
-@media (min-width: 1024px) { [data-work-list] { max-height: 46vh; } #works > div > div > div { transform: none; max-width: 48%; } }
+/* The reference stylesheet is precompiled; tree rules live here. */
+[data-work-list] { max-height: 32vh; overflow-y: auto; overscroll-behavior: contain; padding: 2px 8px 8px 2px; scrollbar-width: thin; }
+.work-scroll-hint { margin-top: 8px; color: #53564e; font-size: 11px; }
+.work-folder-children { margin: 4px 0 12px 12px; padding-left: 16px; border-left: 1px solid #b7b8af; }
+.work-folder-children [role="button"] > span { font-size: 18px; }
+.work-project-link { display: flex; align-items: center; gap: 12px; min-height: 44px; margin-left: 32px; color: #1c1c1c; font-size: 18px; text-decoration: none; }
+.work-project-link:hover { opacity: .7; }
+.work-project-link svg { flex-shrink: 0; }
+[data-work-list] [role="button"]:focus-visible, .work-project-link:focus-visible { outline: 2px solid #354f78; outline-offset: 2px; }
+@media (min-width: 1024px) { [data-work-list] { max-height: 46vh; } #works > div > div > div { transform: none; max-width: 48%; } .work-folder-children [role="button"] > span, .work-project-link { font-size: 24px; } }

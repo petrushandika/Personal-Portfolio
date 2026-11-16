@@ -7,7 +7,7 @@ export default function DrivexdiwaliStudy() {
       <div className={"pt-32 pb-8"}>
       </div>
       <div className={"fixed bottom-6 lg:bottom-12 left-1/2 -translate-x-1/2 lg:left-12 lg:translate-x-0 z-50"}>
-        <a className={"flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-lg border border-black/10 rounded-full text-sm font-semibold shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 group"} href={"/#works"}>
+        <a className={"flex items-center gap-2 px-6 py-3 bg-white/80 backdrop-blur-lg border border-black/10 rounded-full text-sm font-semibold shadow-[0_8px_30px_rgb(0,0,0,0.12)] hover:bg-black hover:text-white hover:scale-105 transition-all duration-300 group"} href={"/work/"}>
           <svg xmlns={"http://www.w3.org/2000/svg"} width={"24"} height={"24"} viewBox={"0 0 24 24"} fill={"none"} stroke={"currentColor"} strokeWidth={"2"} strokeLinecap={"round"} strokeLinejoin={"round"} className={"lucide lucide-arrow-left w-4 h-4 group-hover:-translate-x-1 transition-transform"}>
             <path d={"m12 19-7-7 7-7"}>
             </path>
