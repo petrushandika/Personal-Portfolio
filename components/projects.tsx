@@ -93,7 +93,7 @@ function ScreenshotModal({ images, index, onChange, onClose }: {
   );
 }
 
-export function ProjectPage({ project }: { project: Project }) {
+export function ProjectPage({ project, articles = [] }: { project: Project; articles?: { slug: string; title: string; description: string }[] }) {
   const [expandedIndex, setExpandedIndex] = useState<number | null>(null);
   const [selectedIndex, setSelectedIndex] = useState(0);
   const [moduleIndex, setModuleIndex] = useState(0);
@@ -196,6 +196,7 @@ export function ProjectPage({ project }: { project: Project }) {
           </motion.section>}
 
           <div className="project-capture-note"><span aria-hidden="true">↳</span><p>{project.captureStatus === 'source-only' ? 'No runtime screenshots are available.' : 'Captured from the local application.'} {project.limitations[0] ?? 'Screens show the captured revision; availability and data may differ from production.'}</p></div>
+          {articles.length > 0 && <section className="project-notes" aria-labelledby={`${titleId}-notes`}><p className="project-eyebrow">Notes</p><h2 id={`${titleId}-notes`}>Engineering notes<span>.</span></h2><ul>{articles.map((a) => <li key={a.slug} lang="id"><a href={`/blog/${a.slug}/`}><strong>{a.title}</strong><span>{a.description}</span></a></li>)}</ul></section>}
           <details className="project-evidence"><summary><span>Technical notes</span><span className="project-evidence-summary">Source evidence, runtime & caveats <span aria-hidden="true">＋</span></span></summary><div className="project-evidence-grid">
             <section><p className="project-eyebrow">Source evidence</p><h2>Commits & revision</h2><dl className="project-facts"><div><dt>Reference revision (capture details below)</dt><dd><code>{project.revision}</code></dd></div></dl>
               {project.commits.length > 0 ? <ul className="project-commits">{project.commits.map((commit, index) => {

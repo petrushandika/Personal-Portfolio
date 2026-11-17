@@ -30,7 +30,7 @@ try{
  }
  const aliases={redminote12:'danaku',drivexdiwali:'14daypilot',marketplacecreatives:'reluv',bannerrefresh:'jetflow',artworks:'scalp'};
  for(const [alias,target] of Object.entries(aliases)){const r=await fetch(origin+'/'+alias+'/');assert.equal(r.status,200);assert((await r.text()).includes(`data-project="${target}"`));}
- for(const suite of ['tests/frontend-selection.mjs','tests/export-routes.mjs','tests/ecosystem-data.mjs','tests/work-evidence.mjs','tests/work-folders.mjs','tests/ecosystems.mjs','tests/interaction-regressions.mjs']) {
+ for(const suite of ['tests/frontend-selection.mjs','tests/export-routes.mjs','tests/ecosystem-data.mjs','tests/work-evidence.mjs','tests/work-folders.mjs','tests/ecosystems.mjs','tests/interaction-regressions.mjs','tests/seo.mjs']) {
   const run=spawnSync(process.execPath,[suite],{env:{...process.env,TEST_URL:origin},stdio:'inherit'});assert.equal(run.status,0,`${suite} failed`);
  }
  assert.equal(results.length,projects.length*2);await fs.writeFile('tests/output/projects/results.json',JSON.stringify(results,null,2));console.log(`PASS ${results.length} project cases, 2 homepage cases, ${Object.keys(aliases).length} legacy aliases`);

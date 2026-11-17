@@ -1,7 +1,7 @@
 'use client';
 import {useEffect, useState} from 'react';
 import {AnimatePresence, motion} from 'framer-motion';
-const links=[['Works','works'],['Timeline','timeline'],['About Me','about'],['Contact','contact']];
+const links=[['Works','works'],['Timeline','timeline'],['About Me','about'],['Notes','blog'],['Contact','contact']];
 function RollingText({text}:{text:string}) {
  return <motion.span initial="initial" whileHover="hovered" className="relative block overflow-hidden text-5xl sm:text-6xl md:text-8xl font-extrabold uppercase leading-[0.8] tracking-[-0.03em] transition-colors lg:text-[7rem]" style={{lineHeight:.75}} aria-label={text}>
   {[false,true].map(bottom=><div key={String(bottom)} className={bottom?'absolute inset-0':undefined} aria-hidden="true">{text.split('').map((letter,index)=><motion.span key={index} className="inline-block" variants={{initial:{y:bottom?'100%':0},hovered:{y:bottom?0:'-100%'}}} transition={{ease:'easeInOut',delay:.035*Math.abs(index-(text.length-1)/2)}}>{letter===' '?'\u00a0':letter}</motion.span>)}</div>)}

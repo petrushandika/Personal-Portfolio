@@ -51,13 +51,13 @@ export default function Home({ initialSection = "home" }: { initialSection?: str
         <div className="absolute top-0 lg:relative w-full h-[50vh] lg:h-full flex flex-col justify-center px-6 md:px-12 pr-6 md:pr-16 lg:pr-24 pt-10 lg:pt-0">
           <div className="w-full mx-auto text-[#1c1c1c] space-y-2 text-center lg:translate-y-[-10%] lg:text-right lg:ml-auto lg:mr-0 lg:max-w-4xl">
             <p className="text-xl md:text-3xl font-medium opacity-100">Hi,</p>
-            <h1 className="text-5xl sm:text-6xl md:text-7.5xl lg:text-[5rem] font-bold tracking-tight">
+            <p className="text-5xl sm:text-6xl md:text-7.5xl lg:text-[5rem] font-bold tracking-tight">
               I build.
-            </h1>
-            <h1 className="text-5xl sm:text-6xl md:text-8.5xl lg:text-[5rem] font-bold tracking-tight leading-[0.85]">
+            </p>
+            <p className="text-5xl sm:text-6xl md:text-8.5xl lg:text-[5rem] font-bold tracking-tight leading-[0.85]">
               Ideas ship.
               <br /> <span className="block mt-2 md:mt-4">With care.</span>
-            </h1>
+            </p>
           </div>
           <div className="flex absolute bottom-4 lg:bottom-16 left-0 right-0 lg:left-auto px-6 lg:px-0 flex-col items-center lg:items-end text-[#1c1c1c] lg:-translate-x-[23%] w-full lg:w-auto z-10">
             <div className="inline-flex flex-col w-max">
@@ -93,7 +93,10 @@ export default function Home({ initialSection = "home" }: { initialSection?: str
                 Selected Projects
               </h2>
               <p className="text-xs">
-                Personal projects and work with company teams.
+                Personal projects and work with company teams.{" "}
+                <a href="/petrus-handika/" className="underline underline-offset-4 hover:opacity-70">Profile</a>
+                {" · "}
+                <a href="/blog/" className="underline underline-offset-4 hover:opacity-70">Notes</a>
               </p>
               <div className="w-full lg:pl-4 mt-2 md:mt-6">
                 <WorksTree onBrief={setBrief} />

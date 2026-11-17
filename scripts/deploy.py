@@ -55,12 +55,18 @@ mv -Tf /site/current-next-{release} /site/current
 try:
     switch('releases/' + release)
     projects = json.loads((ROOT / 'data/projects.json').read_text())
-    routes = list(dict.fromkeys([''] + [p['slug'] for p in projects] + ['work', 'timeline', 'about', 'contact', 'redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks']))
+    articles = json.loads((ROOT / 'data/articles.json').read_text())
+    routes = list(dict.fromkeys([''] + [p['slug'] for p in projects] + ['work', 'timeline', 'about', 'contact', 'redminote12', 'drivexdiwali', 'marketplacecreatives', 'bannerrefresh', 'artworks', 'petrus-handika', 'blog'] + ['blog/' + a['slug'] for a in articles]))
     for route in routes:
         url = 'https://petrushandika.com/' + (route + '/' if route else '')
         with urllib.request.urlopen(url, timeout=30) as response:
             assert response.status == 200
+            assert 'noindex' not in (response.headers.get('X-Robots-Tag') or '')
             assert response.read() == (ROOT / 'out' / route / 'index.html').read_bytes()
+    for name in ['robots.txt', 'sitemap.xml']:
+        with urllib.request.urlopen('https://petrushandika.com/' + name, timeout=30) as response:
+            assert response.status == 200
+            assert response.read() == (ROOT / 'out' / name).read_bytes(), name
 except BaseException:
     switch(str(previous))
     assert (SITE / 'current').readlink() == previous
