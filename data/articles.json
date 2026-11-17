@@ -1,0 +1,95 @@
+[
+  {
+    "slug": "tombol-transaksi-mobile-danaku",
+    "title": "Tombol edit dan hapus yang tidak terlihat di layar sentuh",
+    "description": "Catatan perubahan UI Danaku: baris transaksi dibuat bertumpuk di mobile dan tombol edit serta hapus tidak lagi bergantung pada hover.",
+    "published": "2026-11-17",
+    "project": "danaku",
+    "sections": [
+      {
+        "heading": "Masalahnya ada di hover",
+        "paragraphs": [
+          "Di halaman spending Danaku, setiap baris riwayat transaksi punya dua tombol ikon: edit dan hapus. Sebelum perubahan ini, wadah tombol memakai kelas `opacity-0 group-hover:opacity-100`. Artinya tombol baru terlihat ketika kursor mouse berada di atas baris.",
+          "Di desktop itu wajar. Di ponsel tidak ada kursor yang melayang di atas elemen, jadi tombol yang sebenarnya ada di DOM tetap tidak terlihat. Pengguna harus menebak bahwa baris itu bisa diedit."
+        ]
+      },
+      {
+        "heading": "Perubahan di commit 39f6566",
+        "paragraphs": [
+          "Commit 39f6566 (`fix(ui): improve transaction history responsiveness for mobile`) mengubah dua hal di `frontend/src/app/(dashboard)/spending/page.tsx`.",
+          "Pertama, baris transaksi berubah dari satu baris horizontal menjadi `flex-col` di layar kecil dan kembali ke `sm:flex-row` mulai breakpoint sm. Nominal dan tombol tindakan pindah ke baris sendiri dengan `justify-between`, sehingga nama transaksi yang panjang tidak berebut tempat dengan angka.",
+          "Kedua, wadah tombol menjadi `opacity-100 sm:opacity-0 group-hover:opacity-100`. Di mobile tombol selalu terlihat; mulai breakpoint sm perilaku hover yang lama tetap dipakai."
+        ]
+      },
+      {
+        "heading": "Yang masih bisa diperbaiki",
+        "paragraphs": [
+          "Pada revisi yang sama, kedua tombol hanya berisi ikon `Edit2` dan `Trash2` tanpa `aria-label`. Pembaca layar tidak punya nama yang jelas untuk tombol tersebut, jadi itu langkah berikutnya yang masuk akal.",
+          "Perilaku `sm:opacity-0` juga masih bergantung pada hover untuk layar sm ke atas. Tablet layar sentuh yang lebar bisa jatuh ke kategori itu. Kueri media seperti `(hover: hover)` lebih tepat untuk membedakan perangkat dengan kursor dibandingkan lebar layar."
+        ]
+      },
+      {
+        "heading": "Batas bukti",
+        "paragraphs": [
+          "Tulisan ini berdasarkan diff commit publik di bawah. Capture di halaman portfolio Danaku menampilkan landing dan fitur publik, bukan halaman spending, jadi bukan bukti visual untuk perubahan ini."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Diff commit 39f6566 di petrushandika/Danaku",
+        "url": "https://github.com/petrushandika/Danaku/commit/39f656635343b97d30136cda9c613dd7eb85e022"
+      }
+    ]
+  },
+  {
+    "slug": "minimum-stock-inventory-management",
+    "title": "Minimum stok per produk, dari form sampai status persediaan",
+    "description": "Catatan Inventory Management: kolom minStock, aturan status Tersedia/Cukup/Warning/Tidak Tersedia, hitungan stok rendah di dashboard, dan ekspor laporan.",
+    "published": "2026-11-17",
+    "project": "inventory-management",
+    "sections": [
+      {
+        "heading": "Dari angka tetap ke nilai per produk",
+        "paragraphs": [
+          "Sebelum commit 5267ba1, dashboard menghitung produk stok rendah dengan satu angka tetap: `stockQuantity < 20` untuk semua produk. Barang yang laku cepat dan barang yang jarang keluar diperlakukan sama.",
+          "Commit ini menambahkan kolom `minStock Int @default(20)` di model `Products` pada schema Prisma. Nilai bawaan tetap 20, jadi data lama tidak berubah perilaku, tetapi setiap produk sekarang bisa punya batasnya sendiri."
+        ]
+      },
+      {
+        "heading": "Validasi di API dan form",
+        "paragraphs": [
+          "Controller produk menerima `minStock` saat membuat dan mengubah produk. Nilai yang bukan angka atau negatif ditolak dengan HTTP 400 dan pesan `Minimum stock must be a non-negative number`. Saat update, nilai dibulatkan ke bawah dan dibatasi minimal 0.",
+          "Form produk baru dan form edit punya input `minStock` dengan nilai awal 20. Jika input kosong atau tidak bisa di-parse, form mengirim 20."
+        ]
+      },
+      {
+        "heading": "Aturan status persediaan",
+        "paragraphs": [
+          "Aturan ditulis di `client/src/lib/stockStatus.ts` dan `server/src/lib/stockStatus.ts`: Tersedia jika stok > `minStock` + 5, Tidak Tersedia jika stok < `minStock` − 5, Warning jika stok tepat sama dengan `minStock`, dan Cukup untuk kondisi di antaranya.",
+          "Konsekuensinya menarik: stok yang sedikit di bawah minimum (misalnya `minStock` 20, stok 17) berlabel Cukup, sama seperti stok 23. Hanya angka yang tepat sama dengan minimum yang memicu Warning. Kalau itu memang aturan bisnis yang diminta, label ini sudah sesuai; kalau tidak, ini kasus batas yang layak diuji lebih dulu.",
+          "Dashboard tidak lagi memakai `count` dengan angka tetap. Ia mengambil `stockQuantity` dan `minStock` semua produk lalu menghitung lewat `countLowStockProducts`, sehingga angka di dashboard mengikuti aturan yang sama dengan badge di tabel."
+        ]
+      },
+      {
+        "heading": "Ekspor laporan",
+        "paragraphs": [
+          "Commit yang sama menambahkan `ExportReportMenu` dan `client/src/lib/exportReport.ts` dengan empat format: CSV, Excel (xlsx), PDF (`jspdf` dan `jspdf-autotable`), dan cetak lewat jendela browser. Menu ini dipasang di halaman inventory, produk, pembelian, pemasok, pengeluaran, kategori, dan pengguna.",
+          "Tombol ekspor yang muncul belum membuktikan isi file benar. Kolom, nilai stok, dan filter yang aktif tetap perlu dicek di file hasil unduhan."
+        ]
+      },
+      {
+        "heading": "Batas bukti",
+        "paragraphs": [
+          "Semua fakta di atas berasal dari diff commit yang ditautkan. Belum ada screenshot runtime terverifikasi untuk halaman inventory, dan tidak ada klaim dampak bisnis dari perubahan ini."
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "label": "Diff commit 5267ba1 di petrushandika/Inventory-Management",
+        "url": "https://github.com/petrushandika/Inventory-Management/commit/5267ba13fa48034ffb93ff2b125fbf06e8b8665d"
+      }
+    ]
+  }
+]

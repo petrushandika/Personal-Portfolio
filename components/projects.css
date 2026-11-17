@@ -94,6 +94,13 @@
 .project-capture-note { grid-column: 1 / -1; display: flex; gap: 14px; align-items: start; max-width: 800px; padding: 16px 0 0; color: var(--project-muted); }
 .project-capture-note > span { color: var(--project-accent); }
 .project-capture-note p { margin: 0; font-size: 12px; }
+.project-notes { grid-column: 1 / -1; min-width: 0; padding: 48px 0 0; }
+.project-notes ul { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.project-notes a { display: flex; flex-direction: column; gap: 8px; padding: 26px 28px; border: 1px solid var(--project-line); border-radius: 18px; background: #fffefa; color: inherit; text-decoration: none; transition: border-color .2s; }
+.project-notes a:hover { border-color: var(--project-accent); }
+.project-notes a:focus-visible { outline: 2px solid var(--project-accent); outline-offset: 3px; }
+.project-notes strong { font-size: clamp(18px, 1.8vw, 24px); font-weight: 500; letter-spacing: -.03em; overflow-wrap: anywhere; }
+.project-notes span { font-size: 14px; line-height: 1.6; color: var(--project-muted); }
 .project-evidence { grid-column: 1 / -1; border-top: 1px solid var(--project-line); border-bottom: 1px solid var(--project-line); }
 .project-evidence > summary { display: flex; justify-content: space-between; align-items: center; gap: 20px; padding: 26px 0; cursor: pointer; list-style: none; font-size: 16px; }
 .project-evidence > summary::-webkit-details-marker { display: none; }

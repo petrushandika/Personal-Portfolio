@@ -6,7 +6,6 @@ ROOT=Path(__file__).parent/os.environ.get('STATIC_ROOT','out')
 class Handler(SimpleHTTPRequestHandler):
     def __init__(self,*args,**kwargs):super().__init__(*args,directory=str(ROOT),**kwargs)
     def end_headers(self):
-        self.send_header('X-Robots-Tag','noindex, nofollow')
         self.send_header('Referrer-Policy','no-referrer')
         super().end_headers()
     def send_head(self):
