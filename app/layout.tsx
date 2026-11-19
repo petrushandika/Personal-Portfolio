@@ -2,7 +2,10 @@ import type {Metadata} from 'next';
 import Header from '../components/header';
 import {SITE_URL, SITE_NAME} from '../lib/site';
 import './globals.css';
+// Set GOOGLE_SITE_VERIFICATION (Search Console HTML-tag token) at build time to emit the meta tag.
+const googleVerification=process.env.GOOGLE_SITE_VERIFICATION;
 export const metadata:Metadata={
+ verification:googleVerification?{google:googleVerification}:undefined,
  metadataBase:new URL(SITE_URL),
  title:{default:'Petrus Handika | Full Stack Developer (Web & AI)',template:'%s | Petrus Handika'},
  description:'Petrus Handika is a full stack developer in Indonesia building web applications, APIs, data tools and AI workflows.',
