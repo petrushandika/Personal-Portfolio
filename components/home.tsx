@@ -1,7 +1,6 @@
 "use client";
 
-import { Fragment, useEffect, useRef, useState } from "react";
-import projects from "../data/projects.json";
+import { useEffect, useRef, useState } from "react";
 import {
   BackgroundVideos,
   BriefModal,
@@ -10,9 +9,6 @@ import {
   SocialDock,
   WorksTree,
 } from "./home/interactions";
-
-/** Indexable shortlist used for crawlable internal links on the home page. */
-const caseStudies = projects.map((project) => ({ slug: project.slug, title: project.title }));
 
 /** The original five full-screen compositions, with editable content and local media. */
 export default function Home({ initialSection = "home" }: { initialSection?: string }) {
@@ -157,8 +153,8 @@ export default function Home({ initialSection = "home" }: { initialSection?: str
         }}
         className="snap-section bg-transparent"
       >
-        <div className="absolute top-0 lg:relative container mx-auto px-6 md:px-12 w-full h-[50vh] lg:h-full flex flex-col justify-start lg:justify-center pt-8 lg:pt-0">
-          <div className="w-full max-w-2xl xl:max-w-3xl mx-auto md:ml-auto md:mr-0 flex flex-col gap-2 lg:gap-8 pt-6 lg:pt-0">
+        <div className="absolute top-0 lg:relative container mx-auto px-6 md:px-12 w-full h-[50vh] lg:h-full flex flex-col justify-center pt-10 lg:pt-0">
+          <div className="w-full max-w-2xl xl:max-w-3xl mx-auto md:ml-auto md:mr-0 flex flex-col gap-3 lg:gap-8 pt-6 lg:pt-0">
             <div className="w-full text-center overflow-visible lg:translate-x-0 lg:-translate-x-[5%] mb-2 lg:mb-0 px-2 lg:px-0">
               <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-[#1c1c1c] leading-tight drop-shadow-sm lg:whitespace-nowrap">
                 A Little About Me.
@@ -168,49 +164,6 @@ export default function Home({ initialSection = "home" }: { initialSection?: str
               I build web applications and the APIs behind them: Next.js and TypeScript on the
               front, Node and Go on the back, PostgreSQL underneath, AI workflows where they
               actually help.
-            </p>
-            <p className="text-center text-xs md:text-sm max-w-2xl mx-auto leading-snug">
-              <span className="opacity-60">Case studies:</span>{" "}
-              {caseStudies.map((study, index) => (
-                <Fragment key={study.slug}>
-                  <a
-                    href={`/${study.slug}/`}
-                    className="underline underline-offset-4 hover:opacity-70"
-                  >
-                    {study.title}
-                  </a>
-                  {index < caseStudies.length - 1 ? " · " : ""}
-                </Fragment>
-              ))}
-            </p>
-            <p className="hidden md:block text-center text-xs opacity-70">
-              Open source:{" "}
-              <a
-                href="https://github.com/petrushandika/Danaku"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:opacity-90"
-              >
-                Danaku
-              </a>
-              {" / "}
-              <a
-                href="https://github.com/petrushandika/Reluv-App"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:opacity-90"
-              >
-                Reluv
-              </a>
-              {" / "}
-              <a
-                href="https://github.com/petrushandika/Structra"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:opacity-90"
-              >
-                Structra
-              </a>
             </p>
             <div className="w-full flex items-center justify-center lg:justify-end lg:pr-12 pointer-events-auto mt-8 lg:mt-24 mb-10">
               <ProfileCards />
